@@ -1,0 +1,36 @@
+html {
+	font-family: 'Poppins', sans-serif;
+	color: black;
+}
+
+#header {
+	background-color: black;
+}
+
+#body {
+	background-color: #addbf9;
+}
+
+#p11 {
+	font-size: 40px;
+	color: #0F9D58;
+}
+
+#p12 {
+	font-size: 40px;
+	color: #4285F4;
+}
+
+#para {
+	font-size: 20px;
+}
+
+#paraheadings {
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#smallpara {
+	font-size: 10px;
+}

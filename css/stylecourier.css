@@ -1,0 +1,29 @@
+html {
+	background-color: black;
+	font-family: Courier New;
+	color: white;
+}
+
+#p11 {
+	font-size: 40px;
+	color: #0F9D58;
+}
+
+#p12 {
+	font-size: 40px;
+	color: #4285F4;
+}
+
+#para {
+	font-size: 20px;
+}
+
+#paraheadings {
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#smallpara {
+	font-size: 10px;
+}

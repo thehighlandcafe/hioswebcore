@@ -1,0 +1,77 @@
+html {
+	background-color: black;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+}
+
+#homeheading {
+	font-size: 40px;
+	animation: pulse 15s infinite;
+}
+
+#p11 {
+	font-size: 40px;
+	color: #0F9D58;
+}
+
+#p12 {
+	font-size: 40px;
+	color: #4285F4;
+}
+
+#para {
+	font-size: 20px;
+}
+
+#paraheadings {
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#smallpara {
+	font-size: 10px;
+}
+
+#rightalign {
+	text-align: right;
+}
+
+.wrapper {
+	display: grid;
+ 	grid-template-columns: 400px 400px;
+	justify-content: center;
+}
+
+#rickroll {
+	font-size: 40px;
+	text-decoration: underline;
+	animation: pulse 15s infinite;
+}
+
+@keyframes pulse {
+  0% {
+	/*color: #FF4F4B;*/
+	color: #FF0000;
+  } /* Red */
+  
+  25% {
+	/*color: #a0d2eb;*/
+	color: #0000FF;
+  } /* Blue */
+  
+  50% {
+	/*color: #90EE90;*/
+	color: #228B22
+  } /* Green */
+  
+  75% {
+	/*color: #808080;*/
+	color: #FFFFFF;
+  } /* White */
+  
+  100% {
+	/*color: #494d5f;*/
+	color: orange;
+  } /* Black */
+}
