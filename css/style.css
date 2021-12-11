@@ -1,8 +1,14 @@
 html {
-	background-color: black;
+	background-color: #FCFCFF;
 	font-family: 'Outfit', sans-serif;
-	color: white;
+	color: black;
 }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #001D33;
+    color: #FCFCFF;
+  }
 
 #homeheading {
 	font-size: 40px;
