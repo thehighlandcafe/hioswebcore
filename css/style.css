@@ -4,6 +4,11 @@ html {
 	color: black;
 }
 
+.termsconditions {
+	background-color: #FCFCFF;
+	color: black;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #001D33;
