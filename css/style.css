@@ -7,6 +7,7 @@ html {
 .termsconditions {
 	background-color: #FCFCFF;
 	color: black;
+	font-family: 'Courier Prime', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
