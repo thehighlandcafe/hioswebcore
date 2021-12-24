@@ -54,6 +54,11 @@ html {
     background-color: #001D33;
     color: #FCFCFF;
   }
+}
+
+#infoText {
+	font-family: 'Courier Prime', monospace;
+}
 
 #homeheading {
 	font-size: 40px;
