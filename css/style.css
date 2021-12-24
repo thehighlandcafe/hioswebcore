@@ -4,20 +4,9 @@ html {
 	color: #FCFCFF;
 }
 
-#showFeedback {
+.navButton {
 	height:60px;
-    width:200px;
-	font-family: 'Outfit', sans-serif;
-	font-size: 20px;
-	background-color: #26abff;
-	color: white;
-	border-radius: 16px;
-	border: none;
-}
-
-#showComplaints {
-	height:60px;
-    width:200px;
+    	width:200px;
 	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	background-color: #26abff;
