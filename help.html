@@ -7,15 +7,42 @@
 		<link rel="stylesheet" href="css\style.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<title>HiOS | Help</title>
+		<script>
+			function showHelpDiv () {
+				document.getElementById('helpCenter').style.display = "block";
+				document.getElementById('appInfo').style.display = "none";
+			}
+			
+			function showAppinfoDiv () {
+				document.getElementById('helpCenter').style.display = "none";
+				document.getElementById('appInfo').style.display = "block";
+		</script>
 	</head><br>
 	<body>
 	<br>
+		<button id="showHelp" onClick="showHelpDiv()">Help Center</button><br><br><button id="showAppinfo" onClick="showComplaintsDiv()">About App</button><br><br>
+		<div id="helpCenter" style="display:block">
 		<center><h1><u>Help Center</u></h1><br>
 			<img src="icons/help.png">
 		<p id="para">Do you need help with anything in this app? Please click on what you need help with down below.</p><br>
 			<a href="checkinHELP.html"><img src="buttons/help/checkin.png"></a> &nbsp; <a href="keyHELP.html"><img src="buttons/help/key.png"></a> &nbsp; <a href="locationHELP.html"><img src="buttons/help/location.png"></a><br>
 			<a href="breakfastHELP.html"><img src="buttons/help/breakfast.png"></a> &nbsp; <a href="rmserviceHELP.html"><img src="buttons/help/roomservice.png"></a> &nbsp; <a href="formsHELP.html"><img src="buttons/help/forms.png"></a><br>
-		<br><br><br>
+			</div>
+		<div id="appInfo" style="display:none">
+				<img src="pics/logo.png"><br></center>
+				<p><strong><u><i>App Name:</strong></u></i>&nbsp; HiOS(tm) Mobile by The Higland Cafe(tm)</p>
+				<p><strong><u><i>Web software version:</strong></u></i>&nbsp; 5.4.6-mobile</p>
+				<p><strong><u><i>App version:</strong></u></i>&nbsp; 1.1.3</p>
+				<p><strong><u><i>Changelog:</strong></u></i><br></p>
+					<p>In this version, we have added/changed the following things:</p>
+						<ul>
+							<li>[placeholder text]</li>
+							<li>Changelog will be arriving here soon too, but in the meantime, visit <a href="https://hiosmobile.code.blog/blog" target="_blank">HiOS Mobile Changelog</a> to view all the entries. :)</li>
+							
+						<ul><br>
+					<center><p id="smallpara">This webapp was made entirely with HTML5, CSS, and Javascript</p><br>
+						<p id="smallpara">The android app you're using was made with Java</p></div>
+			<br><br><br>
 		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
 	</body>
 </html>
