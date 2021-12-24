@@ -15,6 +15,16 @@ html {
 	border: none;
 }
 	
+.navButtonInactive {
+	height:60px;
+	width:200px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	background-color: #bfe6ff;
+	color: grey;
+	border-radius: 16px;
+	border: none;
+}
 
 .offerBox {
 	border-radius: 25px;
