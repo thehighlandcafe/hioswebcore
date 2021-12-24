@@ -9,13 +9,14 @@
 		<title>HiOS | Help</title>
 		<script>
 			function showHelpDiv () {
+				document.getElementById('appInfo').style.display = "none";  //empty the value
 				document.getElementById('helpCenter').style.display = "block";
-				document.getElementById('appInfo').style.display = "none";
-			}
-			
+				}
+				
 			function showAppinfoDiv () {
-				document.getElementById('helpCenter').style.display = "none";
-				document.getElementById('appInfo').style.display = "block";
+				document.getElementById('helpCenter').style.display = "block";  //empty the value
+				document.getElementById('appInfo').style.display = "none";
+				}
 		</script>
 	</head><br>
 	<body>
