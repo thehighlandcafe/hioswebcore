@@ -13,18 +13,27 @@
 				document.getElementById('appInfo').style.display = "none";  //empty the value
 				document.getElementById('helpCenter').style.display = "block";
 				document.getElementById('infoText').style.display = "none";
+				document.getElementById('helpActive').style.display = "block";
+				document.getElementById('appinfoActive').style.display = "none";
 				}
 				
 			function showAppinfoDiv () {
 				document.getElementById('appInfo').style.display = "block";  //empty the value
 				document.getElementById('helpCenter').style.display = "none";
 				document.getElementById('infoText').style.display = "block";
+				document.getElementById('helpActive').style.display = "none";
+				document.getElementById('appinfoActive').style.display = "block";
 				}
 		</script>
 	</head><br>
 	<body>
 	<br><center>
-		<button class="navButton" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButton" onClick="showAppinfoDiv()">About App</button><br><br>
+		<div id="helpActive" style="display:block">
+			<button class="navButtonInactive" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButton" onClick="showAppinfoDiv()">About App</button><br><br>
+		</div>
+		<div id="appinfoActive" style="display:none">
+			<button class="navButton" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButtonInactive" onClick="showAppinfoDiv()">About App</button><br><br>
+		</div>
 		<div id="helpCenter" style="display:block">
 		<center><h1><u>Help Center</u></h1><br>
 			<img src="icons/help.png">
