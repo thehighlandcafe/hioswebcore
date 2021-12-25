@@ -11,17 +11,26 @@
 			function showComplaintsDiv () {
 				document.getElementById('appFeedback').style.display = "none";  //empty the value
 				document.getElementById('complaints').style.display = "block";
+				document.getElementById('feedbackActive').style.display = "none";
+				document.getElementById('complaintsActive').style.display = "block";
 				}
 				
 			function showFeedbackDiv () {
 				document.getElementById('appFeedback').style.display = "block";  //empty the value
 				document.getElementById('complaints').style.display = "none";
+				document.getElementById('feedbackActive').style.display = "block";
+				document.getElementById('complaintsActive').style.display = "none";
 				}
 		</script>
 	</head><br>
 	<body><center>
 	<br>
-		<button class="navButton" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
+		<div id="feedbackActive" style="display:block">
+			<button class="navButtonInactive" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
+		</div>
+		<div id="complaintsActive" style="display:none">
+			<button class="navButton" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButtonInactive" onClick="showComplaintsDiv()">Complain</button><br><br>
+		</div>
 	<div id="appFeedback" style="display:block">
 		<center><h1><u>App Feedback</u></h1><br>
 			<img src="icons/forms.png">
