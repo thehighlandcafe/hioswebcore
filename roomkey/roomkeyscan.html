@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="color-scheme" content="dark light">
+		<link rel="icon" href="../icons/house.png" type="image/icon">
+		<link rel="stylesheet" href="../css/style.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+		<title>HiOS | Room Key Scan</title>
+		<script>
+			/*function showHelpDiv () {
+				document.getElementById('appInfo').style.display = "none";  //empty the value
+				document.getElementById('helpCenter').style.display = "block";
+				document.getElementById('infoText').style.display = "none";
+				document.getElementById('helpActive').style.display = "block";
+				document.getElementById('appinfoActive').style.display = "none";
+				}
+				
+			function showAppinfoDiv () {
+				document.getElementById('appInfo').style.display = "block";  //empty the value
+				document.getElementById('helpCenter').style.display = "none";
+				document.getElementById('infoText').style.display = "block";
+				document.getElementById('helpActive').style.display = "none";
+				document.getElementById('appinfoActive').style.display = "block";
+				}*/
+            
+                function showUnlockDiv () {
+                    document.getElementById('nfccheck').style.display = "none";
+                    document.getElementById('roomunlock').style.display = "block";
+                    document.getElementById('exitButton').style.display = "block";
+                }
+		</script>
+	</head><br>
+	<body>
+	<br><center>
+            <div id="nfccheck">
+            <u><h1>Turn on NFC</h1></u>
+                <img src="../icons/placeholder.png" width="100">
+                <p id="para">We first need to make sure NFC is enabled.<br><br>
+                    To do this, open Settings > Connected Devices > Connection Settings > NFC, and turn on.<br>
+                    Once on, press <strong>Next</strong>.
+                </p>
+                <br>
+                    <button id="nextButtonRoomkey2" onclick="showUnlockDiv()">Next</button>
+            </div>
+            <div id="roomunlock">
+                <u><h1>Unlocking Time!</h1></u>
+                    <p id="para">
+                        Please tap your phone onto the room door reader.
+                    </p><br><br>
+                    <img src="https://cdn.dribbble.com/users/1489841/screenshots/11131159/nfc.gif" class="roundedImage" width="350"><br><br>
+                </center><div id="exitButton">
+                <a href="keymain.html"><button id="nextButtonRoomkey">Exit</button></a>
+                </div>
+            </div>
+			<br><br><br><br><br><br><br><br><br>
+		<center><p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
+							<!Never Gonna Give You Up>
+	</body>
+</html>
