@@ -149,3 +149,65 @@ html {
 	color: orange;
   } /* Black */
 }
+
+#nextButtonRoomkey {
+	/*float: right;*/
+	height:30px;
+	width:100px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 15px;
+	background-color: #26abff;
+	color: white;
+	border-radius: 16px;
+	border: none;
+}
+
+#nextButtonRoomkey:hover {
+	background-color: #68c6ff; /* lightblue */
+	color: white;
+}
+
+#nextButtonRoomkey2 {
+	/*float: right;*/
+	height:30px;
+	width:100px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 15px;
+	background-color: #26abff;
+	color: white;
+	border-radius: 16px;
+	border: none;
+}
+
+#nextButtonRoomkey2:hover {
+	background-color: #68c6ff; /* lightblue */
+	color: white;
+}
+
+.inputBox {
+	border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: black;
+	height: 30px;
+	width: 100px;
+	font-family: 'Outfit', sans-serif;
+	text-align: center;
+	font-size: 15px;
+}
+
+#nfccheck {
+	display: block;
+}
+
+#roomunlock {
+	display: none;
+}
+
+.roundedImage {
+	border-radius: 15px;
+}
+
+#exitButton {
+	display: none;
+}
