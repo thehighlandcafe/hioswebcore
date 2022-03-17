@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="../css/style.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        
 		<title>HiOS | Room Key Scan</title>
 		<script>
 			/*function showHelpDiv () {
@@ -26,11 +27,11 @@
 				document.getElementById('appinfoActive').style.display = "block";
 				}*/
             
-                function showUnlockDiv () {
+                /*function showUnlockDiv () {
                     document.getElementById('nfccheck').style.display = "none";
                     document.getElementById('roomunlock').style.display = "block";
                     document.getElementById('exitButton').style.display = "block";
-                }
+                }*/
 		</script>
 	</head><br>
 	<body>
@@ -44,20 +45,7 @@
                     Once on, press <strong>Next</strong>.
                 </p>
                 <br>
-                    <button id="nextButtonRoomkey2" onclick="showUnlockDiv()">Next</button>
+                    <a href="loading.html"><button id="nextButtonRoomkey2">Next</button></a>
             </div>
-            <div id="roomunlock">
-                <u><h1>Unlocking Time!</h1></u>
-                    <p id="para">
-                        Please tap your phone onto the room door reader to unlock, then tap <strong>Exit</strong> to exit.
-                    </p><br><br>
-                    <img src="https://cdn.dribbble.com/users/1489841/screenshots/11131159/nfc.gif" class="roundedImage" width="350"><br><br>
-                </center><div id="exitButton">
-                <a href="keymain.html"><button id="nextButtonRoomkey">Exit</button></a>
-                </div>
-            </div>
-			<br><br><br><br><br><br><br><br><br>
-		<center><p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
-							<!Never Gonna Give You Up>
-	</body>
-</html>
+        </body>
+     </html>
