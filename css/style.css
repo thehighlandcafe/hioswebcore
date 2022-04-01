@@ -1,6 +1,7 @@
 html {
 	/*background-color: #FCFCFF;*/
-	background-color: black;
+	/*background-color: black;*/
+	background-image: url('rickroll.gif');
 	font-family: 'Outfit', sans-serif;
 	color: white;
 }
