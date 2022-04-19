@@ -2,8 +2,7 @@ html {
 	/*background-color: #FCFCFF;*/
 	background-color: black;
 	/*background-image: url('rickroll.gif');*/
-	/*font-family: 'Outfit', sans-serif;*/
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	color: white;
 }
 
@@ -83,6 +82,7 @@ html {
 #homeheading {
 	font-size: 40px;
 	animation: pulse 15s infinite;
+	font-family: 'Poppins', sans-serif
 }
 
 #p11 {
@@ -103,6 +103,7 @@ html {
 	font-size: 40px;
 	text-decoration: underline;
 	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
 }
 
 #smallpara {
