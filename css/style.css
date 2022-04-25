@@ -82,7 +82,6 @@ html {
 #homeheading {
 	font-size: 40px;
 	animation: pulse 15s infinite;
-	font-family: 'Poppins', sans-serif
 }
 
 #p11 {
@@ -103,7 +102,6 @@ html {
 	font-size: 40px;
 	text-decoration: underline;
 	font-weight: bold;
-	font-family: 'Poppins', sans-serif;
 }
 
 #smallpara {
@@ -213,4 +211,22 @@ html {
 
 #exitButton {
 	display: none;
+}
+
+/*NEWEST ADDED CSS*/
+
+.translucentBox {
+	border-radius: 25px;
+	/*background: #006ee6;*/
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+	padding: 10px;
+	width: 350px;
+	backdrop-filter: blur(14px);
+	text-align: center;
+}
+
+.whitesmallpara {
+	font-size: 10px;
+	color: white;
 }
