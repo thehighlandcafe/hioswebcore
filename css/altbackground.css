@@ -1,0 +1,9 @@
+html {
+	/*background-color: #FCFCFF;*/
+	background-color: black;
+	background-image: url('backgrounds/backgroundimage.png');
+	background-repeat: repeat;
+    background-size: cover;
+	font-family: 'Outfit', sans-serif;
+	color: white;
+}
