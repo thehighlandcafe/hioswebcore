@@ -84,6 +84,11 @@ html {
 	animation: pulse 15s infinite;
 }
 
+#homeheadingsmall {
+	font-size: 30px;
+	animation: pulse 15s infinite;
+}
+
 #p11 {
 	font-size: 40px;
 	color: #0F9D58;
@@ -124,6 +129,8 @@ html {
 	animation: pulse 15s infinite;
 }
 
+/*THE PULSING HOMESCREEN*/
+
 @keyframes pulse {
   0% {
 	/*color: #FF4F4B;*/
@@ -132,7 +139,7 @@ html {
   
   25% {
 	/*color: #a0d2eb;*/
-	color: #0000FF;
+	color: #22229a;
   } /* Blue */
   
   50% {
@@ -142,12 +149,12 @@ html {
   
   75% {
 	/*color: #808080;*/
-	color: #FFFFFF;
+	color: black;
   } /* White */
   
   100% {
 	/*color: #494d5f;*/
-	color: orange;
+	color: darkorange;
   } /* Black */
 }
 
@@ -225,6 +232,19 @@ html {
 	backdrop-filter: blur(14px);
 	text-align: center;
 }
+
+.translucentInfoBox {
+	border-radius: 25px;
+	/*background: #006ee6;*/
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+	padding: 10px;
+	width: 300px;
+	backdrop-filter: blur(14px);
+	text-align: center;
+	color: black;
+}
+
 
 .whitesmallpara {
 	font-size: 10px;
