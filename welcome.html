@@ -13,13 +13,61 @@
 	<center>
 		<div class="translucentBox">
 			<img src="pics/logo.png" class="roundedImage" width="300"><br>
-			<p id=homeheading><strong> &nbsp; Welcome to HiOS(tm) Mobile<br></strong></p><br>
-				<p id=para>You can use this app to order food @ The Highland Cafe(tm) chain restaurants, view menus, and more!<br>
-				All you need to follow the tutorial below!</p><br>
-				<img src="media/tutorial.gif" width="200" class="roundedImage">
+			<p id="homeheading"></p>
+			<p id="homeheadingsmall">Welcome to HiOS(tm) Mobile!</p><center>
+			<div class="translucentInfoBox">
+				<h2>Today's Info</h2>
+				<h3>Weather</h3>
+				<div id="ww_0ff3e0816dbcd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one_a","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_0ff3e0816dbcd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv2.weatherwidget.org/js/?id=ww_0ff3e0816dbcd"></script>
+				<br>
+				<h3>Date</h3>
+				<p id="date" class="para"></p>
+			</div><br>
+			<div id="buttonNotPressed" style="display: block;">
+				<button class="navButton" onClick="showTutorialDiv()">App Tutorial</button>
+			</div>
+			<div id="buttonPressed" style="display: none;">
+				<button class="navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
+			</div>
+			<div id="tutorial" style="display: none;">
+				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
+			</div>
 						<br></div>
 		<center><p class="whitesmallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p></center><br>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
 	</body>
+	<script>
+		var myDate = new Date();
+			var hrs = myDate.getHours();
+
+			var greet;
+
+			if (hrs < 12)
+				greet = 'Good Morning';
+			else if (hrs >= 12 && hrs <= 17)
+				greet = 'Good Afternoon';
+			else if (hrs >= 17 && hrs <= 24)
+				greet = 'Good Evening';
+
+			document.getElementById('homeheading').innerHTML =
+				'<b>' + greet + '!</b>';
+			
+			n =  new Date();
+			y = n.getFullYear();
+			m = n.getMonth() + 1;
+			d = n.getDate();
+			document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+
+			function showTutorialDiv () {
+				document.getElementById('buttonNotPressed').style.display = "none";  //empty the value
+				document.getElementById('buttonPressed').style.display = "block";
+				document.getElementById('tutorial').style.display = "block";
+				}
+
+			function hideTutorialDiv () {
+				document.getElementById('buttonNotPressed').style.display = "block";
+				document.getElementById('buttonPressed').style.display = "none";
+				document.getElementById('tutorial').style.display = "none";
+			}
+</script>
 </html>
-	<!--test-->
