@@ -1,7 +1,8 @@
 html {
 	/*background-color: #FCFCFF;*/
-	background-color: black;
+	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
+	background-color: black;
 	font-family: 'Outfit', sans-serif;
 	color: white;
 }
@@ -32,14 +33,14 @@ html {
 	border-radius: 25px;
 	background: #006ee6;
 	padding: 10px;
-	width: 350px;
+	width: 300px;
 }
 
 .offerBoxExpired {
 	border-radius: 25px;
 	background: red;
 	padding: 10px;
-	width: 350px;
+	width: 300px;
 }
 
 .offerHeadings {
@@ -231,6 +232,7 @@ html {
 	width: 350px;
 	backdrop-filter: blur(14px);
 	text-align: center;
+	color: black;
 }
 
 .translucentInfoBox {
