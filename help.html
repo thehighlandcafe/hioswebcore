@@ -5,9 +5,9 @@
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css\style.css" type="text/css">
+		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 		<title>HiOS | Help</title>
 		<script>
 			function showHelpDiv () {
@@ -29,12 +29,15 @@
 	</head><br>
 	<body>
 	<br><center>
-		<div id="helpActive" style="display:block">
-			<button class="navButtonInactive" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButton" onClick="showAppinfoDiv()">About App</button><br><br>
-		</div>
-		<div id="appinfoActive" style="display:none">
-			<button class="navButton" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButtonInactive" onClick="showAppinfoDiv()">About App</button><br><br>
-		</div>
+		<div class="translucentBox">
+			<div id="helpActive" style="display:block">
+				<button class="navButtonInactive" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButton" onClick="showAppinfoDiv()">About App</button><br><br>
+			</div>
+			<div id="appinfoActive" style="display:none">
+				<button class="navButton" onClick="showHelpDiv()">Help Center</button><br><br><button class="navButtonInactive" onClick="showAppinfoDiv()">About App</button><br><br>
+			</div>
+		</div><br>
+		<div class="translucentBox">
 		<div id="helpCenter" style="display:block">
 		<center><h1><u>Help Center</u></h1><br>
 			<img src="icons/help.png">
@@ -44,23 +47,25 @@
 			</div>
 		<div id="appInfo" style="display:none">
 				<h1><u>About App</u></h1><br>
-				<img src="pics/loadingLogo.png" width="350"><br></center>
+				<img src="pics/loadingLogo.png" width="350"><br><br><center><div class="translucentAboutBox">
 				<div id="infoText" style="display:none"><p><strong><u><i>App Name:</strong></u></i>&nbsp; HiOS(tm) Mobile by The Higland Cafe(tm)</p>
-				<p><strong><u><i>Web software version:</strong></u></i>&nbsp; 5.5.0-mobile</p>
-				<p><strong><u><i>App version:</strong></u></i>&nbsp; 1.1.3</p>
+				<p><strong><u><i>Web software version:</strong></u></i>&nbsp; 6.0-mobile</p>
+				<p><strong><u><i>App version:</strong></u></i>&nbsp; 1.2</p>
 				<p><strong><u><i>Changelog:</strong></u></i><br></p>
 					<p>In this version, we have added/changed the following things:</p>
 						<ul>
 							<li>Given all the icons a visual refresh</li>
-							<li>Squashed some bugs</li>
-							<li>Modified some more source code</li>
+							<li>Rejigged the design language of the sections in this app to make it more modern and visually appealing</li>
+							<li>Modified some more source code & improved text</li>
 							
 						<ul><br>
 							<p id="smallpara">To view the changes in the actual app, visit "hiosmobile.code.blog/blog"</p><br>
 					<center><p id="smallpara">This webapp was made entirely with HTML5, CSS, and Javascript</p><br>
 						<p id="smallpara">The android app you're using was made with Java</p>
-						</div></div>
-			<br><br><br>
+						</div></div></div>
+			<br>
+					</div>
+			<br><br>
 		<center><p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
 							<!Never Gonna Give You Up>
 	</body>
