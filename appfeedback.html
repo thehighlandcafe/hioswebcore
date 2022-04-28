@@ -5,6 +5,7 @@
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css\style.css" type="text/css">
+		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<title>HiOS | App Feedback</title>
 		<script>
@@ -25,12 +26,16 @@
 	</head><br>
 	<body><center>
 	<br>
+	<div class="translucentBox">
 		<div id="feedbackActive" style="display:block">
 			<button class="navButtonInactive" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
 		<div id="complaintsActive" style="display:none">
 			<button class="navButton" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButtonInactive" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
+	</div>
+	<br>
+	<div class="translucentBox">
 	<div id="appFeedback" style="display:block">
 		<center><h1><u>App Feedback</u></h1><br>
 			<img src="icons/forms.png">
@@ -44,9 +49,10 @@
 		We'd rather you didn't, but if you are being persistant about it, please fill in the form below. :(</p><br>
 		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 		<br></div>
+		<br>
+				<a href="appfeedback.html#"><img src="buttons/scrolltop.bmp" class="roundedImage"></a>
+				</div>
 		<br><br>
-				<a href="appfeedback.html#"><img src="buttons/scrolltop.bmp"></a>
-		<br><br><br><br><br>
 		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
 	</body>
 </html>
