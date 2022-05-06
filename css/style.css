@@ -266,3 +266,85 @@ html {
 	font-size: 10px;
 	color: white;
 }
+
+.showExpiredOffersButton {
+	height:60px;
+    	width:200px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	background-color: red;
+	color: white;
+	border-radius: 16px;
+	border: none;
+}
+	
+.hideExpiredOffersButton {
+	height:60px;
+	width:200px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	background-color: #f46d75;
+	color: grey;
+	border-radius: 16px;
+	border: none;
+}
+
+#usernameBox {
+	border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: black;
+	height: 60px;
+	width: 300px;
+	font-family: 'Outfit', sans-serif;
+	text-align: center;
+	font-size: 15px;
+}
+
+#passwordBox {
+	border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: black;
+	height: 60px;
+	width: 300px;
+	font-family: 'Courier Prime', monospace;
+	text-align: center;
+	font-size: 15px;
+}
+
+.loginText {
+	font-size: 20px;
+	color: black;
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+/*login button*/
+
+#loginButton {
+	/*float: right;*/
+	height:30px;
+	width:100px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 15px;
+	background-color: #0504b7;
+	color: white;
+	border-radius: 16px;
+	border: none;
+	transition: 0.25s;
+}
+
+/*codeBox*/
+
+#codeBox {
+	border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: black;
+	height: 60px;
+	width: 100px;
+	font-family: 'Courier Prime', monospace;
+	text-align: center;
+	font-size: 25px;
+}
