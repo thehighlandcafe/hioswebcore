@@ -1,5 +1,10 @@
-html{
-	font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+
+html {
+	/*background-color: #FCFCFF;*/
+	/*background-color: #081c34;*/
+	/*background-image: url('rickroll.gif');*/
+	font-family: 'Shippori Antique', sans-serif;
 }
 
 body {
@@ -13,7 +18,7 @@ body {
   width: 50%;
   margin: 280px auto; 
   padding: 20px 40px;
-  border-radius: 4px;
+  border-radius: 15px;
   box-sizing: border-box;
   background: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
