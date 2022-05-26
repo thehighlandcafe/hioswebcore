@@ -6,7 +6,7 @@ html {
 	/*background-image: url('rickroll.gif');*/
 	background-color: black;
 	font-family: 'Audiowide', cursive;
-	color: white;
+	color: black;
 }
 
 .navButton {
@@ -73,12 +73,12 @@ html {
 	width: 300px;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   html {
     background-color: black;
     color: #FCFCFF;
   }
-}
+}*/
 
 #infoText {
 	font-family: 'Courier Prime', monospace;
