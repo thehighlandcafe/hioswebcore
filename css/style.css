@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: black;
-	font-family: 'Shippori Antique', sans-serif;
-	color: black;
+	font-family: 'DM Sans', sans-serif;
+	color: white;
 }
 
 .navButton {
 	height:60px;
     	width:200px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 20px;
 	background-color: #26abff;
 	color: white;
@@ -23,7 +23,7 @@ html {
 .navButtonInactive {
 	height:60px;
 	width:200px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 20px;
 	background-color: #bfe6ff;
 	color: grey;
@@ -167,7 +167,7 @@ html {
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -184,7 +184,7 @@ html {
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -204,7 +204,7 @@ html {
 	color: black;
 	height: 30px;
 	width: 100px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
@@ -272,7 +272,7 @@ html {
 .showExpiredOffersButton {
 	height:60px;
     	width:200px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 20px;
 	background-color: red;
 	color: white;
@@ -283,7 +283,7 @@ html {
 .hideExpiredOffersButton {
 	height:60px;
 	width:200px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 20px;
 	background-color: #f46d75;
 	color: grey;
@@ -298,7 +298,7 @@ html {
 	color: black;
 	height: 60px;
 	width: 300px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
@@ -328,7 +328,7 @@ html {
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	font-size: 15px;
 	background-color: #0504b7;
 	color: white;
