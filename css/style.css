@@ -36,6 +36,7 @@ html {
 	background: #006ee6;
 	padding: 10px;
 	width: 300px;
+color: white;
 }
 
 .offerBoxExpired {
@@ -43,6 +44,7 @@ html {
 	background: red;
 	padding: 10px;
 	width: 300px;
+color: white;
 }
 
 .offerHeadings {
