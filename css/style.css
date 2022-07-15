@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: black;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	color: white;
 }
 
 .navButton {
 	height:60px;
     	width:200px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	background-color: #26abff;
 	color: white;
@@ -23,7 +23,7 @@ html {
 .navButtonInactive {
 	height:60px;
 	width:200px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	background-color: #bfe6ff;
 	color: grey;
@@ -169,7 +169,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -186,7 +186,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -206,7 +206,7 @@ color: white;
 	color: black;
 	height: 30px;
 	width: 100px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
@@ -274,7 +274,7 @@ color: white;
 .showExpiredOffersButton {
 	height:60px;
     	width:200px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	background-color: red;
 	color: white;
@@ -285,7 +285,7 @@ color: white;
 .hideExpiredOffersButton {
 	height:60px;
 	width:200px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	background-color: #f46d75;
 	color: grey;
@@ -300,7 +300,7 @@ color: white;
 	color: black;
 	height: 60px;
 	width: 300px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
@@ -330,7 +330,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
 	background-color: #0504b7;
 	color: white;
