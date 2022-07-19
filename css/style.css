@@ -238,7 +238,7 @@ color: white;
 	width: 350px;
 	backdrop-filter: blur(14px);
 	text-align: center;
-	color: black;
+	/*color: black;*/
 }
 
 .translucentInfoBox {
@@ -250,7 +250,7 @@ color: white;
 	width: 300px;
 	backdrop-filter: blur(14px);
 	text-align: center;
-	color: black;
+	/*color: black;/*
 }
 
 .translucentAboutBox {
@@ -262,7 +262,7 @@ color: white;
 	width: 300px;
 	backdrop-filter: blur(14px);
 	text-align: left;
-	color: black;
+	/*color: black;*/
 }
 
 
