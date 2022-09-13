@@ -6,32 +6,41 @@
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<!--link rel="stylesheet" href="css/homebackground.css" type="text/css"-->
-		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<title>HiOS | Welcome</title>
 	</head><br>
 	<body>
 	<center>
 		<!--div class="translucentBox"-->
-			<img src="pics/logo.png" class="roundedImage" width="300"><br>
+
+
+		<!--WAS WORKING ON A PROPER WORKING DARK MODE!!!!!!!!!!!-->
+
+
+
+			<img src="pics/logos/logo_new.png" class="roundedImage" width="350"><br>
 			<p id="homeheading"></p>
 			<p id="homeheadingsmall">Welcome to HiOSMobile!</p><center>
-			<div class="translucentInfoBox">
+			<div class="translucentBox">
 				<h2 class="blue-h2">Your Info</h2>
 					<div class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script>
 				<br>
 				<h3 class="blue-h3">Date</h3>
 				<p id="date" class="para"></p>
 			</div><br>
-			<div id="buttonNotPressed" style="display: block;">
+			<!--div id="buttonNotPressed" style="display: block;">
 				<button class="navButton" onClick="showTutorialDiv()">App Tutorial</button>
-			</div>
+			</!--div>
 			<div id="buttonPressed" style="display: none;">
 				<button class="navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
 			</div>
 			<div id="tutorial" style="display: none;">
 				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
+			</div-->
+			<div class="translucentBox">
+				<h2 class="blue-h2">Visit Our Websites</h2>
+
 			</div>
-						<br><!--div-->
+						<br>
 		<center><p class="whitesmallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p></center><br>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
 	</body>
@@ -57,7 +66,7 @@
 			d = n.getDate();
 			document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 
-			function showTutorialDiv () {
+			/*function showTutorialDiv () {
 				document.getElementById('buttonNotPressed').style.display = "none";  //empty the value
 				document.getElementById('buttonPressed').style.display = "block";
 				document.getElementById('tutorial').style.display = "block";
@@ -67,6 +76,6 @@
 				document.getElementById('buttonNotPressed').style.display = "block";
 				document.getElementById('buttonPressed').style.display = "none";
 				document.getElementById('tutorial').style.display = "none";
-			}
+			}*/
 </script>
 </html>
