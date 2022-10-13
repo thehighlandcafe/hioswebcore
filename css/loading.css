@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
-	font-family: 'Shippori Antique', sans-serif;
+	font-family: 'Outfit', sans-serif;
 }
 
 body {
