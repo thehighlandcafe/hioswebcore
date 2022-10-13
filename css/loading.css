@@ -19,10 +19,11 @@ body {
   width: 50%;
   margin: 280px auto; 
   padding: 20px 40px;
-  border-radius: 15px;
+  border-radius: 25px;
   box-sizing: border-box;
   background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  /*box-shadow: 0 10px 20px rgba(0, 0, 0, .5);*/
+  box-shadow: none;
 }
 
 .Loading {
