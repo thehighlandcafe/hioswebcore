@@ -103,3 +103,7 @@ body {
 	color: #494d5f;
   } /* Black */
 }
+
+.roundedImage {
+	border-radius: 25px;
+}
