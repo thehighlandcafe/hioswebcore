@@ -296,7 +296,7 @@ color: white;
 }
 
 #usernameBox {
-	border-radius: 16px;
+	border-radius: 80px;
 	background-color: white;
 	border: none;
 	color: black;
@@ -308,7 +308,7 @@ color: white;
 }
 
 #passwordBox {
-	border-radius: 16px;
+	border-radius: 80px;
 	background-color: white;
 	border: none;
 	color: black;
@@ -316,7 +316,7 @@ color: white;
 	width: 300px;
 	font-family: 'Courier Prime', monospace;
 	text-align: center;
-	font-size: 15px;
+	font-size: 18px;
 }
 
 .loginText {
@@ -329,11 +329,11 @@ color: white;
 
 #loginButton {
 	/*float: right;*/
-	height:30px;
-	width:100px;
+	height:50px;
+	width:150px;
 	font-family: 'Outfit', sans-serif;
-	font-size: 15px;
-	background-color: #0504b7;
+	font-size: 18px;
+	background-color: #187bcd;
 	color: white;
 	border-radius: 16px;
 	border: none;
@@ -343,7 +343,7 @@ color: white;
 /*codeBox*/
 
 #codeBox {
-	border-radius: 16px;
+	border-radius: 400px;
 	background-color: white;
 	border: none;
 	color: black;
