@@ -10,25 +10,26 @@ html {
 }
 
 .navButton {
-	height:60px;
-    	width:200px;
+	height: 60px;
+	width: 200px;
 	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
-	background-color: #26abff;
+	background-color: #187bdc;
 	color: white;
-	border-radius: 16px;
+	border-radius: 60px;
 	border: none;
 }
-	
+
 .navButtonInactive {
-	height:60px;
-	width:200px;
+	height: 60px;
+	width: 200px;
 	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
-	background-color: #bfe6ff;
+	background-color: #8791a5;
 	color: grey;
-	border-radius: 16px;
+	border-radius: 60px;
 	border: none;
+	color: black;
 }
 
 .offerBox {
@@ -296,7 +297,7 @@ color: white;
 }
 
 #usernameBox {
-	border-radius: 80px;
+	border-radius: 16px;
 	background-color: white;
 	border: none;
 	color: black;
@@ -308,7 +309,7 @@ color: white;
 }
 
 #passwordBox {
-	border-radius: 80px;
+	border-radius: 16px;
 	background-color: white;
 	border: none;
 	color: black;
@@ -316,7 +317,7 @@ color: white;
 	width: 300px;
 	font-family: 'Courier Prime', monospace;
 	text-align: center;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 .loginText {
@@ -329,11 +330,11 @@ color: white;
 
 #loginButton {
 	/*float: right;*/
-	height:50px;
-	width:150px;
+	height:30px;
+	width:100px;
 	font-family: 'Outfit', sans-serif;
-	font-size: 18px;
-	background-color: #187bcd;
+	font-size: 15px;
+	background-color: #0504b7;
 	color: white;
 	border-radius: 16px;
 	border: none;
@@ -343,7 +344,7 @@ color: white;
 /*codeBox*/
 
 #codeBox {
-	border-radius: 400px;
+	border-radius: 16px;
 	background-color: white;
 	border: none;
 	color: black;
