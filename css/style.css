@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
@@ -12,7 +13,7 @@ html {
 .navButton {
 	height: 60px;
 	width: 200px;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-size: 20px;
 	background-color: #187bdc;
 	color: white;
@@ -23,7 +24,7 @@ html {
 .navButtonInactive {
 	height: 60px;
 	width: 200px;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-size: 20px;
 	background-color: #8791a5;
 	color: grey;
@@ -170,7 +171,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -187,7 +188,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -274,28 +275,6 @@ color: white;
 	color: white;
 }
 
-.showExpiredOffersButton {
-	height:60px;
-    	width:200px;
-	font-family: 'Outfit', sans-serif;
-	font-size: 20px;
-	background-color: red;
-	color: white;
-	border-radius: 16px;
-	border: none;
-}
-	
-.hideExpiredOffersButton {
-	height:60px;
-	width:200px;
-	font-family: 'Outfit', sans-serif;
-	font-size: 20px;
-	background-color: #f46d75;
-	color: grey;
-	border-radius: 16px;
-	border: none;
-}
-
 #usernameBox {
 	border-radius: 16px;
 	background-color: white;
@@ -332,7 +311,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-size: 15px;
 	background-color: #0504b7;
 	color: white;
@@ -359,9 +338,30 @@ color: white;
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2 {
-	color: #dde0fe
+	color: #dde0fe;
+	font-family: 'Space Grotesk', sans-serif;
 }
 
 .blue-h3 {
-	color: #dde0fe
+	color: #dde0fe;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+/*NEW HEADINGS FROM DECEMBER 2022*/
+.gradientHeading {
+	background-image: linear-gradient(to right, #512bd4, #d600aa);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 40px;
+}
+
+.gradientHeadingSmall {
+	background-image: linear-gradient(to right, #512bd4, #d600aa);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 30px;
 }
