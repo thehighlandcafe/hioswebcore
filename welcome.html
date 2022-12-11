@@ -18,8 +18,8 @@
 
 
 			<img src="pics/logos/logo_new.png" class="roundedImage" width="350"><br>
-			<p id="homeheading"></p>
-			<p id="homeheadingsmall">Welcome to THCMobile!</p><center>
+			<p class="gradientHeading" id="greetingHome"></p>
+			<p class="gradientHeadingSmall">Welcome to THCMobile!</p><center>
 																  <div class="translucentBox">
 																  	<h2 class="blue-h2">Your Info</h2>
 																  	<!--div class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script-->
@@ -39,7 +39,7 @@
 											  fjs.parentNode.insertBefore(js, fjs);
 										  })(document, 'script', 'tomorrow-sdk');
 																  	</script>
-		
+		<div class="roundedImage">
 																  	<div class="tomorrow"
 										   data-location-id="050236"
 										   data-language="EN"
@@ -56,7 +56,7 @@
 												   width="250"
 												   height="18" />
 																  		</a>
-																  	</div>
+																  	</div></div>
 																  	<br>
 																  	<h3 class="blue-h3">Date</h3>
 																  	<p id="date" class="para"></p>
@@ -91,7 +91,7 @@
 			else if (hrs >= 17 && hrs <= 24)
 				greet = 'Good Evening';
 
-			document.getElementById('homeheading').innerHTML =
+			document.getElementById('greetingHome').innerHTML =
 				'<b>' + greet + '!</b>';
 			
 			n =  new Date();
