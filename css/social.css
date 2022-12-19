@@ -196,3 +196,7 @@
 #contactInfo {
     display: none;
 }
+
+.betaAlert {
+    color: red;
+}
