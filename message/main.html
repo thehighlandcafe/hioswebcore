@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="dark light">
+	<link rel="icon" href="../icons/house.png" type="image/icon type">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/social.css" type="text/css">
+    <script src="../scripts/social.js"></script>
+	<title>HiOS | </title>
+</head>
+<br>
+<body>
+	<br>
+	<center>
+        <div class="translucentBox" id="headerBlock">
+            <h1 class="blue-h2">Social</h1>
+            <div id="showNav" onclick="showNav()"><center>
+                <div class="navContainer">
+                    <div id="sendWrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4989/4989701.png" width="40">&nbsp;<label id="para">Show Navigation</label>
+                    </div>
+                </div>
+            </div>
+            <div id="hideNav" onclick="hideNav()"><center>
+                <div class="navContainer">
+                    <div id="sendWrapper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4989/4989713.png" width="40">&nbsp;<label id="para">Hide Navigation</label>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation">
+                <div id="himessageActive">
+                    <button class="navButtonInactive" onclick="showHimessageDiv()">HiMessage</button><br><br><button class="navButton" onclick="showHicallDiv()">HiCall</button><br><br><button class="navButton" onclick="showHicontactsDiv()">HiContacts</button>
+                </div>
+                <div id="hicallActive">
+                    <button class="navButton" onclick="showHimessageDiv()">HiMessage</button><br><br><button class="navButtonInactive" onclick="showHicallDiv()">HiCall</button><br><br><button class="navButton" onclick="showHicontactsDiv()">HiContacts</button>
+                </div>
+                <div id="hicontactsActive">
+                    <button class="navButton" onclick="showHimessageDiv()">HiMessage</button><br><br><button class="navButton" onclick="showHicallDiv()">HiCall</button><br><br><button class="navButtonInactive" onclick="showHicontactsDiv()">HiContacts</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="himessage">
+            <div class="translucentBox">
+                <h2 class="blue-h2">HiMessage</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" width="100"><br>
+                <div id="mainweb">
+                    <center>
+                    <div class="container">
+                        <img src="avatar2.jpg" alt="Avatar" class="profile">
+                        <p>Hello. How are you today?</p>
+                        <span class="time-right">11:00</span>
+                    </div>
+    
+                    <div class="container darker">
+                      <img src="avatar1.jpg" alt="Avatar" class="right profile">
+                      <p>Hey! I'm fine. Thanks for asking!</p>
+                      <span class="time-left">11:01</span>
+                    </div>
+    
+                    <div class="container">
+                      <img src="avatar1.jpg" alt="Avatar" class="profile">
+                      <p>Sweet! So, what do you wanna do today?</p>
+                      <span class="time-right">11:02</span>
+                    </div>
+    
+                    <div class="container darker">
+                      <img src="avatar2.jpg" alt="Avatar" class="right profile">
+                      <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                      <span class="time-left">11:05</span>
+                    </div>
+                    <div class="container" id="newContainer">
+                      <img src="avatar1.jpg" alt="Avatar" class="profile">
+                      <p id="newText"></p><br>
+                      <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/9195/9195599.png" width="30" class="delete" onclick="deleteMessage()">
+                      </div>
+                    </div>
+                        <div id="sendWrapper">
+                            <br>
+                            <input type="text" id="myText" value="" class="messageBox">&nbsp;
+                            <img src="https://cdn-icons-png.flaticon.com/512/2099/2099122.png" onclick="myFunction()" width="30">
+                        </div>
+                        <br>
+                    </div>
+            </div>
+        </div>
+        <div id="hicall">
+            <div class="translucentBox">
+                <h2 class="blue-h2">HiCall</h2><br>
+                <img src="https://cdn-icons-png.flaticon.com/512/4213/4213179.png" width="100"><br><br>
+                <div id="phoneHome"><center>
+                    <div class="infoDiv">
+                        <h3 class="blue-h2">Quick Shortcuts</h3><center>
+                        <div class="contactBox" onclick="contact1()">
+                            <div id="sendWrapper">
+                                <img src="avatar2.jpg" class="contact"><label class="offerBody" id="name1">Natalie Haber</label>
+                            </div>
+                        </div><br>
+                        <div class="contactBox" onclick="contact2()">
+                            <div id="sendWrapper">
+                                <img src="avatar4.jpg" class="contact"><label class="offerBody" id="name2">Daughter 💕</label>
+                            </div>
+                        </div><br>
+                        <div class="contactBox" onclick="contact3()">
+                            <div id="sendWrapper">
+                                <img src="../pics/logos/thc.png" class="contact"><label class="offerBody thcContact" id="name3">The Highland Cafe™</label>
+                            </div>
+                        </div><br>
+                    </div>
+                    <br>
+                    <div class="infoDiv">
+                        <h3 class="blue-h2">Dialler</h3><center>
+                                <br>
+                                <div id="sendWrapper">
+                                <input type="text" id="diallerText" value="" class="codeBox">&nbsp;
+                                <img src="https://cdn-icons-png.flaticon.com/512/9073/9073336.png" onclick="diallerPhone()" width="30">
+                            </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id="phoning" class="translucentBox">
+            <img id="diallerImage" src="" class="contact"><br>
+            <h1 id="phoneNumber"></h1><br><br><br>
+            <img src="phone.png" width="300" class="roundedImage"><br><br><br>
+            <img src="https://cdn-icons-png.flaticon.com/512/811/811481.png" width="50" onclick="hangUp()">
+        </div>
+        <div id="hicontacts">
+            <div class="translucentBox">
+				<h2 class="blue-h2">HiContacts</h2>
+				<img src="https://cdn-icons-png.flaticon.com/512/3814/3814365.png" width="100"><br><br><center>
+				<div class="infoDiv"><center>
+				<h3 class="blue-h2">All Contacts</h3>
+					<div class="contactBox" onclick="contactInfo1()">
+						<div id="sendWrapper">
+							<img src="avatar1.jpg" class="contact"><label class="offerBody" id="me">Me</label>
+						</div>
+					</div>
+					<br>
+					<div class="contactBox" onclick="contactInfo2()">
+						<div id="sendWrapper">
+							<img src="avatar2.jpg" class="contact"><label class="offerBody">Natalie Haber</label>
+						</div>
+					</div>
+					<br>
+					<div class="contactBox" onclick="contactInfo3()">
+						<div id="sendWrapper">
+							<img src="avatar4.jpg" class="contact"><label class="offerBody">Daughter 💕</label>
+						</div>
+					</div>
+					<br>
+					<div class="contactBox" onclick="contactInfo4()">
+						<div id="sendWrapper">
+							<img src="avatar3.jpg" class="contact"><label class="offerBody">Bro</label>
+						</div>
+					</div>
+					<br>
+                    <div class="contactBox" onclick="contactInfo5()">
+						<div id="sendWrapper">
+							<img src="avatar5.jpg" class="contact"><label class="offerBody">Boss</label>
+						</div>
+					</div>
+					<br>
+                    <div class="contactBox" onclick="contactInfo6()">
+						<div id="sendWrapper">
+							<img src="../pics/logos/thc.png" class="contact"><label class="offerBody thcContact">The Highland Cafe</label>
+						</div>
+					</div>
+					<br>
+            </div><br>
+        </div></div>
+        <div id="contactInfo" class="translucentBox">
+            <h1 id="contactName"></h1>
+            <img src="" class="roundedImage" width="300" id="contactImage"><br><br><br>
+            <label class="contactLabel">Phone Number:</label>&nbsp;<label class="contactData" id="phoneField"></label><br><br>
+            <img src="https://cdn-icons-png.flaticon.com/512/3272/3272680.png" width="50" onclick="backToContacts()">
+        </div>
+		<br><br>
+		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p>
+	</center>
+</body>
+</html>
