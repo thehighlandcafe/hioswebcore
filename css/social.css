@@ -1,0 +1,198 @@
+#himessage {
+    display: block;
+}
+
+#hicall {
+    display: none;
+}
+
+#hicontacts {
+    display: none;
+}
+
+#newContainer {
+    display: none;
+}
+
+/* Chat containers */
+.container {
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
+  color: black;
+  text-align: left;
+}
+
+/* nav container */
+.navContainer {
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+  color: black;
+  text-align: left;
+}
+
+/* Darker chat container */
+.darker {
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.profile {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  clip-path: circle();
+}
+
+/* Style the right image */
+.profile.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.messageBox {
+	border-radius: 16px;
+	background-color: white;
+	border: 20px;
+	color: black;
+	height: 30px;
+	width: 280px;
+	font-family: 'Outfit', sans-serif;
+	text-align: center;
+	font-size: 15px;
+}
+
+#sendWrapper img {
+    vertical-align: middle;
+}
+
+.delete {
+    text-align: left;
+    width: 30px;
+}
+
+#himessageActive {
+    display: block;
+}
+
+#hicallActive {
+    display: none;
+}
+
+#hicontactsActive {
+    display: none;
+}
+
+#showNav {
+    display: block;
+    user-select: none;
+}
+
+#hideNav {
+    display: none;
+    user-select: none;
+}
+
+#navigation {
+    display: none;
+}
+
+#phoning {
+    display: none;
+    text-align: center;
+}
+
+.infoDiv {
+    border-radius: 25px;
+	/*background: #006ee6;*/
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
+	padding: 10px;
+	width: 300px;
+	/*backdrop-filter: blur(14px);*/
+	text-align: center;
+	/*color: black;*/
+	background-color: #5E5E62;
+}
+
+.contactBox {
+    border-radius: 25px;
+	/*background: #006ee6;*/
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
+	padding: 10px;
+	width: 260px;
+	/*backdrop-filter: blur(14px);*/
+	text-align: left;
+	/*color: black;*/
+	background-color: #AAAABC;
+    color: black;
+}
+
+.contact {
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    clip-path: circle();
+}
+
+.codeBox {
+	border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: black;
+	height: 30px;
+	width: 240px;
+	font-family: 'Courier Prime', monospace;
+	text-align: center;
+	font-size: 25px;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.thcContact {
+    font-size: 15px;
+}
+
+.contactLabel {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contactData {
+    font-size: 20px;
+}
+
+#contactInfo {
+    display: none;
+}
