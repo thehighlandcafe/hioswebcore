@@ -350,7 +350,7 @@ color: white;
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading {
-	background-image: linear-gradient(to right, #512bd4, #d600aa);
+	background-image: linear-gradient(to right, #1891ac, #1d3e79);
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -359,7 +359,7 @@ color: white;
 }
 
 .gradientHeadingSmall {
-	background-image: linear-gradient(to right, #512bd4, #d600aa);
+	background-image: linear-gradient(to right, #1891ac, #1d3e79);
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
