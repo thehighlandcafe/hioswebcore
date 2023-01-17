@@ -26,6 +26,7 @@
 				document.getElementById('appinfoActive').style.display = "block";
 				}
 		</script>
+		<script src="scripts/links.js"></script>
 	</head><br>
 	<body>
 	<br><center>
@@ -42,24 +43,27 @@
 		<center><h1 class="blue-h2">Help Center</h1><br>
 			<img src="https://cdn-icons-png.flaticon.com/512/1660/1660216.png" width="100">
 		<p id="para">Do you need help with anything in this app? Please click on what you need help with down below.</p><br>
-			<a href="checkinHELP.html"><img src="buttons/help/checkin.png" class="roundedImage" width="350"></a><a href="keyHELP.html"><img src="buttons/help/key.png" class="roundedImage" width="350"></a><a href="locationHELP.html"><img src="buttons/help/location.png" class="roundedImage" width="350"></a><br>
-			<a href="breakfastHELP.html"><img src="buttons/help/breakfast.png" class="roundedImage" width="350"></a><a href="rmserviceHELP.html"><img src="buttons/help/roomservice.png" class="roundedImage" width="350"></a><a href="formsHELP.html"><img src="buttons/help/forms.png" class="roundedImage" width="350"></a><br>
+			<img src="buttons/help/checkin.png" class="roundedImage" width="350" onclick="help_checkin()">
+			<img src="buttons/help/key.png" class="roundedImage" width="350" onclick="help_key()">
+			<img src="buttons/help/location.png" class="roundedImage" width="350" onclick="help_location()">
+			<img src="buttons/help/breakfast.png" class="roundedImage" width="350" onclick="help_breakfast()">
+			<img src="buttons/help/roomservice.png" class="roundedImage" width="350" onclick="help_rmservice()">
+			<img src="buttons/help/forms.png" class="roundedImage" width="350" onclick="help_forms()">
 			</div>
 		<div id="appInfo" style="display:none">
 				<h1 class="blue-h2">About App</h1><br>
 				<img src="pics/logos/logo_new.png" width="320" class="roundedImage"><br><br><center><div class="translucentAboutBox">
-				<div id="infoText" style="display:none"><p><strong><u><i>App Name:</strong></u></i>&nbsp; THCMobile by The Higland Cafe(tm)</p>
+				<div id="infoText" style="display:none"><p><strong><u><i>App Name:</strong></u></i>&nbsp; HiOSMobile by The Higland Cafe(tm)</p>
 				<p><strong><u><i>HiOSWebServices version:</strong></u></i>&nbsp; 8.8-mobile</p>
 				<p><strong><u><i>Latest app version:</strong></u></i>&nbsp; 1.4</p>
 <br>
 					<center><p id="smallpara">This webapp was made entirely with HTML5, CSS, and Javascript</p><br>
 						<p id="smallpara">The android app you're using was made with Java</p>
 						</div></div></div>
-			<br>
 					</div>
 					<br>
 					<div class="translucentBox">
-						<a href="help-more.html"><img src="icons/previous.png" width="100"></a>
+						<img src="icons/previous.png" width="100" onclick="helpmore_back()">
 						<p>Back</p>
 					</div>
 					<br>
