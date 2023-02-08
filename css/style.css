@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: #f3f0f3;
-	font-family: 'Manrope', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	color: #e8e7ec;
 }
 
@@ -209,7 +208,7 @@ color: white;
 	color: black;
 	height: 30px;
 	width: 100px;
-	font-family: 'Manrope', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
@@ -283,7 +282,7 @@ color: white;
 	color: black;
 	height: 60px;
 	width: 300px;
-	font-family: 'Manrope', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
