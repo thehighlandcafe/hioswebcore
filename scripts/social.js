@@ -1,3 +1,5 @@
+//function for texting people
+
 function myFunction() {
     var x = document.getElementById("myText").value;
     document.getElementById("newText").innerHTML = x;
