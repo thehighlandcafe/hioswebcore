@@ -1,7 +1,8 @@
 function myFunction() {
-  var x = document.getElementById("myText").value;
-  document.getElementById("newText").innerHTML = x;
-  document.getElementById('newContainer').style.display = "block";
+    var x = document.getElementById("myText").value;
+    document.getElementById("newText").innerHTML = x;
+    document.getElementById('newContainer').style.display = "block";
+    document.getElementById('myText').value = "";
 }
 
 /*function displayNewContainer() {
