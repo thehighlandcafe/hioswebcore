@@ -10,6 +10,21 @@ html {
 	color: #e8e7ec;
 }
 
+body {
+	animation: body 1s ease 200ms backwards;
+}
+
+@keyframes body {
+	from {
+	 opacity: 0;
+	 transform: translateY(-100px);
+	}
+	to {
+	 opacity: 1;
+	 transform: translate(0px);
+	}
+   }
+
 .navButton {
 	height: 60px;
 	width: 200px;
