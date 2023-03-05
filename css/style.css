@@ -286,9 +286,9 @@ color: white;
 }
 
 #usernameBox {
-	border-radius: 16px;
+	border-radius: 600px;
 	background-color: white;
-	border: none;
+	border: 0.5px solid #303034;
 	color: black;
 	height: 60px;
 	width: 300px;
@@ -298,9 +298,9 @@ color: white;
 }
 
 #passwordBox {
-	border-radius: 16px;
+	border-radius: 600px;
 	background-color: white;
-	border: none;
+	border: 0.5px solid #303034;
 	color: black;
 	height: 60px;
 	width: 300px;
@@ -311,8 +311,7 @@ color: white;
 
 .loginText {
 	font-size: 20px;
-	text-decoration: underline;
-	font-weight: 900;
+	font-weight: bolder;
 	font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -324,7 +323,7 @@ color: white;
 	width:100px;
 	font-family: 'Space Grotesk', sans-serif;
 	font-size: 15px;
-	background-color: #0504b7;
+	background-color: #006ee6;
 	color: white;
 	border-radius: 16px;
 	border: none;
@@ -334,9 +333,9 @@ color: white;
 /*codeBox*/
 
 #codeBox {
-	border-radius: 16px;
+	border-radius: 600px;
 	background-color: white;
-	border: none;
+	border: 0.5px solid #303034;
 	color: black;
 	height: 60px;
 	width: 100px;

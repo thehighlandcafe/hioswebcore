@@ -138,7 +138,7 @@
 	/*backdrop-filter: blur(14px);*/
 	text-align: center;
 	/*color: black;*/
-	background-color: #5E5E62;
+	background-color: #CAC8D1;
 }
 
 .contactBox {
@@ -199,4 +199,10 @@
 
 .betaAlert {
     color: red;
+}
+
+@media(prefers-color-scheme:dark) {
+    .infoDiv {
+        background-color: #CAC8D1
+    }
 }
