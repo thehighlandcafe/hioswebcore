@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
 	</head><br>
 	<body><center>
 	<br>
-	<div class="translucentBox">
+	<div class="translucentBox joinTop">
 		<div id="feedbackActive" style="display:block">
 			<br><button class="navButtonInactive" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
@@ -34,29 +34,32 @@
 			<br><button class="navButton" onClick="showFeedbackDiv()">Send Feedback</button><br><br><button class="navButtonInactive" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
 	</div>
-	<br>
-	<div class="translucentBox">
 	<div id="appFeedback" style="display:block">
+		<div class="translucentBox joinMiddle">
 		<center><h1 class="blue-h2">App Feedback</h1><br>
 			<img src="https://cdn-icons-png.flaticon.com/512/2546/2546749.png" width="100">
 		<p id="para">Have any feedback on the new HiOS mobile app that you would like to share with us? Please fill in the form below :)</p><br>
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdt40E-D8WHqnvFp8B5AFTk2yK7xCEFrunE6lDbuEvYoTrMQQ/viewform?embedded=true" width="360" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-		<br><br>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdt40E-D8WHqnvFp8B5AFTk2yK7xCEFrunE6lDbuEvYoTrMQQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+		</div>
+		<div class="translucentBox joinBottom">
 			<h1 class="blue-h2">Bug Report</h1>
 		<img src="https://cdn-icons-png.flaticon.com/512/3067/3067396.png" width="100" />
 			<p id="para">Have you noticed a bug in THCMobile? Then please fill in the form below and we'll see to it ASAP!</p>
-				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeP5vjhqfapr854dS6N_sltLmeSXECDjbOz3VO0r5-_GieDhA/viewform?embedded=true" width="360" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-			<br></div>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeP5vjhqfapr854dS6N_sltLmeSXECDjbOz3VO0r5-_GieDhA/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+		</div>
+	</div>
 	<div id="complaints" style="display:none">
+		<div class="translucentBox joinBottom"
 				<center><h1 class="blue-h2">Complaints</h1><br>
 			<img src="https://cdn-icons-png.flaticon.com/512/1027/1027619.png" width="100">
 		<p id="para">Wanting to complain for something unsatisfactory you experienced from The Highland Cafe(tm)? <br>
 		We'd rather you didn't, but if you are being persistant about it, please fill in the form below. :(</p><br>
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-		<br></div>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+		<br>
 		<br>
 				<a href="appfeedback.html#"><img src="buttons/scrolltop.bmp" class="roundedImage"></a>
-				</div>
+		</div>
+	</div>
 		<br><br>
 		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2021. All Rights Reserved.</p></center>
 	</body>

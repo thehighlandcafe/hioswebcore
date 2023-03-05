@@ -242,7 +242,6 @@ color: white;
 /*NEWEST ADDED CSS*/
 
 .translucentBox {
-	border-radius: 25px;
 	/*background: #006ee6;*/
 	/*background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
@@ -277,6 +276,26 @@ color: white;
 	backdrop-filter: blur(14px);
 	text-align: left;
 	/*color: black;*/
+}
+
+/*The radius' of the new joins*/
+
+.joinTop {
+	border-radius: 25px 25px 6px 6px;
+	margin-bottom: 5px;
+}
+
+.joinMiddle {
+	border-radius: 6px;
+	margin-bottom: 5px;
+}
+
+.joinBottom {
+	border-radius: 6px 6px 25px 25px;
+}
+
+.full {
+	border-radius: 25px;
 }
 
 
@@ -395,7 +414,6 @@ color: white;
 	}
 
 	.translucentBox {
-		border-radius: 25px;
 		/*background: #006ee6;*/
 		/*background-color: rgba(255, 255, 255, 0.2);
 		box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
