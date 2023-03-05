@@ -7,7 +7,7 @@ html {
 	/*background-image: url('rickroll.gif');*/
 	background-color: #f3f0f3;
 	font-family: 'Outfit', sans-serif;
-	color: #e8e7ec;
+	color: #1b1b1b;
 }
 
 body {
@@ -90,13 +90,7 @@ color: white;
 	font-family: 'Courier Prime', monospace;
 	border-radius: 35px;
 	width: 300px;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #1b1b1b;
-    color: #FCFCFF;
-  }
+	border: 0.5px solid #303034;
 }
 
 #infoText {
@@ -238,6 +232,7 @@ color: white;
 
 .roundedImage {
 	border-radius: 25px;
+	border: 0.5px solid #303034;
 }
 
 #exitButton {
@@ -256,7 +251,7 @@ color: white;
 	/*backdrop-filter: blur(14px);*/
 	text-align: center;
 	/*color: black;*/
-	background-color: #303034;
+	background-color: #E8E5E8;
 }
 
 .translucentInfoBox {
@@ -287,7 +282,7 @@ color: white;
 
 .whitesmallpara {
 	font-size: 10px;
-	color: white;
+	color: #1b1b1b;
 }
 
 #usernameBox {
@@ -353,13 +348,8 @@ color: white;
 
 /*NEW HEADINGS FROM JULY 2022*/
 
-.blue-h2 {
-	color: #dde0fe;
-	font-family: 'Space Grotesk', sans-serif;
-}
-
-.blue-h3 {
-	color: #dde0fe;
+.blue-h2, .blue-h3 {
+	color: #187bdc;
 	font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -380,4 +370,56 @@ color: white;
 	background-clip: text;
 	font-family: 'Space Grotesk', sans-serif;
 	font-size: 30px;
+}
+
+/*!!!---DARK MODE THEMING---!!!*/
+
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #1b1b1b;
+    	color: #FCFCFF;
+	}
+
+  	#smallpara {
+		font-size: 10px;
+		color: #FCFCFF;
+	}
+
+	.whitesmallpara {
+		font-size: 10px;
+		color: #fcfcff;
+	}
+
+	.blue-h2, .blue-h3 {
+		font-family: 'Space Grotesk', sans-serif;
+		color: #dde0fe;
+	}
+
+	.translucentBox {
+		border-radius: 25px;
+		/*background: #006ee6;*/
+		/*background-color: rgba(255, 255, 255, 0.2);
+		box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
+		padding: 10px;
+		width: 350px;
+		/*backdrop-filter: blur(14px);*/
+		text-align: center;
+		/*color: black;*/
+		background-color: #303034;
+	}
+
+	.translucentInfoBox {
+		border-radius: 25px;
+		/*background: #006ee6;*/
+		/*background-color: rgba(255, 255, 255, 0.2);*/
+		/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
+		padding: 10px;
+		width: 300px;
+		/*backdrop-filter: blur(14px);*/
+		text-align: center;
+		/*color: black;*/
+		background-color: #303034;
+	}
+
+
 }
