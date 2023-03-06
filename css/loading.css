@@ -16,8 +16,8 @@ body {
 
 .container {
   position: relative;
-  width: 50%;
-  margin: 280px auto; 
+  width: 350px;
+  margin: 0px auto; 
   padding: 20px 40px;
   border-radius: 25px;
   box-sizing: border-box;
@@ -32,7 +32,6 @@ body {
   width: 100%;
   height: 10px;
   background: #f1f1f1;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
   border-radius: 4px;
   overflow: hidden;
 }
