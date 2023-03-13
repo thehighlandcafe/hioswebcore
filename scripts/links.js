@@ -13,6 +13,10 @@ function restaurant_menudownload() {
 	window.open('https://drive.google.com/uc?export=download&id=1Iwnhx3FnYckaj07sDKBWGliXZRhA5HxU', '_blank');
 }
 
+function restaurant_menu_gastrodownload() {
+	window.open('https://drive.google.com/uc?export=download&id=1iHoe-pBMn0niY9R2IoZgYmhgXLaz7Mrz')
+}
+
 			//---buttons on main page---
 function restaurant_breakfast() {
 	window.location.href = "breakfast.html";
