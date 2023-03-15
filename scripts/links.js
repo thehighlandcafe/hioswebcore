@@ -106,11 +106,11 @@ function ha_hc() {
 //SETTINGS LINKS
 
 function settings_updates() {
-	window.open('https://sites.google.com/view/thcmobile-by-thc/download', '_blank');
+	window.open('https://sites.google.com/view/hiosmobile-by-thc/download', '_blank');
 }
 
 function settings_changelog() {
-	window.open('https://sites.google.com/view/thcmobile-by-thc/download#h.evwm3pfxwkdn', '_blank');
+	window.open('https://sites.google.com/view/hiosmobile-by-thc/download#h.evwm3pfxwkdn', '_blank');
 }
 
 function settings_website() {
