@@ -12,6 +12,9 @@ html {
 
 body {
 	animation: body 1s ease 200ms backwards;
+ user-select: none;
+ -webkit-user-select: none; /*Safari*/
+ -moz-user-select: none; /*Firefox*/
 }
 
 @keyframes body {
