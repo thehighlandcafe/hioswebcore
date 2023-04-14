@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
@@ -31,7 +31,7 @@ body {
 .navButton {
 	height: 60px;
 	width: 200px;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
 	background-color: #187bdc;
 	color: white;
@@ -42,7 +42,7 @@ body {
 .navButtonInactive {
 	height: 60px;
 	width: 200px;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
 	background-color: #8791a5;
 	color: grey;
@@ -183,7 +183,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -200,7 +200,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
 	background-color: #26abff;
 	color: white;
@@ -334,7 +334,7 @@ color: white;
 .loginText {
 	font-size: 20px;
 	font-weight: bolder;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 }
 
 /*login button*/
@@ -343,7 +343,7 @@ color: white;
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
 	background-color: #006ee6;
 	color: white;
@@ -371,7 +371,7 @@ color: white;
 
 .blue-h2, .blue-h3 {
 	color: #187bdc;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 }
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
@@ -380,7 +380,7 @@ color: white;
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 40px;
 }
 
@@ -389,7 +389,7 @@ color: white;
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Cantarell', sans-serif;
 	font-size: 30px;
 }
 
@@ -412,7 +412,7 @@ color: white;
 	}
 
 	.blue-h2, .blue-h3 {
-		font-family: 'DM Sans', sans-serif;
+		font-family: 'Cantarell', sans-serif;
 		color: #dde0fe;
 	}
 
