@@ -134,3 +134,13 @@ function journey_taxi() {
 function journey_back() {
 	window.location.href = "journey.html";
 }
+
+//CUSTOMER SUPPORT LINKS
+
+function installSkype() {
+	window.open('market://details?id=com.skype.raider', '_blank');
+}
+
+function contactUs() {
+	window.open('https://join.skype.com/invite/AvyA1vfqo77T', '_blank');
+}
