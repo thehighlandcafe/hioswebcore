@@ -18,16 +18,20 @@ function restaurant_menu_gastrodownload() {
 }
 
 			//---buttons on main page---
-function restaurant_breakfast() {
-	window.location.href = "breakfast.html";
+function restaurant_booktable() {
+	window.location.href = "book-table.html";
+}
+
+function restaurant_menus() {
+	window.location.href = "menus.html";
 }
 
 function restaurant_foodordering() {
 	window.location.href = "foodordering.html";
 }
 
-function restaurant_menus() {
-	window.location.href = "menus.html";
+function restaurant_breakfast() {
+	window.location.href = "breakfast.html";
 }
 
 function restaurant_locations() {
