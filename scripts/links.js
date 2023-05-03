@@ -69,6 +69,10 @@ function help_rmservice() {
 	window.location.href = "rmserviceHELP.html";
 }
 
+function help_internet() {
+	window.location.href = "internetHELP.html";
+}
+
 function help_forms() {
 	window.location.href = "formsHELP.html";
 }
