@@ -33,7 +33,7 @@ body {
 	width: 200px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
-	background-color: #187bdc;
+	background-color: #1891ac;
 	color: white;
 	border-radius: 60px;
 	border: none;
@@ -44,7 +44,7 @@ body {
 	width: 200px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
-	background-color: #8791a5;
+	background-color: #96AFB8;
 	color: grey;
 	border-radius: 60px;
 	border: none;
@@ -185,14 +185,14 @@ color: white;
 	width:100px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
-	background-color: #26abff;
+	background-color: #1891ac;
 	color: white;
 	border-radius: 16px;
 	border: none;
 }
 
 #nextButtonRoomkey:hover {
-	background-color: #68c6ff; /* lightblue */
+	background-color: #05B5BD; /* lightblue */
 	color: white;
 }
 
@@ -202,14 +202,14 @@ color: white;
 	width:100px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
-	background-color: #26abff;
+	background-color: #1891ac;
 	color: white;
 	border-radius: 16px;
 	border: none;
 }
 
 #nextButtonRoomkey2:hover {
-	background-color: #68c6ff; /* lightblue */
+	background-color: #05B5BD; /* lightblue */
 	color: white;
 }
 
@@ -345,7 +345,7 @@ color: white;
 	width:100px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
-	background-color: #006ee6;
+	background-color: #1891AC;
 	color: white;
 	border-radius: 16px;
 	border: none;
@@ -370,7 +370,7 @@ color: white;
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2, .blue-h3 {
-	color: #187bdc;
+	color: #1891ac;
 	font-family: 'Cantarell', sans-serif;
 }
 
@@ -413,7 +413,7 @@ color: white;
 
 	.blue-h2, .blue-h3 {
 		font-family: 'Cantarell', sans-serif;
-		color: #dde0fe;
+		color: #EAFDFF;
 	}
 
 	.translucentBox {
