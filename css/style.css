@@ -393,6 +393,10 @@ color: white;
 	font-size: 30px;
 }
 
+.brand {
+	width: 300px;
+}
+
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {

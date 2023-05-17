@@ -152,3 +152,41 @@ function installSkype() {
 function contactUs() {
 	window.open('https://join.skype.com/invite/AvyA1vfqo77T', '_blank');
 }
+
+//BRANDS LINKS
+
+function brand_thc() {
+	window.open('https://sites.google.com/view/thcrestaurants', '_blank');
+}
+
+function brand_mf() {
+	window.open('https://sites.google.com/view/meganfoods', '_blank');
+}
+
+function brand_sn() {
+	window.open('https://sites.google.com/view/sleepynightz', '_blank');
+}
+
+function brand_we() {
+	window.open('https://sites.google.com/view/worsteastern', '_blank');
+}
+
+function brand_hios() {
+	window.open('https://hiosbythc.home.blog/', '_blank');
+}
+
+function brand_hiosmobile() {
+	window.open('https://sites.google.com/view/hiosmobile-by-thc', '_blank');
+}
+
+function brand_nugget() {
+	window.open('https://sites.google.com/view/nuggetos', '_blank');
+}
+
+function brand_ht() {
+	window.open('https://sites.google.com/view/hitech-by-thehighlandcafe/', '_blank');
+}
+
+function brand_thp() {
+	window.open('https://sites.google.com/view/thehighlandparty', '_blank');
+}
