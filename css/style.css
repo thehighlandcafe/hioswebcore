@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: #f3f0f3;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Cantarell', sans-serif;
+	font-weight: 400;
 	color: #1b1b1b;
 }
 
@@ -372,6 +373,7 @@ color: white;
 .blue-h2, .blue-h3 {
 	color: #1891ac;
 	font-family: 'Cantarell', sans-serif;
+	font-weight: 700;
 }
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
@@ -382,6 +384,7 @@ color: white;
 	background-clip: text;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 40px;
+	font-weight: 700;
 }
 
 .gradientHeadingSmall {
@@ -391,6 +394,7 @@ color: white;
 	background-clip: text;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 30px;
+	font-weight: 400;
 }
 
 .brand {
@@ -418,6 +422,7 @@ color: white;
 	.blue-h2, .blue-h3 {
 		font-family: 'Cantarell', sans-serif;
 		color: #EAFDFF;
+		font-weight: 700;
 	}
 
 	.translucentBox {
