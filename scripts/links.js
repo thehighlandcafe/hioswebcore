@@ -42,6 +42,10 @@ function restaurant_offers() {
 	window.location.href = "offers.html";
 }
 
+function restaurant_moreInfo() {
+	window.location.href = "restaurant-moreinfo.html";
+}
+
 //HELP LINKS
 
 function help_back() {
