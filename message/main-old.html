@@ -7,13 +7,14 @@
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/social.css" type="text/css">
     <script src="../scripts/social.js"></script>
+    <script src="../scripts/links.js"></script>
 	<title>HiOS | </title>
 </head>
 <br>
 <body>
 	<br>
 	<center>
-	<h2 class="betaAlert">Still in beta, so more coming soon!</h2>
+	<h2 class="betaAlert">Experimental Feature</h2>
         <div class="translucentBox joinTop" id="headerBlock">
             <h1 class="blue-h2">Social</h1>
             <div id="showNav" onclick="showNav()"><center>
@@ -44,9 +45,9 @@
         </div>
         <!--HiMessage Container-->
         <div id="himessage">
-            <div class="translucentBox joinBottom">
+            <div class="translucentBox joinMiddle">
                 <h2 class="blue-h2">HiMessage</h2>
-                <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" width="100"><br>
+                <img src="https://cdn-icons-png.flaticon.com/512/2190/2190552.png" width="100"><br>
                 <div id="mainweb">
                     <center>
                     <div class="container">
@@ -89,9 +90,9 @@
             </div>
         </div>
         <div id="hicall">
-            <div class="translucentBox joinBottom">
+            <div class="translucentBox joinMiddle">
                 <h2 class="blue-h2">HiCall</h2><br>
-                <img src="https://cdn-icons-png.flaticon.com/512/4213/4213179.png" width="100"><br><br>
+                <img src="https://cdn-icons-png.flaticon.com/512/1538/1538493.png" width="100"><br><br>
                 <div id="phoneHome"><center>
                     <div class="infoDiv">
                         <h3 class="blue-h2">Quick Shortcuts</h3><center>
@@ -123,7 +124,6 @@
                     <br>
                 </div>
             </div>
-            <br>
         </div>
         <div id="phoning" class="translucentBox full">
             <img id="diallerImage" src="" class="contact"><br>
@@ -132,9 +132,9 @@
             <img src="https://cdn-icons-png.flaticon.com/512/811/811481.png" width="50" onclick="hangUp()">
         </div>
         <div id="hicontacts">
-            <div class="translucentBox joinBottom">
+            <div class="translucentBox joinMiddle">
 				<h2 class="blue-h2">HiContacts</h2>
-				<img src="https://cdn-icons-png.flaticon.com/512/3814/3814365.png" width="100"><br><br><center>
+				<img src="https://cdn-icons-png.flaticon.com/512/2449/2449714.png" width="100"><br><br><center>
 				<div class="infoDiv"><center>
 				<h3 class="blue-h2">All Contacts</h3>
 					<div class="contactBox" onclick="contactInfo1()">
@@ -180,6 +180,10 @@
             <img src="" class="roundedImage" width="300" id="contactImage"><br><br><br>
             <label class="contactLabel">Phone Number:</label>&nbsp;<label class="contactData" id="phoneField"></label><br><br>
             <img src="https://cdn-icons-png.flaticon.com/512/3272/3272680.png" width="50" onclick="backToContacts()">
+        </div>
+        <div id="footerBlock" class="translucentBox joinBottom">
+            <img src="../icons/previous.png" width="100" onclick="extras_social_back()">
+            <p>Back</p>
         </div>
 		<br><br>
 		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p>

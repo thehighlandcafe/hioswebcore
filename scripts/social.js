@@ -79,6 +79,7 @@ function diallerPhone() {
     document.getElementById("phoning").style.display = "block";
     document.getElementById("hicall").style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
+    document.getElementById("footerBlock").style.display = "none";
 
     var phone = document.getElementById("diallerText").value;
     document.getElementById("phoneNumber").innerHTML = phone;
@@ -89,6 +90,7 @@ function contact1() {
     document.getElementById("phoning").style.display = "block";
     document.getElementById("hicall").style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
+    document.getElementById("footerBlock").style.display = "none";
 
     var phone = document.getElementById("name1").innerHTML;
     document.getElementById("phoneNumber").innerHTML = phone;
@@ -99,6 +101,7 @@ function contact2() {
     document.getElementById("phoning").style.display = "block";
     document.getElementById("hicall").style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
+    document.getElementById("footerBlock").style.display = "none";
 
     var phone = document.getElementById("name2").innerHTML;
     document.getElementById("phoneNumber").innerHTML = phone;
@@ -109,6 +112,7 @@ function contact3() {
     document.getElementById("phoning").style.display = "block";
     document.getElementById("hicall").style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
+    document.getElementById("footerBlock").style.display = "none";
 
     var phone = document.getElementById("name3").innerHTML;
     document.getElementById("phoneNumber").innerHTML = phone;
@@ -125,6 +129,7 @@ function hangUp() {
     document.getElementById("phoning").style.display = "none";
     document.getElementById("hicall").style.display = "block";
     document.getElementById("headerBlock").style.display = "block";
+    document.getElementById("footerBlock").style.display = "block";
 
     document.getElementById("diallerText").value = "";
     phone = "";
@@ -138,6 +143,7 @@ function contactInfo1() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -152,6 +158,7 @@ function contactInfo2() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -166,6 +173,7 @@ function contactInfo3() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -180,6 +188,7 @@ function contactInfo4() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -194,6 +203,7 @@ function contactInfo5() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -208,6 +218,7 @@ function contactInfo6() {
     document.getElementById('hicontacts').style.display = "none";
     document.getElementById("headerBlock").style.display = "none";
     document.getElementById("contactInfo").style.display = "block";
+    document.getElementById("footerBlock").style.display = "none";
 
     //filling the empty text fields
 
@@ -224,6 +235,7 @@ function backToContacts() {
     document.getElementById('hicontacts').style.display = "block";
     document.getElementById("headerBlock").style.display = "block";
     document.getElementById("contactInfo").style.display = "none";
+    document.getElementById("footerBlock").style.display = "block";
 
     //emptying the values
 

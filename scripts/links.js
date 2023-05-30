@@ -194,3 +194,15 @@ function brand_ht() {
 function brand_thp() {
 	window.open('https://sites.google.com/view/thehighlandparty', '_blank');
 }
+
+//EXTRAS LINKS
+
+function extras_social_back() {
+	window.location.href = "../extras/main.html";
+}
+
+			//---buttons on main page---
+
+function extras_social() {
+	window.location.href = "../message/main-old.html";
+}
