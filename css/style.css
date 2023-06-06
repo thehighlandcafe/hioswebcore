@@ -5,7 +5,7 @@ html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
-	background-color: #f3f0f3;
+	background-color: #f1fbfd;
 	font-family: 'Cantarell', sans-serif;
 	font-weight: 400;
 	color: #1b1b1b;
@@ -254,7 +254,7 @@ color: white;
 	/*backdrop-filter: blur(14px);*/
 	text-align: center;
 	/*color: black;*/
-	background-color: #E8E5E8;
+	background-color: #d3e5ef;
 }
 
 .translucentInfoBox {
@@ -267,7 +267,7 @@ color: white;
 	/*backdrop-filter: blur(14px);*/
 	text-align: center;
 	/*color: black;*/
-	background-color: #303034;
+	background-color: #d3e5ef;
 }
 
 .translucentAboutBox {
@@ -405,7 +405,7 @@ color: white;
 
 @media (prefers-color-scheme: dark) {
 	html {
-		background-color: #1b1b1b;
+		background-color: #212829;
     	color: #FCFCFF;
 	}
 
@@ -434,7 +434,7 @@ color: white;
 		/*backdrop-filter: blur(14px);*/
 		text-align: center;
 		/*color: black;*/
-		background-color: #303034;
+		background-color: #293840;
 	}
 
 	.translucentInfoBox {
