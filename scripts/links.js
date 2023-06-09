@@ -129,6 +129,10 @@ function settings_website() {
 	window.open('https://sites.google.com/view/thehighlandcafe', '_blank');
 }
 
+function settings_support() {
+	window.open('https://sites.google.com/view/thehighlandcafe/customer-support', '_blank');
+}
+
 //JOURNEY LINKS
 
 function journey_flights() {
@@ -205,4 +209,30 @@ function extras_social_back() {
 
 function extras_social() {
 	window.location.href = "../message/main-old.html";
+}
+
+//HIOSMOBILE2 MORE LINKS
+function more_back() {
+	window.location.href = "more.html";
+}
+
+function more_prevfolder_back() {
+	window.location.href = "../more.html";
+}
+
+			//---buttons on main page---
+function more_securelogin() {
+	window.location.href = "hiosunified/hiosunified.html";
+}
+
+function more_experiments() {
+	window.location.href = "extras/main.html";
+}
+
+function more_help() {
+	window.location.href = "help-more.html";
+}
+
+function more_feedback() {
+	window.location.href = "appfeedback.html";
 }
