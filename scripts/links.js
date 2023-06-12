@@ -10,7 +10,7 @@ function restaurant_breakfastTop() {
 
 			//---restaurant menu download---
 function restaurant_menudownload() {
-	window.open('https://drive.google.com/uc?export=download&id=1Iwnhx3FnYckaj07sDKBWGliXZRhA5HxU', '_blank');
+	window.open('https://drive.google.com/uc?export=download&id=1sXcDrJahUyXgH5jGXMinlVRmCPkIaoGq', '_blank');
 }
 
 function restaurant_menu_gastrodownload() {
