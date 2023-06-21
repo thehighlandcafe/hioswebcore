@@ -1,4 +1,4 @@
-# HiOSWebServices for HiOSMobile and HiOSMobileWeb by The Highland Cafe™ Global
+# HiOSWebServices for HiOSMobile and HiOSMobileWeb by The Highland Cafe™ Enterprises
 
 <h2>Hi there!</h2>
 Welcome to the source code for the HiOSWebServices part of the HiOSMobile and HiOSMobileWeb mobile apps!
