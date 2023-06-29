@@ -401,6 +401,27 @@ color: white;
 	width: 300px;
 }
 
+.button {
+	width: 350px;
+	height: 110px;
+	background-color: white;
+	color: black;
+	font-family: 'Cantarell', sans-serif;
+	text-align: left;
+	font-size: 35px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.button:hover {
+	background-color: #96AFB8;
+}
+
+.button img {
+	width: 50px;
+	float: right;
+}
+
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {
