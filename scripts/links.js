@@ -97,6 +97,10 @@ function helpmore_tc() {
 	window.location.href = "terms-conditions.html";
 }
 
+function helpmore_about() {
+	window.location.href = "about.html";
+}
+
 //HOTEL ACTIVITIES LINKS
 
 function ha_key() {
@@ -118,11 +122,15 @@ function ha_hc() {
 //SETTINGS LINKS
 
 function settings_updates() {
-	window.open('https://sites.google.com/view/hios-by-thc/download', '_blank');
+	window.open('https://sites.google.com/view/hiosmobile-by-thc/download', '_blank');
 }
 
 function settings_changelog() {
 	window.open('https://sites.google.com/view/hios-by-thc/download#h.evwm3pfxwkdn', '_blank');
+}
+
+function settings_hiosmusic() {
+	window.open('https://sites.google.com/view/hios-by-thc/download-hiosmusic#h.ogr0r3hzljpf', '_blank');
 }
 
 function settings_website() {

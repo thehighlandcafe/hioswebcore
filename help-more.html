@@ -7,34 +7,33 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<title>HiOS | Help & More</title>
 		<script src="scripts/links.js"></script>
-	</head><br>
+	</head>
 	<body>
-	<br>
-		<center>
-			<div class="translucentBox joinTop">
-				<h1 class="blue-h2">Help & More</h1><br>
-				<img src="icons/forms.png" width="100"><br>
+        <span class="material-symbols-rounded" onclick="more_back()">arrow_back</span>
+	<br><br>
+			<div class="container">
+				<h1 class="blue-h2">Help & More</h1>
 					<p id="para">Choose a option below.</p>
 			</div>
-			<div class="translucentBox joinMiddle">
+			<div class="translucentBox full">
 				<button class="joinTop roundedImage button" onclick="helpmore_help()">
 					<img src="https://cdn-icons-png.flaticon.com/512/1660/1660216.png">
 					Help
 				</button>
-				<button class="joinBottom roundedImage button" onclick="helpmore_tc()">
+				<button class="joinMiddle roundedImage button" onclick="helpmore_tc()">
 					<img src="https://cdn-icons-png.flaticon.com/512/3135/3135874.png" style="margin-top: 30px;">
 					Terms &<br>Conditions
 				</button>
+				<button class="joinBottom roundedImage button" onclick="helpmore_about()">
+					<img src="https://cdn-icons-png.flaticon.com/512/3357/3357329.png">
+					About
+				</button>
 			</div>
 		</div>
-		<div class="translucentBox joinBottom">
-			<img src="icons/previous.png" width="100" onclick="more_back()">
-			<p>Back</p>
-		</div>
-
 		<br><br>
-		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p></center><br><br><br><br>
+		<p id="smallpara">Copyright © The Highland Cafe(tm) Ltd. 2022. All Rights Reserved.</p><br><br><br><br>
 	</body>
 </html>

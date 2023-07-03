@@ -93,7 +93,7 @@ color: white;
 	color: black;
 	font-family: 'Courier Prime', monospace;
 	border-radius: 35px;
-	width: 300px;
+	width: 350px;
 	border: 0.5px solid #303034;
 }
 
@@ -123,6 +123,7 @@ color: white;
 
 #para {
 	font-size: 20px;
+	text-align: left;
 }
 
 #paraheadings {
@@ -133,6 +134,7 @@ color: white;
 
 #smallpara {
 	font-size: 10px;
+	text-align: center;
 }
 
 #rightalign {
@@ -252,9 +254,10 @@ color: white;
 	padding: 10px;
 	width: 350px;
 	/*backdrop-filter: blur(14px);*/
-	text-align: center;
 	/*color: black;*/
 	background-color: #d3e5ef;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .translucentInfoBox {
@@ -373,7 +376,9 @@ color: white;
 .blue-h2, .blue-h3 {
 	color: #1891ac;
 	font-family: 'Cantarell', sans-serif;
-	font-weight: 700;
+	font-size: 45px;
+	font-weight: 100;
+	text-align: left;
 }
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
@@ -422,6 +427,20 @@ color: white;
 	float: right;
 }
 
+.left {
+	text-align: left;
+}
+
+.container {
+	margin: 0 auto;
+	width: 350px;
+	padding: 0px;
+}
+
+.material-symbols-rounded {
+	font-size: 30px !important;
+}
+
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {
@@ -442,8 +461,10 @@ color: white;
 
 	.blue-h2, .blue-h3 {
 		font-family: 'Cantarell', sans-serif;
+		font-size: 45px;
 		color: #EAFDFF;
-		font-weight: 700;
+		font-weight: 100;
+		text-align: left;
 	}
 
 	.translucentBox {
@@ -453,9 +474,10 @@ color: white;
 		padding: 10px;
 		width: 350px;
 		/*backdrop-filter: blur(14px);*/
-		text-align: center;
 		/*color: black;*/
 		background-color: #293840;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.translucentInfoBox {
@@ -471,5 +493,12 @@ color: white;
 		background-color: #303034;
 	}
 
+	.button {
+		color: white;
+		background-color: #354A54;
+	}
 
+	.button:hover {
+		background-color: #5A6B74;
+	}
 }
