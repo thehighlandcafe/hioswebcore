@@ -383,20 +383,22 @@ color: white;
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading {
-	background-image: linear-gradient(to right, #1891ac, #1d3e79);
+	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
 	color: transparent;
 	-webkit-background-clip: text;
-	background-clip: text;
+	background-clip: text;*/
+ color: #1891ac;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 40px;
 	font-weight: 700;
 }
 
 .gradientHeadingSmall {
-	background-image: linear-gradient(to right, #1891ac, #1d3e79);
+	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
 	color: transparent;
 	-webkit-background-clip: text;
-	background-clip: text;
+	background-clip: text;*/
+        color: #1891ac;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 30px;
 }
@@ -498,6 +500,9 @@ color: white;
 	}
 
 	.button:hover {
-		background-color: #5A6B74;
-	}
+		background-color: #5A6B74; }
+
+ .gradientHeading, .gradientHeadingSmall {
+  color: #EAFDFF; }
+
 }
