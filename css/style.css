@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
@@ -415,6 +414,7 @@ color: white;
 	font-family: 'Ubuntu', sans-serif;
 	text-align: left;
 	font-size: 35px;
+	font-weight: bold;
 	transition: 0.5s;
 }
 
@@ -439,6 +439,18 @@ color: white;
 
 .material-symbols-rounded {
 	font-size: 30px !important;
+}
+
+/*Feedback Buttons*/
+.leftButton {
+	width: 100px;
+	border-radius: 60px 10px 10px 60px;
+	margin: 3px;
+}
+
+.rightButton {
+	width: 100px;
+	border-radius: 10px 60px 60px 10px;
 }
 
 /*!!!---DARK MODE THEMING---!!!*/
