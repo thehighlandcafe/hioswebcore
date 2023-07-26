@@ -443,13 +443,13 @@ color: white;
 
 /*Feedback Buttons*/
 .leftButton {
-	width: 100px;
+	width: 150px;
 	border-radius: 60px 10px 10px 60px;
 	margin: 3px;
 }
 
 .rightButton {
-	width: 100px;
+	width: 150px;
 	border-radius: 10px 60px 60px 10px;
 }
 
