@@ -456,6 +456,13 @@ color: white;
 	border-radius: 10px 60px 60px 10px;
 }
 
+/*help center icons css*/
+.helpcenterIcons {
+	font-size: 25px !important;
+	line-height: inherit;
+	vertical-align: middle;
+}
+
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {
