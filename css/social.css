@@ -77,19 +77,19 @@
 }
 
 .messageBox {
-	border-radius: 16px;
+	border-radius: 16px 5px 5px 16px;
 	background-color: white;
-	border: 20px;
+	border: none;
 	color: black;
 	height: 30px;
-	width: 280px;
-	font-family: 'Outfit', sans-serif;
+	width: 200px;
+	font-family: 'Prompt', sans-serif;
 	text-align: center;
 	font-size: 15px;
 }
 
 #sendWrapper img {
-    vertical-align: middle;
+    vertical-align: middle !important;
 }
 
 .delete {
@@ -129,7 +129,6 @@
 }
 
 .infoDiv {
-    border-radius: 25px;
 	/*background: #006ee6;*/
 	/*background-color: rgba(255, 255, 255, 0.2);*/
 	/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
@@ -142,7 +141,6 @@
 }
 
 .contactBox {
-    border-radius: 25px;
 	/*background: #006ee6;*/
 	/*background-color: rgba(255, 255, 255, 0.2);*/
 	/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
@@ -163,15 +161,37 @@
 }
 
 .codeBox {
-	border-radius: 16px;
+	border-radius: 16px 5px 5px 16px;
 	background-color: white;
 	border: none;
 	color: black;
 	height: 30px;
-	width: 240px;
+	width: 200px;
 	font-family: 'Courier Prime', monospace;
 	text-align: center;
 	font-size: 25px;
+}
+
+.diallerSubmit {
+    border-radius: 7px 30px 30px 7px;
+    margin-left: 5px;
+    width: 55px;
+    height: 31.5px;
+    font-size: 31px;
+    border: none;
+    background-color: #1891ac;
+    color: white;
+    transition: 1s;
+    line-height: 5px !important;
+}
+
+.textSubmit {
+    font-size: 16px;
+}
+
+.diallerSubmit:hover {
+    background-color: #96AFB8;
+    color: black
 }
 
 .heading {
@@ -205,4 +225,34 @@
     .infoDiv {
         background-color: #545459;
     }
+}
+
+/*nav buttons*/
+.leftNavButton {
+	width: 90px;
+	border-radius: 60px 10px 10px 60px;
+	margin: 3px;
+}
+
+.middleNavButton {
+    width: 90px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.rightNavButton {
+	width: 90px;
+	border-radius: 10px 60px 60px 10px;
+}
+
+.headingContainer {
+    margin: 0 auto;
+    width: 350px;
+    padding: 0px;
+}
+
+.titleIcon {
+    font-size: inherit !important;
+	line-height: inherit;
+	vertical-align: middle;
 }
