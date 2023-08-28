@@ -1,3 +1,15 @@
+//WELCOME LINKS
+
+function welcome_back() {
+	window.location.href = "welcome.html";
+}
+
+	//---terms and conditions---
+
+function welcome_tc() {
+	window.location.href = "terms-conditions.html";
+}
+
 //RESTAURANT LINKS
 
 function restaurant_back() {
@@ -80,7 +92,7 @@ function help_internet() {
 function help_forms() {
 	window.location.href = "formsHELP.html";
 }
-
+/*
 //HELP-MORE LINKS
 
 function helpmore_back() {
@@ -99,7 +111,7 @@ function helpmore_tc() {
 
 function helpmore_about() {
 	window.location.href = "about.html";
-}
+}*/
 
 //HOTEL ACTIVITIES LINKS
 

@@ -5,10 +5,21 @@
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<!--link rel="stylesheet" href="css/homebackground.css" type="text/css"-->
 		<title>HiOS | Welcome</title>
-	</head><br>
-	<body>
+		<script src="scripts/links.js"></script>
+		<script>
+			function aboutDialogHomeOn(aboutDialog) {
+				document.getElementById(aboutDialog).style.display = "block";
+			}
+
+			function aboutDialogHomeOff() {
+				document.getElementById("aboutDialog").style.display = "none";
+			}
+		</script>
+	</head>
+	<body><br>
 	<center>
 		<!--div class="translucentBox"-->
 
@@ -17,7 +28,7 @@
 
 
 
-			<img src="pics/logos/logo_new.png" class="roundedImage" width="350"><br>
+			<img src="pics/logos/logo_new.png" class="roundedImage" width="350" onclick="aboutDialogHomeOn('aboutDialog')"><br>
 			<p class="gradientHeading" id="greetingHome"></p>
 			<p class="gradientHeadingSmall">Welcome to Harmony!</p><center>
 																  <div class="translucentBox full">
@@ -36,11 +47,24 @@
 			<div id="tutorial" style="display: none;">
 				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
 			</div>
-			<!--div class="translucentBox">
-				<h2 class="blue-h2">Visit Our Websites</h2>
-
-			</div-->
-						<br><br><br><br>
+			<!--DIV FOR ABOUT DIALOG-->
+			<div id="aboutDialog">
+				<span class="material-symbols-rounded" onclick="aboutDialogHomeOff()">arrow_back</span><br><br>
+				<div class="container">
+					<h2 class="blue-h2">About App</h2>
+				</div>
+				<div class="translucentAboutBox">
+					<div id="infoText">
+						<p><b><u><i>App Name:</i></u></b>&nbsp; Harmony by HiOS™</p>
+						<p><b><u><i>HiOSWebCore Version:</i></u></b>&nbsp; 10.2-mobile</p>
+						<p><b><u><i>Latest App Version:</i></u>&nbsp; 2.2</b></p>
+						<br>
+					<center><p id="smallpara">This webapp was made entirely with HTML5, CSS, and Javascript</p><br>
+						<p id="smallpara">The android app you're using was made with Java</p>
+					</div>
+				</div><br>
+				<button class="navButtonInactive" onclick="welcome_tc()">Terms and Conditions</button>
+			</div>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
 			</body>
 	<script>
