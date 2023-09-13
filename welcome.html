@@ -9,15 +9,6 @@
 		<!--link rel="stylesheet" href="css/homebackground.css" type="text/css"-->
 		<title>HiOS | Welcome</title>
 		<script src="scripts/links.js"></script>
-		<script>
-			function aboutDialogHomeOn(aboutDialog) {
-				document.getElementById(aboutDialog).style.display = "block";
-			}
-
-			function aboutDialogHomeOff() {
-				document.getElementById("aboutDialog").style.display = "none";
-			}
-		</script>
 	</head>
 	<body><br>
 	<center>
@@ -48,24 +39,6 @@
 				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
 			</div>
 			<br><br><br><br>
-			<!--DIV FOR ABOUT DIALOG-->
-			<div id="aboutDialog">
-				<span class="material-symbols-rounded" onclick="aboutDialogHomeOff()">arrow_back</span><br><br>
-				<div class="container">
-					<h2 class="blue-h2">About App</h2>
-				</div>
-				<div class="translucentAboutBox">
-					<div id="infoText">
-						<p><b><u><i>App Name:</i></u></b>&nbsp; Harmony by HiOS™</p>
-						<p><b><u><i>HiOSWebCore Version:</i></u></b>&nbsp; 10.2-mobile</p>
-						<p><b><u><i>Latest App Version:</i></u>&nbsp; 2.2</b></p>
-						<br>
-					<center><p id="smallpara">This webapp was made entirely with HTML5, CSS, and Javascript</p><br>
-						<p id="smallpara">The android app you're using was made with Java</p>
-					</div>
-				</div><br>
-				<button class="navButtonInactive" onclick="welcome_tc()">Terms and Conditions</button>
-			</div>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
 			</body>
 	<script>

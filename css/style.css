@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	animation: body 1s ease 200ms backwards;
+	/*animation: body 1s ease 200ms backwards;*/
  	user-select: none;
  	-webkit-user-select: none; /*Safari*/
  	-moz-user-select: none; /*Firefox*/
@@ -20,7 +20,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes body {
+/*@keyframes body {
 	from {
 	 opacity: 0;
 	 transform: translateY(-100px);
@@ -29,45 +29,44 @@ body {
 	 opacity: 1;
 	 transform: translate(0px);
 	}
-   }
+   }*/
 
-.navButton {
+/*MAIN NAVIGATION BUTTONS*/
+
+.navButton, .navButtonInactive {
 	height: 60px;
 	width: 200px;
 	font-family: 'Rubik', sans-serif;
 	font-size: 20px;
-	background-color: #1891ac;
-	color: white;
 	border-radius: 60px;
 	border: none;
+}
+
+.navButton {
+	background-color: #1891ac;
+	color: white;
 }
 
 .navButtonInactive {
-	height: 60px;
-	width: 200px;
-	font-family: 'Rubik', sans-serif;
-	font-size: 20px;
 	background-color: #96AFB8;
-	color: grey;
-	border-radius: 60px;
-	border: none;
 	color: black;
 }
 
-.offerBox {
+/*OFFER BOXES*/
+
+.offerBox, .offerBoxExpired {
 	border-radius: 25px;
-	background: #006ee6;
 	padding: 10px;
 	width: 300px;
-color: white;
+	color: white;
+}
+
+.offerBox {
+	background: #006ee6;
 }
 
 .offerBoxExpired {
-	border-radius: 25px;
 	background: red;
-	padding: 10px;
-	width: 300px;
-color: white;
 }
 
 .offerHeadings {
@@ -90,36 +89,39 @@ color: white;
 	text-align: left;
 }
 
+.termsconditions, #infoText {
+	font-family: 'Courier Prime', monospace;
+}
+
 .termsconditions {
 	background-color: #FCFCFF;
 	color: black;
-	font-family: 'Courier Prime', monospace;
 	border-radius: 35px;
 	width: 350px;
 	border: 0.5px solid #303034;
 }
 
-#infoText {
-	font-family: 'Courier Prime', monospace;
+#homeheading, #homeheadingsmall, #rickroll {
+	animation: pulse 15s infinite;
 }
 
 #homeheading {
 	font-size: 40px;
-	animation: pulse 15s infinite;
 }
 
 #homeheadingsmall {
 	font-size: 30px;
-	animation: pulse 15s infinite;
+}
+
+#p11, #p12, #paraheadings, #rickroll {
+	font-size: 40px;
 }
 
 #p11 {
-	font-size: 40px;
 	color: #0F9D58;
 }
 
 #p12 {
-	font-size: 40px;
 	color: #4285F4;
 }
 
@@ -129,7 +131,6 @@ color: white;
 }
 
 #paraheadings {
-	font-size: 40px;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -150,9 +151,7 @@ color: white;
 }
 
 #rickroll {
-	font-size: 40px;
 	text-decoration: underline;
-	animation: pulse 15s infinite;
 }
 
 /*THE PULSING HOMESCREEN*/
@@ -184,7 +183,7 @@ color: white;
   } /* Black */
 }
 
-#nextButtonRoomkey {
+#nextButtonRoomkey, #nextButtonRoomkey2, #loginButton {
 	/*float: right;*/
 	height:30px;
 	width:100px;
@@ -196,24 +195,7 @@ color: white;
 	border: none;
 }
 
-#nextButtonRoomkey:hover {
-	background-color: #05B5BD; /* lightblue */
-	color: white;
-}
-
-#nextButtonRoomkey2 {
-	/*float: right;*/
-	height:30px;
-	width:100px;
-	font-family: 'Rubik', sans-serif;
-	font-size: 15px;
-	background-color: #1891ac;
-	color: white;
-	border-radius: 16px;
-	border: none;
-}
-
-#nextButtonRoomkey2:hover {
+#nextButtonRoomkey:hover, #nextButtonRoomkey2:hover {
 	background-color: #05B5BD; /* lightblue */
 	color: white;
 }
@@ -234,7 +216,7 @@ color: white;
 	display: block;
 }
 
-#roomunlock {
+#roomunlock, #exitButton {
 	display: none;
 }
 
@@ -243,20 +225,12 @@ color: white;
 	border: 0.5px solid #303034;
 }
 
-#exitButton {
-	display: none;
-}
-
 /*NEWEST ADDED CSS*/
 
 .translucentBox {
-	/*background: #006ee6;*/
-	/*background-color: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
 	padding: 10px;
-	width: 350px;
-	/*backdrop-filter: blur(14px);*/
-	/*color: black;*/
+	max-width: 350px;
+	min-width: 300px;
 	background-color: #d3e5ef;
 	margin-left: auto;
 	margin-right: auto;
@@ -264,27 +238,22 @@ color: white;
 
 .translucentInfoBox {
 	border-radius: 25px;
-	/*background: #006ee6;*/
-	/*background-color: rgba(255, 255, 255, 0.2);*/
-	/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
 	padding: 10px;
-	width: 300px;
-	/*backdrop-filter: blur(14px);*/
+	max-width: 300px;
+	min-width: 250px;
 	text-align: center;
-	/*color: black;*/
 	background-color: #d3e5ef;
 }
 
 .translucentAboutBox {
 	border-radius: 25px;
-	/*background: #006ee6;*/
 	background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 	padding: 10px;
-	width: 300px;
+	max-width: 300px;
+	min-width: 25px;
 	backdrop-filter: blur(14px);
 	text-align: left;
-	/*color: black;*/
 }
 
 /*The radius' of the new joins*/
@@ -313,28 +282,32 @@ color: white;
 	color: #1b1b1b;
 }
 
-#usernameBox {
+#usernameBox, #passwordBox, #codeBox {
 	border-radius: 600px;
 	background-color: white;
 	border: 0.5px solid #303034;
 	color: black;
 	height: 60px;
-	width: 300px;
-	font-family: 'Outfit', sans-serif;
 	text-align: center;
+}
+
+#usernameBox, #passwordBox {
+	max-width: 300px;
+	min-width: 250px;
 	font-size: 15px;
 }
 
-#passwordBox {
-	border-radius: 600px;
-	background-color: white;
-	border: 0.5px solid #303034;
-	color: black;
-	height: 60px;
-	width: 300px;
+#codeBox {
+	width: 100px;
+	font-size: 25px;
+}
+
+#usernameBox {
+	font-family: 'Outfit', sans-serif;
+}
+
+#passwordBox, #codeBox {
 	font-family: 'Courier Prime', monospace;
-	text-align: center;
-	font-size: 15px;
 }
 
 .loginText {
@@ -342,36 +315,6 @@ color: white;
 	font-weight: bolder;
 	font-family: 'Rubik', sans-serif;
 }
-
-/*login button*/
-
-#loginButton {
-	/*float: right;*/
-	height:30px;
-	width:100px;
-	font-family: 'Rubik', sans-serif;
-	font-size: 15px;
-	background-color: #1891AC;
-	color: white;
-	border-radius: 16px;
-	border: none;
-	transition: 0.25s;
-}
-
-/*codeBox*/
-
-#codeBox {
-	border-radius: 600px;
-	background-color: white;
-	border: 0.5px solid #303034;
-	color: black;
-	height: 60px;
-	width: 100px;
-	font-family: 'Courier Prime', monospace;
-	text-align: center;
-	font-size: 25px;
-}
-
 
 /*NEW HEADINGS FROM JULY 2022*/
 
@@ -384,24 +327,17 @@ color: white;
 }
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
-.gradientHeading {
-	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
-	color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;*/
- color: #1891ac;
+.gradientHeading, .gradientHeadingSmall {
+	color: #1891ac;
 	font-family: 'Rubik', sans-serif;
+}
+
+.gradientHeading {
 	font-size: 40px;
 	font-weight: 700;
 }
 
 .gradientHeadingSmall {
-	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
-	color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;*/
-        color: #1891ac;
-	font-family: 'Rubik', sans-serif;
 	font-size: 30px;
 }
 
@@ -410,7 +346,8 @@ color: white;
 }
 
 .button {
-	width: 350px;
+	max-width: 350px;
+	min-width: 300px;
 	height: 110px;
 	background-color: white;
 	color: black;
@@ -436,7 +373,8 @@ color: white;
 
 .container {
 	margin: 0 auto;
-	width: 350px;
+	max-width: 350px;
+	min-width: 300px;
 	padding: 0px;
 }
 
@@ -445,14 +383,16 @@ color: white;
 }
 
 /*Feedback Buttons*/
-.leftButton {
+.leftButton, .rightButton {
 	width: 150px;
+}
+
+.leftButton {
 	border-radius: 60px 10px 10px 60px;
 	margin: 3px;
 }
 
 .rightButton {
-	width: 150px;
 	border-radius: 10px 60px 60px 10px;
 }
 
@@ -463,23 +403,6 @@ color: white;
 	vertical-align: middle;
 }
 
-/*New about dialog on home page*/
-#aboutDialog {
-	position: fixed;
-	display: none;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.3);
-	-webkit-backdrop-filter: blur(15px);
-	backdrop-filter: blur(15px);
-}
-
-#aboutDialog .material-symbols-rounded {
-	float: left;
-}
-
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {
@@ -488,47 +411,19 @@ color: white;
     	color: #FCFCFF;
 	}
 
-  	#smallpara {
-		font-size: 10px;
+	#smallpara, .whitesmallpara {
 		color: #FCFCFF;
 	}
 
-	.whitesmallpara {
-		font-size: 10px;
-		color: #fcfcff;
-	}
-
 	.blue-h2, .blue-h3 {
-		font-family: 'Rubik', sans-serif;
-		font-size: 45px;
 		color: #EAFDFF;
-		font-weight: 100;
-		text-align: left;
 	}
 
 	.translucentBox {
-		/*background: #006ee6;*/
-		/*background-color: rgba(255, 255, 255, 0.2);
-		box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
-		padding: 10px;
-		width: 350px;
-		/*backdrop-filter: blur(14px);*/
-		/*color: black;*/
 		background-color: #293840;
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	.translucentInfoBox {
-		border-radius: 25px;
-		/*background: #006ee6;*/
-		/*background-color: rgba(255, 255, 255, 0.2);*/
-		/*box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);*/
-		padding: 10px;
-		width: 300px;
-		/*backdrop-filter: blur(14px);*/
-		text-align: center;
-		/*color: black;*/
 		background-color: #303034;
 	}
 
@@ -540,8 +435,7 @@ color: white;
 	.button:hover {
 		background-color: #5A6B74; }
 
- .gradientHeading, .gradientHeadingSmall {
-  color: #EAFDFF; }
-
-
+ 	.gradientHeading, .gradientHeadingSmall {
+		color: #EAFDFF; 
+	}
 }
