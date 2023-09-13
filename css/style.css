@@ -346,8 +346,7 @@ body {
 }
 
 .button {
-	max-width: 350px;
-	min-width: 300px;
+	width: 100%;
 	height: 110px;
 	background-color: white;
 	color: black;
@@ -356,6 +355,7 @@ body {
 	font-size: 30px;
 	font-weight: bold;
 	transition: 0.5s;
+	float: inline-block;
 }
 
 .button:hover {
