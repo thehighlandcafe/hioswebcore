@@ -6,8 +6,7 @@ html {
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: #f1fbfd;
-	font-family: 'Rubik', sans-serif;
-	font-weight: 400;
+	font-family: 'Outfit', sans-serif;
 	color: #1b1b1b;
 }
 
@@ -36,7 +35,7 @@ body {
 .navButton, .navButtonInactive {
 	height: 60px;
 	width: 200px;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 20px;
 	border-radius: 60px;
 	border: none;
@@ -187,7 +186,7 @@ body {
 	/*float: right;*/
 	height:30px;
 	width:100px;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
 	background-color: #1891ac;
 	color: white;
@@ -313,14 +312,14 @@ body {
 .loginText {
 	font-size: 20px;
 	font-weight: bolder;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 }
 
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2, .blue-h3 {
 	color: #1891ac;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	font-size: 45px;
 	font-weight: 100;
 	text-align: left;
@@ -329,7 +328,7 @@ body {
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading, .gradientHeadingSmall {
 	color: #1891ac;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 }
 
 .gradientHeading {
@@ -350,7 +349,7 @@ body {
 	height: 110px;
 	background-color: white;
 	color: black;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	text-align: left;
 	font-size: 30px;
 	font-weight: bold;
