@@ -6,6 +6,7 @@
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
+		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
 		<title>HiOS | Restaurant </title>
 		<script src="scripts/links.js"></script>
@@ -16,40 +17,41 @@
 			<h1 class="blue-h2">Restaurant</h1>
 					<p id="para">Choose a option below to get started.</p></div>
 			<div class="translucentBox joinTop">
-				<button class="roundedImage button" onclick="restaurant_booktable()">
+				<button class="ripple-button roundedImage button" onclick="restaurant_booktable()">
 					<img src="https://cdn-icons-png.flaticon.com/512/281/281631.png">
 					Book a Table
 				</button>
 			</div>
 		    <div class="translucentBox joinMiddle">
-				<button class="joinTop roundedImage button" onclick="restaurant_menus()">
+				<button class="ripple-button joinTop roundedImage button" onclick="restaurant_menus()">
 					<img src="https://cdn-icons-png.flaticon.com/512/3073/3073798.png" style="top: 50%">
 					Menus
 				</button>
-				<button class="joinBottom roundedImage button" onclick="restaurant_foodordering()">
+				<button class="ripple-button joinBottom roundedImage button" onclick="restaurant_foodordering()">
 					<img src="https://cdn-icons-png.flaticon.com/512/5643/5643764.png" style="margin-top: 30px;">
 					Food<br>Ordering
 			</div>
 			<div class="translucentBox joinMiddle">
-				<button class="joinTop roundedImage button" onclick="restaurant_breakfast()">
+				<button class="ripple-button joinTop roundedImage button" onclick="restaurant_breakfast()">
 					<img src="https://cdn-icons-png.flaticon.com/512/887/887396.png" style="margin-top: 30px;">
 					Check-In to<br>Breakfast
 				</button>
-				<button class="joinMiddle roundedImage button" onclick="restaurant_locations()">
+				<button class="ripple-button joinMiddle roundedImage button" onclick="restaurant_locations()">
 					<img src="https://cdn-icons-png.flaticon.com/512/535/535137.png">
 					Locations
 				</button>
-				<button class="joinBottom roundedImage button" onclick="restaurant_offers()">
+				<button class="ripple-button joinBottom roundedImage button" onclick="restaurant_offers()">
 					<img src="https://cdn-icons-png.flaticon.com/512/3012/3012373.png">
 					Offers
 				</button>
 			</div>
 			<div class="translucentBox joinBottom">
-				<button class="roundedImage button" onclick="restaurant_moreInfo()">
+				<button class="ripple-button roundedImage button" onclick="restaurant_moreInfo()">
 					<img src="https://cdn-icons-png.flaticon.com/512/9723/9723316.png">
 					More Info
 				</button>
 			</div>
 		</center><br><br><br><br>
+		<script src="scripts/ripple.js"></script>
 	</body>
 </html>

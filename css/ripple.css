@@ -1,0 +1,20 @@
+/* styles.css */
+.ripple-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Ripple color and opacity */
+    transform: scale(0);
+    animation: ripple 0.8s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

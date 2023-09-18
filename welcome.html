@@ -5,6 +5,7 @@
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<!--link rel="stylesheet" href="css/homebackground.css" type="text/css"-->
 		<title>HiOS | Welcome</title>
@@ -19,7 +20,7 @@
 
 
 
-			<img src="pics/logos/logo_new.png" class="roundedImage" width="350"><br>
+			<img src="pics/logos/logo_new.png" class="roundedImage" id="homeImage"><br>
 			<p class="gradientHeading" id="greetingHome"></p>
 			<p class="gradientHeadingSmall">Welcome to Harmony!</p><center>
 																  <div class="translucentBox full">
@@ -30,16 +31,17 @@
 																  	<p id="date" class="para"></p>
 																  </div><br>
 			<div id="buttonNotPressed" style="display: block;">
-				<button class="navButton" onClick="showTutorialDiv()">App Tutorial</button>
+				<button class="ripple-button navButton" onClick="showTutorialDiv()">App Tutorial</button>
 			</div>
 			<div id="buttonPressed" style="display: none;">
-				<button class="navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
+				<button class="ripple-button navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
 			</div>
 			<div id="tutorial" style="display: none;">
 				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
 			</div>
 			<br><br><br><br>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
+				<script src="scripts/ripple.js"></script>
 			</body>
 	<script>
 		var myDate = new Date();

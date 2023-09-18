@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<title>HiOS | Hotel Activities</title>
 		<script src="scripts/links.js"></script>
 	</head><br>
@@ -11,14 +12,18 @@
 	<br>
 	<div class="container">
 		<!--img src="pics/logos/wenew.png" width="350" class="roundedImage"-->
-		<h1 class="blue-h2">Hotels</h1>
-		<p id="para">Choose a hotel or your digital roomkey below.</p>
+		<h1 class="blue-h2">Stay</h1>
+		<p id="para">Choose a hotel from below.</p>
 		</div>
 		<div class="translucentBox full">
-			<button class="joinTop roundedImage button" style="background: url('buttons/sn.png');background-size: 350px 110px;" onclick="ha_sn()"></button>
-			<button class="joinMiddle roundedImage button" style="background: url('buttons/wenew.png');background-size: 350px 110px;" onclick="ha_we()"></button>
-			<button class="joinBottom roundedImage button" style="background: url('buttons/horizonresorts.png');background-size: 350px 110px;" onclick="ha_hc()"></button>
+			<button class="ripple-button joinTop roundedImage button" style="background: url('buttons/sn.png');background-size: 350px 110px;" onclick="ha_sn()"></button>
+			<button class="ripple-button joinMiddle roundedImage button" style="background: url('buttons/wenew.png');background-size: 350px 110px;" onclick="ha_we()"></button>
+			<button class="ripple-button joinBottom roundedImage button" style="background: url('buttons/horizonresorts.png');background-size: 350px 110px;" onclick="ha_hc()"></button>
 		</div>
+		<!--div class="translucentBox joinBottom">
+			<button class="full roundedImage button" style="background: url('buttons/hiseasons.png');background-size: 350px 110px;" onclick="ha_hiseasons()"></button>
+		</div-->
 		<br><br><br><br>
+		<script src="scripts/ripple.js"></script>
 	</body>
 </html>

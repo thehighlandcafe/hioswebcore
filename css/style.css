@@ -6,7 +6,7 @@ html {
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: #f1fbfd;
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Outfit', sans-serif;
 	color: #1b1b1b;
 }
 
@@ -400,6 +400,11 @@ body {
 	font-size: 25px !important;
 	line-height: inherit;
 	vertical-align: middle;
+}
+
+#homeImage {
+	min-width: 300px;
+	max-width: 350px;
 }
 
 /*!!!---DARK MODE THEMING---!!!*/

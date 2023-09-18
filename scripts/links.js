@@ -131,6 +131,10 @@ function ha_hc() {
 	window.location.href = "hotelactivities/hc.html";
 }
 
+function ha_hiseasons() {
+	window.location.href = "hotelactivities/hiseasons.html";
+}
+
 //SETTINGS LINKS
 
 function settings_updates() {

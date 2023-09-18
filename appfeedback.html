@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css\style.css" type="text/css">
 		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<script src="scripts/links.js"></script>
 		<title>HiOS | App Feedback</title>
 		<script>
@@ -32,10 +33,10 @@
 		</div>
 	<div class="translucentBox joinTop">
 		<div id="feedbackActive" style="display:block">
-			<br><button class="leftButton navButtonInactive" onClick="showFeedbackDiv()">Feedback</button><button class="rightButton navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
+			<br><button class="ripple-button leftButton navButtonInactive" onClick="showFeedbackDiv()">Feedback</button><button class="ripple-button rightButton navButton" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
 		<div id="complaintsActive" style="display:none">
-			<br><button class="leftButton navButton" onClick="showFeedbackDiv()">Feedback</button><button class="rightButton navButtonInactive" onClick="showComplaintsDiv()">Complain</button><br><br>
+			<br><button class="ripple-button leftButton navButton" onClick="showFeedbackDiv()">Feedback</button><button class="ripple-button rightButton navButtonInactive" onClick="showComplaintsDiv()">Complain</button><br><br>
 		</div>
 	</div>
 	<div id="appFeedback" style="display:block">
@@ -61,9 +62,10 @@
 		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
 		<br>
 		<br>
-				<a href="appfeedback.html#"><img src="buttons/scrolltop.bmp" class="roundedImage"></a>
+				<a href="appfeedback.html#"><img src="buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
 		</div>
 	</div>
 	</center><br><br><br><br>
+		<script src="scripts/ripple.js"></script>
 	</body>
 </html>
