@@ -5,6 +5,7 @@
 		<link rel="icon" href="icons/house.png" type="image/icon type">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
+		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<title>HiOS | Menus</title>
 		<script src="scripts/links.js"></script>
@@ -16,15 +17,16 @@
 				<h1 class="blue-h2">Menus</h1>
 			<p id="para">Tap below to download our main Menu or *RECOMMENDED* Gastro Menu</p></div>
 			<div class="translucentBox full">
-				<button class="joinTop roundedImage button" onclick="restaurant_menudownload()">
+				<button class="ripple-button joinTop roundedImage button" onclick="restaurant_menudownload()">
 					<img src="https://cdn-icons-png.flaticon.com/512/1091/1091007.png" style="margin-top: 20px;">
 					Download<br>Menu
 				</button>
-				<button class="joinBottom roundedImage button" onclick="restaurant_menu_gastrodownload()">
+				<button class="ripple-button joinBottom roundedImage button" onclick="restaurant_menu_gastrodownload()">
 					<img src="https://cdn-icons-png.flaticon.com/512/1091/1091007.png" style="margin-top: 20px;">
 					Download Gastro Menu
 				</button>
 			</div>
 		<br><br><br><br>
+		<script src="scripts/ripple.js"></script>
 	</body>
 </html>
