@@ -366,6 +366,24 @@ body {
 	float: right;
 }
 
+.hiosmobileLogo {
+	width: 350px;
+	height: 110px;
+	background-color: white;
+	color: black;
+	font-family: 'Outfit', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	line-height: 110px;
+	float: inline-block;
+}
+
+.hiosmobileLogo img {
+	width: 90px;
+	float: left;
+	margin: 10px;
+}
+
 .left {
 	text-align: left;
 }
@@ -438,6 +456,11 @@ body {
 
 	.button:hover {
 		background-color: #5A6B74; }
+	
+	.hiosmobileLogo {
+		background-color: #293840;
+		color: white;
+	}
 
  	.gradientHeading, .gradientHeadingSmall {
 		color: #EAFDFF; 
