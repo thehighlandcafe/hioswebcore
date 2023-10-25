@@ -182,7 +182,7 @@ function installSkype() {
 }
 
 function contactUs() {
-	window.open('https://https://m.me/100095224335357', '_blank');
+	window.open('https://m.me/100095224335357', '_blank');
 }
 
 //BRANDS LINKS
