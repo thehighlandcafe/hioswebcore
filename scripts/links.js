@@ -178,11 +178,11 @@ function journey_back() {
 //CUSTOMER SUPPORT LINKS
 
 function installSkype() {
-	window.open('market://details?id=com.skype.raider', '_blank');
+	window.open('market://details?id=com.facebook.orca', '_blank');
 }
 
 function contactUs() {
-	window.open('https://join.skype.com/invite/AvyA1vfqo77T', '_blank');
+	window.open('https://https://m.me/100095224335357', '_blank');
 }
 
 //BRANDS LINKS
