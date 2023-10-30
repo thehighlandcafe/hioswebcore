@@ -28,16 +28,34 @@
                 document.getElementById('expiredOffersOn').style.display = "block";
                 document.getElementById('expiredOffers').style.display = "block";
             }
+
+            function openSnackbar() {
+                // Get the snackbar DIV
+                var x = document.getElementById("snackbar");
+
+                // Add the "show" class to DIV
+                x.className = "show";
+
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
         </script>
 	</head>
 	<body><center>
-        <img src="../buttons/hirewards.png" class="roundedImage" id="homeImage"><br><br>
-		<div class="translucentBox full">
-            <h3>Your Barcode</h3>
-            <img class="roundedImage" src="pics/frame.png" width="200px">
-            <p style="margin-top: 0;">Please scan this at checkout</p><br>
-            <p><b>Available Points*: </b>2457</p>
-		</div>
+        <div class="container">
+            <h1 class="blue-h2">Account</h1>
+        </div>
+        <div class="translucentBox joinTop">
+            <img src="pics/avatar.jpg" width="200" class="roundedImage">
+        </div>
+        <div class="translucentBox joinBottom">
+            <p style="text-align: left;">
+                <b>Name: </b>John Smith<br>
+                <b>Email: </b>example@email.com<br>
+                <b>Member since: </b>October 2023<br>
+                <b>Points: </b>2457
+            </p>
+        </div>
 			<br><br><br><br></center>
 	</body>
 </html>

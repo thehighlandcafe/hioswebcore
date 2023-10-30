@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .navButton {
-    background-color: #B83B5D !important;
+    background-color: #69001F !important;
 }
 
 .navButtonInactive {
@@ -35,3 +35,65 @@ h1, h2, h3, h4, h5 {
 .container {
     text-align: left !important;
 }
+
+.redeemButton {
+	height:30px;
+    width: 300px;
+	font-family: 'Cantarell', sans-serif;
+	font-size: 15px;
+	background-color: #B83B5D;
+	color: white;
+	border-radius: 16px;
+	border: none;
+}
+
+/*Snackbar*/
+#snackbar {
+    padding: 10px;
+	max-width: 350px;
+	min-width: 300px;
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    border-radius: 25px;
+    color: black;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein -.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
