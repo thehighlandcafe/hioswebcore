@@ -34,6 +34,10 @@ function restaurant_booktable() {
 	window.location.href = "book-table.html";
 }
 
+function restaurant_breakfast() {
+	window.location.href = "breakfast.html";
+}
+
 function restaurant_menus() {
 	window.location.href = "menus.html";
 }
@@ -42,8 +46,8 @@ function restaurant_foodordering() {
 	window.location.href = "foodordering.html";
 }
 
-function restaurant_breakfast() {
-	window.location.href = "breakfast.html";
+function restaurant_reviews() {
+	window.location.href = "reviews.html"
 }
 
 function restaurant_locations() {
@@ -92,26 +96,6 @@ function help_internet() {
 function help_forms() {
 	window.location.href = "formsHELP.html";
 }
-/*
-//HELP-MORE LINKS
-
-function helpmore_back() {
-	window.location.href = "help-more.html";
-}
-
-			//---buttons on main page---
-
-function helpmore_help() {
-	window.location.href = "help.html";
-}
-
-function helpmore_tc() {
-	window.location.href = "terms-conditions.html";
-}
-
-function helpmore_about() {
-	window.location.href = "about.html";
-}*/
 
 //HOTEL ACTIVITIES LINKS
 

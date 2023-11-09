@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="dark light">
+	<link rel="icon" href="icons/house.png" type="image/icon type">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/altbackground.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>HiOS | Food Ordering</title>
+	<script src="scripts/links.js"></script>
+    <script>
+        function showSection(selectedButton, unselectedButton, visibleDiv, hiddenDiv) {
+            let sButton = document.getElementById(selectedButton);
+            let uButton = document.getElementById(unselectedButton);
+            let vDiv = document.getElementById(visibleDiv);
+            let hDiv = document.getElementById(hiddenDiv);
+
+            sButton.classList.replace("navButton", "navButtonInactive");
+            
+            uButton.classList.replace("navButtonInactive", "navButton");
+
+            vDiv.style.display = "block";
+            hDiv.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+	<span class="material-symbols-rounded" onclick="restaurant_back()">arrow_back</span>
+	<br><br>
+	<center>
+		<div class="container">
+			<h1 class="blue-h2">Reviews</h1>
+			<p id="para">View the current reviews and add new ones below.</p>
+		</div>
+        <div class="translucentBox joinTop">
+            <div style="display:block">
+                <br><button id="reviewsButton" class="ripple-button leftButton navButtonInactive" onClick="showSection('reviewsButton', 'addnewButton', 'reviewsDiv', 'addnewDiv')">Reviews</button><button id="addnewButton" class="ripple-button rightButton navButton" onClick="showSection('addnewButton', 'reviewsButton', 'addnewDiv', 'reviewsDiv')">Add New</button><br><br>
+            </div>
+        </div>
+		<div id="reviewsDiv" class="translucentBox joinBottom">
+            <h1>All Reviews</h1>
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRv6sguhwzN54BgPB12FhVB4QHu0GpCcYxgs8Wx06_BTyfPv7qKfQuCgt98OnTABr1ZNlNRlvNFjgYw/pubhtml?widget=true&amp;headers=false" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage"></iframe>
+		</div>
+        <div id="addnewDiv" class="translucentBox joinBottom" style="display: none;">
+            <h1>Add a New Review</h1>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeVdkT4sTsg3rqdcFdRTWD6pSpcUBdpns0ZQz5QX46DprAN3g/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+        </div>
+		<br><br><br><br>
+	</center>
+</body>
+</html>
