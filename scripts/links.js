@@ -22,7 +22,7 @@ function restaurant_breakfastTop() {
 
 			//---restaurant menu download---
 function restaurant_menudownload() {
-	window.open('https://drive.google.com/uc?export=download&id=1sXcDrJahUyXgH5jGXMinlVRmCPkIaoGq', '_blank');
+	window.open('https://drive.google.com/uc?export=download&id=1asnkFiTAX-bancBcS094ge9XE3Q-Bn3d', '_blank');
 }
 
 function restaurant_menu_gastrodownload() {
