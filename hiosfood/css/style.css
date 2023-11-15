@@ -34,7 +34,7 @@ body {
 
 .navButton, .navButtonInactive {
 	height: 60px;
-	width: 200px;
+	width: 300px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
 	border-radius: 60px;
@@ -179,7 +179,7 @@ body {
 
 .translucentBox {
 	padding: 10px;
-	max-width: 350px;
+	max-width: 1920px;
 	min-width: 300px;
 	background-color: #FFB4A8;
 	margin-left: auto;
@@ -342,7 +342,7 @@ body {
 
 .container {
 	margin: 0 auto;
-	max-width: 350px;
+	max-width: 1920px;
 	min-width: 300px;
 	padding: 0px;
 }
@@ -390,7 +390,7 @@ body {
 	}
 
 	.blue-h2, .blue-h3 {
-		color: #EAFDFF;
+		color: #FFB4AB;
 	}
 
 	.translucentBox {
