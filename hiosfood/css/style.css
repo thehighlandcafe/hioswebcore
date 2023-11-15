@@ -179,7 +179,6 @@ body {
 
 .translucentBox {
 	padding: 10px;
-	max-width: 1920px;
 	min-width: 300px;
 	background-color: #FFB4A8;
 	margin-left: auto;
@@ -342,7 +341,6 @@ body {
 
 .container {
 	margin: 0 auto;
-	max-width: 1920px;
 	min-width: 300px;
 	padding: 0px;
 }
