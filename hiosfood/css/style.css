@@ -188,7 +188,6 @@ body {
 .translucentInfoBox {
 	border-radius: 25px;
 	padding: 10px;
-	max-width: 300px;
 	min-width: 250px;
 	text-align: center;
 	background-color: #FFB4A8;

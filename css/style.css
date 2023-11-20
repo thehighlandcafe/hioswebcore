@@ -34,7 +34,7 @@ body {
 
 .navButton, .navButtonInactive {
 	height: 60px;
-	width: 200px;
+	width: 300px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 20px;
 	border-radius: 60px;
@@ -228,7 +228,6 @@ body {
 
 .translucentBox {
 	padding: 10px;
-	max-width: 350px;
 	min-width: 300px;
 	background-color: #d3e5ef;
 	margin-left: auto;
@@ -238,7 +237,6 @@ body {
 .translucentInfoBox {
 	border-radius: 25px;
 	padding: 10px;
-	max-width: 300px;
 	min-width: 250px;
 	text-align: center;
 	background-color: #d3e5ef;
@@ -391,7 +389,6 @@ body {
 
 .container {
 	margin: 0 auto;
-	max-width: 350px;
 	min-width: 300px;
 	padding: 0px;
 }
@@ -424,6 +421,19 @@ body {
 #homeImage {
 	min-width: 300px;
 	max-width: 350px;
+}
+
+/*new iframe wrappers - taken from hiosfood styles*/
+.iframe-wrapper {
+	max-width: 100%;
+	min-width: 250px;
+	height: 800px;
+}
+
+.menu-iframe {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /*!!!---DARK MODE THEMING---!!!*/

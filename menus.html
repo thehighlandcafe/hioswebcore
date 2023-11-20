@@ -7,26 +7,63 @@
 		<link rel="stylesheet" href="css/homebackground.css" type="text/css">
 		<link rel="stylesheet" href="css/ripple.css" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-		<title>HiOS | Menus</title>
+		<title>HiOS | </title>
 		<script src="scripts/links.js"></script>
+		<script>
+			function showComplaintsDiv () {
+				document.getElementById('appFeedback').style.display = "none";  //empty the value
+				document.getElementById('complaints').style.display = "block";
+				document.getElementById('feedbackActive').style.display = "none";
+				document.getElementById('complaintsActive').style.display = "block";
+				}
+				
+			function showFeedbackDiv () {
+				document.getElementById('appFeedback').style.display = "block";  //empty the value
+				document.getElementById('complaints').style.display = "none";
+				document.getElementById('feedbackActive').style.display = "block";
+				document.getElementById('complaintsActive').style.display = "none";
+				}
+		</script>
 	</head>
 	<body>
 		<span class="material-symbols-rounded" onclick="restaurant_back()">arrow_back</span>
-	<br><br>
+	<br><br><center>
 			<div class="container">
 				<h1 class="blue-h2">Menus</h1>
-			<p id="para">Tap below to download our main Menu or *RECOMMENDED* Gastro Menu</p></div>
-			<div class="translucentBox full">
-				<button class="ripple-button joinTop roundedImage button" onclick="restaurant_menudownload()">
-					<img src="https://cdn-icons-png.flaticon.com/512/1091/1091007.png" style="margin-top: 20px;">
-					Download<br>Menu
-				</button>
-				<button class="ripple-button joinBottom roundedImage button" onclick="restaurant_menu_gastrodownload()">
-					<img src="https://cdn-icons-png.flaticon.com/512/1091/1091007.png" style="margin-top: 20px;">
-					Download Gastro Menu
-				</button>
+			<p id="para">Take a look at our menus here.</p></div>
+			<div class="translucentBox joinTop">
+				<div id="feedbackActive" style="display:block">
+					<br><button class="ripple-button leftButton navButtonInactive" onClick="showFeedbackDiv()">Main</button><button class="ripple-button rightButton navButton" onClick="showComplaintsDiv()">Gastro</button><br><br>
+				</div>
+				<div id="complaintsActive" style="display:none">
+					<br><button class="ripple-button leftButton navButton" onClick="showFeedbackDiv()">Main</button><button class="ripple-button rightButton navButtonInactive" onClick="showComplaintsDiv()">Gastro</button><br><br>
+				</div>
 			</div>
-		<br><br><br><br>
+			<div id="appFeedback" style="display:block">
+				<div class="translucentBox joinBottom">
+					<h1>Main Menu</h1>
+					<p id="para" style="text-align: center;">This menu includes Lunch, Dinner, and more.</p>
+					<div class="iframe-wrapper roundedImage">
+						<iframe class="menu-iframe roundedImage" src="https://drive.google.com/file/d/1asnkFiTAX-bancBcS094ge9XE3Q-Bn3d/preview" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+					</div>
+						<br>
+						<br>
+					<a href="menus.html#"><img src="buttons/scrolltop.bmp" class="roundedImage"></a>
+				</div>
+			</div>
+			<div id="complaints" style="display:none">
+				<div class="translucentBox joinBottom">
+						<center><h1>Gastro Menu</h1>
+				<p id="para" style="text-align: center;">This is our most premium menu that you will love!</p>
+				<div class="iframe-wrapper">
+					<iframe class="menu-iframe roundedImage" src="https://drive.google.com/file/d/1iHoe-pBMn0niY9R2IoZgYmhgXLaz7Mrz/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+				</div>
+				<br>
+				<br>
+						<a href="menus.html#"><img src="buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
+				</div>
+			</div>
+		</center><br><br><br><br>
 		<script src="scripts/ripple.js"></script>
 	</body>
 </html>
