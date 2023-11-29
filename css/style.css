@@ -39,6 +39,7 @@ body {
 	font-size: 20px;
 	border-radius: 60px;
 	border: none;
+	box-shadow: 0 5px 5px -5px grey;
 }
 
 .navButton {
@@ -220,7 +221,7 @@ body {
 }
 
 .roundedImage {
-	border-radius: 25px;
+	border-radius: 15px;
 	border: 0.5px solid #303034;
 }
 
@@ -235,7 +236,7 @@ body {
 }
 
 .translucentInfoBox {
-	border-radius: 25px;
+	border-radius: 15px;
 	padding: 10px;
 	min-width: 250px;
 	text-align: center;
@@ -243,7 +244,7 @@ body {
 }
 
 .translucentAboutBox {
-	border-radius: 25px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 	padding: 10px;
@@ -256,7 +257,7 @@ body {
 /*The radius' of the new joins*/
 
 .joinTop {
-	border-radius: 25px 25px 6px 6px;
+	border-radius: 15px 15px 6px 6px;
 	margin-bottom: 5px;
 }
 
@@ -266,11 +267,13 @@ body {
 }
 
 .joinBottom {
-	border-radius: 6px 6px 25px 25px;
+	border-radius: 6px 6px 15px 15px;
+	box-shadow: 0 5px 5px -5px grey;
 }
 
 .full {
-	border-radius: 25px;
+	border-radius: 15px;
+	box-shadow: 0 5px 5px -5px grey;
 }
 
 

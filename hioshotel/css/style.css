@@ -5,7 +5,7 @@ html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
-	background-color: #FFDAD6;
+	background-color: #FFB0C9;
 	font-family: 'Cantarell', sans-serif;
 	color: #1b1b1b;
 }
@@ -42,7 +42,7 @@ body {
 }
 
 .navButton {
-	background-color: #C00100;
+	background-color: #984062;
 	color: white;
 }
 
@@ -139,7 +139,7 @@ body {
 	width:100px;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 15px;
-	background-color: #C00100;
+	background-color: #984062;
 	color: white;
 	border-radius: 16px;
 	border: none;
@@ -171,8 +171,8 @@ body {
 }
 
 .roundedImage {
-	border-radius: 15px;
-	border: 0.5px solid #442925;
+	border-radius: 25px;
+	border: 0.5px solid #3E001E;
 }
 
 /*NEWEST ADDED CSS*/
@@ -180,21 +180,21 @@ body {
 .translucentBox {
 	padding: 10px;
 	min-width: 300px;
-	background-color: #FFB4A8;
+	background-color: #D0859E;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .translucentInfoBox {
-	border-radius: 15px;
+	border-radius: 25px;
 	padding: 10px;
 	min-width: 250px;
 	text-align: center;
-	background-color: #FFB4A8;
+	background-color: #D0859E;
 }
 
 .translucentAboutBox {
-	border-radius: 15px;
+	border-radius: 25px;
 	background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 	padding: 10px;
@@ -207,7 +207,7 @@ body {
 /*The radius' of the new joins*/
 
 .joinTop {
-	border-radius: 15px 15px 6px 6px;
+	border-radius: 25px 25px 6px 6px;
 	margin-bottom: 5px;
 }
 
@@ -217,11 +217,11 @@ body {
 }
 
 .joinBottom {
-	border-radius: 6px 6px 15px 15px;
+	border-radius: 6px 6px 25px 25px;
 }
 
 .full {
-	border-radius: 15px;
+	border-radius: 25px;
 }
 
 
@@ -233,7 +233,7 @@ body {
 #usernameBox, #passwordBox, #codeBox {
 	border-radius: 600px;
 	background-color: white;
-	border: 0.5px solid #442925;
+	border: 0.5px solid #3E001E;
 	color: black;
 	height: 60px;
 	text-align: center;
@@ -267,7 +267,7 @@ body {
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2, .blue-h3 {
-	color: #C00100;
+	color: #984062;
 	font-family: 'Cantarell', sans-serif;
 	font-size: 45px;
 	font-weight: 100;
@@ -276,7 +276,7 @@ body {
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading, .gradientHeadingSmall {
-	color: #C00100;
+	color: #984062;
 	font-family: 'Cantarell', sans-serif;
 }
 
@@ -296,7 +296,7 @@ body {
 .button {
 	width: 100%;
 	height: 110px;
-	background-color: #E7BDB6;
+	background-color: #FFB0C9;
 	color: black;
 	font-family: 'Cantarell', sans-serif;
 	text-align: left;
@@ -307,7 +307,7 @@ body {
 }
 
 .button:hover {
-	background-color: #FFB4AB;
+	background-color: #984062;
 }
 
 .button img {
@@ -391,7 +391,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		background-color: #2C1512;
+		background-color: #422931;
     	color: #FCFCFF;
 	}
 
@@ -400,15 +400,15 @@ body {
 	}
 
 	.blue-h2, .blue-h3 {
-		color: #FFB4AB;
+		color: #FFB0C9;
 	}
 
 	.translucentBox {
-		background-color: #442925;
+		background-color: #74565F;
 	}
 
 	.translucentInfoBox {
-		background-color: #442925;
+		background-color: #74565F;
 	}
 
 	.button {
