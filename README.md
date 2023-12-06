@@ -1,4 +1,5 @@
-# HiOSWebCore for HiOSMobile and HiOSMobileWeb
+# HiOSWebCore for HiOSMobile and HiOSMobileWeb<br><br> [not maintained anymore]
+# We have moved this project to https://github.com/thehighlandcafe/hiosmobile2
 
 <h2>Hi there!</h2>
 Welcome to the source code for the HiOSWebCore part of the HiOSMobile and HiOSMobileWeb mobile apps!
