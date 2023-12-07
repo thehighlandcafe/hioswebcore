@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="color-scheme" content="dark light">
+	<link rel="icon" href="../icons/house.png" type="image/icon type">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/social.css" type="text/css">
+    <script src="../scripts/social.js"></script>
+    <script src="../scripts/links.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>HiOS | </title>
+    <script>
+        function back() {
+            window.location.href="../extras/main.html";
+        }
+    </script>
+</head>
+<body>
+    <span class="material-symbols-rounded" onclick="back()">arrow_back</span>
+	<center>
+	<h2 class="betaAlert">Experimental Feature</h2>
+    <div class="headingContainer">
+        <h1 class="blue-h2">Social</h1>
+        <p id="para">Welcome to the experimental Social section! Try out our social platform prototype below.</p>
+    </div>
+        <div class="translucentBox joinTop" id="headerBlock">
+            <div id="navigation" style="display: block !important;">
+                <div id="himessageActive"><br>
+                    <button class="leftNavButton navButtonInactive" onclick="showHimessageDiv()">Texts</button><button class="middleNavButton navButton" onclick="showHicallDiv()">Calls</button><button class="rightNavButton navButton" onclick="showHicontactsDiv()">People</button><br><br>
+                </div>
+                <div id="hicallActive"><br>
+                    <button class="leftNavButton navButton" onclick="showHimessageDiv()">Texts</button><button class="middleNavButton navButtonInactive" onclick="showHicallDiv()">Calls</button><button class="rightNavButton navButton" onclick="showHicontactsDiv()">People</button><br><br>
+                </div>
+                <div id="hicontactsActive"><br>
+                    <button class="leftNavButton navButton" onclick="showHimessageDiv()">Texts</button><button class="middleNavButton navButton" onclick="showHicallDiv()">Calls</button><button class="rightNavButton navButtonInactive" onclick="showHicontactsDiv()">People</button><br><br>
+                </div>
+            </div>
+        </div>
+        <!--HiMessage Container-->
+        <div id="himessage">
+            <div class="translucentBox joinBottom">
+                <h1><span class="titleIcon material-symbols-rounded">chat</span>&nbsp;Texts</h1>
+                <div id="mainweb">
+                    <center>
+                    <div class="container">
+                        <img src="avatar2.jpg" alt="Avatar" class="profile">
+                        <p>Hello. How are you today?</p>
+                        <span class="time-right">11:00</span>
+                    </div>
+    
+                    <div class="container darker">
+                      <img src="avatar1.jpg" alt="Avatar" class="right profile">
+                      <p>Hey! I'm fine. Thanks for asking!</p>
+                      <span class="time-left">11:01</span>
+                    </div>
+    
+                    <div class="container">
+                      <img src="avatar1.jpg" alt="Avatar" class="profile">
+                      <p>Sweet! So, what do you wanna do today?</p>
+                      <span class="time-right">11:02</span>
+                    </div>
+    
+                    <div class="container darker">
+                      <img src="avatar2.jpg" alt="Avatar" class="right profile">
+                      <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                      <span class="time-left">11:05</span>
+                    </div>
+                    <div class="container" id="newContainer">
+                      <img src="avatar1.jpg" alt="Avatar" class="profile">
+                      <p id="newText"></p><br>
+                      <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/9195/9195599.png" width="30" class="delete" onclick="deleteMessage()">
+                      </div>
+                    </div>
+                        <div id="sendWrapper">
+                            <br>
+                            <input type="text" id="myText" value="" class="messageBox"><button class="textSubmit diallerSubmit" onclick="myFunction()"><span class="titleIcon material-symbols-rounded">chat</span></button>
+                        </div>
+                        <br>
+                    </div>
+            </div>
+        </div>
+        <div id="hicall">
+            <div class="translucentBox joinBottom">
+                <h1><span class="titleIcon material-symbols-rounded">call</span>&nbsp;Calls</h1>
+                <div id="phoneHome"><center>
+                    <div class="joinTop infoDiv">
+                        <h2>Favourites</h2><center>
+                        <div class="joinTop contactBox" onclick="contact1()">
+                            <div id="sendWrapper">
+                                <img src="avatar2.jpg" class="contact"><label class="offerBody" id="name1">Natalie Haber</label>
+                            </div>
+                        </div>
+                        <div class="joinMiddle contactBox" onclick="contact2()">
+                            <div id="sendWrapper">
+                                <img src="avatar4.jpg" class="contact"><label class="offerBody" id="name2">Daughter 💕</label>
+                            </div>
+                        </div>
+                        <div class="joinBottom contactBox" onclick="contact3()">
+                            <div id="sendWrapper">
+                                <img src="../pics/logos/thc.png" class="contact"><label class="offerBody thcContact" id="name3">The Highland Cafe™</label>
+                            </div>
+                        </div><br>
+                    </div>
+                    <div class="joinBottom infoDiv">
+                        <h2>Dialler</h2>
+                            <input type="text" id="diallerText" value="" class="codeBox"><button class="diallerSubmit" onclick="diallerPhone()"><span class="titleIcon material-symbols-rounded">call</span></button><br><br>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div id="phoning" class="translucentBox full">
+            <img id="diallerImage" src="" class="contact"><br>
+            <h1 id="phoneNumber"></h1><br><br><br>
+            <img src="phone.png" width="300" class="roundedImage"><br><br><br>
+            <img src="https://cdn-icons-png.flaticon.com/512/811/811481.png" width="50" onclick="hangUp()">
+        </div>
+        <div id="hicontacts">
+            <div class="translucentBox joinBottom">
+				<h1>People</h1>
+				<div class="infoDiv full"><center>
+				<h2>All People</h2>
+					<div class="contactBox joinTop" onclick="contactInfo1()">
+						<div id="sendWrapper">
+							<img src="avatar1.jpg" class="contact"><label class="offerBody" id="me">Me</label>
+						</div>
+					</div>
+					<div class="contactBox joinMiddle" onclick="contactInfo2()">
+						<div id="sendWrapper">
+							<img src="avatar2.jpg" class="contact"><label class="offerBody">Natalie Haber</label>
+						</div>
+					</div>
+					<div class="contactBox joinMiddle" onclick="contactInfo3()">
+						<div id="sendWrapper">
+							<img src="avatar4.jpg" class="contact"><label class="offerBody">Daughter 💕</label>
+						</div>
+					</div>
+					<div class="contactBox joinMiddle" onclick="contactInfo4()">
+						<div id="sendWrapper">
+							<img src="avatar3.jpg" class="contact"><label class="offerBody">Bro</label>
+						</div>
+					</div>
+                    <div class="contactBox joinMiddle" onclick="contactInfo5()">
+						<div id="sendWrapper">
+							<img src="avatar5.jpg" class="contact"><label class="offerBody">Boss</label>
+						</div>
+					</div>
+                    <div class="contactBox joinBottom" onclick="contactInfo6()">
+						<div id="sendWrapper">
+							<img src="../pics/logos/thc.png" class="contact"><label class="offerBody thcContact">The Highland Cafe</label>
+						</div>
+					</div>
+					<br>
+            </div><br>
+        </div></div>
+        <div id="contactInfo" class="translucentBox full">
+            <h1 id="contactName"></h1>
+            <img src="" class="roundedImage" width="300" id="contactImage"><br><br><br>
+            <label class="contactLabel">Phone Number:</label>&nbsp;<label class="contactData" id="phoneField"></label><br><br>
+            <img src="https://cdn-icons-png.flaticon.com/512/3272/3272680.png" width="50" onclick="backToContacts()">
+        </div>
+		<br><br><br><br>
+	</center>
+</body>
+</html>

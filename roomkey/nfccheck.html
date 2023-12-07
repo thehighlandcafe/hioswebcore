@@ -3,30 +3,29 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
-		<link rel="icon" href="../icons/house.png" type="image/icon">
-		<link rel="stylesheet" href="../css/homebackground.css" type="text/css">
-		<link rel="stylesheet" href="../css/style.css" type="text/css">
-		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../css/ripple.css" type="text/css">
+		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon">
+		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
 		<title>HiOS | Room Key Scan</title>
-	</head><br>
+		<script src="../assets/scripts/links.js"></script>
+	</head>
 	<body>
-	<br><center>
-            <div class="container">
-            <h1 class="blue-h2">Turn on NFC</h1>
-                <p id="para">We first need to make sure NFC is enabled.</p>
-			</div>
-				<div class="translucentBox full">
-                    <p id="para">Open Settings > Connected Devices > Connection Settings > NFC, and turn on.<br><br>
-					<img src="../pics/screenshots/nfc-settings.png" class="roundedImage" width="350"><br><br>
-                    <div id="para" style="text-align: center !important;">Once on, press <strong>Next</strong>.</div>
-                </p>
-                <br>
-                    <a href="generated.html"><button id="nextButtonRoomkey2" class="ripple-button">Next</button></a><br><br>
-					</div>
-            </div><br><br><br><br>
-			<script src="../scripts/ripple.js"></script>
-        </body>
-     </html>
+		<br><br>
+		<center>
+        <div class="container">
+        	<h1 class="blue-h2">Turn on NFC</h1>
+            <p id="para">We first need to make sure NFC is enabled.</p>
+		</div>
+		<div class="translucentBox full">
+            <p id="para">Open Settings > Connected Devices > Connection Settings > NFC, and turn on.<br><br>
+			<img src="../assets/pics/screenshots/nfc-settings.png" class="roundedImage" width="350" style="margin: 0 auto;"><br><br>
+        	<div id="para" style="text-align: center !important;">Once on, press <strong>Next</strong>.</div></p>
+        	<br>
+        	<button id="nextButtonRoomkey2" class="ripple-button" onclick="link('generated.html')">Next</button>
+			<br><br>
+		</div>
+        </div>
+		<br><br><br><br>
+		<script src="../assets/scripts/ripple.js"></script>
+    </body>
+</html>

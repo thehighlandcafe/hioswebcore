@@ -1,4 +1,4 @@
-# HiOSWebCore for HiOSMobile and HiOSMobileWeb<br><br> 
+# HiOSWebCore for HiOSMobile and HiOSMobileWeb
 
 <h2>Hi there!</h2>
 Welcome to the source code for the HiOSWebCore part of the HiOSMobile and HiOSMobileWeb mobile apps!

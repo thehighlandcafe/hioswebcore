@@ -3,89 +3,70 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
-		<link rel="icon" href="icons/house.png" type="image/icon type">
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<link rel="stylesheet" href="css/ripple.css" type="text/css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-		<!--link rel="stylesheet" href="css/homebackground.css" type="text/css"-->
+		<link rel="icon" href="assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/ripple.css" type="text/css">
 		<title>HiOS | Welcome</title>
-		<script src="scripts/links.js"></script>
+		<script src="assets/scripts/links.js"></script>
 	</head>
-	<body><br>
-	<center>
-		<!--div class="translucentBox"-->
-
-
-		<!--WAS WORKING ON A PROPER WORKING DARK MODE!!!!!!!!!!!-->
-
-			<h1 class="blue-h2">HiOSMobile needs an update.</h1>
-			<div class="translucentBox full">
-				<p>We have made big changes to our app, so please go to:</p>
-				<h3>Options (⋮) > Settings > Updates > Check for updates</h3>
-				<p>to continue using HiOSMobile.</p>
-				<hr>
-				<p>💡 You will need to update to at least version 2.3<br>
-					If no update is available, try again later.</p>
-			</div>
-			<div style="display:none;">
-			<img src="pics/logos/logo_new.png" class="roundedImage" id="homeImage" style="box-shadow: 0 5px 5px -5px grey;">
-			<!--div class="hiosmobileLogo roundedImage">
-				<img src="pics/logos/hiosbadge.png"><b>HiOS</b>Mobile
-			</div--><br>
-			<p class="gradientHeading" id="greetingHome"></p>
-			<p class="gradientHeadingSmall">Welcome to HiOSMobile!</p><center>
-																  <div class="translucentBox full">
-																  	<h2>Your Info</h2>
-																	  <h3>Weather</h3>
-																  	<div style="box-shadow: 0 5px 5px -5px grey;" class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script>
-																  	<br><h3>Date</h3>
-																  	<p id="date" class="para"></p>
-																  </div><br>
-			<div id="buttonNotPressed" style="display: block;">
-				<button class="ripple-button navButton" onClick="showTutorialDiv()">App Tutorial</button>
-			</div>
-			<div id="buttonPressed" style="display: none;">
-				<button class="ripple-button navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
-			</div>
-			<div id="tutorial" style="display: none;">
-				<br><img src="media/tutorial.gif" width="300" class="roundedImage">
-			</div>
-			<br><br><br><br>
+	<body>
+		<br><center>
+		<img src="assets/pics/logos/logo_new.png" class="roundedImage" id="homeImage" style="box-shadow: 0 5px 5px -5px grey;">
+		<br>
+		<p class="gradientHeading" id="greetingHome"></p>
+		<p class="gradientHeadingSmall">Welcome to HiOSMobile!</p><center>
+		<div class="translucentBox full">
+			<h2>Your Info</h2>
+				<h3>Weather</h3>
+					<div style="box-shadow: 0 5px 5px -5px grey;" class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script>
+					<br>
+				<h3>Date</h3>
+					<p id="date" class="para"></p>
+		</div><br>
+		<div id="buttonNotPressed" style="display: block;">
+			<button class="ripple-button navButton" onClick="showTutorialDiv()">App Tutorial</button>
+		</div>
+		<div id="buttonPressed" style="display: none;">
+			<button class="ripple-button navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
+		</div>
+		<div id="tutorial" style="display: none;">
+			<br><img src="assets/media/tutorial.gif" width="300" class="roundedImage">
+		</div>
+		<br><br><br><br>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
-				<script src="scripts/ripple.js"></script>
-			</body>
+		<script src="assets/scripts/ripple.js"></script>
+	</body>
 	<script>
 		var myDate = new Date();
-			var hrs = myDate.getHours();
+		var hrs = myDate.getHours();
+		var greet;
 
-			var greet;
+		if (hrs < 12)
+			greet = 'Good Morning';
+		else if (hrs >= 12 && hrs <= 17)
+			greet = 'Good Afternoon';
+		else if (hrs >= 17 && hrs <= 24)
+			greet = 'Good Evening';
 
-			if (hrs < 12)
-				greet = 'Good Morning';
-			else if (hrs >= 12 && hrs <= 17)
-				greet = 'Good Afternoon';
-			else if (hrs >= 17 && hrs <= 24)
-				greet = 'Good Evening';
-
-			document.getElementById('greetingHome').innerHTML =
-				'<b>' + greet + '!</b>';
+		document.getElementById('greetingHome').innerHTML =
+			'<b>' + greet + '!</b>';
 			
-			n =  new Date();
-			y = n.getFullYear();
-			m = n.getMonth() + 1;
-			d = n.getDate();
-			document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+		n =  new Date();
+		y = n.getFullYear();
+		m = n.getMonth() + 1;
+		d = n.getDate();
+		document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 
-			function showTutorialDiv () {
-				document.getElementById('buttonNotPressed').style.display = "none";  //empty the value
-				document.getElementById('buttonPressed').style.display = "block";
-				document.getElementById('tutorial').style.display = "block";
-				}
+		function showTutorialDiv () {
+			document.getElementById('buttonNotPressed').style.display = "none";  //empty the value
+			document.getElementById('buttonPressed').style.display = "block";
+			document.getElementById('tutorial').style.display = "block";
+		}
 
-			function hideTutorialDiv () {
-				document.getElementById('buttonNotPressed').style.display = "block";
-				document.getElementById('buttonPressed').style.display = "none";
-				document.getElementById('tutorial').style.display = "none";
-			}
-</script>
+		function hideTutorialDiv () {
+			document.getElementById('buttonNotPressed').style.display = "block";
+			document.getElementById('buttonPressed').style.display = "none";
+			document.getElementById('tutorial').style.display = "none";
+		}
+	</script>
 </html>

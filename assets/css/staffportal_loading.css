@@ -1,0 +1,98 @@
+html{
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  animation: pulse 15s;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  margin: 280px auto; 
+  padding: 20px 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.Loading {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Loading:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  animation: load 15s;
+}
+
+
+
+@keyframes load {
+  0% {
+    width: 0;
+    background: #FF4F4B;
+  }
+  
+  25% {
+    width: 40%;
+    background: #a0d2eb;
+  }
+  
+  50% {
+    width: 60%;
+    background: #90EE90;
+  }
+  
+  75% {
+    width: 75%;
+    background: #808080;
+  }
+  
+  100% {
+    width: 100%;
+    background: #494d5f;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: #FF0000;
+	color: #FF4F4B;
+  } /* Red */
+  
+  25% {
+    background: #0000FF;
+	color: #a0d2eb;
+  } /* Blue */
+  
+  50% {
+    background: #228B22;
+	color: #90EE90;
+  } /* Green */
+  
+  75% {
+    background: #FFFFFF;
+	color: #808080;
+  } /* White */
+  
+  100% {
+    background: #000000;
+	color: #494d5f;
+  } /* Black */
+}
