@@ -371,7 +371,7 @@ body {
 	color: black;
 	font-family: 'Cantarell', sans-serif;
 	text-align: right;
- margin-right: 10px;
+	margin-right: 10px;
 	font-size: 37px;
 	line-height: 110px;
 	float: inline-block;
@@ -391,6 +391,10 @@ body {
 	margin: 0 auto;
 	min-width: 300px;
 	padding: 0px;
+}
+
+.container .blue-h2, .blue-h1 {
+	line-height: 10px;
 }
 
 .material-symbols-rounded {
@@ -434,6 +438,10 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+}
+
+.imageIcon {
+	font-size: 40px !important;
 }
 
 /*!!!---DARK MODE THEMING---!!!*/
