@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HiAccount</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="../assets/css/hiaccount.css" type="text/css">
+        <script src="../assets/scripts/hiaccount.js"></script>
+        <script src="../assets/scripts/links.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="forms-container">
+                <div class="signin-signup">
+                    <form action="" class="sign-in-form">
+                        <div class="input-field joinTop">
+                            <i class="material-symbols-rounded">person</i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field joinMiddle">
+                            <i class="material-symbols-rounded">lock</i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" value="Log-In" class="btn solid joinBottom"/>
+                    </form>
+                </div>
+            </div>
+            <div class="panels-container">
+                <div class="panel left-panel">
+                <div class="content">
+                    <h2>Sign-In to your HiAccount.</h2>
+                    <p>With your HiAccount, you can do everything from booking a room at WorstEastern to ordering food at The Highland Cafe™️ and more!</p>
+                </div>
+                <img src="../assets/pics/logos/hienterprises.png" class="image" alt="">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h2>Sign-In to your HiAccount.</h2>
+                    <p>With your HiAccount, you can do everything from booking a room at WorstEastern to ordering food at The Highland Cafe™️ and more!</p>
+                </div>
+            <img src="../assets/pics/logos/hienterprises.png" class="image" alt="">
+        </div>
+        <script>
+            // Get the form element
+            const signInForm = document.querySelector(".sign-in-form");
+
+            // Add an event listener for form submission
+            signInForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+
+                // Redirect to the desired page using JavaScript
+                window.location.href = "loggedin.html";
+            });
+        </script>
+    </body>
+</html>

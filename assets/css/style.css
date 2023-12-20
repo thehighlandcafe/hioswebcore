@@ -279,8 +279,12 @@ body {
 	color: #1b1b1b;
 }
 
+/*HiAccount Log-In*/
+.loginLabel {
+	background-color: #a1cce3;
+}
+
 #usernameBox, #passwordBox, #codeBox {
-	border-radius: 600px;
 	background-color: white;
 	border: 0.5px solid #303034;
 	color: black;
@@ -288,9 +292,12 @@ body {
 	text-align: center;
 }
 
+#usernameBox, #passwordBox, .loginLabel {
+	width: 250px;
+	height: 50px;
+}
+
 #usernameBox, #passwordBox {
-	max-width: 300px;
-	min-width: 250px;
 	font-size: 15px;
 }
 
@@ -311,6 +318,7 @@ body {
 	font-size: 20px;
 	font-weight: bolder;
 	font-family: 'Cantarell', sans-serif;
+	margin-bottom: 20px;
 }
 
 /*NEW HEADINGS FROM JULY 2022*/

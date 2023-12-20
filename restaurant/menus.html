@@ -9,19 +9,21 @@
 		<title>HiOS | </title>
 		<script src="../assets/scripts/links.js"></script>
 		<script>
-			function showComplaintsDiv () {
-				document.getElementById('appFeedback').style.display = "none";  //empty the value
-				document.getElementById('complaints').style.display = "block";
-				document.getElementById('feedbackActive').style.display = "none";
-				document.getElementById('complaintsActive').style.display = "block";
-				}
-				
-			function showFeedbackDiv () {
-				document.getElementById('appFeedback').style.display = "block";  //empty the value
-				document.getElementById('complaints').style.display = "none";
-				document.getElementById('feedbackActive').style.display = "block";
-				document.getElementById('complaintsActive').style.display = "none";
-				}
+			function showSection(showing, hiding) {
+				//Showing section in question
+				showing.style.display = "block";
+				hiding.style.display = "none";
+			}
+
+			function leftSelected(left, right) {
+				left.className = "ripple-button leftButton navButtonInactive";
+				right.className = "ripple-button rightButton navButton";
+			}
+
+			function rightSelected(right, left) {
+				right.className = "ripple-button rightButton navButtonInactive";
+				left.className = "ripple-button leftButton navButton";	
+			}
 		</script>
 	</head>
 	<body>
@@ -31,14 +33,9 @@
 				<h1 class="blue-h2">Menus</h1>
 			<p id="para">Take a look at our menus here.</p></div>
 			<div class="translucentBox joinTop">
-				<div id="feedbackActive" style="display:block">
-					<br><button class="ripple-button leftButton navButtonInactive" onClick="showFeedbackDiv()">Main</button><button class="ripple-button rightButton navButton" onClick="showComplaintsDiv()">Gastro</button><br><br>
-				</div>
-				<div id="complaintsActive" style="display:none">
-					<br><button class="ripple-button leftButton navButton" onClick="showFeedbackDiv()">Main</button><button class="ripple-button rightButton navButtonInactive" onClick="showComplaintsDiv()">Gastro</button><br><br>
-				</div>
+				<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro);leftSelected(this, navigationRight);">Main</button><button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal);rightSelected(this, navigationLeft);">Gastro</button>
 			</div>
-			<div id="appFeedback" style="display:block">
+			<div id="normal" style="display:block">
 				<div class="translucentBox joinBottom">
 					<h1>Main Menu</h1>
 					<p id="para" style="text-align: center;">This menu includes Lunch, Dinner, and more.</p>
@@ -50,7 +47,7 @@
 					<a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
 				</div>
 			</div>
-			<div id="complaints" style="display:none">
+			<div id="gastro" style="display:none">
 				<div class="translucentBox joinBottom">
 						<center><h1>Gastro Menu</h1>
 				<p id="para" style="text-align: center;">This is our most premium menu that you will love!</p>
