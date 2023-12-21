@@ -401,10 +401,6 @@ body {
 	padding: 0px;
 }
 
-.container .blue-h2, .blue-h1 {
-	line-height: 10px;
-}
-
 .material-symbols-rounded {
 	font-size: 30px !important;
 }
@@ -450,6 +446,12 @@ body {
 
 .imageIcon {
 	font-size: 40px !important;
+}
+
+.titleIcon {
+	line-height: 45px;
+	font-size: 45px;
+	margin-right: 10px;
 }
 
 /*!!!---DARK MODE THEMING---!!!*/
