@@ -257,12 +257,12 @@ body {
 
 .joinTop {
 	border-radius: 25px 25px 6px 6px;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 
 .joinMiddle {
 	border-radius: 6px;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 
 .joinBottom {
@@ -352,12 +352,13 @@ body {
 
 .button {
 	width: 100%;
-	height: 110px;
+	height: 60px;
 	background-color: white;
 	color: black;
 	font-family: 'Cantarell', sans-serif;
 	text-align: left;
-	font-size: 30px;
+	font-size: 25px;
+	line-height: 60px;
 	font-weight: bold;
 	transition: 0.5s;
 	float: inline-block;
@@ -368,8 +369,14 @@ body {
 }
 
 .button img {
-	width: 50px;
-	float: right;
+	width: 45px;
+	padding: 5px;
+	float: left;
+	position: absolute;
+}
+
+.button span {
+	padding-left: 60px;
 }
 
 .hiosmobileLogo {
