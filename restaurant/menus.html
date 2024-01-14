@@ -9,19 +9,28 @@
 		<title>HiOS | </title>
 		<script src="../assets/scripts/links.js"></script>
 		<script>
-			function showSection(showing, hiding) {
+			function showSection(showing, hiding, hiding2) {
 				//Showing section in question
 				showing.style.display = "block";
 				hiding.style.display = "none";
+				hiding2.style.display = "none";
 			}
 
-			function leftSelected(left, right) {
+			function leftSelected(left, right, middle) {
 				left.className = "ripple-button leftButton navButtonInactive";
+				middle.className = "ripple-button middleButton navButton";
 				right.className = "ripple-button rightButton navButton";
 			}
 
-			function rightSelected(right, left) {
+			function middleSelected(middle, right, left) {
+				left.className = "ripple-button leftButton navButton";
+				middle.className = "ripple-button middleButton navButtonInactive";
+				right.className = "ripple-button rightButton navButton";
+			}
+
+			function rightSelected(right, left, middle) {
 				right.className = "ripple-button rightButton navButtonInactive";
+				middle.className = "ripple-button middleButton navButton";
 				left.className = "ripple-button leftButton navButton";	
 			}
 		</script>
@@ -31,9 +40,12 @@
 		<br><br><center>
 			<div class="container">
 				<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">menu_book</span>Menus</h1>
-			<p id="para">Take a look at our menus here.</p></div>
+				<p id="para">Take a look at our menus here.</p>
+			</div>
 			<div class="translucentBox joinTop">
-				<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro);leftSelected(this, navigationRight);">Main</button><button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal);rightSelected(this, navigationLeft);">Gastro</button>
+				<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro, worldwide);leftSelected(this, navigationRight, navigationMiddle);">Main</button>
+				<button id="navigationMiddle" class="ripple-button middleButton navButton" onclick="showSection(worldwide, normal, gastro);middleSelected(this, navigationRight, navigationLeft);">Abroad</button>
+				<button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal, worldwide);rightSelected(this, navigationLeft, navigationMiddle);">Gastro</button>
 			</div>
 			<div id="normal" style="display:block">
 				<div class="translucentBox joinBottom">
@@ -45,6 +57,19 @@
 						<br>
 						<br>
 					<a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
+				</div>
+			</div>
+			<div id="worldwide" style="display: none">
+				<div class="translucentBox joinBottom">
+					<center>
+						<h1>Worldwide Menu</h1>
+						<p id="para" style="text-align: center;">This is our brand new worldwide foods menu</p>
+						<div class="iframe-wrapper">
+							<iframe class="menu-iframe roundedImage" src="https://drive.google.com/file/d/1vAhfTvOaO3KU1YL2KheKTwOybNbCWFSz/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+						</div>
+						<br><br>
+						<a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
+					</center>
 				</div>
 			</div>
 			<div id="gastro" style="display:none">
