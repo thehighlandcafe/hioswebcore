@@ -5,18 +5,84 @@
 		<link rel="icon" href="assets/pics/logos/hiosbadge.png" type="image/icon type">
 		<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 		<link rel="stylesheet" href="assets/css/ripple.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<title>HiOS | Hotel Activities</title>
 		<script src="assets/scripts/links.js"></script>
+		<script>
+			function showSection(showing, hiding, hiding2) {
+				//Showing section in question
+				showing.style.display = "block";
+				hiding.style.display = "none";
+				hiding2.style.display = "none";
+			}
+
+			function leftSelected(left, right, middle) {
+				left.className = "ripple-button leftButton navButtonInactive";
+				middle.className = "ripple-button middleButton navButton";
+				right.className = "ripple-button rightButton navButton";
+			}
+
+			function middleSelected(middle, right, left) {
+				left.className = "ripple-button leftButton navButton";
+				middle.className = "ripple-button middleButton navButtonInactive";
+				right.className = "ripple-button rightButton navButton";
+			}
+
+			function rightSelected(right, left, middle) {
+				right.className = "ripple-button rightButton navButtonInactive";
+				middle.className = "ripple-button middleButton navButton";
+				left.className = "ripple-button leftButton navButton";	
+			}
+		</script>
 	</head>
 	<body>
-		<br><br>
+		<br><br><center>
 		<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
-			<p id="para">Choose a hotel from below.</p>
+			<h1 class="blue-h2" style="font-family: Audiowide, cursive;color: #10d444"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
+			<p id="para">Staying at WorstEastern? Select an option from below to get started.</p>
 		</div>
-		<div class="translucentBox full">
-			<button class="ripple-button joinMiddle roundedImage button" style="background: url('assets/buttons/wenew.png');background-size: 250px 60px;background-position: center;background-repeat: no-repeat;background-color: #10d444;" onclick="link('hotel/worsteastern.html')"></button>
+		<div class="translucentBox joinTop">
+			<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro, worldwide);leftSelected(this, navigationRight, navigationMiddle);">Book</button>
+			<button id="navigationMiddle" class="ripple-button middleButton navButton" onclick="showSection(worldwide, normal, gastro);middleSelected(this, navigationRight, navigationLeft);">Arriving</button>
+			<button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal, worldwide);rightSelected(this, navigationLeft, navigationMiddle);">Leaving</button>
+		</div>
+		<div id="normal" style="display:block">
+			<div class="translucentBox joinBottom">
+				<h1>Book a Room</h1>
+				<p id="para" style="text-align: center;">Book a room at WorstEastern below.</p>
+				<div class="iframe-wrapper">
+					<iframe class="menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUNzlCNkROOVc3UzJCTFQ1UVpWQ0pHQk9YSS4u&embed=true">Loading...</iframe>
+				</div>
+					<br>
+					<br>
+				<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="roundedImage"></a>
+			</div>
+		</div>
+		<div id="worldwide" style="display: none">
+			<div class="translucentBox joinBottom">
+				<center>
+					<h1>Arriving</h1>
+					<p id="para" style="text-align: center;">This is our brand new worldwide foods menu</p>
+					<div class="iframe-wrapper">
+						<iframe class="menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUQkJBVkZFSDhCOVJDMjdBRFQ2Sjc3NEM5MS4u&embed=true">Loading…</iframe>
+					</div>
+					<br><br>
+					<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
+				</center>
+			</div>
+		</div>
+		<div id="gastro" style="display:none">
+			<div class="translucentBox joinBottom">
+					<center><h1>Leaving</h1>
+			<p id="para" style="text-align: center;">This is our most premium menu that you will love!</p>
+			<div class="iframe-wrapper">
+				<iframe class="menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUMjdUUDRPMzg2OE9GOTRaQlNMUjJSUFdONS4u&embed=true">Loading…</iframe>
+			</div>
+			<br>
+			<br>
+					<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
+			</div>
 		</div>
 		<br><br><br><br>
 		<script src="assets/scripts/ripple.js"></script>
