@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 html {
 	/*background-color: #FCFCFF;*/
@@ -183,13 +184,13 @@ body {
 
 #nextButtonRoomkey, #nextButtonRoomkey2, #loginButton {
 	/*float: right;*/
-	height:30px;
-	width:100px;
+	height: 50px;
+	width: 150px;
 	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
 	background-color: #187bcd;
 	color: white;
-	border-radius: 16px;
+	border-radius: 90px;
 	border: none;
 }
 
@@ -198,16 +199,43 @@ body {
 	color: white;
 }
 
-.inputBox {
+/*signup button*/
+
+#signupButton {
+	/*float: right;*/
+	height: 50px;
+	width: 150px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 15px;
+	background-color: #86dc3d;
+	color: black;
+	border-radius: 90px;
+	border: none;
+	transition: 0.25s;
+}
+
+#signupButton:hover {
+	background-color: #378805;
+	color: white;
+}
+
+.inputBox, .captchaBox {
 	border-radius: 16px;
 	background-color: white;
 	border: none;
 	color: black;
 	height: 30px;
 	width: 100px;
-	font-family: 'Outfit', sans-serif;
 	text-align: center;
 	font-size: 15px;
+}
+
+.inputBox {
+	font-family: 'Outfit', sans-serif;
+}
+
+.captchaBox {
+	font-family: 'Courier Prime', monospace;
 }
 
 #nfccheck {
@@ -242,14 +270,13 @@ body {
 }
 
 .translucentAboutBox {
-	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 	padding: 10px;
-	max-width: 300px;
-	min-width: 25px;
+	min-width: 300px;
 	backdrop-filter: blur(14px);
 	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*The radius' of the new joins*/

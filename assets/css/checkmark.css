@@ -17,7 +17,7 @@
   stroke: #fff;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  box-shadow: inset 0px 0px 0px #1891ac;
+  box-shadow: inset 0px 0px 0px #187bcd;
   animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
 }
 
@@ -43,6 +43,6 @@
 }
 @keyframes fill {
   100% {
-    box-shadow: inset 0px 0px 0px 30px #1891ac;
+    box-shadow: inset 0px 0px 0px 30px #187bcd;
   }
 }

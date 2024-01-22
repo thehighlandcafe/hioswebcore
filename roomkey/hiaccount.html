@@ -3,54 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HiAccount</title>
+        <title>HiAccount | Log-In</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css">
-        <link rel="stylesheet" href="../assets/css/hiaccount.css" type="text/css">
-        <script src="../assets/scripts/hiaccount.js"></script>
+        <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
         <script src="../assets/scripts/links.js"></script>
     </head>
     <body>
+        <span class="material-symbols-rounded" onclick="link('../roomkey.html')">arrow_back</span>
+        <br><br>
         <div class="container">
-            <div class="screen">
-                <div class="screen__content">
-                    <form class="login">
-                        <img src="../assets/pics/logos/hienterprises.png" class="image" alt="" width="200" style="float: 0 auto;">
-                        <h3>Sign-In to your HiAccount</h3>
-                        <div class="login__field">
-                            <i class="login__icon fas fa-user"></i>
-                            <input type="text" class="login__input" placeholder="Email Address">
-                        </div>
-                        <div class="login__field">
-                            <i class="login__icon fas fa-lock"></i>
-                            <input type="password" class="login__input" placeholder="Password">
-                        </div>
-                        <button class="button login__submit" id="loginBtn">
-                            <span class="button__text">Log-In</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                        </button>                                    
-                    </form>
-                </div>
-                <div class="screen__background">
-                    <span class="screen__background__shape screen__background__shape4"></span>
-                    <span class="screen__background__shape screen__background__shape3"></span>		
-                    <span class="screen__background__shape screen__background__shape2"></span>
-                    <span class="screen__background__shape screen__background__shape1"></span>
-                </div>		
-            </div>
+            <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">account_circle</span>HiAccount</h1>
         </div>
-        <script>
-            // Get the button element
-            const loginButton = document.getElementById("loginBtn");
-
-            // Add an event listener for button click
-            loginButton.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent the default form submission behavior
-
-                // Redirect to the desired page using JavaScript
-                window.location.href = "loggedin.html";
-            });
-        </script>
+        <p class="para">Welcome. To get started, please enter your login details below.</p>
+        <div class="translucentBox joinTop" style="text-align: center;">
+            <p class="loginText"><strong>Email Address:</p>
+            <input id="usernameBox" class="full"></input><br><br>
+            <p class="loginText">Password:</p>
+            <input type="password" id="passwordBox" class="full"></input></strong><br><br>
+            <button id="loginButton" class="ripple-button" onclick="link('loggedin.html')">Log-In</button><br><br>
+        </div>
+        <div class="translucentAboutBox joinBottom" style="text-align: center;">
+            <h1>Don't have an account?</h1>
+            <button id="signupButton" onclick="link('signup.html')">Sign-Up</button>
+        </div>
+		<script src="../assets/scripts/ripple.js"></script>
     </body>
 </html>
