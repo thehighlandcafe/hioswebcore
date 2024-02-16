@@ -17,24 +17,23 @@
 			}
 
 			function leftSelected(left, right) {
-				left.className = "ripple-button leftButton navButtonInactive";
-				right.className = "ripple-button rightButton navButton";
+				left.className = "ripple-button leftNew navButtonInactive";
+				right.className = "ripple-button rightNew navButton";
 			}
 
 			function rightSelected(right, left) {
 				right.className = "ripple-button rightButton navButtonInactive";
-				left.className = "ripple-button leftButton navButton";	
+				left.className = "ripple-button leftNew navButton";	
 			}
 		</script>
 	</head>
 	<body><center><br><br>
 		<div class="container">
-			<span class="imageIcon material-symbols-rounded">rate_review</span>
 			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">rate_review</span>Send Feedback</h1>
 			<p id="para">Use this page to send feedback to us.</p>
 		</div>
 	<div class="translucentBox joinTop">
-		<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(appFeedback, complaints);leftSelected(this, navigationRight);">Feedback</button><button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(complaints, appFeedback);rightSelected(this, navigationLeft);">Complain</button>
+		<button id="navigationLeft" class="ripple-button leftNew navButtonInactive" onclick="showSection(appFeedback, complaints);leftSelected(this, navigationRight);">Feedback</button><button id="navigationRight" class="ripple-button rightNew navButton" onclick="showSection(complaints, appFeedback);rightSelected(this, navigationLeft);">Complain</button>
 	</div>
 	<div id="appFeedback" style="display:block">
 		<div class="translucentBox joinMiddle">

@@ -438,19 +438,23 @@ body {
 }
 
 /*Feedback Buttons*/
-.leftButton, .middleButton, .rightButton {
+.leftButton, .middleButton, .rightButton, .leftNew, .rightNew {
 	width: 100px;
 }
 
-.leftButton {
+.leftButton, .leftNew {
 	border-radius: 60px 10px 10px 60px;
+}
+
+.leftNew {
+	margin-right: 4px;
 }
 
 .middleButton {
 	border-radius: 5px;
 }
 
-.rightButton {
+.rightButton, .rightNew {
 	border-radius: 10px 60px 60px 10px;
 }
 
