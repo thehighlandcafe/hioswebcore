@@ -435,6 +435,11 @@ body {
 
 .material-symbols-rounded {
 	font-size: 30px !important;
+	font-variation-settings:
+	'FILL' 1,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 24 !important
 }
 
 /*Feedback Buttons*/
