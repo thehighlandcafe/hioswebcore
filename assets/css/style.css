@@ -1,13 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+/*COLOURS*/
+:root {
+	--primary: #0061a6;
+	--onPrimary: #ffffff;
+	--primaryContainer: #d2e4ff;
+	--onPrimaryContainer: #001c37;
+	--secondary: #535f70;
+	--onSecondary: #ffffff;
+	--secondaryContainer: #d7e3f8;
+	--onSecondaryContainer: #101c2b;
+	--tertiary: #6c5778;
+	--onTertiary: #ffffff;
+	--tertiaryContainer: #f3daff;
+	--onTertiaryContainer: #251431;
+	--background: #fdfcff;
+	--onBackground: #1a1c1e;
+	--surface: #fdfcff;
+	--onSurface: #1a1c1e;
+	--outline: #73777f;
+	--surfaceVarient: #dfe2eb;
+	--onSurfaceVarient: #43474e;
+}
+
+/*HTML CSS CODE*/
+
 html {
 	/*background-color: #FCFCFF;*/
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
-	background-color: #f1fbfd;
+	background-color: var(--background);
 	font-family: 'Outfit', sans-serif;
-	color: black;
+	color: var(--onPrimaryContainer);
 }
 
 body {
@@ -33,22 +58,22 @@ body {
 /*MAIN NAVIGATION BUTTONS*/
 
 .navButton, .navButtonInactive {
-	height: 60px;
-	width: 300px;
+	height: 40px;
+	width: 150px;
 	font-family: 'Outfit', sans-serif;
-	font-size: 20px;
+	font-size: 14px;
 	border-radius: 60px;
 	border: none;
 }
 
 .navButton {
-	background-color: #187bcd;
-	color: white;
+	background-color: var(--primary);
+	color: var(--onPrimary);
 }
 
 .navButtonInactive {
-	background-color: #96AFB8;
-	color: black;
+	background-color: var(--secondary);
+	color: var(--onSecondary);
 }
 
 /*OFFER BOXES*/
@@ -142,6 +167,7 @@ body {
 #smallpara {
 	font-size: 10px;
 	text-align: center;
+	color: var(--onPrimaryContainer);
 }
 
 #rightalign {
@@ -193,16 +219,16 @@ body {
 	width: 150px;
 	font-family: 'Outfit', sans-serif;
 	font-size: 15px;
-	background-color: #187bcd;
-	color: white;
+	background-color: var(--primary);
+	color: var(--onPrimary);
 	border-radius: 90px;
 	border: none;
 }
 
-#nextButtonRoomkey:hover, #nextButtonRoomkey2:hover {
-	background-color: #05B5BD; /* lightblue */
+/*#nextButtonRoomkey:hover, #nextButtonRoomkey2:hover {
+	background-color: #05B5BD; /* lightblue 
 	color: white;
-}
+}*/
 
 /*signup button*/
 
@@ -225,14 +251,19 @@ body {
 }
 
 .inputBox, .captchaBox {
-	border-radius: 16px;
-	background-color: white;
-	border: none;
-	color: black;
-	height: 30px;
-	width: 100px;
+	border-radius: 4px;
+	background-color: var(--surface);
+	border: 1px solid var(--outline);
+	outline: none;
+	color: var(--onSurface);
+	height: 50px;
+	width: 200px;
 	text-align: center;
-	font-size: 15px;
+	font-size: 16pt;
+}
+
+.inputBox, .captchaBox:focus {
+	border: 1px solid var(--primary);
 }
 
 .inputBox {
@@ -253,7 +284,7 @@ body {
 
 .roundedImage {
 	border-radius: 25px;
-	border: 0.5px solid #303034;
+	border: 0.5px solid var(--outline);
 }
 
 /*NEWEST ADDED CSS*/
@@ -261,33 +292,40 @@ body {
 .translucentBox {
 	padding: 10px;
 	min-width: 300px;
-	background-color: #d3e5ef;
+	background-color: var(--primaryContainer);
+	color: var(--onPrimaryContainer);
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 .translucentInfoBox {
-	border-radius: 25px;
+	border-radius: 12px;
 	padding: 10px;
 	min-width: 250px;
+	background-color: var(--secondaryContainer);
+	color: var(--onSecondaryContainer);
+	margin-right: auto;
+	margin-left: auto;
 	text-align: center;
-	background-color: #d3e5ef;
 }
 
 .translucentAboutBox {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: var(--tertiaryContainer);
+	color: var(--onTertiaryContainer);
 	padding: 10px;
 	min-width: 300px;
 	backdrop-filter: blur(14px);
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 12px;
 }
 
 /*The radius' of the new joins*/
 
 .joinTop {
-	border-radius: 25px 25px 6px 6px;
+	border-radius: 12px 12px 6px 6px;
 	margin-bottom: 3px;
 }
 
@@ -297,44 +335,40 @@ body {
 }
 
 .joinBottom {
-	border-radius: 6px 6px 25px 25px;
+	border-radius: 6px 6px 12px 12px;
 }
 
 .full {
-	border-radius: 25px;
+	border-radius: 12px;
 }
 
 
 .whitesmallpara {
 	font-size: 10px;
-	color: #1b1b1b;
+	color: var(--onPrimaryContainer);
 }
 
 /*HiAccount Log-In*/
 .loginLabel {
 	background-color: #a1cce3;
-}
-
-#usernameBox, #passwordBox, #codeBox {
-	background-color: white;
-	border: 0.5px solid #303034;
-	color: black;
-	height: 60px;
-	text-align: center;
-}
-
-#usernameBox, #passwordBox, .loginLabel {
 	width: 250px;
 	height: 50px;
 }
 
-#usernameBox, #passwordBox {
-	font-size: 15px;
+#usernameBox, #passwordBox, #codeBox {
+	border-radius: 4px;
+	background-color: var(--surface);
+	border: 1px solid var(--outline);
+	outline: none;
+	color: var(--onSurface);
+	height: 50px;
+	width: 200px;
+	text-align: center;
+	font-size: 16pt;
 }
 
-#codeBox {
-	width: 100px;
-	font-size: 25px;
+#usernameBox, #passwordBox, #codeBox:focus {
+	border: 1px solid var(--primary);
 }
 
 #usernameBox {
@@ -343,6 +377,11 @@ body {
 
 #passwordBox, #codeBox {
 	font-family: 'Courier Prime', monospace;
+}
+
+#codeBox {
+	width: 100px;
+	font-size: 25px;
 }
 
 .loginText {
@@ -355,7 +394,7 @@ body {
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2, .blue-h3 {
-	color: #187bcd;
+	color: var(--primary);
 	font-family: 'Outfit', sans-serif;
 	font-size: 45px;
 	font-weight: 100;
@@ -402,25 +441,6 @@ body {
 .button img {
 	float: right;
 	width: 50px;
-}
-
-.hiosmobileLogo {
-	width: 350px;
-	height: 110px;
-	background-color: white;
-	color: black;
-	font-family: 'Outfit', sans-serif;
-	text-align: right;
-	margin-right: 10px;
-	font-size: 37px;
-	line-height: 110px;
-	float: inline-block;
-}
-
-.hiosmobileLogo img {
-	width: 90px;
-	float: left;
-	margin: 10px;
 }
 
 .left {
@@ -501,25 +521,26 @@ body {
 /*!!!---DARK MODE THEMING---!!!*/
 
 @media (prefers-color-scheme: dark) {
-	html {
-		background-color: #131314;
-    	color: white;
-	}
-
-	#smallpara, .whitesmallpara {
-		color: white;
-	}
-
-	.blue-h2, .blue-h3 {
-		color: white;
-	}
-
-	.translucentBox {
-		background-color: #293840;
-	}
-
-	.translucentInfoBox {
-		background-color: #303034;
+	:root {
+		--primary: #a0c9ff;
+		--onPrimary: #00325a;
+		--primaryContainer: #253141;
+		--onPrimaryContainer: #d2e4ff;
+		--secondary: #bbc7db;
+		--onSecondary: #253141;
+		--secondaryContainer: #3c4858;
+		--onSecondaryContainer: #d7e3f8;
+		--tertiary: #d7bde4;
+		--onTertiary: #3b2947;
+		--tertiaryContainer: #533f5f;
+		--onTertiaryContainer: #f3daff;
+		--background: #1a1c1e;
+		--onBackground: #e3e2e6;
+		--surface: #1a1c1e;
+		--onSurface: #e3e2e6;
+		--outline: #8d9199;
+		--surfaceVarient: #43474e;
+		--onSurfaceVarient: #c3c6cf;
 	}
 
 	.button {
@@ -529,11 +550,6 @@ body {
 
 	.button:hover {
 		background-color: #5A6B74; }
-	
-	.hiosmobileLogo {
-		background-color: #293840;
-		color: white;
-	}
 
  	.gradientHeading, .gradientHeadingSmall {
 		color: white; 
