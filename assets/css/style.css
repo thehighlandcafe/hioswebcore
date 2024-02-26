@@ -283,7 +283,7 @@ body {
 }
 
 .roundedImage {
-	border-radius: 25px;
+	border-radius: 12px;
 	border: 0.5px solid var(--outline);
 }
 
@@ -451,6 +451,10 @@ body {
 	margin: 0 auto;
 	min-width: 300px;
 	padding: 0px;
+}
+
+.container #para {
+	text-align: left !important;
 }
 
 .material-symbols-rounded {
