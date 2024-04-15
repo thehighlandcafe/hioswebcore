@@ -525,6 +525,14 @@ menu-iframe {
 	border: none;
 }
 
+.form-button-icon {
+	line-height: 14px;
+	font-size: 14px !important;
+	margin-right: 5px;
+	vertical-align: middle;
+	padding-bottom: 3px
+}
+
 .imageIcon {
 	font-size: 40px !important;
 }
