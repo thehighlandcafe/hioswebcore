@@ -5,6 +5,7 @@
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
 		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+		<link rel="../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>HiOS | Breakfast</title>
 		<script src="../assets/scripts/links.js"></script>
@@ -18,13 +19,15 @@
 			<p id="para">Use the form below to check-in to breakfast.</p>
 		</div>
 		<div class="translucentBox full">
+			<button class="ripple-button form-button joinTop" onclick="link('breakfast/breakfast.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
 			<div class="iframe-wrapper">
-				<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSdjJ0yto-VHoTjDtkYlbvr4XjI2wwd_XN-g7vuRP9aNwF1wwg/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+				<iframe class="joinBottom menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSdjJ0yto-VHoTjDtkYlbvr4XjI2wwd_XN-g7vuRP9aNwF1wwg/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 			</div>
 			<br><br>
 			<img src="../assets/buttons/scrolltop.bmp" onclick="link('breakfast.html#')" class="roundedImage">
 		</div>
 		<br><br><br><br>
 		</center>
+		<script src="../assets/scripts/ripple.js"></script>
 	</body>
 </html>
