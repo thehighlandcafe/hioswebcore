@@ -403,7 +403,10 @@ body {
 
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading, .gradientHeadingSmall {
-	color: #187bcd;
+	background-image: linear-gradient(to right, #1891ac, #1d3e79);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
 	font-family: 'Outfit', sans-serif;
 }
 
@@ -577,6 +580,6 @@ menu-iframe {
 		background-color: #5A6B74; }
 
  	.gradientHeading, .gradientHeadingSmall {
-		color: white; 
+		color: var(--primary);
 	}
 }

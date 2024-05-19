@@ -10,31 +10,18 @@
 		<script src="assets/scripts/links.js"></script>
 	</head>
 	<body>
-		<br>
-		<div class="container">
-			<h1 id="greetingHome" class="blue-h2"></h1>
-			<p id="para">Welcome to your Dashboard!</p>
-		</div>
 		<center>
+		<p class="gradientHeading" id="greetingHome"></p>
+		<p class="gradientHeadingSmall">Welcome to HiOSMobile!</p><center>
 		<div class="translucentBox joinTop">
-			<h3>Weather</h3>
-				<div class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script>
+			<h2>Your Info</h2>
+				<h3>Weather</h3>
+					<div style="box-shadow: 0 5px 5px -5px grey;" class="roundedImage" id="ww_6b591a1444ddd" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl8686"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one","font":"Arial"}'>Weather for the Following Location: <a href="https://2ua.org/gbr/lancaster/map/" id="ww_6b591a1444ddd_u" target="_blank">Lancaster map, United Kingdom</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_6b591a1444ddd"></script>
 		</div>
-		<div class="translucentBox joinBottom">
-			<h3>Date</h3>
-				<p id="date" class="para"></p>
-		</div>
-		<!--div class="translucentBox joinBottom">
-			<div id="buttonNotPressed" style="display: block;">
-				<button class="ripple-button navButton" onClick="showTutorialDiv()">App Tutorial</button>
-			</div>
-			<div id="buttonPressed" style="display: none;">
-				<button class="ripple-button navButtonInactive" onClick="hideTutorialDiv()">App Tutorial</button>
-			</div>
-			<div id="tutorial" style="display: none;">
-				<br><img src="assets/media/tutorial.gif" width="300" class="roundedImage">
-			</div-->
-		</div>
+		<div class="translucentBox joinBottom"
+				<h3>Date</h3>
+					<p id="date" class="para"></p>
+		</div><br>
 		<br><br><br><br>
 		<!Please note, to access staff portal after version 1.1.7, you have to exit fullscreen and go back to the HiOS(tm) Launcher and access the staffportal from there;>
 		<script src="assets/scripts/ripple.js"></script>
@@ -52,7 +39,7 @@
 			greet = 'Good Evening';
 
 		document.getElementById('greetingHome').innerHTML =
-			'' + greet + '!';
+			'<b>' + greet + '!</b>';
 			
 		n =  new Date();
 		y = n.getFullYear();
