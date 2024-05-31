@@ -1,8 +1,11 @@
+/*STYLES, FONTS, AND COLOURS*/
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
 
-/*COLOURS*/
+/*Variables*/
 :root {
+	/*Colours*/
 	--primary: #0061a6;
 	--onPrimary: #ffffff;
 	--primaryContainer: #d2e4ff;
@@ -23,17 +26,51 @@
 	--surfaceVarient: #dfe2eb;
 	--onSurfaceVarient: #43474e;
 
-	/*FONTS*/
+	/*Fonts*/
 	--fontPrimary: 'Space Grotesk', sans-serif;
 	--fontCode: 'Roboto Mono', monospace;
 }
 
-/*HTML CSS CODE*/
+/*Dark mode variables/legacy styles*/
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: #a0c9ff;
+		--onPrimary: #00325a;
+		--primaryContainer: #253141;
+		--onPrimaryContainer: #d2e4ff;
+		--secondary: #bbc7db;
+		--onSecondary: #253141;
+		--secondaryContainer: #3c4858;
+		--onSecondaryContainer: #d7e3f8;
+		--tertiary: #d7bde4;
+		--onTertiary: #3b2947;
+		--tertiaryContainer: #533f5f;
+		--onTertiaryContainer: #f3daff;
+		--background: #1a1c1e;
+		--onBackground: #e3e2e6;
+		--surface: #1a1c1e;
+		--onSurface: #e3e2e6;
+		--outline: #8d9199;
+		--surfaceVarient: #43474e;
+		--onSurfaceVarient: #c3c6cf;
+	}
 
+	.button {
+		color: white;
+		background-color: #354A54;
+	}
+
+	.button:hover {
+		background-color: #5A6B74;
+	}
+
+	.gradientHeading, .gradientHeadingSmall {
+		color: var(--primary);
+	}
+}
+
+/*Setting basic HTML styles, such as background colour and font*/
 html {
-	/*background-color: #FCFCFF;*/
-	/*background-color: #081c34;*/
-	/*background-image: url('rickroll.gif');*/
 	background-color: var(--background);
 	font-family: var(--fontPrimary);
 	color: var(--onPrimaryContainer);
@@ -59,8 +96,141 @@ body {
 	}
    }
 
-/*MAIN NAVIGATION BUTTONS*/
+/*Rounded corners for HiMaterial elements*/
+.roundedImage {
+	border-radius: 12px;
+	border: 0.5px solid var(--outline);
+}
 
+/*HIMATERIAL COMPONENTS*/
+
+/*Main headings at top of pages*/
+/*NEW HEADINGS FROM JULY 2022*/
+
+.blue-h2, .blue-h3 {
+	color: var(--primary);
+	font-family: var(--fontPrimary);
+	font-size: 45px;
+	font-weight: 100;
+	text-align: left;
+}
+
+.material-symbols-rounded {
+	font-size: 30px !important;
+	font-variation-settings:
+	'FILL' 1,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 24 !important
+}
+
+/*Heading subtitles*/
+.subtitle {
+	font-family: var(--fontCode) !important;
+}
+
+/*Gradient-coloured headings on Homepage*/
+/*NEW HEADINGS FROM DECEMBER 2022*/
+.gradientHeading, .gradientHeadingSmall {
+	background-image: linear-gradient(to right, #1891ac, #1d3e79);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-family: var(--fontPrimary);
+}
+
+.gradientHeading {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.gradientHeadingSmall {
+	font-size: 30px;
+}
+
+/*Main headings containers*/
+.container {
+	margin: 0 auto;
+	min-width: 300px;
+	padding: 0px;
+}
+
+.container #para {
+	text-align: left !important;
+}
+
+/*Section containers*/
+.translucentBox {
+	padding: 10px;
+	min-width: 300px;
+	background-color: var(--primaryContainer);
+	color: var(--onPrimaryContainer);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/*About Page containers*/
+.translucentAboutBox {
+	background-color: var(--tertiaryContainer);
+	color: var(--onTertiaryContainer);
+	padding: 10px;
+	min-width: 300px;
+	backdrop-filter: blur(14px);
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 12px;
+}
+
+/*
+	Corner radius' for section containers,
+	depending whether they are by themselves,
+	are at the top, middle, or bottom.
+*/
+.joinTop {
+	border-radius: 12px 12px 6px 6px !important;
+	margin-bottom: 3px !important;
+}
+
+.joinMiddle {
+	border-radius: 6px !important;
+	margin-bottom: 3px !important;
+}
+
+.joinBottom {
+	border-radius: 6px 6px 12px 12px !important;
+}
+
+.full {
+	border-radius: 12px;
+}
+
+/*Large link buttons*/
+.button {
+	width: 100%;
+	height: 110px;
+	background-color: white;
+	color: black;
+	font-family: var(--fontPrimary);
+	text-align: left;
+	font-size: 30px;
+	font-weight: bold;
+	transition: 0.5s;
+	float: inline-block;
+	border-radius: 25px !important;
+}
+
+.button:hover {
+	background-color: #96AFB8;
+}
+
+.button img {
+	float: right;
+	width: 50px;
+}
+
+/*Navigation buttons*/
 .navButton, .navButtonInactive {
 	height: 40px;
 	width: 150px;
@@ -80,15 +250,35 @@ body {
 	color: var(--onSecondary);
 }
 
-/*OFFER BOXES*/
-
-.offerBox, .offerBoxExpired {
-	border-radius: 25px;
-	padding: 10px;
-	width: 300px;
-	color: white;
+/*Feedback page navigation buttons*/
+.leftButton, .middleButton, .rightButton, .leftNew, .rightNew {
+	width: 100px;
 }
 
+.leftButton, .leftNew {
+	border-radius: 60px 10px 10px 60px;
+}
+
+.leftNew {
+	margin-right: 4px;
+}
+
+.middleButton {
+	border-radius: 5px;
+}
+
+.rightButton, .rightNew {
+	border-radius: 10px 60px 60px 10px;
+}
+
+/*Icons that go inside paragraphs*/
+.helpcenterIcons {
+	font-size: 25px !important;
+	line-height: inherit;
+	vertical-align: middle;
+}
+
+/*LEGACY/HIOSDESKTOP 2021 COMPONENTS*/
 .offerBox {
 	background: #006ee6;
 }
@@ -157,10 +347,6 @@ body {
 	font-size: 17px;
 }
 
-.subtitle {
-	font-family: var(--fontCode) !important;
-}
-
 .paraHomeSubtitle {
 	text-align: left;
 	font-size: 20px !important;
@@ -176,16 +362,6 @@ body {
 	font-size: 10px;
 	text-align: center;
 	color: var(--onPrimaryContainer);
-}
-
-#rightalign {
-	text-align: right;
-}
-
-.wrapper {
-	display: grid;
- 	grid-template-columns: 400px 400px;
-	justify-content: center;
 }
 
 #rickroll {
@@ -290,73 +466,7 @@ body {
 	display: none;
 }
 
-.roundedImage {
-	border-radius: 12px;
-	border: 0.5px solid var(--outline);
-}
-
-/*NEWEST ADDED CSS*/
-
-.translucentBox {
-	padding: 10px;
-	min-width: 300px;
-	background-color: var(--primaryContainer);
-	color: var(--onPrimaryContainer);
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-.translucentInfoBox {
-	border-radius: 12px;
-	padding: 10px;
-	min-width: 250px;
-	background-color: var(--secondaryContainer);
-	color: var(--onSecondaryContainer);
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-}
-
-.translucentAboutBox {
-	background-color: var(--tertiaryContainer);
-	color: var(--onTertiaryContainer);
-	padding: 10px;
-	min-width: 300px;
-	backdrop-filter: blur(14px);
-	text-align: left;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 12px;
-}
-
-/*The radius' of the new joins*/
-
-.joinTop {
-	border-radius: 12px 12px 6px 6px !important;
-	margin-bottom: 3px !important;
-}
-
-.joinMiddle {
-	border-radius: 6px !important;
-	margin-bottom: 3px !important;
-}
-
-.joinBottom {
-	border-radius: 6px 6px 12px 12px !important;
-}
-
-.full {
-	border-radius: 12px;
-}
-
-
-.whitesmallpara {
-	font-size: 10px;
-	color: var(--onPrimaryContainer);
-}
-
-/*HiAccount Log-In*/
+/*Account Log-In*/
 .loginLabel {
 	background-color: #a1cce3;
 	width: 250px;
@@ -399,110 +509,8 @@ body {
 	margin-bottom: 20px;
 }
 
-/*NEW HEADINGS FROM JULY 2022*/
-
-.blue-h2, .blue-h3 {
-	color: var(--primary);
-	font-family: var(--fontPrimary);
-	font-size: 45px;
-	font-weight: 100;
-	text-align: left;
-}
-
-/*NEW HEADINGS FROM DECEMBER 2022*/
-.gradientHeading, .gradientHeadingSmall {
-	background-image: linear-gradient(to right, #1891ac, #1d3e79);
-	color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
-	font-family: var(--fontPrimary);
-}
-
-.gradientHeading {
-	font-size: 40px;
-	font-weight: 700;
-}
-
-.gradientHeadingSmall {
-	font-size: 30px;
-}
-
 .brand {
 	width: 300px;
-}
-
-.button {
-	width: 100%;
-	height: 110px;
-	background-color: white;
-	color: black;
-	font-family: var(--fontPrimary);
-	text-align: left;
-	font-size: 30px;
-	font-weight: bold;
-	transition: 0.5s;
-	float: inline-block;
-	border-radius: 25px !important;
-}
-
-.button:hover {
-	background-color: #96AFB8;
-}
-
-.button img {
-	float: right;
-	width: 50px;
-}
-
-.left {
-	text-align: left;
-}
-
-.container {
-	margin: 0 auto;
-	min-width: 300px;
-	padding: 0px;
-}
-
-.container #para {
-	text-align: left !important;
-}
-
-.material-symbols-rounded {
-	font-size: 30px !important;
-	font-variation-settings:
-	'FILL' 1,
-	'wght' 400,
-	'GRAD' 0,
-	'opsz' 24 !important
-}
-
-/*Feedback Buttons*/
-.leftButton, .middleButton, .rightButton, .leftNew, .rightNew {
-	width: 100px;
-}
-
-.leftButton, .leftNew {
-	border-radius: 60px 10px 10px 60px;
-}
-
-.leftNew {
-	margin-right: 4px;
-}
-
-.middleButton {
-	border-radius: 5px;
-}
-
-.rightButton, .rightNew {
-	border-radius: 10px 60px 60px 10px;
-}
-
-/*help center icons css*/
-.helpcenterIcons {
-	font-size: 25px !important;
-	line-height: inherit;
-	vertical-align: middle;
 }
 
 #homeImage {
@@ -552,42 +560,4 @@ menu-iframe {
 	line-height: 45px;
 	font-size: 45px;
 	margin-right: 10px;
-}
-
-/*!!!---DARK MODE THEMING---!!!*/
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary: #a0c9ff;
-		--onPrimary: #00325a;
-		--primaryContainer: #253141;
-		--onPrimaryContainer: #d2e4ff;
-		--secondary: #bbc7db;
-		--onSecondary: #253141;
-		--secondaryContainer: #3c4858;
-		--onSecondaryContainer: #d7e3f8;
-		--tertiary: #d7bde4;
-		--onTertiary: #3b2947;
-		--tertiaryContainer: #533f5f;
-		--onTertiaryContainer: #f3daff;
-		--background: #1a1c1e;
-		--onBackground: #e3e2e6;
-		--surface: #1a1c1e;
-		--onSurface: #e3e2e6;
-		--outline: #8d9199;
-		--surfaceVarient: #43474e;
-		--onSurfaceVarient: #c3c6cf;
-	}
-
-	.button {
-		color: white;
-		background-color: #354A54;
-	}
-
-	.button:hover {
-		background-color: #5A6B74; }
-
- 	.gradientHeading, .gradientHeadingSmall {
-		color: var(--primary);
-	}
 }
