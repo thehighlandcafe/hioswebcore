@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
 
 /*COLOURS*/
 :root {
@@ -22,6 +22,10 @@
 	--outline: #73777f;
 	--surfaceVarient: #dfe2eb;
 	--onSurfaceVarient: #43474e;
+
+	/*FONTS*/
+	--fontPrimary: 'Space Grotesk', sans-serif;
+	--fontCode: 'Roboto Mono', monospace;
 }
 
 /*HTML CSS CODE*/
@@ -31,7 +35,7 @@ html {
 	/*background-color: #081c34;*/
 	/*background-image: url('rickroll.gif');*/
 	background-color: var(--background);
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	color: var(--onPrimaryContainer);
 }
 
@@ -60,7 +64,7 @@ body {
 .navButton, .navButtonInactive {
 	height: 40px;
 	width: 150px;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	font-size: 14px;
 	border-radius: 60px;
 	border: none;
@@ -114,7 +118,7 @@ body {
 }
 
 .termsconditions, #infoText {
-	font-family: 'Courier Prime', monospace;
+	font-family: var(--fontCode);
 }
 
 .termsconditions {
@@ -150,7 +154,11 @@ body {
 }
 
 #para {
-	font-size: 20px;
+	font-size: 17px;
+}
+
+.subtitle {
+	font-family: var(--fontCode) !important;
 }
 
 .paraHomeSubtitle {
@@ -217,7 +225,7 @@ body {
 	/*float: right;*/
 	height: 50px;
 	width: 150px;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	font-size: 15px;
 	background-color: var(--primary);
 	color: var(--onPrimary);
@@ -236,7 +244,7 @@ body {
 	/*float: right;*/
 	height: 50px;
 	width: 150px;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	font-size: 15px;
 	background-color: #86dc3d;
 	color: black;
@@ -267,11 +275,11 @@ body {
 }
 
 .inputBox {
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 }
 
 .captchaBox {
-	font-family: 'Courier Prime', monospace;
+	font-family: var(--fontCode);
 }
 
 #nfccheck {
@@ -372,11 +380,11 @@ body {
 }
 
 #usernameBox {
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 }
 
 #passwordBox, #codeBox {
-	font-family: 'Courier Prime', monospace;
+	font-family: var(--fontCode);
 }
 
 #codeBox {
@@ -387,7 +395,7 @@ body {
 .loginText {
 	font-size: 20px;
 	font-weight: bolder;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	margin-bottom: 20px;
 }
 
@@ -395,7 +403,7 @@ body {
 
 .blue-h2, .blue-h3 {
 	color: var(--primary);
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	font-size: 45px;
 	font-weight: 100;
 	text-align: left;
@@ -407,7 +415,7 @@ body {
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 }
 
 .gradientHeading {
@@ -428,7 +436,7 @@ body {
 	height: 110px;
 	background-color: white;
 	color: black;
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	text-align: left;
 	font-size: 30px;
 	font-weight: bold;
@@ -521,7 +529,7 @@ menu-iframe {
 .form-button {
 	background-color: var(--primary);
 	color: var(--onPrimary);
-	font-family: 'Outfit', sans-serif;
+	font-family: var(--fontPrimary);
 	font-size: 14px;
 	height: 40px;
 	border-radius: 12px;
