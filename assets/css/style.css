@@ -98,7 +98,7 @@ body {
 
 /*Rounded corners for HiMaterial elements*/
 .roundedImage {
-	border-radius: 12px;
+	border-radius: 25px;
 	border: 0.5px solid var(--outline);
 }
 
@@ -180,7 +180,7 @@ body {
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 12px;
+	border-radius: 25px;
 }
 
 /*
@@ -189,7 +189,7 @@ body {
 	are at the top, middle, or bottom.
 */
 .joinTop {
-	border-radius: 12px 12px 6px 6px !important;
+	border-radius: 25px 25px 6px 6px !important;
 	margin-bottom: 3px !important;
 }
 
@@ -199,11 +199,11 @@ body {
 }
 
 .joinBottom {
-	border-radius: 6px 6px 12px 12px !important;
+	border-radius: 6px 6px 25px 25px !important;
 }
 
 .full {
-	border-radius: 12px;
+	border-radius: 25px;
 }
 
 /*Large link buttons*/
