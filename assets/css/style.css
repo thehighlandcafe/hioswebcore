@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
 
 /*Variables*/
@@ -27,7 +27,7 @@
 	--onSurfaceVarient: #43474e;
 
 	/*Fonts*/
-	--fontPrimary: 'Space Grotesk', sans-serif;
+	--fontPrimary: 'Lexend', sans-serif;
 	--fontCode: 'Roboto Mono', monospace;
 }
 
