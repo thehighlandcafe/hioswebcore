@@ -11,14 +11,51 @@
 	</head>
 	<body>
         <center>
-        <img src="../assets/buttons/hirewards.png" class="roundedImage" id="homeImage"><br><br>
-		<div class="translucentBox full">
+        <br><img src="../assets/buttons/hirewards.png" class="roundedImage" id="homeImage" width="350"><br>
+		<p class="gradientHeading" id="greetingHome"></p>
+		<p class="gradientHeadingSmall">Welcome to HiRewards!</p></center>
+		<div class="translucentBox joinTop">
             <h3>Your Barcode</h3>
             <img class="roundedImage" src="pics/frame.png" width="200px">
-            <p style="margin-top: 0;">Please scan this at checkout</p><br>
+            <p style="margin-top: 0;">Please scan this at checkout</p>
+		</div>
+		<div class="translucentBox joinBottom">
             <p><b>Available Points*: </b>2457</p>
 		</div>
 	    <br><br><br><br>
     </center>
 	</body>
+	<script>
+		var myDate = new Date();
+		var hrs = myDate.getHours();
+		var greet;
+
+		if (hrs < 12)
+			greet = 'Good Morning';
+		else if (hrs >= 12 && hrs <= 17)
+			greet = 'Good Afternoon';
+		else if (hrs >= 17 && hrs <= 24)
+			greet = 'Good Evening';
+
+		document.getElementById('greetingHome').innerHTML =
+			'<b>' + greet + '!</b>';
+			
+		n =  new Date();
+		y = n.getFullYear();
+		m = n.getMonth() + 1;
+		d = n.getDate();
+		document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+
+		function showTutorialDiv () {
+			document.getElementById('buttonNotPressed').style.display = "none";  //empty the value
+			document.getElementById('buttonPressed').style.display = "block";
+			document.getElementById('tutorial').style.display = "block";
+		}
+
+		function hideTutorialDiv () {
+			document.getElementById('buttonNotPressed').style.display = "block";
+			document.getElementById('buttonPressed').style.display = "none";
+			document.getElementById('tutorial').style.display = "none";
+		}
+	</script>
 </html>

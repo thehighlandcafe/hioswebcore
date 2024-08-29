@@ -1,10 +1,35 @@
+/*STYLES, FONTS, AND COLOURS*/
+
+/*Variables*/
+:root {
+    /*Colours*/
+	--primary: rgb(142 73 88);
+	--onPrimary: rgb(255 255 255);
+	--primaryContainer: rgb(255 217 222);
+	--onPrimaryContainer: rgb(58 7 23);
+	--secondary: rgb(117 86 91);
+	--onSecondary: rgb(255 255 255);
+	--secondaryContainer: rgb(255 217 222);
+	--onSecondaryContainer: rgb(43 21 25);
+	--tertiary: rgb(122 88 50);
+	--onTertiary: rgb(255 255 255);
+	--tertiaryContainer: rgb(255 220 187);
+	--onTertiaryContainer: rgb(43 23 0);
+	--background: rgb(255 248 247);
+	--onBackground: rgb(34 25 27);
+	--surface: rgb(255 248 247);
+	--onSurface: rgb(34 25 27);
+	--outline: rgb(132 115 117);
+	--surfaceVarient: rgb(243 221 224);
+	--onSurfaceVarient: rgb(82 67 69);    
+}
+
 html {
-    background-color: #69001F !important;
-    color: white !important;
+    color: var(--onPrimaryContainer);
 }
 
 .translucentBox {
-    background-color: #B83B5D !important;
+    background-color: var(--primaryContainer) !important;
 }
 
 .offers {
@@ -15,21 +40,9 @@ html {
     color: #69001F !important;
 }
 
-h1, h2, h3, h4, h5 {
-    color: #FEABC5 !important;
-}
-
 #homeImage {
     max-width: 370px !important;
     min-width: 300px !important;
-}
-
-.navButton {
-    background-color: #69001F !important;
-}
-
-.navButtonInactive {
-    background-color: #FEABC5 !important;
 }
 
 .container {

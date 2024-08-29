@@ -6,7 +6,7 @@
 		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
 		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="css/rewards-style.css" type="text/css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>HiOS | </title>
 		<script>
             function showActiveOffers() {
@@ -43,30 +43,37 @@
 	</head>
 	<body><center>
         <div class="container">
-            <h1 class="blue-h2">Offers</h1>
+            <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">award_star</span>Offers</h1>
         </div>
         <div class="translucentBox joinTop">
             <div id="activeOffersOn" style="display:block">
-                <button class="leftButton navButtonInactive" onclick="showActiveOffers()">Active</button><button class="rightButton navButton" onclick="showExpiredOffers()">Expired</button><br><br>
+                <button class="leftButton navButtonInactive" onclick="showActiveOffers()">Active</button>&nbsp;<button class="rightButton navButton" onclick="showExpiredOffers()">Expired</button><br><br>
             </div>
             <div id="expiredOffersOn" style="display:none">
-                <button class="leftButton navButton" onclick="showActiveOffers()">Active</button><button class="rightButton navButtonInactive" onclick="showExpiredOffers()">Expired</button><br><br>
+                <button class="leftButton navButton" onclick="showActiveOffers()">Active</button>&nbsp;<button class="rightButton navButtonInactive" onclick="showExpiredOffers()">Expired</button><br><br>
             </div>
         </div>
         <div id="activeOffers" style="display:block">
             <div class="offers translucentBox joinBottom">
                 <div class="container">
-                    <h3>HiRewards Opening 2023 Special Stay Deal!</h3>
-                    <p>On this opening of HiRewards 2023, make this year special, with 5% off any stay above 15 days at any SnugMotels, WorstEastern, or HotelComfy branch! Don't miss out though!</p>
-                    <p class="offerExpiry">Posted 20/10/2023 16:54, offer expires 31/10/2023 23:59</p>
+                    <h3>HiRewards Overhaul 2024 Special Deal!</h3>
+                    <p>On this design overhaul of HiRewards 2024, make this year special, with 5% off a Small Tea at any HiCafe™ branch! Don't miss out though!</p>
+                    <p class="offerExpiry">Posted 31/08/2024 10:00, offer expires 24/09/2024 23:59</p>
                     <center>
-                        <button class="redeemButton" onclick="openSnackbar()">1000 Points - Redeem</button>
+                        <button class="redeemButton" onclick="openSnackbar()">1500 Points - Redeem</button>
                         <div id="snackbar">Scan the QR code on the homepage to redeem</div>
                     </center>
                 </div>
             </div>
         </div>
         <div id="expiredOffers" style="display:none">
+            <div class="offers translucentBox joinMiddle">
+                <div class="container">
+                    <h3>HiRewards Opening 2023 Special Stay Deal!</h3>
+                    <p>On this opening of HiRewards 2023, make this year special, with 5% off any stay above 15 days at any SnugMotels, WorstEastern, or HotelComfy branch! Don't miss out though!</p>
+                    <p class="offerExpiry">Posted 20/10/2023 16:54, offer expires 31/10/2023 23:59</p>
+                </div>
+            </div>
             <div class="offers translucentBox joinMiddle">
                 <div class="container">
                     <h3>Mother's Day 2023 full breakfast deal!</h3>
