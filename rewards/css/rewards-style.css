@@ -110,3 +110,28 @@ html {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
+
+/*Dark mode variables/legacy styles*/
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: rgb(255 178 191);
+		--onPrimary: rgb(86 29 43);
+		--primaryContainer: rgb(113 51 65);
+		--onPrimaryContainer: rgb(255 217 222);
+		--secondary: rgb(228 189 194);
+		--onSecondary: rgb(67 41 46);
+		--secondaryContainer: rgb(92 63 68);
+		--onSecondaryContainer: #d7e3f8;
+		--tertiary: #d7bde4;
+		--onTertiary: #3b2947;
+		--tertiaryContainer: #533f5f;
+		--onTertiaryContainer: #f3daff;
+		--background: #1a1c1e;
+		--onBackground: #e3e2e6;
+		--surface: #1a1c1e;
+		--onSurface: #e3e2e6;
+		--outline: #8d9199;
+		--surfaceVarient: #43474e;
+		--onSurfaceVarient: #c3c6cf;
+	}
+}
