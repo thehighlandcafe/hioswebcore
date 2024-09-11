@@ -9,3 +9,19 @@ function expandUp(hidingButton, showingButton, hidingSection) {
     document.getElementById(showingButton).style.display = "block";
     document.getElementById(hidingSection).style.display = "none";
 }
+
+function changeClassMiddle(div) {
+    document.getElementById(div).className = "translucentAboutBox joinMiddle";
+}
+
+function changeClassJoinBottom(div) {
+    document.getElementById(div).className = "translucentAboutBox joinBottom";
+}
+
+function changeClassJoinTop(div) {
+    document.getElementById(div).className = "translucentAboutBox joinTop";
+}
+
+function changeClassFull(div) {
+    document.getElementById(div).className = "translucentAboutBox full";
+}

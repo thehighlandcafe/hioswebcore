@@ -12,7 +12,7 @@
 	</head>
 	<body>
         <center>
-        <br><img src="../../assets/buttons/hirewards.png" class="roundedImage" id="homeImage" width="350"><br>
+        <br><img src="../../assets/pics/logos/hicard.png" class="roundedImage" id="homeImage" width="350"><br>
 		<p class="gradientHeading" id="greetingHome"></p>
 		<p class="gradientHeadingSmall">Welcome to HiCard!</p></center>
 		<div class="translucentBox joinTop">
@@ -27,25 +27,25 @@
                     <h3>Transaction History</h3>
                 </div> 
             </div>
-            <div class="translucentAboutBox joinBottom"><span id="savingsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'savingsExpandUp', 'savingsBoxesToExpand')">expand_circle_down</span><span id="savingsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'savingsExpandDown', 'savingsBoxesToExpand')" style="display: none;">expand_circle_up</span>
+            <div id="savings" class="translucentAboutBox joinBottom"><span id="savingsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'savingsExpandUp', 'savingsBoxesToExpand');changeClassMiddle('savings')">expand_circle_down</span><span id="savingsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'savingsExpandDown', 'savingsBoxesToExpand');changeClassJoinBottom('savings')" style="display: none;">expand_circle_up</span>
                 <p style="text-align: left !important;">Your Savings Account</p>
                 <h2>£2,499.48</h2>
             </div>
             <div id="savingsBoxesToExpand" style="display: none;">
-                <div class="expandedBoxes joinMiddle">
-                    <h3>Transaction History</h3>
+                <div class="expandedBoxes joinBottom">
+                    <h3>Transaction and Transfer History</h3>
                 </div> 
             </div>
 		</div>
 		<div class="translucentBox joinBottom">
             <h3>Your Rewards</h3>
-            <div class="translucentAboutBox">
-                <p>Your Rewards Account</p><span id="rewardsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'rewardsExpandUp', 'rewardsBoxesToExpand')">expand_circle_down</span><span id="rewardsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'rewardsExpandDown', 'rewardsBoxesToExpand')" style="display: none;">expand_circle_up</span>
-                <h2><b>Points Balance: </b>2457</p>
+            <div id="rewards" class="translucentAboutBox">
+                <p>Your Rewards Account</p><span id="rewardsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'rewardsExpandUp', 'rewardsBoxesToExpand');changeClassJoinTop('rewards')">expand_circle_down</span><span id="rewardsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'rewardsExpandDown', 'rewardsBoxesToExpand');changeClassFull('rewards')" style="display: none;">expand_circle_up</span>
+                <h2>2457</h2>
             </div>
             <div id="rewardsBoxesToExpand" style="display: none;">
-                <div class="expandedBoxes joinMiddle">
-                    <h3>Transaction History</h3>
+                <div class="expandedBoxes joinBottom">
+                    <h3>Earning and Redemption History</h3>
                 </div> 
             </div>
 		</div>
