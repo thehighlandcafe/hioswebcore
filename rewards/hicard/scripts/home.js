@@ -1,11 +1,11 @@
-function currentExpandDown() {
-    document.getElementById("currentBoxesToExpand").style.display = "block";
-    document.getElementById("currentExpandDown").style.display = "none";
-    document.getElementById("currentExpandUp").style.display = "block";
+function expandDown(hidingButton, showingButton, showingSection) {
+    document.getElementById(hidingButton).style.display = "none";
+    document.getElementById(showingButton).style.display = "block";
+    document.getElementById(showingSection).style.display = "block";
 }
 
-function currentExpandUp() {
-    document.getElementById("currentBoxesToExpand").style.display = "none";
-    document.getElementById("currentExpandDown").style.display = "block";
-    document.getElementById("currentExpandUp").style.display = "none";
+function expandUp(hidingButton, showingButton, hidingSection) {
+    document.getElementById(hidingButton).style.display = "none";
+    document.getElementById(showingButton).style.display = "block";
+    document.getElementById(hidingSection).style.display = "none";
 }

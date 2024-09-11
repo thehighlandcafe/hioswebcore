@@ -19,24 +19,34 @@
             <h2>Your Info, At A Glance</h2>
             <h3>Your Accounts</h3>
             <div class="translucentAboutBox joinTop">
-                <p style="text-align: left !important;">Your Current Account</p><span id="currentExpandDown" class="material-symbols-rounded dropdownIcon" onclick="currentExpandDown()">expand_circle_down</span><span id="currentExpandUp" class="material-symbols-rounded dropdownIcon" onclick="currentExpandUp()" style="display: none;">expand_circle_up</span>
+                <p style="text-align: left !important;">Your Current Account</p><span id="currentExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'currentExpandUp', 'currentBoxesToExpand')">expand_circle_down</span><span id="currentExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'currentExpandDown', 'currentBoxesToExpand')" style="display: none;">expand_circle_up</span>
                 <h2>£567.46</h3>
             </div>
             <div id="currentBoxesToExpand" style="display: none;">
                 <div class="expandedBoxes joinMiddle">
-                    TestTestTest
+                    <h3>Transaction History</h3>
                 </div> 
             </div>
-            <div class="translucentAboutBox joinBottom"><span class="material-symbols-rounded dropdownIcon">expand_circle_down</span>
+            <div class="translucentAboutBox joinBottom"><span id="savingsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'savingsExpandUp', 'savingsBoxesToExpand')">expand_circle_down</span><span id="savingsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'savingsExpandDown', 'savingsBoxesToExpand')" style="display: none;">expand_circle_up</span>
                 <p style="text-align: left !important;">Your Savings Account</p>
                 <h2>£2,499.48</h2>
+            </div>
+            <div id="savingsBoxesToExpand" style="display: none;">
+                <div class="expandedBoxes joinMiddle">
+                    <h3>Transaction History</h3>
+                </div> 
             </div>
 		</div>
 		<div class="translucentBox joinBottom">
             <h3>Your Rewards</h3>
             <div class="translucentAboutBox">
-                <p>Your Rewards Account</p><span class="material-symbols-rounded dropdownIcon">expand_circle_down</span>
+                <p>Your Rewards Account</p><span id="rewardsExpandDown" class="material-symbols-rounded dropdownIcon" onclick="expandDown(this.id, 'rewardsExpandUp', 'rewardsBoxesToExpand')">expand_circle_down</span><span id="rewardsExpandUp" class="material-symbols-rounded dropdownIcon" onclick="expandUp(this.id, 'rewardsExpandDown', 'rewardsBoxesToExpand')" style="display: none;">expand_circle_up</span>
                 <h2><b>Points Balance: </b>2457</p>
+            </div>
+            <div id="rewardsBoxesToExpand" style="display: none;">
+                <div class="expandedBoxes joinMiddle">
+                    <h3>Transaction History</h3>
+                </div> 
             </div>
 		</div>
 	    <br><br><br><br>
