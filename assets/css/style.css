@@ -132,6 +132,13 @@ body {
 	text-align: center;
 }
 
+.imageBox {
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 /*About Page containers*/
 .translucentAboutBox {
 	background-color: var(--tertiaryContainer);
