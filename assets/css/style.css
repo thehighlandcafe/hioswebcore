@@ -178,16 +178,16 @@ body {
 /*Large link buttons*/
 .button {
 	width: 100%;
-	height: 110px;
-	background-color: white;
-	color: black;
+	height: 60px;
+	background-color: var(--secondaryContainer);
+	color: var(--onSecondaryContainer);
 	font-family: var(--fontPrimary);
 	text-align: left;
 	font-size: 30px;
 	font-weight: bold;
 	transition: 0.5s;
 	float: inline-block;
-	border-radius: 25px !important;
+	border-radius: 100px !important;
 }
 
 .button:hover {
@@ -197,6 +197,24 @@ body {
 .button img {
 	float: right;
 	width: 50px;
+	margin-right: 10px;
+	vertical-align: middle;
+	line-height: 60px;
+}
+
+.button .material-symbols-rounded {
+	float: right;
+	font-size: 25px;
+	margin-right: 10px;
+	vertical-align: middle;
+	line-height: 60px;
+}
+
+.button .button-text {
+	vertical-align: middle;
+	font-size: 25px;
+	line-height: 60px;
+	margin-left: 10px;
 }
 
 /*Navigation buttons*/
@@ -535,7 +553,7 @@ menu-iframe {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-  }
+}
 
 /*Dark mode variables/legacy styles*/
 @media (prefers-color-scheme: dark) {
@@ -559,11 +577,6 @@ menu-iframe {
 		--outline: #8d9199;
 		--surfaceVarient: #43474e;
 		--onSurfaceVarient: #c3c6cf;
-	}
-
-	.button {
-		color: var(--onPrimaryContainer);
-		background-color: var(--surface);
 	}
 
 	.button:hover {
