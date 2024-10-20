@@ -183,7 +183,6 @@ body {
 	color: var(--onSecondaryContainer);
 	font-family: var(--fontPrimary);
 	text-align: left;
-	font-size: 30px;
 	font-weight: bold;
 	transition: 0.5s;
 	float: inline-block;
