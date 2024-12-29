@@ -38,26 +38,6 @@ html {
 	color: var(--onPrimaryContainer);
 }
 
-body {
-	animation: body 1s ease 200ms backwards;
- 	user-select: none;
- 	-webkit-user-select: none; /*Safari*/
- 	-moz-user-select: none; /*Firefox*/
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-@keyframes body {
-	from {
-	 opacity: 0;
-	 transform: translateY(-100px);
-	}
-	to {
-	 opacity: 1;
-	 transform: translate(0px);
-	}
-   }
-
 /*Rounded corners for HiMaterial elements*/
 .roundedImage {
 	border-radius: 25px;
