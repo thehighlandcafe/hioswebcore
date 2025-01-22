@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
 /*Variables*/
 :root {
@@ -26,8 +26,8 @@
 	--onSurfaceVarient: #43474e;
 
 	/*Fonts*/
-	--fontPrimary: 'Outfit', sans-serif;
-	--fontCode: 'Outfit', sans-serif;
+	--fontPrimary: 'SUSE', sans-serif;
+	--fontCode: 'SUSE', sans-serif;
 }
 
 /*Setting basic HTML styles, such as background colour and font*/
