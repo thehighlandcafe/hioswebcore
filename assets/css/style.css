@@ -4,7 +4,7 @@
 
 /*Variables*/
 :root {
-	/*Colours*/
+	/*OLD Colours
 	--primary: #0061a6;
 	--onPrimary: #ffffff;
 	--primaryContainer: #d2e4ff;
@@ -23,7 +23,38 @@
 	--onSurface: #1a1c1e;
 	--outline: #73777f;
 	--surfaceVarient: #dfe2eb;
-	--onSurfaceVarient: #43474e;
+	--onSurfaceVarient: #43474e;*/
+
+	/*NEW Dark Colours*/
+	:root {
+		--primary: #a0c9ff;
+		--onPrimary: #00325a;
+		--primaryContainer: #253141;
+		--onPrimaryContainer: #d2e4ff;
+		--secondary: #bbc7db;
+		--onSecondary: #253141;
+		--secondaryContainer: #3c4858;
+		--onSecondaryContainer: #d7e3f8;
+		--tertiary: #d7bde4;
+		--onTertiary: #3b2947;
+		--tertiaryContainer: #533f5f;
+		--onTertiaryContainer: #f3daff;
+		--background: #1a1c1e;
+		--onBackground: #e3e2e6;
+		--surface: #1a1c1e;
+		--onSurface: #e3e2e6;
+		--outline: #8d9199;
+		--surfaceVarient: #43474e;
+		--onSurfaceVarient: #c3c6cf;
+	}
+
+	.button:hover {
+		background-color: #5A6B74;
+	}
+
+	.gradientHeading, .gradientHeadingSmall {
+		color: var(--primary);
+	}
 
 	/*Fonts*/
 	--fontPrimary: 'SUSE', sans-serif;
@@ -535,7 +566,7 @@ menu-iframe {
 }
 
 /*Dark mode variables/legacy styles*/
-@media (prefers-color-scheme: dark) {
+/**@media (prefers-color-scheme: dark) {
 	:root {
 		--primary: #a0c9ff;
 		--onPrimary: #00325a;
@@ -565,4 +596,4 @@ menu-iframe {
 	.gradientHeading, .gradientHeadingSmall {
 		color: var(--primary);
 	}
-}
+}*/
