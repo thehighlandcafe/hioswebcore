@@ -534,7 +534,7 @@ menu-iframe {
 	right: 10px;
 }
 
-/*Dark mode variables/legacy styles*/
+/*Dark mode variables/legacy styles
 @media (prefers-color-scheme: light) {
 	:root {
 		--primary: #a0c9ff;
@@ -565,7 +565,7 @@ menu-iframe {
 	.gradientHeading, .gradientHeadingSmall {
 		color: var(--primary);
 	}
-}
+}*/
 
 @media (prefers-color-scheme: dark) {
 	:root {
