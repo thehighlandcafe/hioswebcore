@@ -32,10 +32,17 @@
 
 /*Setting basic HTML styles, such as background colour and font*/
 html {
-	background-color: var(--background);
 	font-family: var(--fontPrimary);
 	font-weight: 400;
 	color: var(--onPrimaryContainer);
+}
+
+* {
+	font-family: var(--fontPrimary) !important;
+}
+
+body {
+	background-color: var(--background);
 }
 
 /*Rounded corners for HiMaterial elements*/
@@ -91,17 +98,24 @@ html {
 }
 
 /*Main headings containers*/
-.container {
+.top-container {
 	margin: 0 auto;
 	min-width: 300px;
 	padding: 0px;
 }
 
-.container #para {
+.top-container #para {
 	text-align: left !important;
 }
 
 /*Section containers*/
+.card {
+	background-color: var(--primaryContainer);
+	color: var(--onPrimaryContainer);
+	text-align: center;
+}
+
+	/*LEGACY - WILL SOON NO LONGER BE USED*/
 .translucentBox {
 	padding: 10px;
 	min-width: 300px;
