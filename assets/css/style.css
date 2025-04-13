@@ -31,18 +31,11 @@
 }
 
 /*Setting basic HTML styles, such as background colour and font*/
-html {
+body {
+	background-color: var(--background);
 	font-family: var(--fontPrimary);
 	font-weight: 400;
 	color: var(--onPrimaryContainer);
-}
-
-* {
-	font-family: var(--fontPrimary) !important;
-}
-
-body {
-	background-color: var(--background);
 }
 
 /*Rounded corners for HiMaterial elements*/
@@ -113,6 +106,10 @@ body {
 	background-color: var(--primaryContainer);
 	color: var(--onPrimaryContainer);
 	text-align: center;
+}
+
+.card h1, .card h2 {
+	color: var(--primary) !important;
 }
 
 	/*LEGACY - WILL SOON NO LONGER BE USED*/
