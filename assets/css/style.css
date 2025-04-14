@@ -106,6 +106,7 @@ body {
 	background-color: var(--primaryContainer);
 	color: var(--onPrimaryContainer);
 	text-align: center;
+	border: none;
 }
 
 .card h1, .card h2 {
@@ -208,6 +209,42 @@ body {
 }
 
 /*Navigation buttons*/
+
+.nav-pills {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-pills .nav-item {
+	flex-grow: 1;
+}
+
+.nav-pills .nav-link {
+	width: 100%;
+	text-align: center;
+}
+
+.nav-pills .nav-item-left, .nav-pills .nav-item-middle {
+	margin-right: 3px !important;
+}
+
+.nav-pills .nav-item:last-child {
+	margin-right: 0;
+}
+
+	/*Style for the active pill button*/
+.nav-pills .nav-link.active {
+	background-color: var(--primary);
+	color: var(--onPrimary);
+}
+
+	/*Style for the inactive pill buttons*/
+.nav-pills .nav-link:not(.active) {
+	background-color: var(--secondary);
+	color: var(--onSecondary);
+}
+
+	/*LEGACY NAV BUTTONS*/
 .navButton, .navButtonInactive {
 	height: 40px;
 	width: 150px;
@@ -233,7 +270,8 @@ body {
 }
 
 .leftButton, .leftNew {
-	border-radius: 60px 10px 10px 60px;
+	border-radius: 60px 10px 10px 60px !important;
+	margin-right: 3px !important;
 }
 
 .leftNew {
@@ -241,11 +279,12 @@ body {
 }
 
 .middleButton {
-	border-radius: 5px;
+	border-radius: 5px !important;
+	margin-right: 3px !important;
 }
 
 .rightButton, .rightNew {
-	border-radius: 10px 60px 60px 10px;
+	border-radius: 10px 60px 60px 10px !important;
 }
 
 /*Icons that go inside paragraphs*/
