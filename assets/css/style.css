@@ -36,6 +36,11 @@ body {
 	font-family: var(--fontPrimary);
 	font-weight: 400;
 	color: var(--onPrimaryContainer);
+	user-select: none;
+	-webkit-user-select: none; /*Safari*/
+	-moz-user-select: none; /*Firefox*/
+   	-webkit-font-smoothing: antialiased;
+   	-moz-osx-font-smoothing: grayscale;
 }
 
 /*Rounded corners for HiMaterial elements*/
@@ -228,6 +233,10 @@ body {
 	margin-right: 3px !important;
 }
 
+.nav-pills .nav-item-full {
+	border-radius: 25px !important;
+}
+
 .nav-pills .nav-item:last-child {
 	margin-right: 0;
 }
@@ -285,6 +294,10 @@ body {
 
 .rightButton, .rightNew {
 	border-radius: 10px 60px 60px 10px !important;
+}
+
+.fullButton {
+	border-radius: 25px !important;
 }
 
 /*Icons that go inside paragraphs*/
