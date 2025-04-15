@@ -1,3 +1,3 @@
 //TODO:
-Finish adding bootstrap to the other pages. Was in the middle of changing cafefiesta.html
+Finish adding bootstrap to the other pages. Did hotel and internet help, now need to do rest of help pages.
 finish hirewards helpcenter articles.
