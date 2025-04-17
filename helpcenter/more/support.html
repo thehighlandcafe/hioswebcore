@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="color-scheme" content="dark light">
-	<link rel="icon" href="../../assets/pics/logos/hiosbadge.png" type="image/icon type">
-	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
-	<link rel="stylesheet" href="../../assets/css/ripple.css" type="text/css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<title>HiOS | </title>
-	<script src="../../assets/scripts/links.js"></script>
-</head><br>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="color-scheme" content="dark light">
+		<link rel="icon" href="../../assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="../../assets/css/ripple.css" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<title>HiOS | </title>
+		<script src="../../assets/scripts/links.js"></script>
+	</head>
 	<body>
-	<br>
-		<center>
-			<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">support_agent</span>Customer Support</h1>
-		<p id="para">Wanting to contact customer support @ The Highland Cafe™️? Use this part of the HiOSMobile app.</p>
+		<main class="container mt-4 mb-4">
+			<div class="top-container">
+				<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">support_agent</span>Support</h1>
+				<p id="para">Wanting to contact customer support @ The Highland Cafe™️? Use this part of the HiOSMobile app.</p>
 			</div>
-			<div class="translucentBox joinTop">
-                <h2>1. Install and sign into Messenger before contacting us...</h2>
-                <button class="ripple-button navButtonInactive" onclick="link('market://details?id=com.facebook.orca')">Install Messenger</button>
+			<div class="card mt-4 joinTop">
+				<div class="card-body">
+					<h2 class="card-title">Install and sign into Messenger before contacting us...</h2>
+					<button class="btn fullWidth navButtonInactive" onclick="link('market://details?id=com.facebook.orca')">Install Messenger</button>
+				</div>
 			</div>
-            <div class="translucentBox joinBottom">
-                <h1>...now it's set up, contact us from below!</h1>
-                <button class="ripple-button navButton" onclick="link('https://m.me/100095224335357')">Contact Us</button>
-            </div>
-			<br><br><br><br>
-			<script src="../../assets/scripts/ripple.js"></script>
+			<div class="card joinBottom">
+				<div class="card-body">
+					<h1 class="card-title">...now it's set up, contact us from below!</h1>
+					<button class="btn fullWidth navButton" onclick="link('https://m.me/100095224335357')">Contact Us</button>
+				</div>
+			</div>
+		</main>
+		<script src="../../assets/scripts/ripple.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 	</body>
 </html>
