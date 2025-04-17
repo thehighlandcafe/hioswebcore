@@ -4,70 +4,79 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="../../assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 		<link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
 		<link rel="stylesheet" href="../../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<script src="../../assets/scripts/links.js"></script>
 		<title>HiOS | App Feedback</title>
-		<script>
-			function showSection(showing, hiding) {
-				//Showing section in question
-				showing.style.display = "block";
-				hiding.style.display = "none";
-			}
-
-			function leftSelected(left, right) {
-				left.className = "ripple-button leftNew navButtonInactive";
-				right.className = "ripple-button rightNew navButton";
-			}
-
-			function rightSelected(right, left) {
-				right.className = "ripple-button rightButton navButtonInactive";
-				left.className = "ripple-button leftNew navButton";	
-			}
-		</script>
 	</head>
-	<body><center><br><br>
-		<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">rate_review</span>Send Feedback</h1>
-			<p id="para">Use this page to send feedback to us.</p>
-		</div>
-	<div class="translucentBox joinTop">
-		<button id="navigationLeft" class="ripple-button leftNew navButtonInactive" onclick="showSection(appFeedback, complaints);leftSelected(this, navigationRight);">Feedback</button><button id="navigationRight" class="ripple-button rightNew navButton" onclick="showSection(complaints, appFeedback);rightSelected(this, navigationLeft);">Complain</button>
-	</div>
-	<div id="appFeedback" style="display:block">
-		<div class="translucentBox joinMiddle">
-			<center><h1>App Feedback</h1>
-			<p id="para" style="text-align: center;">Have any feedback on the new HiOS mobile app that you would like to share with us? Please fill in the form below :)</p><br>
-			<div class="iframe-wrapper">
-				<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSdt40E-D8WHqnvFp8B5AFTk2yK7xCEFrunE6lDbuEvYoTrMQQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+	<body>
+		<main class="container mt-4 mb-4">
+			<div class="top-container">
+				<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">rate_review</span>Send Feedback</h1>
+				<p id="para">Use this page to send feedback to us.</p>
 			</div>
-		</div>
-		<div class="translucentBox joinBottom">
-			<h1>Bug Report</h1>
-			<p id="para" style="text-align: center;">Have you noticed a bug in HiOSMobile? Then please fill in the form below and we'll see to it ASAP!</p>
-			<div class="iframe-wrapper">
-				<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSeP5vjhqfapr854dS6N_sltLmeSXECDjbOz3VO0r5-_GieDhA/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+			<div class="card mt-4 joinTop">
+				<div class="card-body">
+					<ul class="nav nav-pills">
+						<li class="nav-item nav-item-left">
+							<button class="nav-link active ripple-button leftButton" id="feedback-tab" data-bs-toggle="pill" data-bs-target="#feedback-tab-pane" type="button" role="tab" aria-controls="feedback-tab-pane" aria-selected="true">Feedback</button>
+						</li>
+						<li class="nav-item nav-item-middle">
+							<button class="nav-link ripple-button middleButton" id="bugreport-tab" data-bs-toggle="pill" data-bs-target="#bugreport-tab-pane" type="button" role="tab" aria-controls="bugreport-tab-pane" aria-selected="false">Bug Report</button>
+						</li>
+						<li class="nav-item nav-item-right">
+							<button class="nav-link ripple-button rightButton" id="complain-tab" data-bs-toggle="pill" data-bs-target="#complain-tab-pane" type="button" role="tab" aria-controls="complain-tab-pane" aria-selected="false">Complain</button>
+						</li>
+					</ul>
+				</div>
 			</div>
-				<br>
-				<br>
-			<a href="appfeedback.html#"><img src="../../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
-		</div>
-	</div>
-	<div id="complaints" style="display:none">
-		<div class="translucentBox joinBottom">
-				<center><h1>Complaints</h1>
-		<p id="para" style="text-align: center;">Wanting to complain for something unsatisfactory you experienced from The Highland Cafe(tm)? <br>
-		We'd rather you didn't, but if you are being persistant about it, please fill in the form below. :(</p><br>
-		<div class="iframe-wrapper">
-			<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
-		</div>
-		<br>
-		<br>
-				<a href="appfeedback.html#"><img src="../../assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
-		</div>
-	</div>
-	</center><br><br><br><br>
+			<div class="tab-content">
+				<!--Feedback tab-->
+				<div class="tab-pane fade show active" id="feedback-tab-pane" role="tabpanel" aria-labelledby="feedback-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">App Feedback</h2>
+							<p class="card-text">Have any feedback on the new HiOS mobile app that you would like to share with us? Please fill in the form below :)</p>
+							<div class="iframe-wrapper">
+								<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSdt40E-D8WHqnvFp8B5AFTk2yK7xCEFrunE6lDbuEvYoTrMQQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+							</div>
+							<a href="appfeedback.html#"><img src="../../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+					</div>
+				</div>
+
+				<!--Bug Report tab-->
+				<div class="tab-pane fade" id="bugreport-tab-pane" role="tabpanel" aria-labelledby="bugreport-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">Bug Report</h2>
+							<p class="card-text">Have you noticed a bug in HiOSMobile? Then please fill in the form below and we'll see to it ASAP!</p>
+							<div class="iframe-wrapper">
+								<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSeP5vjhqfapr854dS6N_sltLmeSXECDjbOz3VO0r5-_GieDhA/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+							</div>
+							<a href="appfeedback.html#"><img src="../../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+					</div>
+				</div>
+
+				<!--Complain tab-->
+				<div class="tab-pane fade" id="complain-tab-pane" role="tabpanel" aria-labelledby="complain-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">Complain</h2>
+							<p class="card-text">Wanting to complain for something unsatisfactory you experienced from The Highland Cafe(tm)?<br>We'd rather you didn't, but if you are being persistant about it, please fill in the form below. :(</p>
+							<div class="iframe-wrapper">
+								<iframe class="menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSeHXG6XZo0qHtU57Y5IYeqpI44eEUsHVAYRRMVZWL8O1UathQ/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage">Loading…</iframe>
+							</div>
+							<a href="appfeedback.html#"><img src="../../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 		<script src="../../assets/scripts/ripple.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 	</body>
 </html>

@@ -4,44 +4,54 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
 		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>HiOS | HelpCenter</title>
-        <style>
-            section {
-                text-align: center;
-            }
-        </style>
 	</head>
 	<body>
-		<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
-			<p id="para" class="subtitle" >Unsure on how to do something with this app for your stay? Take a look below.</p>
-		</div>
-		<div class="translucentBox joinTop">
-            <section><h1>Booking a Room</h1></section>
-			<ol id="para" class="subtitle">
-				<li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li><br>
-				<li>Tap <b>'Book'</b>.</li><br>
-				<li>Fill in the form to book a room at weB&B.</li>
-			</ol>
-		</div>
-        <div class="translucentBox joinMiddle">
-            <section><h1>Checking-In</h1></section>
-            <ol id="para" class="subtitle">
-                <li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li><br>
-				<li>Tap <b>'Arriving'</b>.</li><br>
-				<li>Fill in the form to check-in to weB&B.</li>
-            </ol>
-        </div>
-        <div class="translucentBox joinBottom">
-            <section><h1>Checking-Out</h1></section>
-            <ol id="para" class="subtitle">
-                <li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li><br>
-                <li>Tap <b>'Leaving'</b>.</li><br>
-                <li>Fill in the form to check-out of weB&B.</li>
-            </ol>
-        </div>
-		</center><br><br><br><br>
+		<main class="container mt-4 mb-4">
+			<div class="top-container">
+				<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
+				<p id="para" class="subtitle" >Unsure on how to do something with this app for your stay? Take a look below.</p>
+			</div>
+			<div class="card mt-4 joinTop">
+				<div class="card-body">
+					<h2 class="card-title mb-0">Booking a Room</h2>
+				</div>
+				<div class="card-body text-start">
+					<ol class="card-text">
+						<li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li>
+						<li class="mt-2">Tap <b>'Book'</b>.</li>
+						<li class="mt-2">Fill in the form to book a room at weB&B.</li>
+					</ol>
+				</div>
+			</div>
+			<div class="card joinMiddle">
+				<div class="card-body">
+					<h2 class="card-title mb-0">Checking-In</h2>
+				</div>
+				<div class="card-body text-start">
+					<ol class="card-text">
+						<li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li>
+						<li class="mt-2">Tap <b>'Arriving'</b>.</li>
+						<li class="mt-2">Fill in the form to check-in to weB&B.</li>
+					</ol>
+				</div>
+			</div>
+			<div class="card joinBottom">
+				<div class="card-body">
+					<h2 class="card-title mb-0">Checking-Out</h2>
+				</div>
+				<div class="card-body text-start">
+					<ol class="card-text">
+						<li>First, tap the <i class="helpcenterIcons material-symbols-rounded">hotel</i> icon on the bottom navigation bar.</li>
+						<li class="mt-2">Tap <b>'Leaving'</b>.</li>
+						<li class="mt-2">Fill in the form to check-out to weB&B.</li>
+					</ol>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 	</body>
 </html>

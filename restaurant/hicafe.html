@@ -1,179 +1,162 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
-		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-		<link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<title>HiOS | </title>
-		<script src="../assets/scripts/links.js"></script>
-		<script>
-			function showSection(showing, hiding, hiding2) {
-				//Showing section in question
-				showing.style.display = "block";
-				hiding.style.display = "none";
-				hiding2.style.display = "none";
-			}
-
-			function leftSelected(left, right, middle) {
-				left.className = "ripple-button leftButton navButtonInactive";
-				middle.className = "ripple-button middleButton navButton";
-				right.className = "ripple-button rightButton navButton";
-			}
-
-			function middleSelected(middle, right, left) {
-				left.className = "ripple-button leftButton navButton";
-				middle.className = "ripple-button middleButton navButtonInactive";
-				right.className = "ripple-button rightButton navButton";
-			}
-
-			function rightSelected(right, left, middle) {
-				right.className = "ripple-button rightButton navButtonInactive";
-				middle.className = "ripple-button middleButton navButton";
-				left.className = "ripple-button leftButton navButton";	
-			}
-
-            //displays & hides the main top navigation box
-            function showMainNavigationBox() {
-                document.getElementById('mainNavBox').style.display = "block";
-                document.getElementById('drawerIcon').style.display = "none";
-                document.getElementById('hideIcon').style.display = "block";
-            }
-
-            function hideMainNavigationBox() {
-                document.getElementById('mainNavBox').style.display = "none";
-                document.getElementById('hideIcon').style.display = "none";
-                document.getElementById('drawerIcon').style.display = "block";
-            }
-
-            //more info
-            function showMoreInfo() {
-                document.getElementById('buttonNotPressed').style.display = "none";
-                document.getElementById('buttonPressed').style.display = "block";
-                document.getElementById('moreInfo').style.display = "block";
-            }
-
-            function hideMoreInfo() {
-                document.getElementById('buttonNotPressed').style.display = "block";
-                document.getElementById('buttonPressed').style.display = "none";
-                document.getElementById('moreInfo').style.display = "none";
-            }
-		</script>
-	</head>
-	<body>
-		<span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span><span id="drawerIcon" class="material-symbols-rounded" style="float: right;" onclick="showMainNavigationBox()">menu</span><span id="hideIcon" class="material-symbols-rounded" style="float: right;display: none;" onclick="hideMainNavigationBox()">close</span>
-		<br><center>
-            <div id="mainNavBox" class="translucentBox full" style="display: none;">
-                <button id="mainNavigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(bookingFragment, menuFragment, orderingFragment);leftSelected(this, mainNavigationRight, mainNavigationMiddle);">Booking</button>
-                <button id="mainNavigationMiddle" class="ripple-button middleButton navButton" onclick="showSection(menuFragment, bookingFragment, orderingFragment);middleSelected(this, mainNavigationRight, mainNavigationLeft);">Menus</button>
-                <button id="mainNavigationRight" class="ripple-button rightButton navButton" onclick="showSection(orderingFragment, menuFragment, bookingFragment);rightSelected(this, mainNavigationLeft, mainNavigationMiddle);">Order</button>
-            </div>
-            <div id="bookingFragment">
-                <div class="container">
-                    <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">table_restaurant</span>Book a Table</h1>
-                    <p id="para" class="subtitle">Fill in the below form to book a table, and we'll reply within an hour by email.</p>
+        <title>HiOS | </title>
+        <script src="../assets/scripts/links.js"></script>
+    </head>
+    <body>
+        <main class="container mt-4 mb-4">
+            <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span><span id="drawerIcon" class="material-symbols-rounded" style="float: right;" onclick="showMainNavigationBox()">menu</span><span id="hideIcon" class="material-symbols-rounded" style="float: right;display: none;" onclick="hideMainNavigationBox()">close</span>
+            <div id="mainNavBox" class="card mt-3 full" style="display: none;">
+                <div class="card-body">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item nav-item-left">
+                            <button class="nav-link active ripple-button leftButton" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button>
+                        </li>
+                        <li class="nav-item nav-item-middle">
+                            <button class="nav-link ripple-button middleButton" id="menus-tab" data-bs-toggle="pill" data-bs-target="#menus-tab-pane" type="button" role="tab" aria-controls="menus-tab-pane" aria-selected="false">Menus</button>
+                        </li>
+                        <li class="nav-item nav-item-right">
+                            <button class="nav-link ripple-button rightButton" id="order-tab" data-bs-toggle="pill" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false">Order</button>
+                        </li>
+                    </ul>
                 </div>
-                <div class="translucentBox full">
-                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/book-table.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-                    <div class="iframe-wrapper">
-                        <iframe class="joinBottom menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSfeP-cO7te979Dc-QRmUsBwQTzIojYRtg7Yx3OufiiUcn2r2g/viewform?embedded=true" width="300" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <div class="tab-content mt-3">
+                <div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
+                    <div class="top-container">
+                        <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">table_restaurant</span>Book a Table</h1>
+                        <p id="para" class="subtitle">Fill in the below form to book a table, and we'll reply within an hour by email.</p>
                     </div>
-                    <br>
-                    <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
-                </div>
-            </div>
-            <div id="menuFragment" style="display: none;">
-                <div class="container">
-                    <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">menu_book</span>Menus</h1>
-                    <p id="para" class="subtitle">Take a look at our menus here.</p>
-                </div>
-                <div class="translucentBox joinTop">
-                    <button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro, worldwide);leftSelected(this, navigationRight, navigationMiddle);">Main</button>
-                    <button id="navigationMiddle" class="ripple-button middleButton navButton" onclick="showSection(worldwide, normal, gastro);middleSelected(this, navigationRight, navigationLeft);">Abroad</button>
-                    <button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal, worldwide);rightSelected(this, navigationLeft, navigationMiddle);">Gastro</button>
-                </div>
-                <div id="normal" style="display:block">
-                    <div class="translucentBox joinBottom">
-                        <h1>Main Menu</h1>
-                        <p id="para" style="text-align: center;" class="subtitle">This menu includes Lunch, Dinner, and more.</p>
-                        <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/normal.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
-                        <div class="iframe-wrapper roundedImage">
-                            <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1asnkFiTAX-bancBcS094ge9XE3Q-Bn3d/preview" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                    <div class="card mt-4 full">
+                        <div class="card-body">
+                            <button class="ripple-button form-button joinTop" onclick="link('hicafe/book-table.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+                            <div class="iframe-wrapper">
+                                <iframe class="joinBottom menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSfeP-cO7te979Dc-QRmUsBwQTzIojYRtg7Yx3OufiiUcn2r2g/viewform?embedded=true" width="300" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            </div>
+                            <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 roundedImage"></a>
                         </div>
-                            <br>
-                            <br>
-                        <a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
                     </div>
                 </div>
-                <div id="worldwide" style="display: none">
-                    <div class="translucentBox joinMiddle">
-                        <center>
-                            <h1>Worldwide Menu</h1>
-                            <p id="para" style="text-align: center;" class="subtitle">This is our brand new worldwide foods menu</p>
-                            <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/worldwide.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
-                            <div class="iframe-wrapper">
-                                <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1ZTnLTPCGjV0MdHNjTP9JJBSW_WdtSm8i/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+
+                <div class="tab-pane fade" id="menus-tab-pane" role="tabpanel" aria-labelledby="menus-tab" tabindex="0">
+                    <div class="top-container">
+                        <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">menu_book</span>Menus</h1>
+                        <p id="para" class="subtitle">Take a look at our menus here.</p>
+                    </div>
+                    <div class="card mt-4 joinTop">
+                        <div class="card-body">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item nav-item-left">
+                                    <button class="nav-link active ripple-button leftButton" id="normal-menu-tab" data-bs-toggle="pill" data-bs-target="#normal-menu-tab-pane" type="button" role="tab" aria-controls="normal-menu-tab-pane" aria-selected="true">Normal</button>
+                                </li>
+                                <li class="nav-item nav-item-middle">
+                                    <button class="nav-link ripple-button middleButton" id="worldwide-menu-tab" data-bs-toggle="pill" data-bs-target="#worldwide-menu-tab-pane" type="button" role="tab" aria-controls="worldwide-menu-tab-pane" aria-selected="false">Worldwide</button>
+                                </li>
+                                <li class="nav-item nav-item-middle">
+                                    <button class="nav-link ripple-button middleButton" id="pizza-menu-tab" data-bs-toggle="pill" data-bs-target="#pizza-menu-tab-pane" type="button" role="tab" aria-controls="pizza-menu-tab-pane" aria-selected="false">Pizza</button>
+                                </li>
+                                <li class="nav-item nav-item-right">
+                                    <button class="nav-link ripple-button rightButton" id="gastro-menu-tab" data-bs-toggle="pill" data-bs-target="#gastro-menu-tab-pane" type="button" role="tab" aria-controls="gastro-menu-tab-pane" aria-selected="false">Gastro</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="normal-menu-tab-pane" role="tabpanel" aria-labelledby="normal-menu-tab" tabindex="0">
+                            <div class="card joinBottom">
+                                <div class="card-body">
+                                    <h2 class="card-title">Main Menu</h2>
+                                    <p class="card-text">This menu includes Lunch, Dinner, and more.</p>
+                                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/normal.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
+                                    <div class="iframe-wrapper roundedImage">
+                                        <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1asnkFiTAX-bancBcS094ge9XE3Q-Bn3d/preview" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                                    </div>
+                                    <a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+                                </div>
                             </div>
-                        </center>
-                    </div>
-                    <div class="translucentBox joinBottom">
-                        <center>
-                            <h1>Pizza Menu</h1>
-                            <p id="para" style="text-align: center;" class="subtitle">Take a look at our majestic new pizza menu below now!</p>
-                            <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/pizza.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
-                            <div class="iframe-wrapper">
-                                <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1YezhyJuuUg-sghImzB-zWn-wGnI6l8Ww/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                        </div>
+
+                        <div class="tab-pane fade" id="worldwide-menu-tab-pane" role="tabpanel" aria-labelledby="worldwide-menu-tab" tabindex="0">
+                            <div class="card joinBottom">
+                                <div class="card-body">
+                                    <h2 class="card-title">Worldwide Menu</h2>
+                                    <p class="card-text">This is our brand new worldwide foods menu</p>
+                                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/worldwide.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
+                                    <div class="iframe-wrapper">
+                                        <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1ZTnLTPCGjV0MdHNjTP9JJBSW_WdtSm8i/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                                    </div>
+                                    <a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+                                </div>
                             </div>
-                            <br><br>
-                            <a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
-                        </center>
+                        </div>
+
+                        <div class="tab-pane fade" id="pizza-menu-tab-pane" role="tabpanel" aria-labelledby="pizza-menu-tab" tabindex="0">
+                            <div class="card joinBottom">
+                                <div class="card-body">
+                                    <h1 class="card-title">Pizza Menu</h1>
+                                    <p class="card-text">Take a look at our majestic new pizza menu below now!</p>
+                                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/pizza.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
+                                    <div class="iframe-wrapper">
+                                        <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1YezhyJuuUg-sghImzB-zWn-wGnI6l8Ww/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                                    </div>
+                                    <a href="menus.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="gastro-menu-tab-pane" role="tabpanel" aria-labelledby="gastro-menu-tab" tabindex="0">
+                            <div class="card joinBottom">
+                                <div class="card-body">
+                                    <h1 class="card-title">Gastro Menu</h1>
+                                    <p class="card-text">This is our most premium menu that you will love!</p>
+                                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/gastro.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
+                                    <div class="iframe-wrapper">
+                                        <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1iHoe-pBMn0niY9R2IoZgYmhgXLaz7Mrz/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+                                    </div>
+                                    <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="gastro" style="display:none">
-                    <div class="translucentBox joinBottom">
-                            <center><h1>Gastro Menu</h1>
-                    <p id="para" style="text-align: center;" class="subtitle">This is our most premium menu that you will love!</p>
-                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/gastro.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
-                    <div class="iframe-wrapper">
-                        <iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1iHoe-pBMn0niY9R2IoZgYmhgXLaz7Mrz/preview" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
+
+                <div class="tab-pane fade" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
+                    <div class="top-container">
+                        <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">edit</span>Food Ordering</h1>
+                        <p id="para" class="subtitle">Order the food you would like below.</p>
                     </div>
-                    <br>
-                    <br>
-                            <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
+                    <div class="card mt-4 full">
+                        <div class="card-body">
+                            <button class="ripple-button form-button joinTop" onclick="link('hicafe/foodordering.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+                            <div class="iframe-wrapper">
+                                <iframe class="joinBottom menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSfGzW5su4bVmpeRVGRbDDeudfZkvhbyuXi-pySKLW4qA8WnaA/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            </div>
+                            <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="orderingFragment" style="display: none;">
-                <div class="container">
-                    <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">edit</span>Food Ordering</h1>
-                    <p id="para" class="subtitle">Order the food you would like below.</p>
-                </div>
-                <div class="translucentBox full">
-                    <button class="ripple-button form-button joinTop" onclick="link('hicafe/foodordering.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-                    <div class="iframe-wrapper">
-                        <iframe class="joinBottom menu-iframe roundedImage" src="https://docs.google.com/forms/d/e/1FAIpQLSfGzW5su4bVmpeRVGRbDDeudfZkvhbyuXi-pySKLW4qA8WnaA/viewform?embedded=true" width="350" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+            <!--div class="tab-content">
+                <div class="tab-pane fade" id="more-info-tab-pane" role="tabpanel" aria-labelledby="more-info-tab" tabindex="0">
+                    <div class="card mt-4 full">
+                        <div class="card-body">
+                            <h1 class="card-title">More Info</h1>
+                            <img class="img-fluid d-block mx-auto roundedImage" src="../assets/pics/moreinfo.png">
+                            <p class="card-text">thanks for your cvustom and understandings in this matters !</p>
+                        </div>
                     </div>
-                    <br>
-                    <a href="hicafe.html#"><img src="../assets/buttons/scrolltop.bmp" class="roundedImage"></a>
                 </div>
-            </div><br><br>
-            <div id="buttonNotPressed" style="display: block;">
-                <button class="ripple-button navButton" onClick="showMoreInfo()">More Info</button>
-            </div>
-            <div id="buttonPressed" style="display: none;">
-                <button class="ripple-button navButtonInactive" onClick="hideMoreInfo()">More Info</button>
-            </div>
-            <div id="moreInfo" style="display: none;">
-                <br>
-                <div class="translucentBox full">
-                    <h1>More Info</h1>
-                    <img src="../assets/pics/moreinfo.png" width="350" class="roundedImage"><br><br>
-                    <p class="subtitle">thanks for your cvustom and understandings in this matters !</p>
-                    <br><br>
-                </div>
-            </div>
-		</center><br><br><br><br>
-		<script src="../assets/scripts/ripple.js"></script>
-	</body>
+            </div-->
+        </main>
+        <script src="../assets/scripts/ripple.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
 </html>

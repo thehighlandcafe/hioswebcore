@@ -1,11 +1,6 @@
 /*Top-level pages in HiOSMobile apps - exclusive css code*/
 body {
 	animation: body 1s ease 200ms backwards;
- 	user-select: none;
- 	-webkit-user-select: none; /*Safari*/
- 	-moz-user-select: none; /*Firefox*/
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 @keyframes body {

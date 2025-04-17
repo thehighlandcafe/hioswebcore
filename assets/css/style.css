@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /*Variables*/
 :root {
@@ -26,16 +26,21 @@
 	--onSurfaceVarient: #43474e;
 
 	/*Fonts*/
-	--fontPrimary: 'SUSE', sans-serif;
-	--fontCode: 'SUSE', sans-serif;
+	--fontPrimary: 'Inter', sans-serif;
+	--fontCode: 'Inter', sans-serif;
 }
 
 /*Setting basic HTML styles, such as background colour and font*/
-html {
+body {
 	background-color: var(--background);
 	font-family: var(--fontPrimary);
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--onPrimaryContainer);
+	user-select: none;
+	-webkit-user-select: none; /*Safari*/
+	-moz-user-select: none; /*Firefox*/
+   	-webkit-font-smoothing: antialiased;
+   	-moz-osx-font-smoothing: grayscale;
 }
 
 /*Rounded corners for HiMaterial elements*/
@@ -91,17 +96,29 @@ html {
 }
 
 /*Main headings containers*/
-.container {
+.top-container {
 	margin: 0 auto;
 	min-width: 300px;
 	padding: 0px;
 }
 
-.container #para {
+.top-container #para {
 	text-align: left !important;
 }
 
 /*Section containers*/
+.card {
+	background-color: var(--primaryContainer);
+	color: var(--onPrimaryContainer);
+	text-align: center;
+	border: none;
+}
+
+.card h1, .card h2 {
+	color: var(--primary) !important;
+}
+
+	/*LEGACY - WILL SOON NO LONGER BE USED*/
 .translucentBox {
 	padding: 10px;
 	min-width: 300px;
@@ -197,6 +214,46 @@ html {
 }
 
 /*Navigation buttons*/
+
+.nav-pills {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-pills .nav-item {
+	flex-grow: 1;
+}
+
+.nav-pills .nav-link {
+	width: 100%;
+	text-align: center;
+}
+
+.nav-pills .nav-item-left, .nav-pills .nav-item-middle {
+	margin-right: 3px !important;
+}
+
+.nav-pills .nav-item-full {
+	border-radius: 25px !important;
+}
+
+.nav-pills .nav-item:last-child {
+	margin-right: 0;
+}
+
+	/*Style for the active pill button*/
+.nav-pills .nav-link.active {
+	background-color: var(--secondary);
+	color: var(--onSecondary);
+}
+
+	/*Style for the inactive pill buttons*/
+.nav-pills .nav-link:not(.active) {
+	background-color: var(--primary);
+	color: var(--onPrimary);
+}
+
+	/*LEGACY NAV BUTTONS*/
 .navButton, .navButtonInactive {
 	height: 40px;
 	width: 150px;
@@ -204,6 +261,11 @@ html {
 	font-size: 14px;
 	border-radius: 60px;
 	border: none;
+}
+
+.fullWidth {
+	width: 100%;
+	max-width: 400px;
 }
 
 .navButton {
@@ -222,7 +284,8 @@ html {
 }
 
 .leftButton, .leftNew {
-	border-radius: 60px 10px 10px 60px;
+	border-radius: 60px 10px 10px 60px !important;
+	margin-right: 3px !important;
 }
 
 .leftNew {
@@ -230,11 +293,16 @@ html {
 }
 
 .middleButton {
-	border-radius: 5px;
+	border-radius: 5px !important;
+	margin-right: 3px !important;
 }
 
 .rightButton, .rightNew {
-	border-radius: 10px 60px 60px 10px;
+	border-radius: 10px 60px 60px 10px !important;
+}
+
+.fullButton {
+	border-radius: 25px !important;
 }
 
 /*Icons that go inside paragraphs*/

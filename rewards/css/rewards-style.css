@@ -24,8 +24,8 @@
 	--onSurfaceVarient: rgb(82 67 69);    
 }
 
-html {
-    color: var(--onPrimaryContainer);
+.gradientHeading, .gradientHeadingSmall {
+	background-image: linear-gradient(to right, rgb(142 73 88), rgb(122 88 50));
 }
 
 .translucentBox {
@@ -63,8 +63,7 @@ html {
 
 .redeemButton {
 	height:30px;
-    width: 300px;
-	font-family: 'Cantarell', sans-serif;
+    width: 100%;
 	font-size: 15px;
 	background-color: #B83B5D;
 	color: white;
@@ -145,5 +144,9 @@ html {
 		--outline: #8d9199;
 		--surfaceVarient: #43474e;
 		--onSurfaceVarient: #c3c6cf;
+	}
+
+	.gradientHeading, .gradientHeadingSmall {
+		color: var(--primary);
 	}
 }

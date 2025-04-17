@@ -3,6 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 		<link rel="stylesheet" href="assets/css/ripple.css" type="text/css">
 		<link rel="stylesheet" href="assets/css/toplevel.css" type="text/css">
@@ -26,85 +27,73 @@
 			}
 		</style>
 		<script src="assets/scripts/links.js"></script>
-		<script>
-			function showSection(showing, hiding, hiding2) {
-				//Showing section in question
-				showing.style.display = "block";
-				hiding.style.display = "none";
-				hiding2.style.display = "none";
-			}
-
-			function leftSelected(left, right, middle) {
-				left.className = "ripple-button leftButton navButtonInactive";
-				middle.className = "ripple-button middleButton navButton";
-				right.className = "ripple-button rightButton navButton";
-			}
-
-			function middleSelected(middle, right, left) {
-				left.className = "ripple-button leftButton navButton";
-				middle.className = "ripple-button middleButton navButtonInactive";
-				right.className = "ripple-button rightButton navButton";
-			}
-
-			function rightSelected(right, left, middle) {
-				right.className = "ripple-button rightButton navButtonInactive";
-				middle.className = "ripple-button middleButton navButton";
-				left.className = "ripple-button leftButton navButton";	
-			}
-		</script>
 	</head>
 	<body>
-		<center>
-		<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
-			<p id="para" class="subtitle">Staying at weB&B? Select an option from below to get started.</p>
-		</div>
-		<div class="translucentBox joinTop">
-			<button id="navigationLeft" class="ripple-button leftButton navButtonInactive" onclick="showSection(normal, gastro, worldwide);leftSelected(this, navigationRight, navigationMiddle);">Book</button>
-			<button id="navigationMiddle" class="ripple-button middleButton navButton" onclick="showSection(worldwide, normal, gastro);middleSelected(this, navigationRight, navigationLeft);">Arriving</button>
-			<button id="navigationRight" class="ripple-button rightButton navButton" onclick="showSection(gastro, normal, worldwide);rightSelected(this, navigationLeft, navigationMiddle);">Leaving</button>
-		</div>
-		<div id="normal" style="display:block">
-			<div class="translucentBox joinBottom">
-				<h1>Book a Room</h1>
-				<p id="para" style="text-align: center;" class="subtitle">Book a room at weB&B below.</p>
-				<button class="ripple-button form-button joinTop" onclick="link('hotel/booking.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-				<div class="iframe-wrapper">
-					<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUNzlCNkROOVc3UzJCTFQ1UVpWQ0pHQk9YSS4u&embed=true">Loading...</iframe>
+		<main class="container mt-4 mb-4">
+			<div class="top-container">
+				<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
+				<p id="para" class="subtitle">Staying at weB&B? Select an option from below to get started.</p>
+			</div>
+			<div class="card mt-4 joinTop">
+				<div class="card-body">
+					<ul class="nav nav-pills">
+						<li class="nav-item nav-item-left">
+							<button class="nav-link active ripple-button leftButton" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button>
+						</li>
+						<li class="nav-item nav-item-middle">
+							<button class="nav-link ripple-button middleButton" id="arriving-tab" data-bs-toggle="pill" data-bs-target="#arriving-tab-pane" type="button" role="tab" aria-controls="arriving-tab-pane" aria-selected="false">Arriving</button>
+						</li>
+						<li class="nav-item nav-item-right">
+							<button class="nav-link ripple-button rightButton" id="leaving-tab" data-bs-toggle="pill" data-bs-target="#leaving-tab-pane" type="button" role="tab" aria-controls="leaving-tab-pane" aria-selected="false">Leaving</button>
+						</li>
+					</ul>
 				</div>
-					<br>
-					<br>
-				<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="roundedImage"></a>
 			</div>
-		</div>
-		<div id="worldwide" style="display: none">
-			<div class="translucentBox joinBottom">
-				<center>
-					<h1>Arriving</h1>
-					<p id="para" style="text-align: center;" class="subtitle">Welcome! Check in below. :)</p>
-					<button class="ripple-button form-button joinTop" onclick="link('hotel/checkin.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-					<div class="iframe-wrapper">
-						<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUQkJBVkZFSDhCOVJDMjdBRFQ2Sjc3NEM5MS4u&embed=true">Loading…</iframe>
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">Book a Room</h1>
+							<p class="card-text">Book a room at weB&B below.</p>
+							<button class="ripple-button form-button joinTop" onclick="link('hotel/booking.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+							<div class="iframe-wrapper">
+								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUNzlCNkROOVc3UzJCTFQ1UVpWQ0pHQk9YSS4u&embed=true">Loading...</iframe>
+							</div>
+							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
 					</div>
-					<br><br>
-					<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
-				</center>
+				</div>
+
+				<div class="tab-pane fade" id="arriving-tab-pane" role="tabpanel" aria-labelledby="arriving-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">Arriving</h1>
+							<p class="card-text">Welcome! Check in below. :)</p>
+							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkin.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+							<div class="iframe-wrapper">
+								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUQkJBVkZFSDhCOVJDMjdBRFQ2Sjc3NEM5MS4u&embed=true">Loading…</iframe>
+							</div>
+							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="leaving-tab-pane" role="tabpanel" aria-labelledby="leaving-tab" tabindex="0">
+					<div class="card joinBottom">
+						<div class="card-body">
+							<h2 class="card-title">Leaving</h1>
+							<p class="card-text">Thank you for staying with us! Check out below. :)</p>
+							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkout.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+							<div class="iframe-wrapper">
+								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUMjdUUDRPMzg2OE9GOTRaQlNMUjJSUFdONS4u&embed=true">Loading…</iframe>
+							</div>
+							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div id="gastro" style="display:none">
-			<div class="translucentBox joinBottom">
-					<center><h1>Leaving</h1>
-			<p id="para" style="text-align: center;" class="subtitle">Thank you for staying with us! Check out below. :)</p>
-			<button class="ripple-button form-button joinTop" onclick="link('hotel/checkout.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-			<div class="iframe-wrapper">
-				<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUMjdUUDRPMzg2OE9GOTRaQlNMUjJSUFdONS4u&embed=true">Loading…</iframe>
-			</div>
-			<br>
-			<br>
-					<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="ripple-button roundedImage"></a>
-			</div>
-		</div>
-		<br><br><br><br>
+		</main>
 		<script src="assets/scripts/ripple.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 	</body>
 </html>
