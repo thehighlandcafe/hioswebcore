@@ -34,7 +34,7 @@
 body {
 	background-color: var(--background);
 	font-family: var(--fontPrimary);
-	font-weight: 500;
+	font-weight: 400;
 	color: var(--onPrimaryContainer);
 	user-select: none;
 	-webkit-user-select: none; /*Safari*/
