@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /*Variables*/
 :root {
@@ -26,15 +26,15 @@
 	--onSurfaceVarient: #43474e;
 
 	/*Fonts*/
-	--fontPrimary: 'Ubuntu', sans-serif;
-	--fontCode: 'Ubuntu', sans-serif;
+	--fontPrimary: 'Outfit', sans-serif;
+	--fontCode: 'Outfit', sans-serif;
 }
 
 /*Setting basic HTML styles, such as background colour and font*/
 body {
 	background-color: var(--background);
 	font-family: var(--fontPrimary);
-	font-weight: 400;
+	font-weight: 350;
 	color: var(--onPrimaryContainer);
 	user-select: none;
 	-webkit-user-select: none; /*Safari*/
@@ -79,8 +79,9 @@ body {
 /*Gradient-coloured headings on Homepage*/
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading, .gradientHeadingSmall {
-	background-image: linear-gradient(to right, #1891ac, #1d3e79);
-	color: transparent;
+	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
+	color: transparent;*/
+	color: var(--primary);
 	-webkit-background-clip: text;
 	background-clip: text;
 	font-family: var(--fontPrimary);
@@ -602,38 +603,7 @@ menu-iframe {
 	right: 10px;
 }
 
-/*Dark mode variables/legacy styles
-@media (prefers-color-scheme: light) {
-	:root {
-		--primary: #a0c9ff;
-		--onPrimary: #00325a;
-		--primaryContainer: #253141;
-		--onPrimaryContainer: #d2e4ff;
-		--secondary: #bbc7db;
-		--onSecondary: #253141;
-		--secondaryContainer: #3c4858;
-		--onSecondaryContainer: #d7e3f8;
-		--tertiary: #d7bde4;
-		--onTertiary: #3b2947;
-		--tertiaryContainer: #533f5f;
-		--onTertiaryContainer: #f3daff;
-		--background: #1a1c1e;
-		--onBackground: #e3e2e6;
-		--surface: #1a1c1e;
-		--onSurface: #e3e2e6;
-		--outline: #8d9199;
-		--surfaceVarient: #43474e;
-		--onSurfaceVarient: #c3c6cf;
-	}
-
-	.button:hover {
-		background-color: #5A6B74;
-	}
-
-	.gradientHeading, .gradientHeadingSmall {
-		color: var(--primary);
-	}
-}*/
+/*Dark mode variables/legacy styles*/
 
 @media (prefers-color-scheme: dark) {
 	:root {
