@@ -281,11 +281,11 @@ body {
 	/*LEGACY NAV BUTTONS*/
 .navButton, .navButtonInactive {
 	height: 40px;
-	width: 150px;
 	font-family: var(--fontPrimary);
 	font-size: 14px;
 	border-radius: 60px;
 	border: none;
+	margin-bottom: 5px;
 }
 
 .fullWidth {
@@ -652,9 +652,9 @@ menu-iframe {
 		--onSurfaceVarient: #c3c6cf;
 	}
 
-	.background-image {
+	/*.background-image {
 		background-image: url('backgrounds/background-dark.png');
-}
+	}*/
 
 	.card {
 		backdrop-filter: blur(10px);
