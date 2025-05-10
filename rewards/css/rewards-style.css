@@ -32,6 +32,10 @@
     background-color: var(--primaryContainer) !important;
 }
 
+.card {
+	background-color: var(--primaryContainer) !important;
+}
+
 .expandedBoxes {
 	background-color: var(--primary);
 	color: var(--onPrimary);
