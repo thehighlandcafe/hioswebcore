@@ -654,6 +654,7 @@ menu-iframe {
 
 	.background-image {
 		background-image: url('backgrounds/background-dark.png');
+}
 
 	.card {
 		backdrop-filter: blur(10px);
