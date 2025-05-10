@@ -652,6 +652,9 @@ menu-iframe {
 		--onSurfaceVarient: #c3c6cf;
 	}
 
+	.background-image {
+		background-image: url('backgrounds/background-dark.png');
+
 	.card {
 		backdrop-filter: blur(10px);
 		background-color: rgba(0, 0, 0, 0.5);
