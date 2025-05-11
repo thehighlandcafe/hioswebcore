@@ -44,6 +44,7 @@ body {
    	-moz-osx-font-smoothing: grayscale;
 }
 
+/*Universal image backdrop*/
 .background-wrapper {
 	position: fixed;
 	top: 0;
@@ -60,6 +61,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	/*Default background image, if user has not changed settings. Is light Montenegro photo.*/
 	background-image: url('backgrounds/backgroundimage.png');
 	background-size: cover;
 	background-position: center;
@@ -199,7 +201,7 @@ body {
 }
 
 /*Large link buttons*/
-.button {
+.button, .form-select {
 	width: 100%;
 	height: 60px;
 	background-color: var(--secondaryContainer);
@@ -237,6 +239,10 @@ body {
 	font-size: 25px;
 	line-height: 60px;
 	margin-left: 10px;
+}
+
+.form-select {
+	font-size: 25px;
 }
 
 /*Navigation buttons*/
