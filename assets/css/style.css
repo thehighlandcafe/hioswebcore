@@ -32,6 +32,7 @@
 
 /*Setting basic HTML styles, such as background colour and font*/
 body {
+	display: none;
 	background-color: var(--background);
 	font-family: var(--fontPrimary);
 	font-weight: 350;
