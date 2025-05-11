@@ -280,7 +280,7 @@ body {
 }
 
 	/*LEGACY NAV BUTTONS*/
-.navButton, .navButtonInactive {
+.navButton, .navButtonInactive, ::file-selector-button {
 	height: 40px;
 	font-family: var(--fontPrimary);
 	font-size: 14px;
@@ -294,7 +294,7 @@ body {
 	max-width: 400px;
 }
 
-.navButton {
+.navButton, ::file-selector-button {
 	background-color: var(--primary);
 	color: var(--onPrimary);
 }

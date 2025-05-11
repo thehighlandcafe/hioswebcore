@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
+        <link rel="icon" href="../../../assets/pics/logos/hiosbadge.png" type="image/icon type">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="../../../assets/css/ripple.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="../../../assets/scripts/links.js"></script>
+        <title>HiOS |</title>
+    </head>
+    <body>
+        		<!--The universal background image-->
+		<div class="background-wrapper">
+			<div class="background-image"></div>
+		</div>
+        <main class="container mt-4 mb-5">
+            <div class="card mt-3 full">
+                <div class="card-body">
+                    <div class="top-container">
+                        <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">palette</span>Appearance</h1>
+                        <p id="para">Customise the appearance of HiOSMobile to your taste below.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2 joinTop">
+                <div class="card-body">
+                    <div id="background-selector">
+						<h1 class="card-title">App Background</h1>
+						<h3 class="card-subtitle mb-2">Our backgrounds</h3>
+						<select class="form-select" id="backgroundSelect">
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png">Default</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/background-dark.png">Default (Night)</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg">City</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg">Night Sky</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg">Morocco</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/british-clouds.jpg">Cloudy Sunrise</option>
+							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/blossoms.jpg">Blossoms</option>
+						</select>
+					</div>
+                </div>
+            </div>
+            <div class="card joinBottom">
+                <div class="card-body">
+                    <div id="background-upload">
+						<h3 class="card-subtitle mb-2">Your background</h2>
+						<input type="file" id="uploadBackground" accept="image/*">
+					</div>
+                </div>
+            </div>
+        </main>
+        <script src="../../../assets/scripts/background.js"></script>
+        <script src="../../../assets/scripts/ripple.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
+    </body>
+</html>
