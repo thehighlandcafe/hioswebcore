@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const backgroundSelector = document.getElementById('background-selector');
-    const backgroundSelect = document.getElementById('backgroundSelect');
-    const backgroundUploader = document.getElementById('uploadBackground');
     const backgroundImageElement = document.querySelector('.background-image');
     const bodyElement = document.body;
-    const uploadedBgKey = 'userUploadedBackgroundImage';
     const dropdownKey = 'backgroundDropdownSelection';
-    const baseThemeKey = 'userBaseTheme';
+    const baseThemeKey = 'userbasetheme';
     const defaultBaseTheme = 'default-light';
-
+    const backgroundSelect = document.getElementById('backgroundSelect');
     const autoColourToggle = document.getElementById('autoColourToggle');
     const genericColourSelect = document.getElementById('genericColourSelect');
     const genericColourKey = 'userGenericColourSelection';
     const autoColourKey = 'userAutoColourEnabled';
 
     function applyBackground(imageUrl) {
-        backgroundImageElement.style.backgroundImage = `url('${imageUrl}')`;
-        bodyElement.style.display = 'block';
+        if (backgroundImageElement) {
+            backgroundImageElement.style.backgroundImage = `url('${imageUrl}')`;
+            bodyElement.style.display = 'block';
+        }
     }
 
     function applyBaseTheme(theme) {
         bodyElement.className = theme;
         localStorage.setItem(baseThemeKey, theme);
+        console.log('Applying theme:', theme); // Debugging log
     }
 
     function applyGenericColour(colour) {
         bodyElement.className = colour;
         localStorage.setItem(baseThemeKey, colour);
+        console.log('Applying generic colour:', colour); // Debugging log
     }
 
     function updateGenericColourSelectState() {
@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Load saved settings and apply theme on initial load
-    const savedUploadedBackground = localStorage.getItem(uploadedBgKey);
+    // Load saved settings and apply theme/selections on initial load (runs on every page)
     const savedDropdownValue = localStorage.getItem(dropdownKey);
-    const savedBaseTheme = localStorage.getItem(baseThemeKey) || defaultBaseTheme;
+    const savedBaseTheme = localStorage.getItem(baseThemeKey);
     const savedAutoColour = localStorage.getItem(autoColourKey) === 'true';
     const savedGenericColour = localStorage.getItem(genericColourKey);
 
@@ -47,96 +46,87 @@ document.addEventListener('DOMContentLoaded', function() {
         updateGenericColourSelectState();
     }
 
-    if (savedUploadedBackground) {
-        applyBackground(savedUploadedBackground);
-        applyBaseTheme(defaultBaseTheme);
+    if (savedDropdownValue && backgroundSelect) {
+        applyBackground(savedDropdownValue);
+        backgroundSelect.value = savedDropdownValue;
     } else if (savedDropdownValue) {
         applyBackground(savedDropdownValue);
-        // Directly apply the theme associated with the saved wallpaper
-        const themeForWallpaper = document.querySelector(`#backgroundSelect option[value="${savedDropdownValue}"]`)?.getAttribute('data-theme');
-        applyBaseTheme(themeForWallpaper || defaultBaseTheme);
-        if (backgroundSelect) {
-            backgroundSelect.value = savedDropdownValue;
-        }
-    } else if (savedGenericColour && !(autoColourToggle && autoColourToggle.checked)) {
-        applyGenericColour(savedGenericColour);
-        if (genericColourSelect) {
-            genericColourSelect.value = savedGenericColour;
-        }
-    } else {
-        applyBaseTheme(defaultBaseTheme);
     }
 
-    bodyElement.style.display = 'block'; // Ensure body is visible after applying initial theme
+    if (savedAutoColour) {
+        if (savedBaseTheme && !savedBaseTheme.startsWith('generic-')) {
+            applyBaseTheme(savedBaseTheme);
+        } else {
+            applyBaseTheme(defaultBaseTheme);
+        }
+    } else {
+        if (savedGenericColour) {
+            applyGenericColour(savedGenericColour);
+            if (genericColourSelect) {
+                genericColourSelect.value = savedGenericColour;
+            }
+        } else {
+            applyBaseTheme(defaultBaseTheme);
+        }
+    }
 
-    // Handle toggle change
+    bodyElement.style.display = 'block'; // Ensure body is visible
+
+    // Handle toggle change (ONLY on appearance page)
     if (autoColourToggle) {
         autoColourToggle.addEventListener('change', function() {
             localStorage.setItem(autoColourKey, this.checked);
             updateGenericColourSelectState();
-            if (!this.checked && backgroundSelect && backgroundSelect.value !== 'https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png') {
-                applyBaseTheme('default-light');
-                localStorage.removeItem(baseThemeKey);
+            if (!this.checked) {
+                const currentGeneric = localStorage.getItem(genericColourKey);
+                if (currentGeneric) {
+                    applyGenericColour(currentGeneric);
+                } else {
+                    applyBaseTheme('default-light');
+                }
             } else if (this.checked && savedDropdownValue) {
                 const themeForWallpaper = document.querySelector(`#backgroundSelect option[value="${savedDropdownValue}"]`)?.getAttribute('data-theme');
                 applyBaseTheme(themeForWallpaper || defaultBaseTheme);
             } else if (this.checked) {
                 applyBaseTheme(defaultBaseTheme);
             }
-            localStorage.removeItem(genericColourKey);
+            window.location.reload(); // Refresh the page
         });
     }
 
-    // Handle background dropdown change
+    // Handle background dropdown change (ONLY on appearance page)
     if (backgroundSelect) {
         backgroundSelect.addEventListener('change', function() {
             const selectedBg = this.value;
             applyBackground(selectedBg);
             localStorage.setItem(dropdownKey, selectedBg);
-            localStorage.removeItem(uploadedBgKey);
-
             if (autoColourToggle && autoColourToggle.checked) {
                 const selectedBaseTheme = this.options[this.selectedIndex].getAttribute('data-theme') || defaultBaseTheme;
                 applyBaseTheme(selectedBaseTheme);
             } else if (autoColourToggle) {
-                applyBaseTheme('default-light');
-                localStorage.removeItem(baseThemeKey);
+                const currentGeneric = localStorage.getItem(genericColourKey);
+                if (currentGeneric) {
+                    applyGenericColour(currentGeneric);
+                } else {
+                    applyBaseTheme('default-light');
+                }
             }
-            localStorage.removeItem(genericColourKey);
+            window.location.reload(); // Refresh the page
         });
     }
 
-    // Handle generic colour dropdown change
+    // Handle generic colour dropdown change (ONLY on appearance page)
     if (genericColourSelect) {
         genericColourSelect.addEventListener('change', function() {
             const selectedColour = this.value;
             applyGenericColour(selectedColour);
             localStorage.setItem(genericColourKey, selectedColour);
-            localStorage.removeItem(baseThemeKey);
-        });
-    }
-
-    // Handle file upload
-    if (backgroundUploader) {
-        backgroundUploader.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const dataUrl = e.target.result;
-                    applyBackground(dataUrl);
-                    localStorage.setItem(uploadedBgKey, dataUrl);
-                    localStorage.removeItem(dropdownKey);
-                    localStorage.removeItem(genericColourKey);
-                    localStorage.setItem(autoColourKey, true);
-                    if (autoColourToggle) {
-                        autoColourToggle.checked = true;
-                    }
-                    updateGenericColourSelectState();
-                    applyBaseTheme(defaultBaseTheme);
-                }
-                reader.readAsDataURL(file);
+            localStorage.setItem(autoColourKey, false);
+            if (autoColourToggle) {
+                autoColourToggle.checked = false;
+                updateGenericColourSelectState();
             }
+            window.location.reload(); // Refresh the page
         });
     }
 });
