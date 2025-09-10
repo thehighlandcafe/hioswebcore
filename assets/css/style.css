@@ -1,6 +1,15 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');*/
+
+/*Defining Selawik font*/
+@font-face {
+	font-family: 'Selawik';
+	src: 	url('../fonts/selawk.woff2') format('woff2'),
+			url('../fonts/selawk.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /*Variables*/
 :root {
@@ -26,8 +35,8 @@
 	--onSurfaceVarient: #43474e;
 
 	/*Fonts*/
-	--fontPrimary: 'Outfit', sans-serif;
-	--fontCode: 'Outfit', sans-serif;
+	--fontPrimary: 'Selawik', sans-serif;
+	--fontCode: 'Selawik', sans-serif;
 }
 
 /*background-based themes*/
@@ -638,12 +647,27 @@ body {
 
 /*Section containers*/
 .card {
-	/*background-color: var(--primaryContainer);*/
-	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, 0.5);
-	color: var(--onPrimaryContainer);
-	text-align: center;
-	border: none;
+    /* Core Acrylic effect */
+    -webkit-backdrop-filter: blur(30px) saturate(120%);
+    backdrop-filter: blur(30px) saturate(120%);
+
+    /* Background with noise texture */
+    background-color: rgba(252, 252, 252, 0.5); /* UPDATED: Was 0.7 */
+    /* The long url() string below is an inline SVG that creates the noise texture */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%27100%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.65%27 numOctaves=%273%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27 opacity=%270.05%27/%3E%3C/svg%3E');
+    
+    /* Subtle border for definition */
+    border: 1px solid rgba(200, 200, 200, 0.3);
+
+    /* Optional shadow for depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+
+    /* Your existing properties */
+    color: var(--onPrimaryContainer);
+    text-align: center;
+
+    /* Ensure cards have a default radius */
+    border-radius: 12px;
 }
 
 .card h1, .card h2 {
@@ -1168,8 +1192,9 @@ menu-iframe {
 	}*/
 
 	.card {
-		backdrop-filter: blur(10px);
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(30, 30, 30, 0.5); /* UPDATED: Was 0.75 */
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 	}
 
 	.button:hover {
