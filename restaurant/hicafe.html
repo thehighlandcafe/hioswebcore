@@ -30,8 +30,12 @@
 			<div class="background-image"></div>
 		</div>
         <main class="container mt-4 mb-5">
-            <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span><span id="drawerIcon" class="material-symbols-rounded" style="float: right;" onclick="showMainNavigationBox()">menu</span><span id="hideIcon" class="material-symbols-rounded" style="float: right;display: none;" onclick="hideMainNavigationBox()">close</span>
-            <div id="mainNavBox" class="card mt-3 full" style="display: none;">
+            <div class="card joinTop">
+                <div class="card-body text-start">
+                    <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span><span id="drawerIcon" class="material-symbols-rounded" style="float: right;" onclick="showMainNavigationBox()">menu</span><span id="hideIcon" class="material-symbols-rounded" style="float: right;display: none;" onclick="hideMainNavigationBox()">close</span>
+                </div>
+            </div>
+            <div id="mainNavBox" class="card joinMiddle" style="display: none;">
                 <div class="card-body">
                     <ul class="nav nav-pills">
                         <li class="nav-item nav-item-left">
@@ -46,9 +50,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="tab-content mt-3">
+            <div class="tab-content">
                 <div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
-                    <div class="card full">
+                    <div class="card joinBottom">
                         <div class="card-body">
                             <div class="top-container">
                                 <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">table_restaurant</span>Book a Table</h1>
@@ -68,7 +72,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="menus-tab-pane" role="tabpanel" aria-labelledby="menus-tab" tabindex="0">
-                    <div class="card full">
+                    <div class="card joinBottom">
                         <div class="card-body">
                             <div class="top-container">
                                 <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">menu_book</span>Menus</h1>
@@ -154,7 +158,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
-                    <div class="card full">
+                    <div class="card joinBottom">
                         <div class="card-body">
                             <div class="top-container">
                                 <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">edit</span>Food Ordering</h1>

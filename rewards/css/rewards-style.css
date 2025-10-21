@@ -24,16 +24,16 @@
 	--onSurfaceVarient: rgb(82 67 69);    
 }
 
+.background-image {
+	background-image: url(../pics/background.jpg);
+}
+
 .gradientHeading, .gradientHeadingSmall {
 	background-image: linear-gradient(to right, rgb(142 73 88), rgb(122 88 50));
 }
 
 .translucentBox {
     background-color: var(--primaryContainer) !important;
-}
-
-.card {
-	background-color: var(--primaryContainer) !important;
 }
 
 .expandedBoxes {
@@ -49,11 +49,11 @@
 }
 
 .offers {
-    background-color: #FEABC5 !important;
+    /*background-color: #FEABC5 !important;*/
 }
 
 .offers h1, .offers h2, .offers h3, .offers h4, .offers h5, .offers p {
-    color: #69001F !important;
+    /*color: #69001F !important;*/
 }
 
 #homeImage {
