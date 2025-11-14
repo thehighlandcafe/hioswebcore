@@ -4,49 +4,49 @@
 
 /*Defining Selawik font*/
 @font-face {
-	font-family: 'Selawik';
-	src: 	url('../fonts/selawk.woff2') format('woff2'),
-			url('../fonts/selawk.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Selawik';
+    src:    url('../fonts/selawk.woff2') format('woff2'),
+            url('../fonts/selawk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*Variables*/
 :root {
-	/*OLD Colours*/
-	--primary: #0061a6;
-	--onPrimary: #ffffff;
-	--primaryContainer: #d2e4ff;
-	--onPrimaryContainer: #001c37;
-	--secondary: #535f70;
-	--onSecondary: #ffffff;
-	--secondaryContainer: #d7e3f8;
-	--onSecondaryContainer: #101c2b;
-	--tertiary: #6c5778;
-	--onTertiary: #ffffff;
-	--tertiaryContainer: #f3daff;
-	--onTertiaryContainer: #251431;
-	--background: #fdfcff;
-	--onBackground: #1a1c1e;
-	--surface: #fdfcff;
-	--onSurface: #1a1c1e;
-	--outline: #73777f;
-	--surfaceVarient: #dfe2eb;
-	--onSurfaceVarient: #43474e;
+    /*OLD Colours*/
+    --primary: #0061a6;
+    --onPrimary: #ffffff;
+    --primaryContainer: #d2e4ff;
+    --onPrimaryContainer: #001c37;
+    --secondary: #535f70;
+    --onSecondary: #ffffff;
+    --secondaryContainer: #d7e3f8;
+    --onSecondaryContainer: #101c2b;
+    --tertiary: #6c5778;
+    --onTertiary: #ffffff;
+    --tertiaryContainer: #f3daff;
+    --onTertiaryContainer: #251431;
+    --background: #fdfcff;
+    --onBackground: #1a1c1e;
+    --surface: #fdfcff;
+    --onSurface: #1a1c1e;
+    --outline: #73777f;
+    --surfaceVarient: #dfe2eb;
+    --onSurfaceVarient: #43474e;
 
-	/*Fonts*/
-	--fontPrimary: 'Selawik', sans-serif;
-	--fontCode: 'Selawik', sans-serif;
+    /*Fonts*/
+    --fontPrimary: 'Selawik', sans-serif;
+    --fontCode: 'Selawik', sans-serif;
 }
 
 /*background-based themes*/
 body.default-dark {
-	/*Not necessary*/
+    /*Not necessary*/
 }
 
-	/*THE CITY WALLPAPER THEME*/
+    /*THE CITY WALLPAPER THEME*/
 body.city {
-	--primary: rgb(46 98 140);
+    --primary: rgb(46 98 140);
     --onPrimary: rgb(255 255 255);
     --primaryContainer: rgb(205 229 255);
     --onPrimaryContainer: rgb(11 74 114);
@@ -99,9 +99,9 @@ body.city {
     }
 }
 
-	/*THE NIGHT SKY WALLPAPER THEME*/
+    /*THE NIGHT SKY WALLPAPER THEME*/
 body.night-sky {
-	--primary: rgb(71 93 146);
+    --primary: rgb(71 93 146);
     --onPrimary: rgb(255 255 255);
     --primaryContainer: rgb(217 226 255);
     --onPrimaryContainer: rgb(47 69 120);
@@ -127,35 +127,35 @@ body.night-sky {
 }
 
 @media (prefers-color-scheme: dark) {
-	body.night-sky {
-		--primary: rgb(177 198 255);
-		--onPrimary: rgb(22 46 96);
-		--primaryContainer: rgb(47 69 120);
-		--onPrimaryContainer: rgb(217 226 255);
-		--secondary: rgb(192 198 220);
-		--onSecondary: rgb(42 48 66);
-		--secondaryContainer: rgb(64 70 89);
-		--onSecondaryContainer: rgb(220 226 249);
-		--tertiary: rgb(224 187 221);
-		--onTertiary: rgb(65 39 66);
-		--tertiaryContainer: rgb(89 61 89);
-		--onTertiaryContainer: rgb(253 215 250);
-		--error: rgb(255 180 171);
-		--onError: rgb(105 0 5);
-		--errorContainer: rgb(147 0 10);
-		--onErrorContainer: rgb(255 218 214);
-		--background: rgb(18 19 24);
-		--onBackground: rgb(226 226 233);
-		--surface: rgb(18 19 24);
-		--onSurface: rgb(226 226 233);
-		--surfaceVarient: rgb(68 70 79);
-		--onSurfaceVarient: rgb(197 198 208);
-		--outline: rgb(143 144 153);
-	}
+    body.night-sky {
+        --primary: rgb(177 198 255);
+        --onPrimary: rgb(22 46 96);
+        --primaryContainer: rgb(47 69 120);
+        --onPrimaryContainer: rgb(217 226 255);
+        --secondary: rgb(192 198 220);
+        --onSecondary: rgb(42 48 66);
+        --secondaryContainer: rgb(64 70 89);
+        --onSecondaryContainer: rgb(220 226 249);
+        --tertiary: rgb(224 187 221);
+        --onTertiary: rgb(65 39 66);
+        --tertiaryContainer: rgb(89 61 89);
+        --onTertiaryContainer: rgb(253 215 250);
+        --error: rgb(255 180 171);
+        --onError: rgb(105 0 5);
+        --errorContainer: rgb(147 0 10);
+        --onErrorContainer: rgb(255 218 214);
+        --background: rgb(18 19 24);
+        --onBackground: rgb(226 226 233);
+        --surface: rgb(18 19 24);
+        --onSurface: rgb(226 226 233);
+        --surfaceVarient: rgb(68 70 79);
+        --onSurfaceVarient: rgb(197 198 208);
+        --outline: rgb(143 144 153);
+    }
 }
 
 body.morocco {
-	--primary: rgb(137 81 31);
+    --primary: rgb(137 81 31);
     --surfaceTint: rgb(137 81 31);
     --onPrimary: rgb(255 255 255);
     --primaryContainer: rgb(255 220 195);
@@ -182,8 +182,8 @@ body.morocco {
 }
 
 @media(prefers-color-scheme: dark) {
-	body.morocco {
-		--primary: rgb(255 183 126);
+    body.morocco {
+        --primary: rgb(255 183 126);
         --onPrimary: rgb(78 38 0);
         --primaryContainer: rgb(108 58 7);
         --onPrimaryContainer: rgb(255 220 195);
@@ -206,7 +206,7 @@ body.morocco {
         --surfaceVarient: rgb(81 68 59);
         --onSurfaceVarient: rgb(214 195 183);
         --outline: rgb(158 141 130);
-	}
+    }
 }
 
 body.clouds {
@@ -372,7 +372,7 @@ body.london {
 }
 
 /*Generic colour themes*/
-	/*Green*/
+    /*Green*/
 body.generic-green {
     /* Light Generic Green */
     --primary: rgb(63 104 54);
@@ -429,162 +429,162 @@ body.generic-green {
     }
 }
 
-	/*Cyan*/
-	body.generic-cyan {
-		/* Light Generic Cyan */
-		--primary: rgb(0 106 106);
-		--onPrimary: rgb(255 255 255);
-		--primaryContainer: rgb(156 241 240);
-		--onPrimaryContainer: rgb(0 79 79);
-		--secondary: rgb(74 99 99);
-		--onSecondary: rgb(255 255 255);
-		--secondaryContainer: rgb(204 232 231);
-		--onSecondaryContainer: rgb(50 75 75);
-		--tertiary: rgb(75 96 124);
-		--onTertiary: rgb(255 255 255);
-		--tertiaryContainer: rgb(211 228 255);
-		--onTertiaryContainer: rgb(51 72 99);
-		--error: rgb(186 26 26);
-		--onError: rgb(255 255 255);
-		--errorContainer: rgb(255 218 214);
-		--onErrorContainer: rgb(147 0 10);
-		--background: rgb(244 251 250);
-		--onBackground: rgb(22 29 29);
-		--surface: rgb(244 251 250);
-		--onSurface: rgb(22 29 29);
-		--surfaceVarient: rgb(218 229 228);
-		--onSurfaceVarient: rgb(63 73 72);
-		--outline: rgb(111 121 121);
-	}
-	
-	@media (prefers-color-scheme: dark) {
-		body.generic-cyan {
-			/* Dark Generic Cyan */
-			--primary: rgb(128 213 212);
-			--onPrimary: rgb(0 55 55);
-			--primaryContainer: rgb(0 79 79);
-			--onPrimaryContainer: rgb(156 241 240);
-			--secondary: rgb(176 204 203);
-			--onSecondary: rgb(27 53 52);
-			--secondaryContainer: rgb(50 75 75);
-			--onSecondaryContainer: rgb(204 232 231);
-			--tertiary: rgb(179 200 232);
-			--onTertiary: rgb(28 49 75);
-			--tertiaryContainer: rgb(51 72 99);
-			--onTertiaryContainer: rgb(211 228 255);
-			--error: rgb(255 180 171);
-			--onError: rgb(105 0 5);
-			--errorContainer: rgb(147 0 10);
-			--onErrorContainer: rgb(255 218 214);
-			--background: rgb(14 21 20);
-			--onBackground: rgb(221 228 227);
-			--surface: rgb(14 21 20);
-			--onSurface: rgb(221 228 227);
-			--surfaceVarient: rgb(63 73 72);
-			--onSurfaceVarient: rgb(190 201 200);
-			--outline: rgb(136 147 146);
-		}
-	}
+    /*Cyan*/
+    body.generic-cyan {
+        /* Light Generic Cyan */
+        --primary: rgb(0 106 106);
+        --onPrimary: rgb(255 255 255);
+        --primaryContainer: rgb(156 241 240);
+        --onPrimaryContainer: rgb(0 79 79);
+        --secondary: rgb(74 99 99);
+        --onSecondary: rgb(255 255 255);
+        --secondaryContainer: rgb(204 232 231);
+        --onSecondaryContainer: rgb(50 75 75);
+        --tertiary: rgb(75 96 124);
+        --onTertiary: rgb(255 255 255);
+        --tertiaryContainer: rgb(211 228 255);
+        --onTertiaryContainer: rgb(51 72 99);
+        --error: rgb(186 26 26);
+        --onError: rgb(255 255 255);
+        --errorContainer: rgb(255 218 214);
+        --onErrorContainer: rgb(147 0 10);
+        --background: rgb(244 251 250);
+        --onBackground: rgb(22 29 29);
+        --surface: rgb(244 251 250);
+        --onSurface: rgb(22 29 29);
+        --surfaceVarient: rgb(218 229 228);
+        --onSurfaceVarient: rgb(63 73 72);
+        --outline: rgb(111 121 121);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        body.generic-cyan {
+            /* Dark Generic Cyan */
+            --primary: rgb(128 213 212);
+            --onPrimary: rgb(0 55 55);
+            --primaryContainer: rgb(0 79 79);
+            --onPrimaryContainer: rgb(156 241 240);
+            --secondary: rgb(176 204 203);
+            --onSecondary: rgb(27 53 52);
+            --secondaryContainer: rgb(50 75 75);
+            --onSecondaryContainer: rgb(204 232 231);
+            --tertiary: rgb(179 200 232);
+            --onTertiary: rgb(28 49 75);
+            --tertiaryContainer: rgb(51 72 99);
+            --onTertiaryContainer: rgb(211 228 255);
+            --error: rgb(255 180 171);
+            --onError: rgb(105 0 5);
+            --errorContainer: rgb(147 0 10);
+            --onErrorContainer: rgb(255 218 214);
+            --background: rgb(14 21 20);
+            --onBackground: rgb(221 228 227);
+            --surface: rgb(14 21 20);
+            --onSurface: rgb(221 228 227);
+            --surfaceVarient: rgb(63 73 72);
+            --onSurfaceVarient: rgb(190 201 200);
+            --outline: rgb(136 147 146);
+        }
+    }
 
-	/*Orange*/
-	body.generic-orange {
-		/* Light Generic Orange */
-		--primary: rgb(129 85 18);
-		--onPrimary: rgb(255 255 255);
-		--primaryContainer: rgb(255 221 183);
-		--onPrimaryContainer: rgb(101 62 0);
-		--secondary: rgb(112 91 65);
-		--onSecondary: rgb(255 255 255);
-		--secondaryContainer: rgb(252 222 188);
-		--onSecondaryContainer: rgb(87 67 43);
-		--tertiary: rgb(83 100 62);
-		--onTertiary: rgb(255 255 255);
-		--tertiaryContainer: rgb(214 233 185);
-		--onTertiaryContainer: rgb(60 76 40);
-		--error: rgb(186 26 26);
-		--onError: rgb(255 255 255);
-		--errorContainer: rgb(255 218 214);
-		--onErrorContainer: rgb(147 0 10);
-		--background: rgb(255 248 244);
-		--onBackground: rgb(33 26 19);
-		--surface: rgb(255 248 244);
-		--onSurface: rgb(33 26 19);
-		--surfaceVarient: rgb(240 224 208);
-		--onSurfaceVarient: rgb(80 69 57);
-		--outline: rgb(130 117 104);
-	}
-	
-	@media (prefers-color-scheme: dark) {
-		body.generic-orange {
-			/* Dark Generic Orange */
-			--primary: rgb(247 187 112);
-			--onPrimary: rgb(70 42 0);
-			--primaryContainer: rgb(101 62 0);
-			--onPrimaryContainer: rgb(255 221 183);
-			--secondary: rgb(223 194 162);
-			--onSecondary: rgb(63 45 23);
-			--secondaryContainer: rgb(87 67 43);
-			--onSecondaryContainer: rgb(252 222 188);
-			--tertiary: rgb(186 205 159);
-			--onTertiary: rgb(38 53 20);
-			--tertiaryContainer: rgb(60 76 40);
-			--onTertiaryContainer: rgb(214 233 185);
-			--error: rgb(255 180 171);
-			--onError: rgb(105 0 5);
-			--errorContainer: rgb(147 0 10);
-			--onErrorContainer: rgb(255 218 214);
-			--background: rgb(24 18 12);
-			--onBackground: rgb(238 224 212);
-			--surface: rgb(24 18 12);
-			--onSurface: rgb(238 224 212);
-			--surfaceVarient: rgb(80 69 57);
-			--onSurfaceVarient: rgb(212 196 181);
-			--outline: rgb(156 142 128);
-		}
-	}
+    /*Orange*/
+    body.generic-orange {
+        /* Light Generic Orange */
+        --primary: rgb(129 85 18);
+        --onPrimary: rgb(255 255 255);
+        --primaryContainer: rgb(255 221 183);
+        --onPrimaryContainer: rgb(101 62 0);
+        --secondary: rgb(112 91 65);
+        --onSecondary: rgb(255 255 255);
+        --secondaryContainer: rgb(252 222 188);
+        --onSecondaryContainer: rgb(87 67 43);
+        --tertiary: rgb(83 100 62);
+        --onTertiary: rgb(255 255 255);
+        --tertiaryContainer: rgb(214 233 185);
+        --onTertiaryContainer: rgb(60 76 40);
+        --error: rgb(186 26 26);
+        --onError: rgb(255 255 255);
+        --errorContainer: rgb(255 218 214);
+        --onErrorContainer: rgb(147 0 10);
+        --background: rgb(255 248 244);
+        --onBackground: rgb(33 26 19);
+        --surface: rgb(255 248 244);
+        --onSurface: rgb(33 26 19);
+        --surfaceVarient: rgb(240 224 208);
+        --onSurfaceVarient: rgb(80 69 57);
+        --outline: rgb(130 117 104);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        body.generic-orange {
+            /* Dark Generic Orange */
+            --primary: rgb(247 187 112);
+            --onPrimary: rgb(70 42 0);
+            --primaryContainer: rgb(101 62 0);
+            --onPrimaryContainer: rgb(255 221 183);
+            --secondary: rgb(223 194 162);
+            --onSecondary: rgb(63 45 23);
+            --secondaryContainer: rgb(87 67 43);
+            --onSecondaryContainer: rgb(252 222 188);
+            --tertiary: rgb(186 205 159);
+            --onTertiary: rgb(38 53 20);
+            --tertiaryContainer: rgb(60 76 40);
+            --onTertiaryContainer: rgb(214 233 185);
+            --error: rgb(255 180 171);
+            --onError: rgb(105 0 5);
+            --errorContainer: rgb(147 0 10);
+            --onErrorContainer: rgb(255 218 214);
+            --background: rgb(24 18 12);
+            --onBackground: rgb(238 224 212);
+            --surface: rgb(24 18 12);
+            --onSurface: rgb(238 224 212);
+            --surfaceVarient: rgb(80 69 57);
+            --onSurfaceVarient: rgb(212 196 181);
+            --outline: rgb(156 142 128);
+        }
+    }
 
 /*Setting basic HTML styles, such as background colour and font*/
 body {
-	display: none;
-	background-color: var(--background);
-	font-family: var(--fontPrimary);
-	font-weight: 350;
-	color: var(--onPrimaryContainer);
-	user-select: none;
-	-webkit-user-select: none; /*Safari*/
-	-moz-user-select: none; /*Firefox*/
-   	-webkit-font-smoothing: antialiased;
-   	-moz-osx-font-smoothing: grayscale;
+    display: none;
+    background-color: var(--background);
+    font-family: var(--fontPrimary);
+    font-weight: 350;
+    color: var(--onPrimaryContainer);
+    user-select: none;
+    -webkit-user-select: none; /*Safari*/
+    -moz-user-select: none; /*Firefox*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /*Universal image backdrop*/
 .background-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
 
 .background-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	/*Default background image, if user has not changed settings. Is light Montenegro photo.*/
-	background-image: url('backgrounds/backgroundimage.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*Default background image, if user has not changed settings. Is light Montenegro photo.*/
+    background-image: url('backgrounds/backgroundimage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*Rounded corners for HiMaterial elements*/
 .roundedImage {
-	border-radius: 25px;
-	border: 0.5px solid var(--outline);
+    border-radius: 25px;
+    border: 0.5px solid var(--outline);
 }
 
 /*HIMATERIAL COMPONENTS*/
@@ -593,615 +593,712 @@ body {
 /*NEW HEADINGS FROM JULY 2022*/
 
 .blue-h2, .blue-h3 {
-	color: var(--primary);
-	font-family: var(--fontPrimary);
-	font-size: 45px;
-	font-weight: 300;
-	text-align: left;
+    color: var(--primary);
+    font-family: var(--fontPrimary);
+    font-size: 45px;
+    font-weight: 300;
+    text-align: left;
 }
 
 .material-symbols-rounded {
-	font-size: 30px !important;
-	font-variation-settings:
-	'FILL' 1,
-	'wght' 400,
-	'GRAD' 0,
-	'opsz' 24 !important
+    font-size: 30px !important;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24 !important
 }
 
 /*Heading subtitles*/
 .subtitle {
-	font-family: var(--fontCode) !important;
+    font-family: var(--fontCode) !important;
 }
 
 /*Gradient-coloured headings on Homepage*/
 /*NEW HEADINGS FROM DECEMBER 2022*/
 .gradientHeading, .gradientHeadingSmall {
-	/*background-image: linear-gradient(to right, #1891ac, #1d3e79);
-	color: transparent;*/
-	color: var(--primary);
-	-webkit-background-clip: text;
-	background-clip: text;
-	font-family: var(--fontPrimary);
+    /*background-image: linear-gradient(to right, #1891ac, #1d3e79);
+    color: transparent;*/
+    color: var(--primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: var(--fontPrimary);
 }
 
 .gradientHeading {
-	font-size: 40px;
-	font-weight: 700;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .gradientHeadingSmall {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 /*Main headings containers*/
 .top-container {
-	margin: 0 auto;
-	min-width: 300px;
-	padding: 0px;
+    margin: 0 auto;
+    min-width: 300px;
+    padding: 0px;
 }
 
 .top-container #para {
-	text-align: left !important;
+    text-align: left !important;
 }
 
-/*Section containers*/
-.card {
-    /* Core Acrylic effect */
-    -webkit-backdrop-filter: blur(30px) saturate(120%);
-    backdrop-filter: blur(30px) saturate(120%);
-
-    /* Background with noise texture */
-    background-color: rgba(252, 252, 252, 0.5); /* UPDATED: Was 0.7 */
-    /* The long url() string below is an inline SVG that creates the noise texture */
-    background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%27100%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.65%27 numOctaves=%273%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27 opacity=%270.05%27/%3E%3C/svg%3E');
-    
-    /* Subtle border for definition */
-    border: 1px solid rgba(200, 200, 200, 0.3);
-
-    /* Optional shadow for depth */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-
-    /* Your existing properties */
-    color: var(--onPrimaryContainer);
-    text-align: center;
-
-    /* Ensure cards have a default radius */
-    border-radius: 12px;
-}
+/*
+ * DELETED the main .card {} style block from here
+ * to prevent conflicts with the new liquid glass.
+ */
 
 .card h1, .card h2 {
-	color: var(--primary) !important;
+    color: var(--primary) !important;
 }
 
-	/*LEGACY - WILL SOON NO LONGER BE USED*/
+    /*LEGACY - WILL SOON NO LONGER BE USED*/
 .translucentBox {
-	padding: 10px;
-	min-width: 300px;
-	background-color: var(--primaryContainer);
-	color: var(--onPrimaryContainer);
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    padding: 10px;
+    min-width: 300px;
+    background-color: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .imageBox {
-	min-width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /*About Page containers*/
 .translucentAboutBox {
-	background-color: var(--tertiaryContainer);
-	color: var(--onTertiaryContainer);
-	padding: 10px;
-	min-width: 300px;
-	backdrop-filter: blur(14px);
-	text-align: left;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 25px;
+    background-color: var(--tertiaryContainer);
+    color: var(--onTertiaryContainer);
+    padding: 10px;
+    min-width: 300px;
+    backdrop-filter: blur(14px);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
 }
 
 /*
-	Corner radius' for section containers,
-	depending whether they are by themselves,
-	are at the top, middle, or bottom.
+    Corner radius' for section containers,
+    depending whether they are by themselves,
+    are at the top, middle, or bottom.
 */
 .joinTop {
-	border-radius: 25px 25px 6px 6px !important;
-	margin-bottom: 3px !important;
+    border-radius: 25px 25px 6px 6px !important;
+    margin-bottom: 3px !important;
 }
 
 .joinMiddle {
-	border-radius: 6px !important;
-	margin-bottom: 3px !important;
+    border-radius: 6px !important;
+    margin-bottom: 3px !important;
 }
 
 .joinBottom {
-	border-radius: 6px 6px 25px 25px !important;
+    border-radius: 6px 6px 25px 25px !important;
 }
 
 .full {
-	border-radius: 25px;
+    border-radius: 25px;
 }
 
 /*Large link buttons*/
 .button, .form-select {
-	width: 100%;
-	height: 60px;
-	background-color: var(--secondaryContainer);
-	color: var(--onSecondaryContainer);
-	font-family: var(--fontPrimary);
-	text-align: left;
-	font-weight: bold;
-	transition: 0.5s;
-	float: inline-block;
-	border-radius: 100px !important;
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondaryContainer);
+    color: var(--onSecondaryContainer);
+    font-family: var(--fontPrimary);
+    text-align: left;
+    font-weight: bold;
+    transition: 0.5s;
+    float: inline-block;
+    border-radius: 100px !important;
 }
 
 .button:hover {
-	background-color: #96AFB8;
+    background-color: #96AFB8;
 }
 
 .button img {
-	float: right;
-	width: 50px;
-	margin-right: 10px;
-	vertical-align: middle;
-	line-height: 60px;
+    float: right;
+    width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 60px;
 }
 
 .button .material-symbols-rounded {
-	float: right;
-	font-size: 25px;
-	margin-right: 10px;
-	vertical-align: middle;
-	line-height: 60px;
+    float: right;
+    font-size: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 60px;
 }
 
 .button .button-text {
-	vertical-align: middle;
-	font-size: 25px;
-	line-height: 60px;
-	margin-left: 10px;
+    vertical-align: middle;
+    font-size: 25px;
+    line-height: 60px;
+    margin-left: 10px;
 }
 
 .form-select {
-	font-size: 25px;
+    font-size: 25px;
 }
 
 /*Navigation buttons*/
 
 .nav-pills {
-	display: flex;
-	justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-pills .nav-item {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
 .nav-pills .nav-link {
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-pills .nav-item-left, .nav-pills .nav-item-middle {
-	margin-right: 3px !important;
+    margin-right: 3px !important;
 }
 
 .nav-pills .nav-item-full {
-	border-radius: 25px !important;
+    border-radius: 25px !important;
 }
 
 .nav-pills .nav-item:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
-	/*Style for the active pill button*/
+    /*Style for the active pill button*/
 .nav-pills .nav-link.active {
-	background-color: var(--secondary);
-	color: var(--onSecondary);
+    background-color: var(--secondary);
+    color: var(--onSecondary);
 }
 
-	/*Style for the inactive pill buttons*/
+    /*Style for the inactive pill buttons*/
 .nav-pills .nav-link:not(.active) {
-	background-color: var(--primary);
-	color: var(--onPrimary);
+    background-color: var(--primary);
+    color: var(--onPrimary);
 }
 
-	/*LEGACY NAV BUTTONS*/
+    /*LEGACY NAV BUTTONS*/
 .navButton, .navButtonInactive, ::file-selector-button {
-	height: 40px;
-	font-family: var(--fontPrimary);
-	font-size: 14px;
-	border-radius: 60px;
-	border: none;
-	margin-bottom: 5px;
+    height: 40px;
+    font-family: var(--fontPrimary);
+    font-size: 14px;
+    border-radius: 60px;
+    border: none;
+    margin-bottom: 5px;
 }
 
 .fullWidth {
-	width: 100%;
-	max-width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .navButton, ::file-selector-button {
-	background-color: var(--primary);
-	color: var(--onPrimary);
+    background-color: var(--primary);
+    color: var(--onPrimary);
 }
 
 .navButtonInactive {
-	background-color: var(--secondary);
-	color: var(--onSecondary);
+    background-color: var(--secondary);
+    color: var(--onSecondary);
 }
 
 /*Feedback page navigation buttons*/
 .leftButton, .middleButton, .rightButton, .leftNew, .rightNew {
-	width: 100px;
+    width: 100px;
 }
 
 .leftButton, .leftNew {
-	border-radius: 60px 10px 10px 60px !important;
-	margin-right: 3px !important;
+    border-radius: 60px 10px 10px 60px !important;
+    margin-right: 3px !important;
 }
 
 .leftNew {
-	margin-right: 4px;
+    margin-right: 4px;
 }
 
 .middleButton {
-	border-radius: 5px !important;
-	margin-right: 3px !important;
+    border-radius: 5px !important;
+    margin-right: 3px !important;
 }
 
 .rightButton, .rightNew {
-	border-radius: 10px 60px 60px 10px !important;
+    border-radius: 10px 60px 60px 10px !important;
 }
 
 .fullButton {
-	border-radius: 25px !important;
+    border-radius: 25px !important;
 }
 
 /*Icons that go inside paragraphs*/
 .helpcenterIcons {
-	font-size: 25px !important;
-	line-height: inherit;
-	vertical-align: middle;
+    font-size: 25px !important;
+    line-height: inherit;
+    vertical-align: middle;
 }
 
 /*LEGACY/HIOSDESKTOP 2021 COMPONENTS*/
 .offerBox {
-	background: #006ee6;
+    background: #006ee6;
 }
 
 .offerBoxExpired {
-	background: red;
+    background: red;
 }
 
 .offerHeadings {
-	font-size: 35px;
-	font-weight: bold;
-	text-decoration: underline;
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .offerBody {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .offerExpiry {
-	font-size: 10px;
-	font-style: italic;
+    font-size: 10px;
+    font-style: italic;
 }
 
 .offerDate {
-	font-size: 14px;
-	text-align: left;
+    font-size: 14px;
+    text-align: left;
 }
 
 .termsconditions, #infoText {
-	font-family: var(--fontCode);
+    font-family: var(--fontCode);
 }
 
 .termsconditions {
-	background-color: #FCFCFF;
-	color: black;
-	border-radius: 35px;
-	width: 350px;
-	border: 0.5px solid #303034;
+    background-color: #FCFCFF;
+    color: black;
+    border-radius: 35px;
+    width: 350px;
+    border: 0.5px solid #303034;
 }
 
 #homeheading, #homeheadingsmall, #rickroll {
-	animation: pulse 15s infinite;
+    animation: pulse 15s infinite;
 }
 
 #homeheading {
-	font-size: 40px;
+    font-size: 40px;
 }
 
 #homeheadingsmall {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 #p11, #p12, #paraheadings, #rickroll {
-	font-size: 40px;
+    font-size: 40px;
 }
 
 #p11 {
-	color: #0F9D58;
+    color: #0F9D58;
 }
 
 #p12 {
-	color: #4285F4;
+    color: #4285F4;
 }
 
 #para {
-	font-size: 17px;
+    font-size: 17px;
 }
 
 .paraHomeSubtitle {
-	text-align: left;
-	font-size: 20px !important;
-	font-weight: 400 !important;
+    text-align: left;
+    font-size: 20px !important;
+    font-weight: 400 !important;
 }
 
 #paraheadings {
-	text-decoration: underline;
-	font-weight: bold;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #smallpara {
-	font-size: 10px;
-	text-align: center;
-	color: var(--onPrimaryContainer);
+    font-size: 10px;
+    text-align: center;
+    color: var(--onPrimaryContainer);
 }
 
 #rickroll {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /*THE PULSING HOMESCREEN*/
 
 @keyframes pulse {
   0% {
-	/*color: #FF4F4B;*/
-	color: #FF0000;
+    /*color: #FF4F4B;*/
+    color: #FF0000;
   } /* Red */
   
   25% {
-	/*color: #a0d2eb;*/
-	color: #22229a;
+    /*color: #a0d2eb;*/
+    color: #22229a;
   } /* Blue */
   
   50% {
-	/*color: #90EE90;*/
-	color: #228B22
+    /*color: #90EE90;*/
+    color: #228B22
   } /* Green */
   
   75% {
-	/*color: #808080;*/
-	color: #dde0fe;
+    /*color: #808080;*/
+    color: #dde0fe;
   } /* White */
   
   100% {
-	/*color: #494d5f;*/
-	color: darkorange;
+    /*color: #494d5f;*/
+    color: darkorange;
   } /* Black */
 }
 
 #nextButtonRoomkey, #nextButtonRoomkey2, #loginButton {
-	/*float: right;*/
-	height: 50px;
-	width: 150px;
-	font-family: var(--fontPrimary);
-	font-size: 15px;
-	background-color: var(--primary);
-	color: var(--onPrimary);
-	border-radius: 90px;
-	border: none;
+    /*float: right;*/
+    height: 50px;
+    width: 150px;
+    font-family: var(--fontPrimary);
+    font-size: 15px;
+    background-color: var(--primary);
+    color: var(--onPrimary);
+    border-radius: 90px;
+    border: none;
 }
 
 /*#nextButtonRoomkey:hover, #nextButtonRoomkey2:hover {
-	background-color: #05B5BD; /* lightblue 
-	color: white;
+    background-color: #05B5BD; /* lightblue 
+    color: white;
 }*/
 
 /*signup button*/
 
 #signupButton {
-	/*float: right;*/
-	height: 50px;
-	width: 150px;
-	font-family: var(--fontPrimary);
-	font-size: 15px;
-	background-color: #86dc3d;
-	color: black;
-	border-radius: 90px;
-	border: none;
-	transition: 0.25s;
+    /*float: right;*/
+    height: 50px;
+    width: 150px;
+    font-family: var(--fontPrimary);
+    font-size: 15px;
+    background-color: #86dc3d;
+    color: black;
+    border-radius: 90px;
+    border: none;
+    transition: 0.25s;
 }
 
 #signupButton:hover {
-	background-color: #378805;
-	color: white;
+    background-color: #378805;
+    color: white;
 }
 
 .inputBox, .captchaBox {
-	border-radius: 4px;
-	background-color: var(--surface);
-	border: 1px solid var(--outline);
-	outline: none;
-	color: var(--onSurface);
-	height: 50px;
-	width: 200px;
-	text-align: center;
-	font-size: 16pt;
+    border-radius: 4px;
+    background-color: var(--surface);
+    border: 1px solid var(--outline);
+    outline: none;
+    color: var(--onSurface);
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    font-size: 16pt;
 }
 
 .inputBox, .captchaBox:focus {
-	border: 1px solid var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .inputBox {
-	font-family: var(--fontPrimary);
+    font-family: var(--fontPrimary);
 }
 
 .captchaBox {
-	font-family: var(--fontCode);
+    font-family: var(--fontCode);
 }
 
 #nfccheck {
-	display: block;
+    display: block;
 }
 
 #roomunlock, #exitButton {
-	display: none;
+    display: none;
 }
 
 /*Account Log-In*/
 .loginLabel {
-	background-color: #a1cce3;
-	width: 250px;
-	height: 50px;
+    background-color: #a1cce3;
+    width: 250px;
+    height: 50px;
 }
 
 #usernameBox, #passwordBox, #codeBox {
-	border-radius: 4px;
-	background-color: var(--surface);
-	border: 1px solid var(--outline);
-	outline: none;
-	color: var(--onSurface);
-	height: 50px;
-	width: 200px;
-	text-align: center;
-	font-size: 16pt;
+    border-radius: 4px;
+    background-color: var(--surface);
+    border: 1px solid var(--outline);
+    outline: none;
+    color: var(--onSurface);
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    font-size: 16pt;
 }
 
 #usernameBox, #passwordBox, #codeBox:focus {
-	border: 1px solid var(--primary);
+    border: 1px solid var(--primary);
 }
 
 #usernameBox {
-	font-family: var(--fontPrimary);
+    font-family: var(--fontPrimary);
 }
 
 #passwordBox, #codeBox {
-	font-family: var(--fontCode);
+    font-family: var(--fontCode);
 }
 
 #codeBox {
-	width: 100px;
-	font-size: 25px;
+    width: 100px;
+    font-size: 25px;
 }
 
 .loginText {
-	font-size: 20px;
-	font-weight: bolder;
-	font-family: var(--fontPrimary);
-	margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: var(--fontPrimary);
+    margin-bottom: 20px;
 }
 
 .brand {
-	width: 300px;
+    width: 300px;
 }
 
 #homeImage {
-	min-width: 300px;
-	max-width: 350px;
+    min-width: 300px;
+    max-width: 350px;
 }
 
 /*new iframe wrappers - taken from hiosfood styles*/
 .iframe-wrapper {
-	max-width: 100%;
-	min-width: 250px;
-	height: 800px;
+    max-width: 100%;
+    min-width: 250px;
+    height: 800px;
 }
 
 .menu-iframe, .form-button {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 menu-iframe {
-	object-fit: contain;
+    object-fit: contain;
 }
 
 .form-button {
-	background-color: var(--primary);
-	color: var(--onPrimary);
-	font-family: var(--fontPrimary);
-	font-size: 14px;
-	height: 40px;
-	border-radius: 12px;
-	border: none;
+    background-color: var(--primary);
+    color: var(--onPrimary);
+    font-family: var(--fontPrimary);
+    font-size: 14px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
 }
 
 .form-button-icon {
-	line-height: 14px;
-	font-size: 14px !important;
-	margin-right: 5px;
-	vertical-align: middle;
-	padding-bottom: 3px
+    line-height: 14px;
+    font-size: 14px !important;
+    margin-right: 5px;
+    vertical-align: middle;
+    padding-bottom: 3px
 }
 
 .imageIcon {
-	font-size: 40px !important;
+    font-size: 40px !important;
 }
 
 .titleIcon {
-	line-height: 45px;
-	font-size: 45px;
-	margin-right: 10px;
+    line-height: 45px;
+    font-size: 45px;
+    margin-right: 10px;
 }
 
 .dropdownIcon {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/*NEW WELCOME SCREEN WIDGET STYLES -- NOV 2025*/
+.widget-ghost {
+    opacity: 0.4;
+    background-color: #0d6efd;
+    border-radius: 25px;
+}
+
+.form-control {
+    border-radius: 25px;
+    background-color: var(--secondaryContainer);
+    color: var(--onSecondaryContainer);
+    padding: 15px;
 }
 
 /*Dark mode variables/legacy styles*/
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--primary: #a0c9ff;
-		--onPrimary: #00325a;
-		--primaryContainer: #253141;
-		--onPrimaryContainer: #d2e4ff;
-		--secondary: #bbc7db;
-		--onSecondary: #253141;
-		--secondaryContainer: #3c4858;
-		--onSecondaryContainer: #d7e3f8;
-		--tertiary: #d7bde4;
-		--onTertiary: #3b2947;
-		--tertiaryContainer: #533f5f;
-		--onTertiaryContainer: #f3daff;
-		--background: #1a1c1e;
-		--onBackground: #e3e2e6;
-		--surface: #1a1c1e;
-		--onSurface: #e3e2e6;
-		--outline: #8d9199;
-		--surfaceVarient: #43474e;
-		--onSurfaceVarient: #c3c6cf;
-	}
+    :root {
+        --primary: #a0c9ff;
+        --onPrimary: #00325a;
+        --primaryContainer: #253141;
+        --onPrimaryContainer: #d2e4ff;
+        --secondary: #bbc7db;
+        --onSecondary: #253141;
+        --secondaryContainer: #3c4858;
+        --onSecondaryContainer: #d7e3f8;
+        --tertiary: #d7bde4;
+        --onTertiary: #3b2947;
+        --tertiaryContainer: #533f5f;
+        --onTertiaryContainer: #f3daff;
+        --background: #1a1c1e;
+        --onBackground: #e3e2e6;
+        --surface: #1a1c1e;
+        --onSurface: #e3e2e6;
+        --outline: #8d9199;
+        --surfaceVarient: #43474e;
+        --onSurfaceVarient: #c3c6cf;
+    }
 
-	/*.background-image {
-		background-image: url('backgrounds/background-dark.png');
-	}*/
+    /*
+     * DELETED the dark mode .card {} style block from here
+     * to prevent conflicts with the new liquid glass.
+     */
 
-	.card {
-		background-color: rgba(30, 30, 30, 0.5); /* UPDATED: Was 0.75 */
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-	}
+    .button:hover {
+        background-color: #5A6B74;
+    }
 
-	.button:hover {
-		background-color: #5A6B74;
-	}
+    .gradientHeading, .gradientHeadingSmall {
+        color: var(--primary);
+    }
+}
 
-	.gradientHeading, .gradientHeadingSmall {
-		color: var(--primary);
-	}
+
+/* --- FINAL Dynamic Liquid Glass (Nov 2025) --- */
+
+/* 1. Define the glass colors */
+:root {
+  --liquid-glass-bg: rgba(255, 255, 255, 0.35); /* More opaque */
+  --liquid-glass-highlight: rgba(255, 255, 255, 0.8); /* Brighter edge */
+  --liquid-text-color: var(--onSurface); /* Uses your theme's text color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --liquid-glass-bg: rgba(40, 40, 40, 0.5); /* More opaque */
+    --liquid-glass-highlight: rgba(255, 255, 255, 0.25); /* Brighter edge */
+    --liquid-text-color: var(--onSurface); /* Uses your theme's text color */
+  }
+}
+
+/*
+ * 2. Style the main .card as the container.
+ * We use .glass-container-ready (which the JS adds) to be specific.
+*/
+.card.glass-container-ready {
+  position: relative;
+  /* Make the card itself transparent, the layers inside do the work */
+  background: transparent !important; 
+  color: var(--onPrimaryContainer);
+  border: none !important; /* Remove the old border */
+  border-radius: 25px !important; /* Keep your rounded shape */
+  overflow: hidden;
+  text-align: center;
+  /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);*/
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+/* 3. Style the 4 layers that the JavaScript just added */
+.glass-filter {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Apply the SVG distortion */
+  filter: url(#lg-dist);
+  isolation: isolate;
+  
+  /* Apply the frost */
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.glass-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* Apply the semi-transparent background color */
+  background: var(--liquid-glass-bg);
+}
+
+.glass-specular {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  overflow: hidden;
+  /* Apply the "wet" edge highlight */
+  box-shadow: inset 1px 1px 0 var(--liquid-glass-highlight),
+    inset 0 0 5px var(--liquid-glass-highlight);
+}
+
+.glass-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column; /* Make content stack vertically */
+  width: 100%;
+  padding: 0; /* Was 1.5rem, changed to 0 to remove double padding */
+}
+
+/* 4. Readability fixes for YOUR content inside the glass */
+.glass-content .card-title,
+.glass-content .para,
+.glass-content h1,
+.glass-content h2,
+.glass-content h3,
+.glass-content h5 {
+  /*color: var(--liquid-text-color) !important;*/
+  text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* Fix for .form-control (like your textarea) inside the glass */
+.glass-content .form-control {
+  background-color: rgba(0,0,0,0.1) !important;
+  color: var(--liquid-text-color) !important;
+  border-color: var(--liquid-glass-highlight) !important;
+  border-radius: 8px !important;
+}
+
+.glass-content .form-control::placeholder {
+  color: var(--liquid-text-color) !important;
+  opacity: 0.7;
+}
+
+/* 5. Style the drag-handle ghost */
+.widget-ghost {
+  opacity: 0.4;
+  background-color: #0d6efd;
+  border-radius: 25px;
 }
