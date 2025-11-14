@@ -6,24 +6,57 @@
  */
 
 // --- 1. Dynamic Theme/Background Switcher ---
-// (This is your existing logic from the file)
-
+// THIS SECTION IS UNCHANGED.
 function themeSwitcher() {
-    // Check user's preference and apply the correct theme class to the <body>
-    const savedTheme = localStorage.getItem('hiosTheme');
-    if (savedTheme) {
-        document.body.className = savedTheme;
-    } else {
-        // Default to 'city' if no theme is saved
-        document.body.className = 'city';
+    // Read the *wallpaper* choice
+    const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+    // Read the *color* choice
+    const colorTheme = localStorage.getItem('hiosColorTheme') || 'default-light';
+    
+    // Apply the COLOR theme to the body class
+    document.body.className = colorTheme;
+
+    // Find the background image element
+    const bgImage = document.querySelector('.background-image');
+    if (!bgImage) {
+        console.error("Background image element '.background-image' not found.");
+        return;
     }
 
-    // Make the body visible after the theme is applied to prevent flashing
-    /* * REMOVE THIS LINE! We will move it to the end of the
-     * DOMContentLoaded listener so the page stays hidden
-     * while the cards are wrapped.
-     */
-    /* document.body.style.display = 'block'; */
+    let imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png')"; // Default
+
+    // Set the correct wallpaper URL based on the WALLPAPER theme
+    switch (wallpaperTheme) {
+        case 'city':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg')";
+            break;
+        case 'night-sky':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg')"; 
+            break;
+        case 'default-dark':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/background-dark.png')";
+            break;
+        case 'morocco':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg')";
+            break;
+        case 'clouds':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/british-clouds.jpg')";
+            break;
+        case 'blossoms':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/blossoms.jpg')";
+            break;
+        case 'london':
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/london.jpg')";
+            break;
+        default:
+            // Find the base path
+            let basePath = "https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png"; 
+            
+            imageUrl = `url('${basePath}')`;
+            break;
+    }
+    
+    bgImage.style.backgroundImage = imageUrl;
 }
 
 // Run the theme switcher as soon as the script loads
@@ -31,19 +64,35 @@ themeSwitcher();
 
 
 // --- 2. Automatic Liquid Glass Effect ---
+// THIS SECTION IS UPDATED with the new toggle logic.
 
 /**
  * Runs when the page content is loaded.
- * This starts the whole glass effect process.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    injectSvgFilter();
-    wrapAllCards();
+    
+    // Check if Liquid Glass is enabled
+    const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // Default to true
 
     /*
-     * ADD THIS LINE HERE!
-     * Now that all the heavy JavaScript work is done,
-     * we can safely make the page visible.
+     * NEW LOGIC:
+     * Step 1: ALWAYS wrap the cards to create the 4-layer structure.
+     * This enables the "simple frost" effect by default.
+     */
+    wrapAllCards();
+
+    if (isGlassEnabled) {
+        // Step 2: If the toggle is ON, inject the SVG filter...
+        injectSvgFilter();
+        // ...and add a class to the body to activate the distortion.
+        document.body.classList.add('liquid-glass-on');
+    }
+    // If the toggle is OFF, we simply don't add the filter or the class.
+    
+
+    /*
+     * This line is correct. It makes the page visible
+     * *after* the theme is set, preventing all flashing.
      */
     document.body.style.display = 'block';
 });

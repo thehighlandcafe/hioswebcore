@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-/*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /*Defining Selawik font*/
 @font-face {
@@ -35,8 +35,8 @@
     --onSurfaceVarient: #43474e;
 
     /*Fonts*/
-    --fontPrimary: 'Selawik', sans-serif;
-    --fontCode: 'Selawik', sans-serif;
+    --fontPrimary: 'Inter', sans-serif;
+    --fontCode: 'Inter', sans-serif;
 }
 
 /*background-based themes*/
@@ -1236,7 +1236,7 @@ menu-iframe {
   inset: 0;
   z-index: 0;
   /* Apply the SVG distortion */
-  filter: url(#lg-dist);
+  /* filter: url(#lg-dist); */ /* <-- THIS IS NOW CONDITIONAL */
   isolation: isolate;
   
   /* Apply the frost */
@@ -1268,6 +1268,7 @@ menu-iframe {
   z-index: 3;
   display: flex;
   flex-direction: column; /* Make content stack vertically */
+  text-align: center; /* ADD THIS LINE to center the text inside blocks */
   width: 100%;
   padding: 0; /* Was 1.5rem, changed to 0 to remove double padding */
 }
@@ -1301,4 +1302,11 @@ menu-iframe {
   opacity: 0.4;
   background-color: #0d6efd;
   border-radius: 25px;
+}
+
+/* --- Add-on for Liquid Glass Toggle --- */
+
+/* This rule ADDs the liquid distortion *only* if the toggle is ON */
+body.liquid-glass-on .glass-filter {
+    filter: url(#lg-dist);
 }

@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark light">
         <link rel="icon" href="../../../assets/pics/logos/hiosbadge.png" type="image/icon type">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/toggle.css" type="text/css">
@@ -32,14 +32,14 @@
 						<h1 class="card-title">App Background</h1>
 						<h3 class="card-subtitle mb-2">Our backgrounds</h3>
 						<select class="form-select" id="backgroundSelect">
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png" data-theme="default-light">Default</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/background-dark.png" data-theme="default-dark">Default (Night)</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg" data-theme="city">City</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg" data-theme="night-sky">Night Sky</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg" data-theme="morocco">Morocco</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/british-clouds.jpg" data-theme="clouds">Cloudy Sunrise</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/blossoms.jpg" data-theme="blossoms">Blossoms</option>
-                            <option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/london.jpg" data-theme="london">London</option>
+							<option value="default-light">Default</option>
+							<option value="default-dark">Default (Night)</option>
+							<option value="city" data-theme="city">City</option>
+							<option value="night-sky" data-theme="night-sky">Night Sky</option>
+							<option value="morocco" data-theme="morocco">Morocco</option>
+							<option value="clouds" data-theme="clouds">Cloudy Sunrise</option>
+							<option value="blossoms" data-theme="blossoms">Blossoms</option>
+                            <option value="london" data-theme="london">London</option>
 						</select>
 					</div>
                 </div>
@@ -51,7 +51,7 @@
 						<input type="file" id="uploadBackground" accept="image/*">
 					</div>
                 </div>
-            </div--!>
+            </div-->
             <div class="card joinBottom">
                 <div class="card-body">
                     <h1 class="card-title">App Colours</h1>
@@ -68,11 +68,115 @@
                         <option value="generic-cyan">Cyan</option>
                         <option value="generic-orange">Orange</option>
                     </select>
+
+                    <!-- === NEW TOGGLE ADDED HERE === -->
+                    <hr class="my-3">
+                    <div class="mb-2" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <label class="form-check-label ms-2" for="liquidGlassToggle" style="margin-right: auto;">LiquidAcrylic Effect</label>
+                        <label class="switch" style="margin-left: auto;">
+                            <input type="checkbox" id="liquidGlassToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <!-- === END OF NEW TOGGLE === -->
+
                 </div>
             </div>
         </main>
         <script src="../../../assets/scripts/background.js"></script>
         <script src="../../../assets/scripts/ripple.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
+
+        <!-- UPDATED SCRIPT BLOCK -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const backgroundSelect = document.getElementById('backgroundSelect');
+                const autoToggle = document.getElementById('autoColourToggle');
+                const genericColourSelect = document.getElementById('genericColourSelect');
+                
+                // === NEW ===
+                const liquidGlassToggle = document.getElementById('liquidGlassToggle');
+
+                // --- 1. SET INITIAL STATE ---
+                // Read from TWO different localStorage keys
+                const savedWallpaper = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+                const savedColor = localStorage.getItem('hiosColorTheme') || 'default-light';
+                const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
+                
+                // === NEW: Load liquid glass state ===
+                const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // default to true
+                
+                autoToggle.checked = isAuto;
+                genericColourSelect.disabled = isAuto;
+                
+                // === NEW ===
+                liquidGlassToggle.checked = isGlassEnabled;
+
+                // Set dropdowns to the correct saved values
+                if (backgroundSelect.querySelector(`[value="${savedWallpaper}"]`)) {
+                    backgroundSelect.value = savedWallpaper;
+                }
+                if (genericColourSelect.querySelector(`[value="${savedColor}"]`)) {
+                    genericColourSelect.value = savedColor;
+                }
+
+                // --- 2. ADD EVENT LISTENERS ---
+
+                // Auto Toggle clicked
+                autoToggle.addEventListener('change', () => {
+                    const isChecked = autoToggle.checked;
+                    localStorage.setItem('hiosAutoColor', isChecked);
+                    genericColourSelect.disabled = isChecked;
+                    applyTheme();
+                });
+
+                // Background dropdown changed
+                backgroundSelect.addEventListener('change', () => {
+                    applyTheme();
+                });
+
+                // Color dropdown changed
+                genericColourSelect.addEventListener('change', () => {
+                    if (!autoToggle.checked) {
+                        applyTheme();
+                    }
+                });
+
+                // === NEW: Liquid Glass toggle listener ===
+                liquidGlassToggle.addEventListener('change', () => {
+                    const isChecked = liquidGlassToggle.checked;
+                    localStorage.setItem('hiosLiquidGlass', isChecked);
+                    
+                    // The easiest and safest way to apply/remove the glass
+                    // is to just reload the page.
+                    location.reload();
+                });
+
+                // --- 3. APPLY THEME FUNCTION ---
+                function applyTheme() {
+                    const wallpaperName = backgroundSelect.value;
+                    let colorName = '';
+
+                    if (autoToggle.checked) {
+                        // Auto is ON: Color matches wallpaper
+                        colorName = wallpaperName;
+                    } else {
+                        // Auto is OFF: Color comes from generic dropdown
+                        colorName = genericColourSelect.value;
+                    }
+                    
+                    // Save to TWO separate localStorage keys
+                    localStorage.setItem('hiosWallpaperTheme', wallpaperName);
+                    localStorage.setItem('hiosColorTheme', colorName);
+                    
+                    // Call the global function from background.js to update the page
+                    if (typeof themeSwitcher === 'function') {
+                        themeSwitcher();
+                    } else {
+                        console.error('themeSwitcher() function not found.');
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
