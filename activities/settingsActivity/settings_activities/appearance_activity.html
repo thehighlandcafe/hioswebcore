@@ -32,14 +32,14 @@
 						<h1 class="card-title">App Background</h1>
 						<h3 class="card-subtitle mb-2">Our backgrounds</h3>
 						<select class="form-select" id="backgroundSelect">
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png" data-theme="default-light">Default</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/background-dark.png" data-theme="default-dark">Default (Night)</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg" data-theme="city">City</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg" data-theme="night-sky">Night Sky</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg" data-theme="morocco">Morocco</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/british-clouds.jpg" data-theme="clouds">Cloudy Sunrise</option>
-							<option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/blossoms.jpg" data-theme="blossoms">Blossoms</option>
-                            <option value="https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/london.jpg" data-theme="london">London</option>
+							<option value="default-light">Default</option>
+							<option value="default-dark">Default (Night)</option>
+							<option value="city" data-theme="city">City</option>
+							<option value="night-sky" data-theme="night-sky">Night Sky</option>
+							<option value="morocco" data-theme="morocco">Morocco</option>
+							<option value="clouds" data-theme="clouds">Cloudy Sunrise</option>
+							<option value="blossoms" data-theme="blossoms">Blossoms</option>
+                            <option value="london" data-theme="london">London</option>
 						</select>
 					</div>
                 </div>
@@ -51,7 +51,7 @@
 						<input type="file" id="uploadBackground" accept="image/*">
 					</div>
                 </div>
-            </div--!>
+            </div-->
             <div class="card joinBottom">
                 <div class="card-body">
                     <h1 class="card-title">App Colours</h1>
@@ -74,5 +74,81 @@
         <script src="../../../assets/scripts/background.js"></script>
         <script src="../../../assets/scripts/ripple.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
+
+                <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const backgroundSelect = document.getElementById('backgroundSelect');
+                const autoToggle = document.getElementById('autoColourToggle');
+                const genericColourSelect = document.getElementById('genericColourSelect');
+                const bgImage = document.querySelector('.background-image');
+
+                // --- 1. SET INITIAL STATE ---
+                const savedTheme = localStorage.getItem('hiosTheme') || 'default-light';
+                const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
+                
+                autoToggle.checked = isAuto;
+                genericColourSelect.disabled = isAuto;
+
+                // Set dropdowns to the correct saved value
+                if (isAuto) {
+                    if (backgroundSelect.querySelector(`[value="${savedTheme}"]`)) {
+                        backgroundSelect.value = savedTheme;
+                    }
+                } else {
+                    if (genericColourSelect.querySelector(`[value="${savedTheme}"]`)) {
+                        genericColourSelect.value = savedTheme;
+                    }
+                }
+
+                // --- 2. ADD EVENT LISTENERS ---
+
+                // Auto Toggle clicked
+                autoToggle.addEventListener('change', () => {
+                    const isChecked = autoToggle.checked;
+                    localStorage.setItem('hiosAutoColor', isChecked);
+                    genericColourSelect.disabled = isChecked;
+
+                    // Immediately apply the new theme
+                    applyTheme();
+                });
+
+                // Background dropdown changed
+                backgroundSelect.addEventListener('change', () => {
+                    if (autoToggle.checked) {
+                        applyTheme();
+                    }
+                });
+
+                // Color dropdown changed
+                genericColourSelect.addEventListener('change', () => {
+                    if (!autoToggle.checked) {
+                        applyTheme();
+                    }
+                });
+
+                // --- 3. APPLY THEME FUNCTION ---
+                function applyTheme() {
+                    let themeName = 'default-light';
+
+                    if (autoToggle.checked) {
+                        // Use background theme
+                        themeName = backgroundSelect.value;
+                    } else {
+                        // Use generic color theme
+                        themeName = genericColourSelect.value;
+                    }
+                    
+                    // Save the new theme
+                    localStorage.setItem('hiosTheme', themeName);
+                    
+                    // Call the global function from background.js to update the page
+                    if (typeof themeSwitcher === 'function') {
+                        themeSwitcher();
+                    } else {
+                        console.error('themeSwitcher() function not found.');
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
