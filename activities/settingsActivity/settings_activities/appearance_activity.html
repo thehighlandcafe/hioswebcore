@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark light">
         <link rel="icon" href="../../../assets/pics/logos/hiosbadge.png" type="image/icon type">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/toggle.css" type="text/css">
@@ -73,31 +73,30 @@
         </main>
         <script src="../../../assets/scripts/background.js"></script>
         <script src="../../../assets/scripts/ripple.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
 
-                <script>
+        <!-- UPDATED SCRIPT BLOCK -->
+        <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const backgroundSelect = document.getElementById('backgroundSelect');
                 const autoToggle = document.getElementById('autoColourToggle');
                 const genericColourSelect = document.getElementById('genericColourSelect');
-                const bgImage = document.querySelector('.background-image');
 
                 // --- 1. SET INITIAL STATE ---
-                const savedTheme = localStorage.getItem('hiosTheme') || 'default-light';
+                // Read from TWO different localStorage keys
+                const savedWallpaper = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+                const savedColor = localStorage.getItem('hiosColorTheme') || 'default-light';
                 const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
                 
                 autoToggle.checked = isAuto;
                 genericColourSelect.disabled = isAuto;
 
-                // Set dropdowns to the correct saved value
-                if (isAuto) {
-                    if (backgroundSelect.querySelector(`[value="${savedTheme}"]`)) {
-                        backgroundSelect.value = savedTheme;
-                    }
-                } else {
-                    if (genericColourSelect.querySelector(`[value="${savedTheme}"]`)) {
-                        genericColourSelect.value = savedTheme;
-                    }
+                // Set dropdowns to the correct saved values
+                if (backgroundSelect.querySelector(`[value="${savedWallpaper}"]`)) {
+                    backgroundSelect.value = savedWallpaper;
+                }
+                if (genericColourSelect.querySelector(`[value="${savedColor}"]`)) {
+                    genericColourSelect.value = savedColor;
                 }
 
                 // --- 2. ADD EVENT LISTENERS ---
@@ -107,16 +106,12 @@
                     const isChecked = autoToggle.checked;
                     localStorage.setItem('hiosAutoColor', isChecked);
                     genericColourSelect.disabled = isChecked;
-
-                    // Immediately apply the new theme
                     applyTheme();
                 });
 
                 // Background dropdown changed
                 backgroundSelect.addEventListener('change', () => {
-                    if (autoToggle.checked) {
-                        applyTheme();
-                    }
+                    applyTheme();
                 });
 
                 // Color dropdown changed
@@ -128,18 +123,20 @@
 
                 // --- 3. APPLY THEME FUNCTION ---
                 function applyTheme() {
-                    let themeName = 'default-light';
+                    const wallpaperName = backgroundSelect.value;
+                    let colorName = '';
 
                     if (autoToggle.checked) {
-                        // Use background theme
-                        themeName = backgroundSelect.value;
+                        // Auto is ON: Color matches wallpaper
+                        colorName = wallpaperName;
                     } else {
-                        // Use generic color theme
-                        themeName = genericColourSelect.value;
+                        // Auto is OFF: Color comes from generic dropdown
+                        colorName = genericColourSelect.value;
                     }
                     
-                    // Save the new theme
-                    localStorage.setItem('hiosTheme', themeName);
+                    // Save to TWO separate localStorage keys
+                    localStorage.setItem('hiosWallpaperTheme', wallpaperName);
+                    localStorage.setItem('hiosColorTheme', colorName);
                     
                     // Call the global function from background.js to update the page
                     if (typeof themeSwitcher === 'function') {

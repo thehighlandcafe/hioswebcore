@@ -6,10 +6,15 @@
  */
 
 // --- 1. Dynamic Theme/Background Switcher ---
-// THIS SECTION IS UNCHANGED, as per your request.
+// THIS SECTION IS UPDATED to read from two separate localStorage keys
 function themeSwitcher() {
-    const savedTheme = localStorage.getItem('hiosTheme') || 'default-light'; // Default to 'city'
-    document.body.className = savedTheme;
+    // Read the *wallpaper* choice
+    const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+    // Read the *color* choice
+    const colorTheme = localStorage.getItem('hiosColorTheme') || 'default-light';
+    
+    // Apply the COLOR theme to the body class
+    document.body.className = colorTheme;
 
     // Find the background image element
     const bgImage = document.querySelector('.background-image');
@@ -20,9 +25,8 @@ function themeSwitcher() {
 
     let imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png')"; // Default
 
-    // Set the correct wallpaper URL based on the theme
-    // NOTE: Updated paths to be relative from the root.
-    switch (savedTheme) {
+    // Set the correct wallpaper URL based on the WALLPAPER theme
+    switch (wallpaperTheme) {
         case 'city':
             imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg')";
             break;
@@ -60,6 +64,7 @@ themeSwitcher();
 
 
 // --- 2. Automatic Liquid Glass Effect ---
+// THIS SECTION IS UNCHANGED.
 
 /**
  * Runs when the page content is loaded.
