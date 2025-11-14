@@ -6,7 +6,7 @@
  */
 
 // --- 1. Dynamic Theme/Background Switcher ---
-// THIS SECTION IS UPDATED to read from two separate localStorage keys
+// THIS SECTION IS UNCHANGED.
 function themeSwitcher() {
     // Read the *wallpaper* choice
     const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
@@ -64,22 +64,31 @@ themeSwitcher();
 
 
 // --- 2. Automatic Liquid Glass Effect ---
-// THIS SECTION IS UNCHANGED.
+// THIS SECTION IS UPDATED with the new toggle logic.
 
 /**
  * Runs when the page content is loaded.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // Inject the SVG filter on *every* page
-    injectSvgFilter();
+    
+    // Check if Liquid Glass is enabled
+    const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // Default to true
 
     /*
-     * THIS IS THE FIX:
-     * Re-enabling wrapAllCards() here will apply the liquid
-     * glass effect to all .card elements on every page.
-     * This will fix the unstyled cards on the Appearance page.
+     * NEW LOGIC:
+     * Step 1: ALWAYS wrap the cards to create the 4-layer structure.
+     * This enables the "simple frost" effect by default.
      */
     wrapAllCards();
+
+    if (isGlassEnabled) {
+        // Step 2: If the toggle is ON, inject the SVG filter...
+        injectSvgFilter();
+        // ...and add a class to the body to activate the distortion.
+        document.body.classList.add('liquid-glass-on');
+    }
+    // If the toggle is OFF, we simply don't add the filter or the class.
+    
 
     /*
      * This line is correct. It makes the page visible

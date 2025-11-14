@@ -68,6 +68,18 @@
                         <option value="generic-cyan">Cyan</option>
                         <option value="generic-orange">Orange</option>
                     </select>
+
+                    <!-- === NEW TOGGLE ADDED HERE === -->
+                    <hr class="my-3">
+                    <div class="mb-2" style="display: flex; align-items: center; justify-content: flex-start;">
+                        <label class="form-check-label ms-2" for="liquidGlassToggle" style="margin-right: auto;">LiquidAcrylic Effect</label>
+                        <label class="switch" style="margin-left: auto;">
+                            <input type="checkbox" id="liquidGlassToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <!-- === END OF NEW TOGGLE === -->
+
                 </div>
             </div>
         </main>
@@ -81,6 +93,9 @@
                 const backgroundSelect = document.getElementById('backgroundSelect');
                 const autoToggle = document.getElementById('autoColourToggle');
                 const genericColourSelect = document.getElementById('genericColourSelect');
+                
+                // === NEW ===
+                const liquidGlassToggle = document.getElementById('liquidGlassToggle');
 
                 // --- 1. SET INITIAL STATE ---
                 // Read from TWO different localStorage keys
@@ -88,8 +103,14 @@
                 const savedColor = localStorage.getItem('hiosColorTheme') || 'default-light';
                 const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
                 
+                // === NEW: Load liquid glass state ===
+                const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // default to true
+                
                 autoToggle.checked = isAuto;
                 genericColourSelect.disabled = isAuto;
+                
+                // === NEW ===
+                liquidGlassToggle.checked = isGlassEnabled;
 
                 // Set dropdowns to the correct saved values
                 if (backgroundSelect.querySelector(`[value="${savedWallpaper}"]`)) {
@@ -119,6 +140,16 @@
                     if (!autoToggle.checked) {
                         applyTheme();
                     }
+                });
+
+                // === NEW: Liquid Glass toggle listener ===
+                liquidGlassToggle.addEventListener('change', () => {
+                    const isChecked = liquidGlassToggle.checked;
+                    localStorage.setItem('hiosLiquidGlass', isChecked);
+                    
+                    // The easiest and safest way to apply/remove the glass
+                    // is to just reload the page.
+                    location.reload();
                 });
 
                 // --- 3. APPLY THEME FUNCTION ---
