@@ -37,6 +37,12 @@
     /*Fonts*/
     --fontPrimary: 'Google Sans Flex', sans-serif;
     --fontCode: 'Google Sans Flex', sans-serif;
+
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "ROND" 100;
 }
 
 /*background-based themes*/
