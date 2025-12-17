@@ -5,8 +5,8 @@
 /*Defining Selawik font*/
 @font-face {
     font-family: 'Selawik';
-    src:    url('../fonts/selawk.woff2') format('woff2'),
-            url('../fonts/selawk.ttf') format('truetype');
+    src: url('../fonts/selawk.woff2') format('woff2'),
+        url('../fonts/selawk.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,7 +50,7 @@ body.default-dark {
     /*Not necessary*/
 }
 
-    /*THE CITY WALLPAPER THEME*/
+/*THE CITY WALLPAPER THEME*/
 body.city {
     --primary: rgb(46 98 140);
     --onPrimary: rgb(255 255 255);
@@ -105,7 +105,7 @@ body.city {
     }
 }
 
-    /*THE NIGHT SKY WALLPAPER THEME*/
+/*THE NIGHT SKY WALLPAPER THEME*/
 body.night-sky {
     --primary: rgb(71 93 146);
     --onPrimary: rgb(255 255 255);
@@ -378,7 +378,7 @@ body.london {
 }
 
 /*Generic colour themes*/
-    /*Green*/
+/*Green*/
 body.generic-green {
     /* Light Generic Green */
     --primary: rgb(63 104 54);
@@ -435,130 +435,137 @@ body.generic-green {
     }
 }
 
-    /*Cyan*/
-    body.generic-cyan {
-        /* Light Generic Cyan */
-        --primary: rgb(0 106 106);
-        --onPrimary: rgb(255 255 255);
-        --primaryContainer: rgb(156 241 240);
-        --onPrimaryContainer: rgb(0 79 79);
-        --secondary: rgb(74 99 99);
-        --onSecondary: rgb(255 255 255);
-        --secondaryContainer: rgb(204 232 231);
-        --onSecondaryContainer: rgb(50 75 75);
-        --tertiary: rgb(75 96 124);
-        --onTertiary: rgb(255 255 255);
-        --tertiaryContainer: rgb(211 228 255);
-        --onTertiaryContainer: rgb(51 72 99);
-        --error: rgb(186 26 26);
-        --onError: rgb(255 255 255);
-        --errorContainer: rgb(255 218 214);
-        --onErrorContainer: rgb(147 0 10);
-        --background: rgb(244 251 250);
-        --onBackground: rgb(22 29 29);
-        --surface: rgb(244 251 250);
-        --onSurface: rgb(22 29 29);
-        --surfaceVarient: rgb(218 229 228);
-        --onSurfaceVarient: rgb(63 73 72);
-        --outline: rgb(111 121 121);
-    }
-    
-    @media (prefers-color-scheme: dark) {
-        body.generic-cyan {
-            /* Dark Generic Cyan */
-            --primary: rgb(128 213 212);
-            --onPrimary: rgb(0 55 55);
-            --primaryContainer: rgb(0 79 79);
-            --onPrimaryContainer: rgb(156 241 240);
-            --secondary: rgb(176 204 203);
-            --onSecondary: rgb(27 53 52);
-            --secondaryContainer: rgb(50 75 75);
-            --onSecondaryContainer: rgb(204 232 231);
-            --tertiary: rgb(179 200 232);
-            --onTertiary: rgb(28 49 75);
-            --tertiaryContainer: rgb(51 72 99);
-            --onTertiaryContainer: rgb(211 228 255);
-            --error: rgb(255 180 171);
-            --onError: rgb(105 0 5);
-            --errorContainer: rgb(147 0 10);
-            --onErrorContainer: rgb(255 218 214);
-            --background: rgb(14 21 20);
-            --onBackground: rgb(221 228 227);
-            --surface: rgb(14 21 20);
-            --onSurface: rgb(221 228 227);
-            --surfaceVarient: rgb(63 73 72);
-            --onSurfaceVarient: rgb(190 201 200);
-            --outline: rgb(136 147 146);
-        }
-    }
+/*Cyan*/
+body.generic-cyan {
+    /* Light Generic Cyan */
+    --primary: rgb(0 106 106);
+    --onPrimary: rgb(255 255 255);
+    --primaryContainer: rgb(156 241 240);
+    --onPrimaryContainer: rgb(0 79 79);
+    --secondary: rgb(74 99 99);
+    --onSecondary: rgb(255 255 255);
+    --secondaryContainer: rgb(204 232 231);
+    --onSecondaryContainer: rgb(50 75 75);
+    --tertiary: rgb(75 96 124);
+    --onTertiary: rgb(255 255 255);
+    --tertiaryContainer: rgb(211 228 255);
+    --onTertiaryContainer: rgb(51 72 99);
+    --error: rgb(186 26 26);
+    --onError: rgb(255 255 255);
+    --errorContainer: rgb(255 218 214);
+    --onErrorContainer: rgb(147 0 10);
+    --background: rgb(244 251 250);
+    --onBackground: rgb(22 29 29);
+    --surface: rgb(244 251 250);
+    --onSurface: rgb(22 29 29);
+    --surfaceVarient: rgb(218 229 228);
+    --onSurfaceVarient: rgb(63 73 72);
+    --outline: rgb(111 121 121);
+}
 
-    /*Orange*/
+@media (prefers-color-scheme: dark) {
+    body.generic-cyan {
+        /* Dark Generic Cyan */
+        --primary: rgb(128 213 212);
+        --onPrimary: rgb(0 55 55);
+        --primaryContainer: rgb(0 79 79);
+        --onPrimaryContainer: rgb(156 241 240);
+        --secondary: rgb(176 204 203);
+        --onSecondary: rgb(27 53 52);
+        --secondaryContainer: rgb(50 75 75);
+        --onSecondaryContainer: rgb(204 232 231);
+        --tertiary: rgb(179 200 232);
+        --onTertiary: rgb(28 49 75);
+        --tertiaryContainer: rgb(51 72 99);
+        --onTertiaryContainer: rgb(211 228 255);
+        --error: rgb(255 180 171);
+        --onError: rgb(105 0 5);
+        --errorContainer: rgb(147 0 10);
+        --onErrorContainer: rgb(255 218 214);
+        --background: rgb(14 21 20);
+        --onBackground: rgb(221 228 227);
+        --surface: rgb(14 21 20);
+        --onSurface: rgb(221 228 227);
+        --surfaceVarient: rgb(63 73 72);
+        --onSurfaceVarient: rgb(190 201 200);
+        --outline: rgb(136 147 146);
+    }
+}
+
+/*Orange*/
+body.generic-orange {
+    /* Light Generic Orange */
+    --primary: rgb(129 85 18);
+    --onPrimary: rgb(255 255 255);
+    --primaryContainer: rgb(255 221 183);
+    --onPrimaryContainer: rgb(101 62 0);
+    --secondary: rgb(112 91 65);
+    --onSecondary: rgb(255 255 255);
+    --secondaryContainer: rgb(252 222 188);
+    --onSecondaryContainer: rgb(87 67 43);
+    --tertiary: rgb(83 100 62);
+    --onTertiary: rgb(255 255 255);
+    --tertiaryContainer: rgb(214 233 185);
+    --onTertiaryContainer: rgb(60 76 40);
+    --error: rgb(186 26 26);
+    --onError: rgb(255 255 255);
+    --errorContainer: rgb(255 218 214);
+    --onErrorContainer: rgb(147 0 10);
+    --background: rgb(255 248 244);
+    --onBackground: rgb(33 26 19);
+    --surface: rgb(255 248 244);
+    --onSurface: rgb(33 26 19);
+    --surfaceVarient: rgb(240 224 208);
+    --onSurfaceVarient: rgb(80 69 57);
+    --outline: rgb(130 117 104);
+}
+
+@media (prefers-color-scheme: dark) {
     body.generic-orange {
-        /* Light Generic Orange */
-        --primary: rgb(129 85 18);
-        --onPrimary: rgb(255 255 255);
-        --primaryContainer: rgb(255 221 183);
-        --onPrimaryContainer: rgb(101 62 0);
-        --secondary: rgb(112 91 65);
-        --onSecondary: rgb(255 255 255);
-        --secondaryContainer: rgb(252 222 188);
-        --onSecondaryContainer: rgb(87 67 43);
-        --tertiary: rgb(83 100 62);
-        --onTertiary: rgb(255 255 255);
-        --tertiaryContainer: rgb(214 233 185);
-        --onTertiaryContainer: rgb(60 76 40);
-        --error: rgb(186 26 26);
-        --onError: rgb(255 255 255);
-        --errorContainer: rgb(255 218 214);
-        --onErrorContainer: rgb(147 0 10);
-        --background: rgb(255 248 244);
-        --onBackground: rgb(33 26 19);
-        --surface: rgb(255 248 244);
-        --onSurface: rgb(33 26 19);
-        --surfaceVarient: rgb(240 224 208);
-        --onSurfaceVarient: rgb(80 69 57);
-        --outline: rgb(130 117 104);
+        /* Dark Generic Orange */
+        --primary: rgb(247 187 112);
+        --onPrimary: rgb(70 42 0);
+        --primaryContainer: rgb(101 62 0);
+        --onPrimaryContainer: rgb(255 221 183);
+        --secondary: rgb(223 194 162);
+        --onSecondary: rgb(63 45 23);
+        --secondaryContainer: rgb(87 67 43);
+        --onSecondaryContainer: rgb(252 222 188);
+        --tertiary: rgb(186 205 159);
+        --onTertiary: rgb(38 53 20);
+        --tertiaryContainer: rgb(60 76 40);
+        --onTertiaryContainer: rgb(214 233 185);
+        --error: rgb(255 180 171);
+        --onError: rgb(105 0 5);
+        --errorContainer: rgb(147 0 10);
+        --onErrorContainer: rgb(255 218 214);
+        --background: rgb(24 18 12);
+        --onBackground: rgb(238 224 212);
+        --surface: rgb(24 18 12);
+        --onSurface: rgb(238 224 212);
+        --surfaceVarient: rgb(80 69 57);
+        --onSurfaceVarient: rgb(212 196 181);
+        --outline: rgb(156 142 128);
     }
-    
-    @media (prefers-color-scheme: dark) {
-        body.generic-orange {
-            /* Dark Generic Orange */
-            --primary: rgb(247 187 112);
-            --onPrimary: rgb(70 42 0);
-            --primaryContainer: rgb(101 62 0);
-            --onPrimaryContainer: rgb(255 221 183);
-            --secondary: rgb(223 194 162);
-            --onSecondary: rgb(63 45 23);
-            --secondaryContainer: rgb(87 67 43);
-            --onSecondaryContainer: rgb(252 222 188);
-            --tertiary: rgb(186 205 159);
-            --onTertiary: rgb(38 53 20);
-            --tertiaryContainer: rgb(60 76 40);
-            --onTertiaryContainer: rgb(214 233 185);
-            --error: rgb(255 180 171);
-            --onError: rgb(105 0 5);
-            --errorContainer: rgb(147 0 10);
-            --onErrorContainer: rgb(255 218 214);
-            --background: rgb(24 18 12);
-            --onBackground: rgb(238 224 212);
-            --surface: rgb(24 18 12);
-            --onSurface: rgb(238 224 212);
-            --surfaceVarient: rgb(80 69 57);
-            --onSurfaceVarient: rgb(212 196 181);
-            --outline: rgb(156 142 128);
-        }
-    }
+}
 
 /*Setting basic HTML styles, such as background colour and font*/
 body {
     display: none;
     background-color: var(--background);
     font-family: var(--fontPrimary);
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "ROND" 100;
     font-weight: 350;
     color: var(--onPrimaryContainer);
     user-select: none;
-    -webkit-user-select: none; /*Safari*/
-    -moz-user-select: none; /*Firefox*/
+    -webkit-user-select: none;
+    /*Safari*/
+    -moz-user-select: none;
+    /*Firefox*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -572,6 +579,7 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: -1;
+    pointer-events: none;
 }
 
 .background-image {
@@ -585,6 +593,25 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: saturate(110%) brightness(0.92);
+}
+
+.background-wrapper::before,
+.background-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.background-wrapper::before {
+    background: rgba(255, 255, 255, 0.14);
+    mix-blend-mode: soft-light;
+}
+
+.background-wrapper::after {
+    background-image: var(--glass-noise);
+    opacity: 0.08;
 }
 
 /*Rounded corners for HiMaterial elements*/
@@ -598,7 +625,8 @@ body {
 /*Main headings at top of pages*/
 /*NEW HEADINGS FROM JULY 2022*/
 
-.blue-h2, .blue-h3 {
+.blue-h2,
+.blue-h3 {
     color: var(--primary);
     font-family: var(--fontPrimary);
     font-size: 45px;
@@ -609,10 +637,10 @@ body {
 .material-symbols-rounded {
     font-size: 30px !important;
     font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24 !important
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24 !important
 }
 
 /*Heading subtitles*/
@@ -622,7 +650,8 @@ body {
 
 /*Gradient-coloured headings on Homepage*/
 /*NEW HEADINGS FROM DECEMBER 2022*/
-.gradientHeading, .gradientHeadingSmall {
+.gradientHeading,
+.gradientHeadingSmall {
     /*background-image: linear-gradient(to right, #1891ac, #1d3e79);
     color: transparent;*/
     color: var(--primary);
@@ -656,11 +685,22 @@ body {
  * to prevent conflicts with the new liquid glass.
  */
 
-.card h1, .card h2 {
+.card h1,
+.card h2 {
     color: var(--primary) !important;
 }
 
-    /*LEGACY - WILL SOON NO LONGER BE USED*/
+.card h5 {
+    font-size: 1.4rem;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "ROND" 100;
+    font-weight: 600;
+}
+
+/*LEGACY - WILL SOON NO LONGER BE USED*/
 .translucentBox {
     padding: 10px;
     min-width: 300px;
@@ -715,7 +755,8 @@ body {
 }
 
 /*Large link buttons*/
-.button, .form-select {
+.button,
+.form-select {
     width: 100%;
     height: 60px;
     background-color: var(--secondaryContainer);
@@ -775,7 +816,8 @@ body {
     text-align: center;
 }
 
-.nav-pills .nav-item-left, .nav-pills .nav-item-middle {
+.nav-pills .nav-item-left,
+.nav-pills .nav-item-middle {
     margin-right: 3px !important;
 }
 
@@ -787,20 +829,23 @@ body {
     margin-right: 0;
 }
 
-    /*Style for the active pill button*/
+/*Style for the active pill button*/
 .nav-pills .nav-link.active {
     background-color: var(--secondary);
     color: var(--onSecondary);
+    border-radius: 25px !important;
 }
 
-    /*Style for the inactive pill buttons*/
+/*Style for the inactive pill buttons*/
 .nav-pills .nav-link:not(.active) {
     background-color: var(--primary);
     color: var(--onPrimary);
 }
 
-    /*LEGACY NAV BUTTONS*/
-.navButton, .navButtonInactive, ::file-selector-button {
+/*LEGACY NAV BUTTONS*/
+.navButton,
+.navButtonInactive,
+::file-selector-button {
     height: 40px;
     font-family: var(--fontPrimary);
     font-size: 14px;
@@ -814,7 +859,8 @@ body {
     max-width: 400px;
 }
 
-.navButton, ::file-selector-button {
+.navButton,
+::file-selector-button {
     background-color: var(--primary);
     color: var(--onPrimary);
 }
@@ -825,11 +871,16 @@ body {
 }
 
 /*Feedback page navigation buttons*/
-.leftButton, .middleButton, .rightButton, .leftNew, .rightNew {
+.leftButton,
+.middleButton,
+.rightButton,
+.leftNew,
+.rightNew {
     width: 100px;
 }
 
-.leftButton, .leftNew {
+.leftButton,
+.leftNew {
     border-radius: 60px 10px 10px 60px !important;
     margin-right: 3px !important;
 }
@@ -843,7 +894,8 @@ body {
     margin-right: 3px !important;
 }
 
-.rightButton, .rightNew {
+.rightButton,
+.rightNew {
     border-radius: 10px 60px 60px 10px !important;
 }
 
@@ -887,7 +939,8 @@ body {
     text-align: left;
 }
 
-.termsconditions, #infoText {
+.termsconditions,
+#infoText {
     font-family: var(--fontCode);
 }
 
@@ -899,7 +952,9 @@ body {
     border: 0.5px solid #303034;
 }
 
-#homeheading, #homeheadingsmall, #rickroll {
+#homeheading,
+#homeheadingsmall,
+#rickroll {
     animation: pulse 15s infinite;
 }
 
@@ -911,7 +966,10 @@ body {
     font-size: 30px;
 }
 
-#p11, #p12, #paraheadings, #rickroll {
+#p11,
+#p12,
+#paraheadings,
+#rickroll {
     font-size: 40px;
 }
 
@@ -951,33 +1009,45 @@ body {
 /*THE PULSING HOMESCREEN*/
 
 @keyframes pulse {
-  0% {
-    /*color: #FF4F4B;*/
-    color: #FF0000;
-  } /* Red */
-  
-  25% {
-    /*color: #a0d2eb;*/
-    color: #22229a;
-  } /* Blue */
-  
-  50% {
-    /*color: #90EE90;*/
-    color: #228B22
-  } /* Green */
-  
-  75% {
-    /*color: #808080;*/
-    color: #dde0fe;
-  } /* White */
-  
-  100% {
-    /*color: #494d5f;*/
-    color: darkorange;
-  } /* Black */
+    0% {
+        /*color: #FF4F4B;*/
+        color: #FF0000;
+    }
+
+    /* Red */
+
+    25% {
+        /*color: #a0d2eb;*/
+        color: #22229a;
+    }
+
+    /* Blue */
+
+    50% {
+        /*color: #90EE90;*/
+        color: #228B22
+    }
+
+    /* Green */
+
+    75% {
+        /*color: #808080;*/
+        color: #dde0fe;
+    }
+
+    /* White */
+
+    100% {
+        /*color: #494d5f;*/
+        color: darkorange;
+    }
+
+    /* Black */
 }
 
-#nextButtonRoomkey, #nextButtonRoomkey2, #loginButton {
+#nextButtonRoomkey,
+#nextButtonRoomkey2,
+#loginButton {
     /*float: right;*/
     height: 50px;
     width: 150px;
@@ -1014,7 +1084,8 @@ body {
     color: white;
 }
 
-.inputBox, .captchaBox {
+.inputBox,
+.captchaBox {
     border-radius: 4px;
     background-color: var(--surface);
     border: 1px solid var(--outline);
@@ -1026,7 +1097,8 @@ body {
     font-size: 16pt;
 }
 
-.inputBox, .captchaBox:focus {
+.inputBox,
+.captchaBox:focus {
     border: 1px solid var(--primary);
 }
 
@@ -1042,7 +1114,8 @@ body {
     display: block;
 }
 
-#roomunlock, #exitButton {
+#roomunlock,
+#exitButton {
     display: none;
 }
 
@@ -1053,7 +1126,9 @@ body {
     height: 50px;
 }
 
-#usernameBox, #passwordBox, #codeBox {
+#usernameBox,
+#passwordBox,
+#codeBox {
     border-radius: 4px;
     background-color: var(--surface);
     border: 1px solid var(--outline);
@@ -1065,7 +1140,9 @@ body {
     font-size: 16pt;
 }
 
-#usernameBox, #passwordBox, #codeBox:focus {
+#usernameBox,
+#passwordBox,
+#codeBox:focus {
     border: 1px solid var(--primary);
 }
 
@@ -1073,7 +1150,8 @@ body {
     font-family: var(--fontPrimary);
 }
 
-#passwordBox, #codeBox {
+#passwordBox,
+#codeBox {
     font-family: var(--fontCode);
 }
 
@@ -1105,7 +1183,8 @@ body {
     height: 800px;
 }
 
-.menu-iframe, .form-button {
+.menu-iframe,
+.form-button {
     width: 100%;
     height: 100%;
 }
@@ -1155,6 +1234,19 @@ menu-iframe {
     border-radius: 25px;
 }
 
+.widget-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--bs-space-3);
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .widget-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 .form-control {
     border-radius: 25px;
     background-color: var(--secondaryContainer);
@@ -1196,123 +1288,446 @@ menu-iframe {
         background-color: #5A6B74;
     }
 
-    .gradientHeading, .gradientHeadingSmall {
+    .gradientHeading,
+    .gradientHeadingSmall {
         color: var(--primary);
     }
 }
 
 
-/* --- FINAL Dynamic Liquid Glass (Nov 2025) --- */
+/* --- Acrylic / Mica Glass (replaces Liquid Glass) --- */
 
-/* 1. Define the glass colors */
+/* Glass tokens */
 :root {
-  --liquid-glass-bg: rgba(255, 255, 255, 0.35); /* More opaque */
-  --liquid-glass-highlight: rgba(255, 255, 255, 0.8); /* Brighter edge */
-  --liquid-text-color: var(--onSurface); /* Uses your theme's text color */
+    /* Acrylic-ish tint (light) */
+    --glass-tint: rgba(255, 255, 255, 0.62);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+
+    /* Optional noise (very subtle) */
+    --glass-noise-opacity: 0.06;
+    --glass-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+    /* Optional mica-like top sheen */
+    --glass-sheen: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --liquid-glass-bg: rgba(40, 40, 40, 0.5); /* More opaque */
-    --liquid-glass-highlight: rgba(255, 255, 255, 0.25); /* Brighter edge */
-    --liquid-text-color: var(--onSurface); /* Uses your theme's text color */
-  }
+    :root {
+        /* Acrylic-ish tint (dark) */
+        --glass-tint: rgba(32, 32, 32, 0.62);
+        --glass-border: rgba(255, 255, 255, 0.10);
+        --glass-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+
+        --glass-noise-opacity: 0.05;
+        --glass-sheen: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+    }
 }
 
-/*
- * 2. Style the main .card as the container.
- * We use .glass-container-ready (which the JS adds) to be specific.
-*/
+/* Main glass surface: Bootstrap .card (and also catches your previous .glass-container-ready cards) */
+.card,
 .card.glass-container-ready {
-  position: relative;
-  /* Make the card itself transparent, the layers inside do the work */
-  background: transparent !important; 
-  color: var(--onPrimaryContainer);
-  border: none !important; /* Remove the old border */
-  border-radius: 25px !important; /* Keep your rounded shape */
-  overflow: hidden;
-  text-align: center;
-  /*box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);*/
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+    position: relative;
+    background: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
+    border: none;
+    border-radius: 25px !important;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* 3. Style the 4 layers that the JavaScript just added */
-.glass-filter {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  /* Apply the SVG distortion */
-  /* filter: url(#lg-dist); */ /* <-- THIS IS NOW CONDITIONAL */
-  isolation: isolate;
-  
-  /* Apply the frost */
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+.acrylic-on .card,
+.acrylic-on .card.glass-container-ready {
+    background: var(--glass-tint) !important;
+    color: var(--onPrimaryContainer);
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow);
 }
 
-.glass-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  /* Apply the semi-transparent background color */
-  background: var(--liquid-glass-bg);
+/* Backdrop blur (Acrylic) */
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+
+    .acrylic-on .card,
+    .acrylic-on .card.glass-container-ready {
+        backdrop-filter: blur(18px) saturate(165%);
+        -webkit-backdrop-filter: blur(18px) saturate(165%);
+    }
 }
 
+/* Noise + subtle sheen (helps it feel more like Acrylic/Mica) */
+.acrylic-on .card::before,
+.acrylic-on .card.glass-container-ready::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--glass-noise);
+    opacity: var(--glass-noise-opacity);
+}
+
+.acrylic-on .card::after,
+.acrylic-on .card.glass-container-ready::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--glass-sheen);
+    opacity: 0.7;
+}
+
+/* If your JS is still injecting the old liquid-glass layers, neutralize them */
+.glass-filter,
+.glass-overlay,
 .glass-specular {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border-radius: inherit;
-  overflow: hidden;
-  /* Apply the "wet" edge highlight */
-  box-shadow: inset 1px 1px 0 var(--liquid-glass-highlight),
-    inset 0 0 5px var(--liquid-glass-highlight);
+    display: none !important;
 }
 
+/* Make sure content still lays out normally if JS wrapped it in .glass-content */
 .glass-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-direction: column; /* Make content stack vertically */
-  text-align: center; /* ADD THIS LINE to center the text inside blocks */
-  width: 100%;
-  padding: 0; /* Was 1.5rem, changed to 0 to remove double padding */
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 0;
 }
 
-/* 4. Readability fixes for YOUR content inside the glass */
-.glass-content .card-title,
-.glass-content .para,
-.glass-content h1,
-.glass-content h2,
-.glass-content h3,
-.glass-content h5 {
-  /*color: var(--liquid-text-color) !important;*/
-  text-shadow: 0 0 3px rgba(0,0,0,0.2);
+/* Optional: inputs inside glass look nicer */
+.acrylic-on .card .form-control,
+.acrylic-on .glass-content .form-control {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    color: var(--onSurface) !important;
+    border-radius: 12px !important;
 }
 
-/* Fix for .form-control (like your textarea) inside the glass */
-.glass-content .form-control {
-  background-color: rgba(0,0,0,0.1) !important;
-  color: var(--liquid-text-color) !important;
-  border-color: var(--liquid-glass-highlight) !important;
-  border-radius: 8px !important;
+@media (prefers-color-scheme: dark) {
+
+    .acrylic-on .card .form-control,
+    .acrylic-on .glass-content .form-control {
+        background-color: rgba(255, 255, 255, 0.06) !important;
+        border-color: rgba(255, 255, 255, 0.14) !important;
+    }
 }
 
-.glass-content .form-control::placeholder {
-  color: var(--liquid-text-color) !important;
-  opacity: 0.7;
+
+.background-off .background-wrapper {
+    display: none;
 }
 
-/* 5. Style the drag-handle ghost */
-.widget-ghost {
-  opacity: 0.4;
-  background-color: #0d6efd;
-  border-radius: 25px;
+.background-off {
+    background-color: var(--background);
 }
 
-/* --- Add-on for Liquid Glass Toggle --- */
+.background-off .card,
+.background-off .card.glass-container-ready {
+    background: var(--primaryContainer) !important;
+    color: var(--onPrimaryContainer);
+    border: none !important;
+    box-shadow: none;
+}
 
-/* This rule ADDs the liquid distortion *only* if the toggle is ON */
-body.liquid-glass-on .glass-filter {
-    filter: url(#lg-dist);
+.background-off .card::before,
+.background-off .card::after {
+    display: none;
+}
+
+.background-off .glass-content {
+    padding: 0;
+}
+
+/* --- Bootstrap-lite utility replacements --- */
+:root {
+    /* Reset heading/text spacing similar to Bootstrap */
+    --h-margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: var(--h-margin-bottom);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+:root {
+    --bs-space-0: 0;
+    --bs-space-1: 0.25rem;
+    --bs-space-2: 0.5rem;
+    --bs-space-3: 1rem;
+    --bs-space-4: 1.5rem;
+    --bs-space-5: 3rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.row>* {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.g-3 {
+    gap: var(--bs-space-3);
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-start {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-0 {
+    margin-top: var(--bs-space-0);
+}
+
+.mt-1 {
+    margin-top: var(--bs-space-1);
+}
+
+.mt-2 {
+    margin-top: var(--bs-space-2);
+}
+
+.mt-3 {
+    margin-top: var(--bs-space-3);
+}
+
+.mt-4 {
+    margin-top: var(--bs-space-4);
+}
+
+.mt-5 {
+    margin-top: var(--bs-space-5);
+}
+
+.mb-0 {
+    margin-bottom: var(--bs-space-0);
+}
+
+.mb-1 {
+    margin-bottom: var(--bs-space-1);
+}
+
+.mb-2 {
+    margin-bottom: var(--bs-space-2);
+}
+
+.mb-3 {
+    margin-bottom: var(--bs-space-3);
+}
+
+.mb-4 {
+    margin-bottom: var(--bs-space-4);
+}
+
+.mb-5 {
+    margin-bottom: var(--bs-space-5);
+}
+
+.p-3 {
+    padding: var(--bs-space-3);
+}
+
+.me-2 {
+    margin-right: var(--bs-space-2);
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.start-50 {
+    left: 50%;
+}
+
+.translate-middle {
+    transform: translate(-50%, -50%);
+}
+
+.rounded {
+    border-radius: 0.375rem;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "ROND" 100;
+    font-weight: 600;
+}
+
+.card-text {
+    margin-bottom: 0.75rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.nav-link:focus {
+    outline: none;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active.show {
+    display: block;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.toast-container {
+    z-index: 1055;
+}
+
+.toast {
+    background: #fff;
+    color: #000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.toast-header,
+.toast-body {
+    padding: 0.75rem 1rem;
+}
+
+.toast-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    width: 1em;
+    height: 1em;
+    opacity: 0.6;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-close::before,
+.btn-close::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: currentColor;
+    transform-origin: center;
+}
+
+.btn-close::before {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.btn-close::after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.btn-close:hover {
+    opacity: 1;
 }

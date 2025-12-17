@@ -6,8 +6,13 @@
  */
 
 // --- 1. Dynamic Theme/Background Switcher ---
-// THIS SECTION IS UNCHANGED.
 function themeSwitcher() {
+    // Read toggles (default ON for both)
+    const storedBg = localStorage.getItem('hiosBackgroundEnabled');
+    const effectsEnabled = storedBg === null ? true : storedBg === 'true';
+    const storedAcrylic = localStorage.getItem('hiosAcrylicEnabled');
+    const acrylicEnabled = storedAcrylic === null ? true : storedAcrylic === 'true';
+
     // Read the *wallpaper* choice
     const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
     // Read the *color* choice
@@ -15,11 +20,22 @@ function themeSwitcher() {
     
     // Apply the COLOR theme to the body class
     document.body.className = colorTheme;
+    if (!effectsEnabled) {
+        document.body.classList.add('background-off');
+    } else {
+        document.body.classList.remove('background-off');
+    }
+    document.body.classList.toggle('acrylic-on', acrylicEnabled && effectsEnabled);
 
     // Find the background image element
     const bgImage = document.querySelector('.background-image');
     if (!bgImage) {
         console.error("Background image element '.background-image' not found.");
+        return;
+    }
+
+    if (!effectsEnabled) {
+        bgImage.style.backgroundImage = 'none';
         return;
     }
 
@@ -71,23 +87,19 @@ themeSwitcher();
  */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Check if Liquid Glass is enabled
-    const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // Default to true
+    // Check toggles (background and acrylic are independent, default ON)
+    const storedBg = localStorage.getItem('hiosBackgroundEnabled');
+    const effectsEnabled = storedBg === null ? true : storedBg === 'true';
 
-    /*
-     * NEW LOGIC:
-     * Step 1: ALWAYS wrap the cards to create the 4-layer structure.
-     * This enables the "simple frost" effect by default.
-     */
-    wrapAllCards();
+    const storedAcrylic = localStorage.getItem('hiosAcrylicEnabled');
+    const isGlassEnabled = storedAcrylic === null ? true : storedAcrylic === 'true';
 
     if (isGlassEnabled) {
-        // Step 2: If the toggle is ON, inject the SVG filter...
+        // Only wrap/inject when acrylic is enabled
+        wrapAllCards();
         injectSvgFilter();
-        // ...and add a class to the body to activate the distortion.
-        document.body.classList.add('liquid-glass-on');
+        document.body.classList.add('liquid-glass-on', 'acrylic-on');
     }
-    // If the toggle is OFF, we simply don't add the filter or the class.
     
 
     /*
