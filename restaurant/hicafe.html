@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
-        <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-        <link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <title>HiOS | </title>
         <script src="../assets/scripts/links.js"></script>
-        <script>
-            function showMainNavigationBox() {
-                document.getElementById('mainNavBox').style.display = 'block';
-                document.getElementById('drawerIcon').style.display = 'none';
-                document.getElementById('hideIcon').style.display = 'block';
-            }
-
-            function hideMainNavigationBox() {
-                document.getElementById('mainNavBox').style.display = 'none';
-                document.getElementById('drawerIcon').style.display = 'block';
-                document.getElementById('hideIcon').style.display = 'none';
-            }
-
-        </script>
-    </head>
-    <body>
+	</head>
+	<body>
 		<!--The universal background image-->
 		<div class="background-wrapper">
 			<div class="background-image"></div>
 		</div>
+        <div id="drawerOverlay" class="drawer-overlay"></div>
+        <aside id="sideDrawer" class="side-drawer">
+            <div class="drawer-header">
+                <h2 class="drawer-title"><span class="material-symbols-rounded">restaurant</span>&nbsp;HiCafe</h2>
+                <span class="material-symbols-rounded" style="cursor: pointer;" onclick="hideDrawer()">close</span>
+            </div>
+            <div class="card full">
+                <div class="card-body">
+                    <div class="drawer-nav">
+                        <button class="fluent-interactive ripple-button joinTop roundedImage button" onclick="switchTab('book-tab')">
+                            <span class="material-symbols-rounded">table_restaurant</span>
+                            <span class="button-text">Book</span>
+                        </button>
+                        <button class="fluent-interactive ripple-button joinMiddle roundedImage button" onclick="switchTab('menus-tab')">
+                            <span class="material-symbols-rounded">menu_book</span>
+                            <span class="button-text">Menus</span>
+                        </button>
+                        <button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="switchTab('order-tab')">
+                            <span class="material-symbols-rounded">edit</span>
+                            <span class="button-text">Order</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
         <main class="container mt-4 mb-5">
             <div class="card joinTop">
                 <div class="card-body text-start">
-                    <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span><span id="drawerIcon" class="material-symbols-rounded" style="float: right;" onclick="showMainNavigationBox()">menu</span><span id="hideIcon" class="material-symbols-rounded" style="float: right;display: none;" onclick="hideMainNavigationBox()">close</span>
+                    <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span>
+                    <span class="material-symbols-rounded" style="float: right; cursor: pointer;" onclick="showDrawer()">menu</span>
                 </div>
             </div>
-            <div id="mainNavBox" class="card joinMiddle" style="display: none;">
-                <div class="card-body">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item nav-item-left">
-                            <button class="nav-link active ripple-button leftButton" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button>
-                        </li>
-                        <li class="nav-item nav-item-middle">
-                            <button class="nav-link ripple-button middleButton" id="menus-tab" data-bs-toggle="pill" data-bs-target="#menus-tab-pane" type="button" role="tab" aria-controls="menus-tab-pane" aria-selected="false">Menus</button>
-                        </li>
-                        <li class="nav-item nav-item-right">
-                            <button class="nav-link ripple-button rightButton" id="order-tab" data-bs-toggle="pill" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false">Order</button>
-                        </li>
-                    </ul>
-                </div>
+
+            <!-- Hidden nav buttons for tab activation -->
+            <div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+                <ul class="nav">
+                    <li><button class="nav-link active" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button></li>
+                    <li><button class="nav-link" id="menus-tab" data-bs-toggle="pill" data-bs-target="#menus-tab-pane" type="button" role="tab" aria-controls="menus-tab-pane" aria-selected="false">Menus</button></li>
+                    <li><button class="nav-link" id="order-tab" data-bs-toggle="pill" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false">Order</button></li>
+                </ul>
             </div>
+
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
                     <div class="card joinBottom">
@@ -81,27 +88,27 @@
                     </div>
                     <div class="card mt-2 joinTop">
                         <div class="card-body">
-                            <ul class="nav nav-pills">
-                                <li class="nav-item nav-item-left">
-                                    <button class="nav-link active ripple-button leftButton" id="normal-menu-tab" data-bs-toggle="pill" data-bs-target="#normal-menu-tab-pane" type="button" role="tab" aria-controls="normal-menu-tab-pane" aria-selected="true">Normal</button>
-                                </li>
-                                <li class="nav-item nav-item-middle">
-                                    <button class="nav-link ripple-button middleButton" id="worldwide-menu-tab" data-bs-toggle="pill" data-bs-target="#worldwide-menu-tab-pane" type="button" role="tab" aria-controls="worldwide-menu-tab-pane" aria-selected="false">Worldwide</button>
-                                </li>
-                                <li class="nav-item nav-item-middle">
-                                    <button class="nav-link ripple-button middleButton" id="pizza-menu-tab" data-bs-toggle="pill" data-bs-target="#pizza-menu-tab-pane" type="button" role="tab" aria-controls="pizza-menu-tab-pane" aria-selected="false">Pizza</button>
-                                </li>
-                                <li class="nav-item nav-item-right">
-                                    <button class="nav-link ripple-button rightButton" id="gastro-menu-tab" data-bs-toggle="pill" data-bs-target="#gastro-menu-tab-pane" type="button" role="tab" aria-controls="gastro-menu-tab-pane" aria-selected="false">Gastro</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <ul class="nav nav-pills" style="flex-wrap: nowrap; gap: 0.35rem; overflow-x: auto; padding: 0.25rem;">
+                        <li class="nav-item nav-item-left">
+                            <button class="nav-link active ripple-button leftButton" id="normal-menu-tab" data-bs-toggle="pill" data-bs-target="#normal-menu-tab-pane" type="button" role="tab" aria-controls="normal-menu-tab-pane" aria-selected="true">Normal</button>
+                        </li>
+                        <li class="nav-item nav-item-middle">
+                            <button class="nav-link ripple-button middleButton" id="worldwide-menu-tab" data-bs-toggle="pill" data-bs-target="#worldwide-menu-tab-pane" type="button" role="tab" aria-controls="worldwide-menu-tab-pane" aria-selected="false">Worldwide</button>
+                        </li>
+                        <li class="nav-item nav-item-middle">
+                            <button class="nav-link ripple-button middleButton" id="pizza-menu-tab" data-bs-toggle="pill" data-bs-target="#pizza-menu-tab-pane" type="button" role="tab" aria-controls="pizza-menu-tab-pane" aria-selected="false">Pizza</button>
+                        </li>
+                        <li class="nav-item nav-item-right">
+                            <button class="nav-link ripple-button rightButton" id="gastro-menu-tab" data-bs-toggle="pill" data-bs-target="#gastro-menu-tab-pane" type="button" role="tab" aria-controls="gastro-menu-tab-pane" aria-selected="false">Gastro</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="normal-menu-tab-pane" role="tabpanel" aria-labelledby="normal-menu-tab" tabindex="0">
                             <div class="card joinBottom">
                                 <div class="card-body">
-                                    <h2 class="card-title">Main Menu</h2>
+                                    <h2 class="card-title">Main</h2>
                                     <p class="card-text">This menu includes Lunch, Dinner, and more.</p>
                                     <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/normal.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
                                     <div class="iframe-wrapper roundedImage">
@@ -115,7 +122,7 @@
                         <div class="tab-pane fade" id="worldwide-menu-tab-pane" role="tabpanel" aria-labelledby="worldwide-menu-tab" tabindex="0">
                             <div class="card joinBottom">
                                 <div class="card-body">
-                                    <h2 class="card-title">Worldwide Menu</h2>
+                                    <h2 class="card-title">Worldwide</h2>
                                     <p class="card-text">This is our brand new worldwide foods menu</p>
                                     <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/worldwide.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
                                     <div class="iframe-wrapper">
@@ -129,7 +136,7 @@
                         <div class="tab-pane fade" id="pizza-menu-tab-pane" role="tabpanel" aria-labelledby="pizza-menu-tab" tabindex="0">
                             <div class="card joinBottom">
                                 <div class="card-body">
-                                    <h1 class="card-title">Pizza Menu</h1>
+                                    <h1 class="card-title">Pizza</h1>
                                     <p class="card-text">Take a look at our majestic new pizza menu below now!</p>
                                     <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/pizza.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
                                     <div class="iframe-wrapper">
@@ -143,7 +150,7 @@
                         <div class="tab-pane fade" id="gastro-menu-tab-pane" role="tabpanel" aria-labelledby="gastro-menu-tab" tabindex="0">
                             <div class="card joinBottom">
                                 <div class="card-body">
-                                    <h1 class="card-title">Gastro Menu</h1>
+                                    <h1 class="card-title">Gastro</h1>
                                     <p class="card-text">This is our most premium menu that you will love!</p>
                                     <button class="ripple-button form-button joinTop" onclick="link('hicafe/menu/gastro.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
                                     <div class="iframe-wrapper">
@@ -160,7 +167,7 @@
                     <div class="card joinBottom">
                         <div class="card-body">
                             <div class="top-container">
-                                <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">edit</span>Food Ordering</h1>
+                                <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">edit</span>Order</h1>
                                 <p id="para" class="subtitle">Order the food you would like below.</p>
                             </div>
                         </div>
@@ -191,8 +198,24 @@
         </main>
 		<script src="../assets/scripts/background.js"></script>
         <script src="../assets/scripts/ripple.js"></script>
-    
+        <script>
+            function showDrawer() {
+                document.getElementById('drawerOverlay').classList.add('show');
+                document.getElementById('sideDrawer').classList.add('show');
+            }
+            function hideDrawer() {
+                document.getElementById('drawerOverlay').classList.remove('show');
+                document.getElementById('sideDrawer').classList.remove('show');
+            }
+            function switchTab(buttonId) {
+                const btn = document.getElementById(buttonId);
+                if (btn) {
+                    btn.click();
+                    hideDrawer();
+                }
+            }
+            document.getElementById('drawerOverlay').addEventListener('click', hideDrawer);
+        </script>
 		<script src="../assets/scripts/bootstrap-shim.js"></script>
 </body>
 </html>
-
