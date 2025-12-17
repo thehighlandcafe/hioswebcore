@@ -4,7 +4,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark light">
         <link rel="icon" href="../../../assets/pics/logos/hiosbadge.png" type="image/icon type">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/toggle.css" type="text/css">
@@ -55,12 +54,14 @@
             <div class="card joinBottom">
                 <div class="card-body">
                     <h1 class="card-title">App Colours</h1>
-                    <div class="mb-2" style="display: flex; align-items: center; justify-content: flex-start;">
-                        <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
-                        <label class="switch" style="margin-left: auto;">
-                            <input type="checkbox" id="autoColourToggle" checked>
-                            <span class="slider round"></span>
-                        </label>
+                    <div class="translucentAboutBox" style="margin-top: 8px; margin-bottom: 8px;">
+                        <div style="display: flex; align-items: center; justify-content: flex-start;">
+                            <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
+                            <label class="switch" style="margin-left: auto;">
+                                <input type="checkbox" id="autoColourToggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
                     <select class="form-select" id="genericColourSelect">
                         <option value="default-light">Blue (Default)</option>
@@ -69,23 +70,30 @@
                         <option value="generic-orange">Orange</option>
                     </select>
 
-                    <!-- === NEW TOGGLE ADDED HERE === -->
-                    <hr class="my-3">
-                    <div class="mb-2" style="display: flex; align-items: center; justify-content: flex-start;">
-                        <label class="form-check-label ms-2" for="liquidGlassToggle" style="margin-right: auto;">LiquidAcrylic Effect</label>
-                        <label class="switch" style="margin-left: auto;">
-                            <input type="checkbox" id="liquidGlassToggle" checked>
-                            <span class="slider round"></span>
-                        </label>
+                    <div class="translucentAboutBox" style="margin-top: 12px; margin-bottom: 8px;">
+                        <div style="display: flex; align-items: center; justify-content: flex-start;">
+                            <label class="form-check-label ms-2" for="backgroundToggle" style="margin-right: auto;">Background Image</label>
+                            <label class="switch" style="margin-left: auto;">
+                                <input type="checkbox" id="backgroundToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-                    <!-- === END OF NEW TOGGLE === -->
+                    <div class="translucentAboutBox" style="margin-top: 8px;">
+                        <div style="display: flex; align-items: center; justify-content: flex-start;">
+                            <label class="form-check-label ms-2" for="acrylicToggle" style="margin-right: auto;">Acrylic</label>
+                            <label class="switch" style="margin-left: auto;">
+                                <input type="checkbox" id="acrylicToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </main>
         <script src="../../../assets/scripts/background.js"></script>
         <script src="../../../assets/scripts/ripple.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YpPczugYYLkLMkpBqlbQlHvpcRQlzhZKHXYkJGVxHf39Eo7RjVMqljJutlnWsZPd" crossorigin="anonymous"></script>
 
         <!-- UPDATED SCRIPT BLOCK -->
         <script>
@@ -94,8 +102,8 @@
                 const autoToggle = document.getElementById('autoColourToggle');
                 const genericColourSelect = document.getElementById('genericColourSelect');
                 
-                // === NEW ===
-                const liquidGlassToggle = document.getElementById('liquidGlassToggle');
+                const backgroundToggle = document.getElementById('backgroundToggle');
+                const acrylicToggle = document.getElementById('acrylicToggle');
 
                 // --- 1. SET INITIAL STATE ---
                 // Read from TWO different localStorage keys
@@ -103,14 +111,21 @@
                 const savedColor = localStorage.getItem('hiosColorTheme') || 'default-light';
                 const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
                 
-                // === NEW: Load liquid glass state ===
-                const isGlassEnabled = localStorage.getItem('hiosLiquidGlass') !== 'false'; // default to true
+                // New toggles
+                const storedBg = localStorage.getItem('hiosBackgroundEnabled');
+                const storedAcrylic = localStorage.getItem('hiosAcrylicEnabled');
+                const isBackgroundEnabled = storedBg === null ? true : storedBg === 'true'; // default on
+                const isAcrylicEnabled = storedAcrylic === null ? true : storedAcrylic === 'true'; // default on
                 
-                autoToggle.checked = isAuto;
-                genericColourSelect.disabled = isAuto;
-                
-                // === NEW ===
-                liquidGlassToggle.checked = isGlassEnabled;
+                const effectiveAuto = isBackgroundEnabled ? isAuto : false;
+
+                autoToggle.checked = effectiveAuto;
+                genericColourSelect.disabled = effectiveAuto;
+                backgroundToggle.checked = isBackgroundEnabled;
+                acrylicToggle.checked = isBackgroundEnabled ? isAcrylicEnabled : false;
+                backgroundSelect.disabled = !isBackgroundEnabled;
+                autoToggle.disabled = !isBackgroundEnabled;
+                acrylicToggle.disabled = !isBackgroundEnabled;
 
                 // Set dropdowns to the correct saved values
                 if (backgroundSelect.querySelector(`[value="${savedWallpaper}"]`)) {
@@ -142,13 +157,38 @@
                     }
                 });
 
-                // === NEW: Liquid Glass toggle listener ===
-                liquidGlassToggle.addEventListener('change', () => {
-                    const isChecked = liquidGlassToggle.checked;
-                    localStorage.setItem('hiosLiquidGlass', isChecked);
-                    
-                    // The easiest and safest way to apply/remove the glass
-                    // is to just reload the page.
+                // Background image toggle listener
+                backgroundToggle.addEventListener('change', () => {
+                    const isChecked = backgroundToggle.checked;
+                    localStorage.setItem('hiosBackgroundEnabled', isChecked);
+                    backgroundSelect.disabled = !isChecked;
+                    autoToggle.disabled = !isChecked;
+                    acrylicToggle.disabled = !isChecked;
+
+                    if (!isChecked) {
+                        autoToggle.checked = false;
+                        acrylicToggle.checked = false;
+                        localStorage.setItem('hiosAutoColor', false);
+                        localStorage.setItem('hiosAcrylicEnabled', false);
+                        genericColourSelect.disabled = false;
+                    } else {
+                        const savedAuto = localStorage.getItem('hiosAutoColor');
+                        const savedAcrylicPref = localStorage.getItem('hiosAcrylicEnabled');
+                        const autoOn = savedAuto === null ? true : savedAuto !== 'false';
+                        const acrylicOn = savedAcrylicPref === null ? true : savedAcrylicPref === 'true';
+                        autoToggle.checked = autoOn;
+                        acrylicToggle.checked = acrylicOn;
+                        genericColourSelect.disabled = autoOn ? true : false;
+                    }
+
+                    applyTheme();
+                    location.reload();
+                });
+
+                // Acrylic toggle listener
+                acrylicToggle.addEventListener('change', () => {
+                    const isChecked = acrylicToggle.checked;
+                    localStorage.setItem('hiosAcrylicEnabled', isChecked);
                     location.reload();
                 });
 
@@ -178,5 +218,7 @@
                 }
             });
         </script>
-    </body>
+    
+		<script src="../../../assets/scripts/bootstrap-shim.js"></script>
+</body>
 </html>
