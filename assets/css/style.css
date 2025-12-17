@@ -1915,3 +1915,7 @@ img[src$="scrolltop.bmp"] {
 .btn-close:hover {
     opacity: 1;
 }
+
+.card.joinTop .card-body {
+    padding: 0.5rem; /* Reduces 1.25rem to 0.5rem */
+}
