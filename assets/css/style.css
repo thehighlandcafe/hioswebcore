@@ -759,7 +759,7 @@ body {
 .form-select {
     width: 100%;
     height: 60px;
-    background-color: var(--secondaryContainer);
+    background-color: color-mix(in srgb, var(--secondaryContainer) 70%, transparent);
     color: var(--onSecondaryContainer);
     font-family: var(--fontPrimary);
     text-align: left;
@@ -1236,7 +1236,7 @@ menu-iframe {
 
 .widget-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--bs-space-3);
     align-items: stretch;
 }
@@ -1245,6 +1245,22 @@ menu-iframe {
     .widget-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
+
+.widget-grid .card {
+    height: 100%;
+}
+
+.widget-grid .roundedImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#ww_6b591a1444ddd {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 .form-control {
@@ -1476,6 +1492,20 @@ p {
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --bs-space-1: 0.15rem;
+        --bs-space-2: 0.35rem;
+        --bs-space-3: 0.6rem;
+        --bs-space-4: 0.8rem;
+        --bs-space-5: 1rem;
+    }
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -1627,6 +1657,160 @@ p {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+}
+
+.nav-drawer {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.nav-drawer.show {
+    max-height: 260px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-drawer .card-body {
+    padding: 0.35rem 0.5rem;
+}
+
+.nav-drawer .nav {
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+}
+
+.nav-drawer .nav-link {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+}
+
+.nav-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* --- Side drawer navigation (HiCafe) --- */
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 20;
+}
+
+.drawer-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 340px;
+    max-width: 92%;
+    background: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
+    border: 1px solid var(--outline);
+    border-radius: 24px 0 0 24px;
+    box-shadow: var(--glass-shadow);
+    transform: translateX(110%);
+    transition: transform 0.25s ease;
+    z-index: 21;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+    backdrop-filter: blur(8px) saturate(120%);
+}
+
+.side-drawer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--glass-noise);
+    opacity: var(--glass-noise-opacity);
+}
+
+.side-drawer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--glass-sheen);
+    opacity: 0.6;
+}
+
+/* Use normal card styling inside drawer */
+
+.side-drawer.show {
+    transform: translateX(0);
+}
+
+.side-drawer .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.side-drawer .drawer-title {
+    font-size: 1.2rem;
+    font-weight: 650;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.side-drawer .drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.drawer-btn {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: none !important;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--secondaryContainer) 78%, transparent);
+    color: var(--onSecondaryContainer);
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.drawer-btn:hover {
+    background: color-mix(in srgb, var(--secondaryContainer) 80%, transparent);
+    transform: translateY(-1px);
+}
+
+.drawer-btn:active {
+    transform: translateY(0);
+}
+
+.scrolltop-image,
+img[src$="scrolltop.bmp"] {
+    display: block;
+    margin: 0.5rem auto 0;
+    max-width: 150px;
 }
 
 .nav-link {
