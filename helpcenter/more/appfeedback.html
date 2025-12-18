@@ -26,17 +26,27 @@
 			</div>
 			<div class="card mt-2 joinTop">
 				<div class="card-body">
-					<ul class="nav nav-pills">
-						<li class="nav-item nav-item-left">
-							<button class="nav-link active ripple-button leftButton" id="feedback-tab" data-bs-toggle="pill" data-bs-target="#feedback-tab-pane" type="button" role="tab" aria-controls="feedback-tab-pane" aria-selected="true">Feedback</button>
-						</li>
-						<li class="nav-item nav-item-middle">
-							<button class="nav-link ripple-button middleButton" id="bugreport-tab" data-bs-toggle="pill" data-bs-target="#bugreport-tab-pane" type="button" role="tab" aria-controls="bugreport-tab-pane" aria-selected="false">Bug Report</button>
-						</li>
-						<li class="nav-item nav-item-right">
-							<button class="nav-link ripple-button rightButton" id="complain-tab" data-bs-toggle="pill" data-bs-target="#complain-tab-pane" type="button" role="tab" aria-controls="complain-tab-pane" aria-selected="false">Complain</button>
-						</li>
-					</ul>
+					<!--new pills navigation-->
+					<div class="sub-nav-pills-header">
+						<button class="sub-header-tab active ripple-button" onclick="switchMenu('feedback-tab')" data-target="feedback-tab">
+							Feedback
+						</button>
+						<button class="sub-header-tab ripple-button" onclick="switchMenu('bugreport-tab')" data-target="bugreport-tab">
+							Bug Report
+						</button>
+						<button class="sub-header-tab ripple-button" onclick="switchMenu('complain-tab')" data-target="complain-tab">
+							Complain
+						</button>
+					</div>
+					
+					<!--Hidden nav buttons for bootstrap tab functionality-->
+					<div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+						<ul class="nav nav-pills">
+							<li><button class="nav-link active" id="feedback-tab" data-bs-toggle="pill" data-bs-target="#feedback-tab-pane" type="button" role="tab">Feedback</button></li>
+							<li><button class="nav-link" id="bugreport-tab" data-bs-toggle="pill" data-bs-target="#bugreport-tab-pane" type="button" role="tab">Bug Report</button></li>
+							<li><button class="nav-link" id="complain-tab" data-bs-toggle="pill" data-bs-target="#complain-tab-pane" type="button" role="tab">Complain</button></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="tab-content">
@@ -85,8 +95,8 @@
 		</main>
 		<script src="../../assets/scripts/background.js"></script>
 		<script src="../../assets/scripts/ripple.js"></script>
-	
+		<script src="../../assets/scripts/tabs.js"></script>
 		<script src="../../assets/scripts/bootstrap-shim.js"></script>
-</body>
+	</body>
 </html>
 

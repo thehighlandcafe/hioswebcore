@@ -559,9 +559,11 @@ body {
         "wdth" 100,
         "GRAD" 0,
         "ROND" 100;
-    font-weight: 350;
+    font-weight: 300;
     color: var(--onPrimaryContainer);
     user-select: none;
+    align-content: center;
+    text-align: center;
     -webkit-user-select: none;
     /*Safari*/
     -moz-user-select: none;
@@ -1918,4 +1920,112 @@ img[src$="scrolltop.bmp"] {
 
 .card.joinTop .card-body {
     padding: 0.5rem; /* Reduces 1.25rem to 0.5rem */
+}
+
+/* --- NEW HEADER NAVIGATION CSS --- */
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+.justify-content-between { justify-content: space-between; }
+.p-2 { padding: 0.5rem; }
+
+/* The Back Arrow Button */
+.nav-icon-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* The Container for the 3 tabs */
+.nav-pills-header {
+    display: flex;
+    /* Uses a slightly different background to stand out from the card */
+    background-color: rgba(0,0,0,0.05); 
+    border-radius: 50px;
+    padding: 4px;
+    border: 1px solid var(--outline);
+}
+
+/* --- SUB-NAVIGATION (MENUS) CSS --- */
+.sub-nav-pills-header {
+    display: flex;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 50px;
+    padding: 4px;
+    border: 1px solid var(--outline);
+    overflow-x: auto; /* Allow scrolling on small screens */
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+}
+
+.sub-nav-pills-header::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+@media (prefers-color-scheme: dark) {
+    .nav-pills-header,
+    .sub-nav-pills-header {
+        background-color: rgba(255,255,255,0.05);
+    }
+}
+
+/* The individual tab buttons */
+.header-tab {
+    background: none;
+    border: none;
+    color: var(--onSurface);
+    padding: 6px 12px;
+    border-radius: 40px;
+    font-family: var(--fontPrimary);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.sub-header-tab {
+    background: none;
+    border: none;
+    color: var(--onSurface);
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-family: var(--fontPrimary);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Expand to fill space */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.header-tab .material-symbols-rounded {
+    font-size: 18px !important;
+}
+
+/* Active State */
+.header-tab.active,
+.sub-header-tab.active {
+    background-color: var(--primary);
+    color: var(--onPrimary); /* Ensure text is readable on primary color */
+    opacity: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hide text on very small screens to prevent breaking */
+@media (max-width: 360px) {
+    .header-tab .tab-text { display: none; }
+    .header-tab { padding: 8px; }
 }

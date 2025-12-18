@@ -43,18 +43,28 @@
 			</div>
 			<div class="card mt-2 joinTop">
 				<div class="card-body">
-					<ul class="nav nav-pills">
-						<li class="nav-item nav-item-left">
-							<button class="nav-link active ripple-button leftButton" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button>
-						</li>
-						<li class="nav-item nav-item-middle">
-							<button class="nav-link ripple-button middleButton" id="arriving-tab" data-bs-toggle="pill" data-bs-target="#arriving-tab-pane" type="button" role="tab" aria-controls="arriving-tab-pane" aria-selected="false">Arriving</button>
-						</li>
-						<li class="nav-item nav-item-right">
-							<button class="nav-link ripple-button rightButton" id="leaving-tab" data-bs-toggle="pill" data-bs-target="#leaving-tab-pane" type="button" role="tab" aria-controls="leaving-tab-pane" aria-selected="false">Leaving</button>
-						</li>
-					</ul>
-				</div><br>
+					<!--new pills navigation-->
+					<div class="sub-nav-pills-header">
+						<button class="sub-header-tab active ripple-button" onclick="switchMenu('book-tab')" data-target="book-tab">
+							Book a Room
+						</button>
+						<button class="sub-header-tab ripple-button" onclick="switchMenu('arriving-tab')" data-target="arriving-tab">
+							Check-In
+						</button>
+						<button class="sub-header-tab ripple-button" onclick="switchMenu('leaving-tab')" data-target="leaving-tab">
+							Check-Out
+						</button>
+					</div>
+					
+					<!--Hidden nav buttons for bootstrap tab functionality-->
+					<div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+						<ul class="nav nav-pills">
+							<li><button class="nav-link active" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab">Book a Room</button></li>
+							<li><button class="nav-link" id="arriving-tab" data-bs-toggle="pill" data-bs-target="#arriving-tab-pane" type="button" role="tab">Check-In</button></li>
+							<li><button class="nav-link" id="leaving-tab" data-bs-toggle="pill" data-bs-target="#leaving-tab-pane" type="button" role="tab">Check-Out</button></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div class="tab-content">
 				<div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
@@ -74,7 +84,7 @@
 				<div class="tab-pane fade" id="arriving-tab-pane" role="tabpanel" aria-labelledby="arriving-tab" tabindex="0">
 					<div class="card joinBottom">
 						<div class="card-body">
-							<h2 class="card-title">Arriving</h1>
+							<h2 class="card-title">Check-In</h1>
 							<p class="card-text">Welcome! Check in below. :)</p>
 							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkin.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
 							<div class="iframe-wrapper">
@@ -88,7 +98,7 @@
 				<div class="tab-pane fade" id="leaving-tab-pane" role="tabpanel" aria-labelledby="leaving-tab" tabindex="0">
 					<div class="card joinBottom">
 						<div class="card-body">
-							<h2 class="card-title">Leaving</h1>
+							<h2 class="card-title">Check-Out</h1>
 							<p class="card-text">Thank you for staying with us! Check out below. :)</p>
 							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkout.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
 							<div class="iframe-wrapper">
@@ -102,8 +112,8 @@
 		</main>
 		<script src="assets/scripts/background.js"></script>
 		<script src="assets/scripts/ripple.js"></script>
-	
+		<script src="assets/scripts/tabs.js"></script>
 		<script src="assets/scripts/bootstrap-shim.js"></script>
-</body>
+	</body>
 </html>
 
