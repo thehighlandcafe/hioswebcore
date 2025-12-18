@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
-		<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-		<link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/pics/logos/hiosbadge.png" type="image/icon type">
+        <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <title>HiOS | </title>
+        <title>HiOS | HiCafe</title>
         <script src="../assets/scripts/links.js"></script>
-	</head>
-	<body>
-		<!--The universal background image-->
-		<div class="background-wrapper">
-			<div class="background-image"></div>
-		</div>
-        <div id="drawerOverlay" class="drawer-overlay"></div>
-        <aside id="sideDrawer" class="side-drawer">
-            <div class="drawer-header">
-                <h2 class="drawer-title"><span class="material-symbols-rounded">restaurant</span>&nbsp;HiCafe</h2>
-                <span class="material-symbols-rounded" style="cursor: pointer;" onclick="hideDrawer()">close</span>
-            </div>
-            <div class="card full">
-                <div class="card-body">
-                    <div class="drawer-nav">
-                        <button class="fluent-interactive ripple-button joinTop roundedImage button" onclick="switchTab('book-tab')">
+    </head>
+    <body>
+        <!--The universal background image-->
+        <div class="background-wrapper">
+            <div class="background-image"></div>
+        </div>
+        
+        <main class="container mt-4 mb-5">
+            <!-- NEW INTEGRATED NAVIGATION HEADER -->
+            <div class="card joinTop">
+                <div class="card-body d-flex align-items-center justify-content-between p-2">
+                    <!-- Back Button -->
+                    <button class="nav-icon-btn ripple-button" onclick="link('../restaurant.html')">
+                        <span class="material-symbols-rounded">arrow_back_ios</span>
+                    </button>
+
+                    <!-- The 3-Item Toggle Switch -->
+                    <div class="nav-pills-header">
+                        <button class="header-tab active ripple-button" onclick="switchTab('book-tab')" data-target="book-tab">
                             <span class="material-symbols-rounded">table_restaurant</span>
-                            <span class="button-text">Book</span>
+                            <span class="tab-text">Book</span>
                         </button>
-                        <button class="fluent-interactive ripple-button joinMiddle roundedImage button" onclick="switchTab('menus-tab')">
+                        <button class="header-tab ripple-button" onclick="switchTab('menus-tab')" data-target="menus-tab">
                             <span class="material-symbols-rounded">menu_book</span>
-                            <span class="button-text">Menus</span>
+                            <span class="tab-text">Menus</span>
                         </button>
-                        <button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="switchTab('order-tab')">
+                        <button class="header-tab ripple-button" onclick="switchTab('order-tab')" data-target="order-tab">
                             <span class="material-symbols-rounded">edit</span>
-                            <span class="button-text">Order</span>
+                            <span class="tab-text">Order</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </aside>
-        <main class="container mt-4 mb-5">
-            <div class="card joinTop">
-                <div class="card-body text-start">
-                    <span class="material-symbols-rounded" onclick="link('../restaurant.html')">arrow_back_ios</span>
-                    <span class="material-symbols-rounded" style="float: right; cursor: pointer;" onclick="showDrawer()">menu</span>
-                </div>
-            </div>
 
-            <!-- Hidden nav buttons for tab activation -->
+            <!-- Hidden nav buttons for bootstrap tab functionality -->
             <div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
                 <ul class="nav">
                     <li><button class="nav-link active" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab" aria-controls="book-tab-pane" aria-selected="true">Book</button></li>
@@ -57,6 +52,7 @@
             </div>
 
             <div class="tab-content">
+                <!-- BOOK TAB -->
                 <div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
                     <div class="card joinBottom">
                         <div class="card-body">
@@ -77,6 +73,7 @@
                     </div>
                 </div>
 
+                <!-- MENUS TAB -->
                 <div class="tab-pane fade" id="menus-tab-pane" role="tabpanel" aria-labelledby="menus-tab" tabindex="0">
                     <div class="card joinBottom">
                         <div class="card-body">
@@ -88,23 +85,35 @@
                     </div>
                     <div class="card mt-2 joinTop">
                         <div class="card-body">
-                    <ul class="nav nav-pills" style="flex-wrap: nowrap; gap: 0.35rem; overflow-x: auto; padding: 0.25rem;">
-                        <li class="nav-item nav-item-left">
-                            <button class="nav-link active ripple-button leftButton" id="normal-menu-tab" data-bs-toggle="pill" data-bs-target="#normal-menu-tab-pane" type="button" role="tab" aria-controls="normal-menu-tab-pane" aria-selected="true">Normal</button>
-                        </li>
-                        <li class="nav-item nav-item-middle">
-                            <button class="nav-link ripple-button middleButton" id="worldwide-menu-tab" data-bs-toggle="pill" data-bs-target="#worldwide-menu-tab-pane" type="button" role="tab" aria-controls="worldwide-menu-tab-pane" aria-selected="false">Worldwide</button>
-                        </li>
-                        <li class="nav-item nav-item-middle">
-                            <button class="nav-link ripple-button middleButton" id="pizza-menu-tab" data-bs-toggle="pill" data-bs-target="#pizza-menu-tab-pane" type="button" role="tab" aria-controls="pizza-menu-tab-pane" aria-selected="false">Pizza</button>
-                        </li>
-                        <li class="nav-item nav-item-right">
-                            <button class="nav-link ripple-button rightButton" id="gastro-menu-tab" data-bs-toggle="pill" data-bs-target="#gastro-menu-tab-pane" type="button" role="tab" aria-controls="gastro-menu-tab-pane" aria-selected="false">Gastro</button>
-                        </li>
-                    </ul>
-                    <br>
-                </div>
-            </div>
+                            <!-- NEW SUB-NAVIGATON (PILLS STYLE) -->
+                            <div class="sub-nav-pills-header">
+                                <button class="sub-header-tab active ripple-button" onclick="switchMenu('normal-menu-tab')" data-target="normal-menu-tab">
+                                    Normal
+                                </button>
+                                <button class="sub-header-tab ripple-button" onclick="switchMenu('worldwide-menu-tab')" data-target="worldwide-menu-tab">
+                                    Worldwide
+                                </button>
+                                <button class="sub-header-tab ripple-button" onclick="switchMenu('pizza-menu-tab')" data-target="pizza-menu-tab">
+                                    Pizza
+                                </button>
+                                <button class="sub-header-tab ripple-button" onclick="switchMenu('gastro-menu-tab')" data-target="gastro-menu-tab">
+                                    Gastro
+                                </button>
+                            </div>
+                            
+                            <!-- Hidden nav buttons for sub-menu bootstrap tab functionality -->
+                            <div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+                                <ul class="nav nav-pills">
+                                    <li><button class="nav-link active" id="normal-menu-tab" data-bs-toggle="pill" data-bs-target="#normal-menu-tab-pane" type="button" role="tab">Normal</button></li>
+                                    <li><button class="nav-link" id="worldwide-menu-tab" data-bs-toggle="pill" data-bs-target="#worldwide-menu-tab-pane" type="button" role="tab">Worldwide</button></li>
+                                    <li><button class="nav-link" id="pizza-menu-tab" data-bs-toggle="pill" data-bs-target="#pizza-menu-tab-pane" type="button" role="tab">Pizza</button></li>
+                                    <li><button class="nav-link" id="gastro-menu-tab" data-bs-toggle="pill" data-bs-target="#gastro-menu-tab-pane" type="button" role="tab">Gastro</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sub-tabs for Menus -->
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="normal-menu-tab-pane" role="tabpanel" aria-labelledby="normal-menu-tab" tabindex="0">
                             <div class="card joinBottom">
@@ -164,6 +173,7 @@
                     </div>
                 </div>
 
+                <!-- ORDER TAB -->
                 <div class="tab-pane fade" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
                     <div class="card joinBottom">
                         <div class="card-body">
@@ -184,39 +194,11 @@
                     </div>
                 </div>
             </div>
-
-            <!--div class="tab-content">
-                <div class="tab-pane fade" id="more-info-tab-pane" role="tabpanel" aria-labelledby="more-info-tab" tabindex="0">
-                    <div class="card mt-4 full">
-                        <div class="card-body">
-                            <h1 class="card-title">More Info</h1>
-                            <img class="img-fluid d-block mx-auto roundedImage" src="../assets/pics/moreinfo.png">
-                            <p class="card-text">thanks for your cvustom and understandings in this matters !</p>
-                        </div>
-                    </div>
-                </div>
-            </div-->
         </main>
-		<script src="../assets/scripts/background.js"></script>
+        
+        <script src="../assets/scripts/background.js"></script>
         <script src="../assets/scripts/ripple.js"></script>
-        <script>
-            function showDrawer() {
-                document.getElementById('drawerOverlay').classList.add('show');
-                document.getElementById('sideDrawer').classList.add('show');
-            }
-            function hideDrawer() {
-                document.getElementById('drawerOverlay').classList.remove('show');
-                document.getElementById('sideDrawer').classList.remove('show');
-            }
-            function switchTab(buttonId) {
-                const btn = document.getElementById(buttonId);
-                if (btn) {
-                    btn.click();
-                    hideDrawer();
-                }
-            }
-            document.getElementById('drawerOverlay').addEventListener('click', hideDrawer);
-        </script>
-		<script src="../assets/scripts/bootstrap-shim.js"></script>
-</body>
+        <script src="../assets/scripts/tabs.js"></script>
+        <script src="../assets/scripts/bootstrap-shim.js"></script>
+    </body>
 </html>
