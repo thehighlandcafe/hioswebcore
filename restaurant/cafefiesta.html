@@ -41,14 +41,23 @@
 			</div>
 			<div class="card mt-2 joinTop">
 				<div class="card-body">
-					<ul class="nav nav-pills">
-						<li class="nav-item nav-item-left">
-							<button class="nav-link active ripple-button leftButton" id="menu-tab" data-bs-toggle="pill" data-bs-target="#menu-tab-pane" type="button" role="tab" aria-controls="menu-tab-pane" aria-selected="true">Menu</button>
-						</li>
-						<li class="nav-item nav-item-right">
-							<button class="nav-link ripple-button rightButton" id="order-tab" data-bs-toggle="pill" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false">Order</button>
-						</li>
-					</ul>
+					<!--new pills navigation-->
+					<div class="sub-nav-pills-header">
+						<button class="sub-header-tab active ripple-button" onclick="switchMenu('menu-tab')" data-target="menu-tab">
+							Menu
+						</button>
+						<button class="sub-header-tab ripple-button" onclick="switchMenu('order-tab')" data-target="order-tab">
+							Order
+						</button>
+					</div>
+
+					<!--Hidden nav buttons for bootstrap functionality-->
+					<div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+						<ul class="nav nav-pills">
+							<li><button class="nav-link active" id="menu-tab" data-bs-toggle="pill" data-bs-target="#menu-tab-pane" type="button" role="tab">Menu</button></li>
+							<li><button class="nav-link" id="order-tab" data-bs-toggle="pill" data-bs-target="#order-tab-pane" type="button" role="tab">Order</button></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="tab-content">
@@ -56,7 +65,7 @@
 				<div class="tab-pane fade show active" id="menu-tab-pane" role="tabpanel" aria-labelledby="menu-tab" tabindex="0">
 					<div class="card joinBottom">
 						<div class="card-body">
-							<h2 class="card-title style=font-family: 'Playfair Display', serif;">Menu</h2>
+							<h2 class="card-title" style="font-family: 'Playfair Display', serif;">Menu</h2>
 							<button class="ripple-button form-button joinTop" onclick="link('cafefiesta/menu.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Menu Fullscreen</button>
 							<div class="iframe-wrapper">
 								<iframe class="joinBottom menu-iframe roundedImage" src="https://drive.google.com/file/d/1v6kWr813fKLS25FprgLu0sklpXpjB2Gy/preview" frameborder="0" marginheight="0" marginwidth="0" class="roundedImage" allow="autoplay"></iframe>
@@ -83,7 +92,7 @@
 		</main>
 		<script src="../assets/scripts/background.js"></script>
 		<script src="../assets/scripts/ripple.js"></script>
-	
+		<script src="../assets/scripts/tabs.js"></script>
 		<script src="../assets/scripts/bootstrap-shim.js"></script>
 </body>
 </html>
