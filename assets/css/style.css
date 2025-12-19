@@ -551,7 +551,6 @@ body.generic-orange {
 
 /*Setting basic HTML styles, such as background colour and font*/
 body {
-    padding-top: 20px;
     display: none;
     background-color: var(--background);
     font-family: var(--fontPrimary);
