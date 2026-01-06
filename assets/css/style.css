@@ -13,6 +13,8 @@
 
 /*Variables*/
 :root {
+    --statusbar-pad: max(env(safe-area-inset-top), 24px);
+
     /*OLD Colours*/
     --primary: #0061a6;
     --onPrimary: #ffffff;
@@ -570,6 +572,10 @@ body {
     /*Firefox*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+main.container {
+    padding-top: var(--statusbar-pad);
 }
 
 /*Universal image backdrop*/
