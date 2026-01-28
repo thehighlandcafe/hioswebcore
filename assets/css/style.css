@@ -47,6 +47,10 @@
         "ROND" 100;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /*background-based themes*/
 body.default-dark {
     /*Not necessary*/
