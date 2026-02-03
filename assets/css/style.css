@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /*Defining Selawik font*/
 @font-face {
@@ -37,8 +37,8 @@
     --onSurfaceVarient: #43474e;
 
     /*Fonts*/
-    --fontPrimary: 'IBM Plex Sans', sans-serif;
-    --fontCode: 'IBM Plex Sans', sans-serif;
+    --fontPrimary: 'Space Grotesk', sans-serif;
+    --fontCode: 'Space Grotesk', sans-serif;
 
     font-variation-settings:
         "slnt" 0,
