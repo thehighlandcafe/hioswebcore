@@ -50,7 +50,7 @@ function themeSwitcher() {
             imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg')"; 
             break;
         case 'default-dark':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/background-dark.png')";
+            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/old/backgroundimage.png')";
             break;
         case 'morocco':
             imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg')";
