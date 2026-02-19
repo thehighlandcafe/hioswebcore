@@ -9,96 +9,190 @@
         <link rel="stylesheet" href="../../../assets/css/toggle.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script src="../../../assets/scripts/links.js"></script>
-        <title>HiOS |</title>
+        <title>HiOS | Appearance</title>
+        <style>
+            .form-select {
+                padding-left: 15px;
+                border: 0.5px solid var(--outline);
+                border-radius: 25px 25px 6px 6px !important;
+                background-color: var(--secondaryContainer) !important;
+                color: var(--onSecondaryContainer);
+            }
+
+            .form-select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24' fill='%23101c2b'%3E%3Cpath d='M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 15px center;
+                background-size: 24px;
+                padding-right: 45px;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                .form-select {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24' fill='%23d7e3f8'%3E%3Cpath d='M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E");
+                }
+            }
+
+            .infoBubble {
+                padding: 15px;
+                margin-top: 3px;
+                margin-bottom: 8px;
+                border-radius: 6px 6px 25px 25px;
+                background-color: color-mix(in srgb, var(--surfaceVarient) 70%, transparent);
+                color: var(--onPrimaryContainer);
+            }
+
+            .switchContainer {
+                border: 0.5px solid var(--outline);
+                border-radius: 25px 25px 6px 6px;
+                background-color: color-mix(in srgb, var(--tertiaryContainer) 70%, transparent);
+            }
+        </style>
     </head>
     <body>
         <!--The universal background image-->
-		<div class="background-wrapper">
-			<div class="background-image"></div>
-		</div>
+        <div class="background-wrapper">
+            <div class="background-image"></div>
+        </div>
         <main class="container mt-4 mb-5">
             <div class="card mt-3 full">
                 <div class="card-body">
                     <div class="top-container">
                         <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">palette</span>Appearance</h1>
-                        <p id="para">Customise the appearance of HiOSMobile to your taste below.</p>
+                        <p id="para">Customise the look and feel of HiOSMobile below.</p>
                     </div>
                 </div>
             </div>
-            <div class="card mt-2 joinTop">
-                <div class="card-body">
-                    <div id="background-selector">
-						<h1 class="card-title">App Background</h1>
-						<h3 class="card-subtitle mb-2">Our backgrounds</h3>
-						<select class="form-select" id="backgroundSelect">
-							<option value="default-light">Default</option>
-							<option value="default-dark">Montenegro</option>
-							<option value="city" data-theme="city">City</option>
-							<option value="night-sky" data-theme="night-sky">Night Sky</option>
-							<option value="morocco" data-theme="morocco">Morocco</option>
-							<option value="clouds" data-theme="clouds">Cloudy Sunrise</option>
-							<option value="blossoms" data-theme="blossoms">Blossoms</option>
-                            <option value="london" data-theme="london">London</option>
-						</select>
-					</div>
-                </div>
-            </div>
-            <!--div class="card joinMiddle">
-                <div class="card-body">
-                    <div id="background-upload">
-						<h3 class="card-subtitle mb-2">Your background</h2>
-						<input type="file" id="uploadBackground" accept="image/*">
-					</div>
-                </div>
-            </div-->
-            <div class="card joinBottom">
-                <div class="card-body">
-                    <h1 class="card-title">App Colours</h1>
-                    <div class="translucentAboutBox" style="margin-top: 8px; margin-bottom: 8px;">
-                        <div style="display: flex; align-items: center; justify-content: flex-start;">
-                            <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
-                            <label class="switch" style="margin-left: auto;">
-                                <input type="checkbox" id="autoColourToggle" checked>
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <select class="form-select" id="genericColourSelect">
-                        <option value="default-light">Blue (Default)</option>
-                        <option value="generic-green">Green</option>
-                        <option value="generic-cyan">Cyan</option>
-                        <option value="generic-orange">Orange</option>
-                    </select>
+            <div id="widget-container" class="text-center widget-grid mt-2 mb-4">
+                <div class="card full">
+                    <div class="card-body">
+                        <div id="background-selector">
+                            <h1 class="card-title">Backgrounds</h1>
 
-                    <div class="translucentAboutBox" style="margin-top: 12px; margin-bottom: 8px;">
-                        <div style="display: flex; align-items: center; justify-content: flex-start;">
-                            <label class="form-check-label ms-2" for="backgroundToggle" style="margin-right: auto;">Background Image</label>
-                            <label class="switch" style="margin-left: auto;">
-                                <input type="checkbox" id="backgroundToggle">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="translucentAboutBox" style="margin-top: 8px;">
-                        <div style="display: flex; align-items: center; justify-content: flex-start;">
-                            <label class="form-check-label ms-2" for="acrylicToggle" style="margin-right: auto;">Acrylic</label>
-                            <label class="switch" style="margin-left: auto;">
-                                <input type="checkbox" id="acrylicToggle">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
+                            <div class="switchContainer translucentAboutBox" style="margin-top: 12px;">
+                                <div style="display: flex; align-items: center; justify-content: flex-start;">
+                                    <label class="form-check-label ms-2" for="backgroundToggle" style="margin-right: auto;">Background Image</label>
+                                    <label class="switch" style="margin-left: auto;">
+                                        <input type="checkbox" id="backgroundToggle">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
 
+                            <div class="infoBubble translucentAboutBox mb-4">
+                                <h4><span class="material-symbols-rounded helpcenterIcons">wallpaper</span> Turn on or off the background image.</h4>
+					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                    For the sake of accessibility, or just your personal preference.
+					            </p>
+                            </div>
+
+                            <h3 class="card-subtitle mb-2 mt-4">Pick a Wallpaper</h3>
+                            <select class="form-select" id="backgroundSelect">
+                                <option value="default">Default</option>
+                                <option value="dobrota" data-theme="dobrota">Dobrota, Montenegro</option>
+                                <option value="spain" data-theme="spain">Montefrío, Spain</option>
+                                <option value="france" data-theme="france">Terrasson, France</option>
+                                <option value="turkey" data-theme="turkey">Tlos, Turkey</option>
+                                <option value="morocco" data-theme="morocco">Dades Gorge, Morocco</option>
+                                <option value="clouds" data-theme="clouds">Cloudy Sunrise, Liverpool</option>
+                                <option value="london" data-theme="london">Tower Bridge, London</option>
+                                <option value="yorkshire" data-theme="yorkshire">Keld, Yorkshire</option>
+                                <option value="scotland" data-theme="scotland">Knockan Crag, Scotland</option>
+                            </select>
+
+                            <div class="infoBubble translucentAboutBox mb-4">
+                                <h4><span class="material-symbols-rounded helpcenterIcons">photo_prints</span> Pick a background. Our backgrounds are stunning.</h4>
+					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+						            All our background photos were taken by us. We took the light mode photos, and Google Gemini generated dark mode versions of them, for HiOSMobile.
+					            </p>
+                            </div>
+
+                            <!-- Theme Mode Selector (Light/Dark/Auto) -->
+                            <h3 class="card-subtitle mb-2 mt-4">Theme Mode</h3>
+                            <select class="form-select" id="darkModeSelect">
+                                <option value="auto">Auto (System Default)</option>
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+
+                            <div class="infoBubble translucentAboutBox mb-4">
+                                <h4><span class="material-symbols-rounded helpcenterIcons">palette</span> Pick a colour of wallpaper.</h4>
+					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+						            All our background photos were taken by us. We took the light mode photos, and Google Gemini generated dark mode versions of them, for HiOSMobile.
+					            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card full">
+                    <div class="card-body">
+                        <h1 class="card-title">Colours</h1>
+
+                        <h3 class="card-subtitle mb-2 mt-4">Auto Colour Palette</h3>
+                        <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
+                            <div style="display: flex; align-items: center; justify-content: flex-start;">
+                                <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
+                                <label class="switch" style="margin-left: auto;">
+                                    <input type="checkbox" id="autoColourToggle" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="infoBubble translucentAboutBox mb-4">
+                            <h4><span class="material-symbols-rounded helpcenterIcons">colors</span> Turn on or off the auto wallpaper colours.</h4>
+					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                This allows you to use a basic default colour scheme, and disable the colours which match the wallpapers.
+					        </p>
+                        </div>
+
+                        <h3 class="card-subtitle mb-2 mt-4">Basic Colours</h3>
+                        <select class="form-select" id="genericColourSelect">
+                            <option value="default-light">Blue (Default)</option>
+                            <option value="generic-green">Green</option>
+                            <option value="generic-cyan">Cyan</option>
+                            <option value="generic-orange">Orange</option>
+                        </select>
+
+                        <div class="infoBubble translucentAboutBox mb-4">
+                            <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Pick a basic colour.</h4>
+					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                To pick a basic colour, please disable Auto Wallpaper Colours above.
+					        </p>
+                        </div>
+
+                        <h3 class="card-subtitle mb-2 mt-4">Basic Colours</h3>
+                        <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
+                            <div style="display: flex; align-items: center; justify-content: flex-start;">
+                                <label class="form-check-label ms-2" for="acrylicToggle" style="margin-right: auto;">Acrylic Glass</label>
+                                <label class="switch" style="margin-left: auto;">
+                                    <input type="checkbox" id="acrylicToggle">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="infoBubble translucentAboutBox mb-4">
+                            <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Turn on or off the acrylic glass effect.</h4>
+					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                The acrylic glass effect is the glassy blur effect used throughout HiOSMobile. You can disable this above for accessibility's sake, or just personal preference.
+					        </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
         <script src="../../../assets/scripts/background.js"></script>
         <script src="../../../assets/scripts/ripple.js"></script>
 
-        <!-- UPDATED SCRIPT BLOCK -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const backgroundSelect = document.getElementById('backgroundSelect');
+                const darkModeSelect = document.getElementById('darkModeSelect'); // New
                 const autoToggle = document.getElementById('autoColourToggle');
                 const genericColourSelect = document.getElementById('genericColourSelect');
                 
@@ -106,16 +200,17 @@
                 const acrylicToggle = document.getElementById('acrylicToggle');
 
                 // --- 1. SET INITIAL STATE ---
-                // Read from TWO different localStorage keys
-                const savedWallpaper = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+                // Read from localStorage
+                const savedWallpaper = localStorage.getItem('hiosWallpaperTheme') || 'default';
                 const savedColor = localStorage.getItem('hiosColorTheme') || 'default-light';
-                const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; // default to true
+                const savedDarkMode = localStorage.getItem('hiosDarkModePreference') || 'auto'; // New
+                const isAuto = localStorage.getItem('hiosAutoColor') !== 'false'; 
                 
                 // New toggles
                 const storedBg = localStorage.getItem('hiosBackgroundEnabled');
                 const storedAcrylic = localStorage.getItem('hiosAcrylicEnabled');
-                const isBackgroundEnabled = storedBg === null ? true : storedBg === 'true'; // default on
-                const isAcrylicEnabled = storedAcrylic === null ? true : storedAcrylic === 'true'; // default on
+                const isBackgroundEnabled = storedBg === null ? true : storedBg === 'true'; 
+                const isAcrylicEnabled = storedAcrylic === null ? true : storedAcrylic === 'true';
                 
                 const effectiveAuto = isBackgroundEnabled ? isAuto : false;
 
@@ -124,6 +219,7 @@
                 backgroundToggle.checked = isBackgroundEnabled;
                 acrylicToggle.checked = isBackgroundEnabled ? isAcrylicEnabled : false;
                 backgroundSelect.disabled = !isBackgroundEnabled;
+                darkModeSelect.disabled = !isBackgroundEnabled; // Disable mode select if BG is off
                 autoToggle.disabled = !isBackgroundEnabled;
                 acrylicToggle.disabled = !isBackgroundEnabled;
 
@@ -134,8 +230,21 @@
                 if (genericColourSelect.querySelector(`[value="${savedColor}"]`)) {
                     genericColourSelect.value = savedColor;
                 }
+                if (darkModeSelect.querySelector(`[value="${savedDarkMode}"]`)) {
+                    darkModeSelect.value = savedDarkMode;
+                }
 
                 // --- 2. ADD EVENT LISTENERS ---
+
+                // Dark Mode Dropdown Changed
+                darkModeSelect.addEventListener('change', () => {
+                    const selectedMode = darkModeSelect.value;
+                    localStorage.setItem('hiosDarkModePreference', selectedMode);
+                    // Force a theme update
+                    if (typeof themeSwitcher === 'function') {
+                        themeSwitcher();
+                    }
+                });
 
                 // Auto Toggle clicked
                 autoToggle.addEventListener('change', () => {
@@ -161,7 +270,9 @@
                 backgroundToggle.addEventListener('change', () => {
                     const isChecked = backgroundToggle.checked;
                     localStorage.setItem('hiosBackgroundEnabled', isChecked);
+                    
                     backgroundSelect.disabled = !isChecked;
+                    darkModeSelect.disabled = !isChecked;
                     autoToggle.disabled = !isChecked;
                     acrylicToggle.disabled = !isChecked;
 
@@ -205,20 +316,16 @@
                         colorName = genericColourSelect.value;
                     }
                     
-                    // Save to TWO separate localStorage keys
                     localStorage.setItem('hiosWallpaperTheme', wallpaperName);
                     localStorage.setItem('hiosColorTheme', colorName);
                     
-                    // Call the global function from background.js to update the page
                     if (typeof themeSwitcher === 'function') {
                         themeSwitcher();
-                    } else {
-                        console.error('themeSwitcher() function not found.');
                     }
                 }
             });
         </script>
     
-		<script src="../../../assets/scripts/bootstrap-shim.js"></script>
-</body>
+        <script src="../../../assets/scripts/bootstrap-shim.js"></script>
+    </body>
 </html>
