@@ -14,10 +14,21 @@ function themeSwitcher() {
     const acrylicEnabled = storedAcrylic === null ? true : storedAcrylic === 'true';
 
     // Read the *wallpaper* choice
-    const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default-light';
+    const wallpaperTheme = localStorage.getItem('hiosWallpaperTheme') || 'default';
     // Read the *color* choice
     const colorTheme = localStorage.getItem('hiosColorTheme') || 'default-light';
     
+    // Read *Dark Mode* Preference (light, dark, or auto)
+    const darkModePref = localStorage.getItem('hiosDarkModePreference') || 'auto';
+    
+    // Determine if we should show dark mode content
+    let isDarkMode = false;
+    if (darkModePref === 'auto') {
+        isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } else {
+        isDarkMode = darkModePref === 'dark';
+    }
+
     // Apply the COLOR theme to the body class
     document.body.className = colorTheme;
     if (!effectsEnabled) {
@@ -39,40 +50,81 @@ function themeSwitcher() {
         return;
     }
 
-    let imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png')"; // Default
+    // Base path for backgrounds
+    const basePath = "https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/";
+    
+    let imageUrl = "";
 
-    // Set the correct wallpaper URL based on the WALLPAPER theme
+    /* Logic:
+     * Check wallpaperTheme and isDarkMode to pick the right file.
+     * Naming convention: 'name.jpg' vs 'name-dark.jpg'
+     */
+
     switch (wallpaperTheme) {
-        case 'city':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.jpg')";
+        case 'spain':
+            imageUrl = isDarkMode 
+                ? `url('${basePath}spain-dark.png')` 
+                : `url('${basePath}spain.jpg')`;
             break;
-        case 'night-sky':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/homebackground.jpg')"; 
+        case 'turkey':
+            imageUrl = isDarkMode 
+                ? `url('${basePath}turkey-dark.png')` 
+                : `url('${basePath}turkey.jpg')`;
             break;
-        case 'default-dark':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/old/backgroundimage.png')";
+        case 'france':
+            imageUrl = isDarkMode 
+                ? `url('${basePath}france-dark.png')` 
+                : `url('${basePath}france.jpg')`;
             break;
         case 'morocco':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/dades-gorge.jpg')";
+            imageUrl = isDarkMode 
+                ? `url('${basePath}morocco-dark.png')` 
+                : `url('${basePath}morocco.jpg')`;
             break;
         case 'clouds':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/british-clouds.jpg')";
-            break;
-        case 'blossoms':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/blossoms.jpg')";
+            imageUrl = isDarkMode 
+                ? `url('${basePath}clouds-dark.png')` 
+                : `url('${basePath}clouds.jpg')`;
             break;
         case 'london':
-            imageUrl = "url('https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/london.jpg')";
+            imageUrl = isDarkMode 
+                ? `url('${basePath}london-dark.png')` 
+                : `url('${basePath}london.jpg')`;
+            break;
+        case 'dobrota':
+            imageUrl = isDarkMode 
+                ? `url('${basePath}dobrota-dark.png')` 
+                : `url('${basePath}dobrota.jpg')`;
+            break;
+        case 'yorkshire':
+            imageUrl = isDarkMode
+                ? `url('${basePath}yorkshire-dark.png')`
+                : `url('${basePath}yorkshire.jpg')`;
+            break;
+        case 'scotland':
+            imageUrl = isDarkMode 
+                ? `url('${basePath}scotland-dark.png')` 
+                : `url('${basePath}scotland.jpg')`;
             break;
         default:
-            // Find the base path
-            let basePath = "https://thehighlandcafe.github.io/hioswebcore/assets/css/backgrounds/backgroundimage.png"; 
-            
-            imageUrl = `url('${basePath}')`;
+            // "Default"
+            imageUrl = isDarkMode 
+                ? `url('${basePath}backgroundimage-dark.png')` 
+                : `url('${basePath}backgroundimage.png')`;
             break;
     }
     
     bgImage.style.backgroundImage = imageUrl;
+}
+
+// Listen for system theme changes to update wallpaper dynamically (only if Auto is selected)
+if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        const pref = localStorage.getItem('hiosDarkModePreference') || 'auto';
+        if (pref === 'auto') {
+            themeSwitcher();
+        }
+    });
 }
 
 // Run the theme switcher as soon as the script loads
@@ -80,8 +132,6 @@ themeSwitcher();
 
 
 // --- 2. Automatic Liquid Glass Effect ---
-// THIS SECTION IS UPDATED with the new toggle logic.
-
 /**
  * Runs when the page content is loaded.
  */
@@ -101,75 +151,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('liquid-glass-on', 'acrylic-on');
     }
     
-
-    /*
-     * This line is correct. It makes the page visible
-     * *after* the theme is set, preventing all flashing.
-     */
     document.body.style.display = 'block';
 });
 
 /**
  * Injects the advanced SVG filter needed for the "edge-focused" liquid distortion.
- * This is hidden and only needs to exist once on the page.
  */
 function injectSvgFilter() {
-    // Only add the filter if it doesn't already exist
-    if (document.getElementById('lg-dist')) {
-        return;
-    }
+    if (document.getElementById('lg-dist')) return;
 
     const svgFilter = `
     <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
       <filter id="lg-dist">
-        
-        <!-- 1. Create the turbulence (the "wavy" noise) -->
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.01 0.03"
-          numOctaves="1"
-          result="turbulence"
-          seed="0"
-        />
-
-        <!-- 2. Get the shape of the card (the alpha) and blur it -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.03" numOctaves="1" result="turbulence" seed="0" />
         <feGaussianBlur stdDeviation="10" in="SourceAlpha" result="blur"/>
-
-        <!-- 3. Invert the blur to create an "edge mask" -->
-        <!-- This makes the center black (0) and edges white (1) -->
-        <feColorMatrix
-          type="matrix"
-          in="blur"
-          result="edge_gradient"
-          values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0 0 0 -1 1"
-        />
-
-        <!-- 4. Multiply the turbulence by the edge mask -->
-        <!-- This makes the turbulence 100% at the edge and 0% in the center -->
-        <feComposite
-          in="turbulence"
-          in2="edge_gradient"
-          operator="in"
-          result="edge_turbulence"
-        />
-        
-        <!-- 5. Apply the new "edge-only" turbulence as distortion -->
-        <!-- Increased scale to 50 to make the edge effect obvious -->
-        <feDisplacementMap
-          in="SourceGraphic"
-          in2="edge_turbulence"
-          scale="50" 
-          xChannelSelector="R"
-          yChannelSelector="G"
-        />
+        <feColorMatrix type="matrix" in="blur" result="edge_gradient" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 -1 1" />
+        <feComposite in="turbulence" in2="edge_gradient" operator="in" result="edge_turbulence" />
+        <feDisplacementMap in="SourceGraphic" in2="edge_turbulence" scale="50" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </svg>
     `;
 
-    // Create a temporary div to hold the SVG and inject it
     const container = document.createElement('div');
     container.innerHTML = svgFilter;
     document.body.appendChild(container.firstElementChild);
@@ -177,44 +179,31 @@ function injectSvgFilter() {
 
 /**
  * Finds all elements with class ".card" and wraps their content
- * in the 4-layer structure needed for the liquid glass effect.
  */
 function wrapAllCards() {
     const cards = document.querySelectorAll('.card');
 
     cards.forEach(card => {
-        // Safety check: If we already wrapped this card, skip it
-        if (card.querySelector('.glass-filter')) {
-            return;
-        }
+        if (card.querySelector('.glass-filter')) return;
 
-        // Save the card's original content
         const originalContent = card.innerHTML;
-
-        // Clear the card and build the new 4-layer structure
         card.innerHTML = '';
 
-        // Create the 4 layers
         const filter = document.createElement('div');
         filter.className = 'glass-filter';
-
         const overlay = document.createElement('div');
         overlay.className = 'glass-overlay';
-
         const specular = document.createElement('div');
         specular.className = 'glass-specular';
-
         const content = document.createElement('div');
         content.className = 'glass-content';
-        content.innerHTML = originalContent; // Put the original content back
+        content.innerHTML = originalContent;
 
-        // Add the new layers into the card
         card.appendChild(filter);
         card.appendChild(overlay);
         card.appendChild(specular);
         card.appendChild(content);
 
-        // Add a class to the parent card so our CSS can style it
         card.classList.add('glass-container-ready');
     });
 }

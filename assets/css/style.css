@@ -1,6 +1,6 @@
 /*STYLES, FONTS, AND COLOURS*/
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*Defining Selawik font*/
 @font-face {
@@ -37,39 +37,34 @@
     --onSurfaceVarient: #43474e;
 
     /*Fonts*/
-    --fontPrimary: 'IBM Plex Sans', sans-serif;
-    --fontCode: 'IBM Plex Sans', sans-serif;
+    --fontPrimary: 'Google Sans Flex', sans-serif;
+    --fontCode: 'Google Sans Flex', sans-serif;
 
     font-variation-settings:
         "slnt" 0,
         "wdth" 100,
-        "GRAD" 0,
-        "ROND" 100;
+        "GRAD" 0;
 }
 
 * {
     -webkit-tap-highlight-color: transparent;
 }
 
-/*background-based themes*/
-body.default-dark {
-    /*Not necessary*/
-}
-
-/*THE CITY WALLPAPER THEME*/
-body.city {
-    --primary: rgb(46 98 140);
+/*HiOSCore Wallpapers -- Auto Wallpaper Colours
+    /*Dobrota, Montenegro*/
+body.dobrota {
+    --primary: rgb(44 99 139);
     --onPrimary: rgb(255 255 255);
-    --primaryContainer: rgb(205 229 255);
-    --onPrimaryContainer: rgb(11 74 114);
+    --primaryContainer: rgb(204 229 255);
+    --onPrimaryContainer: rgb(7 75 114);
     --secondary: rgb(81 96 111);
     --onSecondary: rgb(255 255 255);
-    --secondaryContainer: rgb(213 228 246);
-    --onSecondaryContainer: rgb(58 72 87);
+    --secondaryContainer: rgb(212 228 246);
+    --onSecondaryContainer: rgb(57 72 87);
     --tertiary: rgb(103 88 122);
     --onTertiary: rgb(255 255 255);
-    --tertiaryContainer: rgb(238 220 255);
-    --onTertiaryContainer: rgb(79 64 97);
+    --tertiaryContainer: rgb(237 220 255);
+    --onTertiaryContainer: rgb(78 65 97);
     --error: rgb(186 26 26);
     --onError: rgb(255 255 255);
     --errorContainer: rgb(255 218 214);
@@ -80,23 +75,23 @@ body.city {
     --onSurface: rgb(24 28 32);
     --surfaceVarient: rgb(222 227 235);
     --onSurfaceVarient: rgb(66 71 78);
-    --outline: rgb(114 120 127);
+    --outline: rgb(114 120 126);
 }
 
 @media (prefers-color-scheme: dark) {
-    body.city {
-        --primary: rgb(154 203 250);
-        --onPrimary: rgb(0 51 82);
-        --primaryContainer: rgb(11 74 114);
-        --onPrimaryContainer: rgb(205 229 255);
-        --secondary: rgb(185 200 218);
-        --onSecondary: rgb(35 50 64);
-        --secondaryContainer: rgb(58 72 87);
-        --onSecondaryContainer: rgb(213 228 246);
-        --tertiary: rgb(210 191 231);
-        --onTertiary: rgb(56 42 73);
-        --tertiaryContainer: rgb(79 64 97);
-        --onTertiaryContainer: rgb(238 220 255);
+    body.dobrota {
+        --primary: rgb(153 204 250);
+        --onPrimary: rgb(0 51 81);
+        --primaryContainer: rgb(7 75 114);
+        --onPrimaryContainer: rgb(204 229 255);
+        --secondary: rgb(184 200 218);
+        --onSecondary: rgb(35 50 63);
+        --secondaryContainer: rgb(57 72 87);
+        --onSecondaryContainer: rgb(212 228 246);
+        --tertiary: rgb(209 191 231);
+        --onTertiary: rgb(55 42 74);
+        --tertiaryContainer: rgb(78 65 97);
+        --onTertiaryContainer: rgb(237 220 255);
         --error: rgb(255 180 171);
         --onError: rgb(105 0 5);
         --errorContainer: rgb(147 0 10);
@@ -106,66 +101,177 @@ body.city {
         --surface: rgb(16 20 24);
         --onSurface: rgb(224 226 232);
         --surfaceVarient: rgb(66 71 78);
-        --onSurfaceVarient: rgb(194 199 207);
+        --onSurfaceVarient: rgb(194 199 206);
         --outline: rgb(140 145 152);
     }
 }
 
-/*THE NIGHT SKY WALLPAPER THEME*/
-body.night-sky {
-    --primary: rgb(71 93 146);
-    --onPrimary: rgb(255 255 255);
-    --primaryContainer: rgb(217 226 255);
-    --onPrimaryContainer: rgb(47 69 120);
-    --secondary: rgb(88 94 113);
-    --onSecondary: rgb(255 255 255);
-    --secondaryContainer: rgb(220 226 249);
-    --onSecondaryContainer: rgb(64 70 89);
-    --tertiary: rgb(114 85 114);
-    --onTertiary: rgb(255 255 255);
-    --tertiaryContainer: rgb(253 215 250);
-    --onTertiaryContainer: rgb(89 61 89);
-    --error: rgb(186 26 26);
-    --onError: rgb(255 255 255);
-    --errorContainer: rgb(255 218 214);
-    --onErrorContainer: rgb(147 0 10);
-    --background: rgb(250 248 255);
-    --onBackground: rgb(26 27 33);
-    --surface: rgb(250 248 255);
-    --onSurface: rgb(26 27 33);
-    --surfaceVarient: rgb(225 226 236);
-    --onSurfaceVarient: rgb(68 70 79);
-    --outline: rgb(117 119 128);
+    /*Spain*/
+body.spain {
+    --primary: #3D5F90;
+    --onPrimary: #FFFFFF;
+    --primaryContainer: #D5E3FF;
+    --onPrimaryContainer: #234776;
+    --secondary: #555F71;
+    --onSecondary: #FFFFFF;
+    --secondaryContainer: #D9E3F8;
+    --onSecondaryContainer: #3D4758;
+    --tertiary: #6E5676;
+    --onTertiary: #FFFFFF;
+    --tertiaryContainer: #F7D8FF;
+    --onTertiaryContainer: #553F5D;
+    --error: #BA1A1A;
+    --onError: #FFFFFF;
+    --errorContainer: #FFDAD6;
+    --onErrorContainer: #93000A;
+    --background: #F9F9FF;
+    --onBackground: #191C20;
+    --surface: #F9F9FF;
+    --onSurface: #191C20;
+    --surfaceVarient: #E0E2EC;
+    --onSurfaceVarient: #43474E;
+    --outline: #74777F;
 }
 
 @media (prefers-color-scheme: dark) {
-    body.night-sky {
-        --primary: rgb(177 198 255);
-        --onPrimary: rgb(22 46 96);
-        --primaryContainer: rgb(47 69 120);
-        --onPrimaryContainer: rgb(217 226 255);
-        --secondary: rgb(192 198 220);
-        --onSecondary: rgb(42 48 66);
-        --secondaryContainer: rgb(64 70 89);
-        --onSecondaryContainer: rgb(220 226 249);
-        --tertiary: rgb(224 187 221);
-        --onTertiary: rgb(65 39 66);
-        --tertiaryContainer: rgb(89 61 89);
-        --onTertiaryContainer: rgb(253 215 250);
-        --error: rgb(255 180 171);
-        --onError: rgb(105 0 5);
-        --errorContainer: rgb(147 0 10);
-        --onErrorContainer: rgb(255 218 214);
-        --background: rgb(18 19 24);
-        --onBackground: rgb(226 226 233);
-        --surface: rgb(18 19 24);
-        --onSurface: rgb(226 226 233);
-        --surfaceVarient: rgb(68 70 79);
-        --onSurfaceVarient: rgb(197 198 208);
-        --outline: rgb(143 144 153);
+    body.spain {
+        --primary: #A6C8FF;
+        --onPrimary: #02315E;
+        --primaryContainer: #234776;
+        --onPrimaryContainer: #D5E3FF;
+        --secondary: #BDC7DC;
+        --onSecondary: #273141;
+        --secondaryContainer: #3D4758;
+        --onSecondaryContainer: #D9E3F8;
+        --tertiary: #DABDE2;
+        --onTertiary: #3D2846;
+        --tertiaryContainer: #553F5D;
+        --onTertiaryContainer: #F7D8FF;
+        --error: #FFB4AB;
+        --onError: #690005;
+        --errorContainer: #93000A;
+        --onErrorContainer: #FFDAD6;
+        --background: #111318;
+        --onBackground: #E1E2E9;
+        --surface: #111318;
+        --onSurface: #E1E2E9;
+        --surfaceVarient: #43474E;
+        --onSurfaceVarient: #C4C6CF;
+        --outline: #8D9199;
     }
 }
 
+    /*France*/
+body.france {
+    --primary: #38608F;
+    --onPrimary: #FFFFFF;
+    --primaryContainer: #D2E4FF;
+    --onPrimaryContainer: #1C4875;
+    --secondary: #535F70;
+    --onSecondary: #FFFFFF;
+    --secondaryContainer: #D7E3F8;
+    --onSecondaryContainer: #3C4858;
+    --tertiary: #6C5677;
+    --onTertiary: #FFFFFF;
+    --tertiaryContainer: #F4D9FF;
+    --onTertiaryContainer: #533F5F;
+    --error: #BA1A1A;
+    --onError: #FFFFFF;
+    --errorContainer: #FFDAD6;
+    --onErrorContainer: #93000A;
+    --background: #F8F9FF;
+    --onBackground: #191C20;
+    --surface: #F8F9FF;
+    --onSurface: #191C20;
+    --surfaceVarient: #DFE2EB;
+    --onSurfaceVarient: #43474E;
+    --outline: #73777F;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.france {
+        --primary: #A2C9FE;
+        --onPrimary: #00325A;
+        --primaryContainer: #1C4875;
+        --onPrimaryContainer: #D2E4FF;
+        --secondary: #BBC7DB;
+        --onSecondary: #263141;
+        --secondaryContainer: #3C4858;
+        --onSecondaryContainer: #D7E3F8;
+        --tertiary: #D8BDE4;
+        --onTertiary: #3C2947;
+        --tertiaryContainer: #533F5F;
+        --onTertiaryContainer: #F4D9FF;
+        --error: #FFB4AB;
+        --onError: #690005;
+        --errorContainer: #93000A;
+        --onErrorContainer: #FFDAD6;
+        --background: #111418;
+        --onBackground: #E1E2E8;
+        --surface: #111418;
+        --onSurface: #E1E2E8;
+        --surfaceVarient: #43474E;
+        --onSurfaceVarient: #C3C6CF;
+        --outline: #8D9199;
+    }
+}
+
+    /*Turkey*/
+body.turkey {
+    --primary: #5A631F;
+    --onPrimary: #FFFFFF;
+    --primaryContainer: #DEEA96;
+    --onPrimaryContainer: #424B07;
+    --secondary: #5D6145;
+    --onSecondary: #FFFFFF;
+    --secondaryContainer: #E2E5C2;
+    --onSecondaryContainer: #45492F;
+    --tertiary: #3B665B;
+    --onTertiary: #FFFFFF;
+    --tertiaryContainer: #BDECDE;
+    --onTertiaryContainer: #224E44;
+    --error: #BA1A1A;
+    --onError: #FFFFFF;
+    --errorContainer: #FFDAD6;
+    --onErrorContainer: #93000A;
+    --background: #FCFAED;
+    --onBackground: #1B1C15;
+    --surface: #FCFAED;
+    --onSurface: #1B1C15;
+    --surfaceVarient: #E4E3D2;
+    --onSurfaceVarient: #47483B;
+    --outline: #77786A;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.turkey {
+        --primary: #C2CD7D;
+        --onPrimary: #2D3400;
+        --primaryContainer: #424B07;
+        --onPrimaryContainer: #DEEA96;
+        --secondary: #C6C9A7;
+        --onSecondary: #2F321A;
+        --secondaryContainer: #45492F;
+        --onSecondaryContainer: #E2E5C2;
+        --tertiary: #A2D0C2;
+        --onTertiary: #05372E;
+        --tertiaryContainer: #224E44;
+        --onTertiaryContainer: #BDECDE;
+        --error: #FFB4AB;
+        --onError: #690005;
+        --errorContainer: #93000A;
+        --onErrorContainer: #FFDAD6;
+        --background: #13140D;
+        --onBackground: #E4E3D6;
+        --surface: #13140D;
+        --onSurface: #E4E3D6;
+        --surfaceVarient: #47483B;
+        --onSurfaceVarient: #C8C7B7;
+        --outline: #919283;
+    }
+}
+
+    /*Morocco*/
 body.morocco {
     --primary: rgb(137 81 31);
     --surfaceTint: rgb(137 81 31);
@@ -221,6 +327,7 @@ body.morocco {
     }
 }
 
+    /*Cloudy Sunrise*/
 body.clouds {
     --primary: rgb(66 94 145);
     --onPrimary: rgb(255 255 255);
@@ -275,60 +382,7 @@ body.clouds {
     }
 }
 
-body.blossoms {
-    --primary: rgb(122 89 12);
-    --onPrimary: rgb(255 255 255);
-    --primaryContainer: rgb(255 222 166);
-    --onPrimaryContainer: rgb(94 66 0);
-    --secondary: rgb(109 92 63);
-    --onSecondary: rgb(255 255 255);
-    --secondaryContainer: rgb(247 223 187);
-    --onSecondaryContainer: rgb(84 69 42);
-    --tertiary: rgb(76 101 68);
-    --onTertiary: rgb(255 255 255);
-    --tertiaryContainer: rgb(206 235 193);
-    --onTertiaryContainer: rgb(53 77 46);
-    --error: rgb(186 26 26);
-    --onError: rgb(255 255 255);
-    --errorContainer: rgb(255 218 214);
-    --onErrorContainer: rgb(147 0 10);
-    --background: rgb(255 248 243);
-    --onBackground: rgb(32 27 19);
-    --surface: rgb(255 248 243);
-    --onSurface: rgb(32 27 19);
-    --surfaceVarient: rgb(238 225 207);
-    --onSurfaceVarient: rgb(78 70 57);
-    --outline: rgb(128 118 103);
-}
-
-@media (prefers-color-scheme: dark) {
-    body.blossoms {
-        --primary: rgb(237 192 108);
-        --onPrimary: rgb(65 45 0);
-        --primaryContainer: rgb(94 66 0);
-        --onPrimaryContainer: rgb(255 222 166);
-        --secondary: rgb(218 196 160);
-        --onSecondary: rgb(60 46 21);
-        --secondaryContainer: rgb(84 69 42);
-        --onSecondaryContainer: rgb(247 223 187);
-        --tertiary: rgb(179 206 167);
-        --onTertiary: rgb(31 54 26);
-        --tertiaryContainer: rgb(53 77 46);
-        --onTertiaryContainer: rgb(206 235 193);
-        --error: rgb(255 180 171);
-        --onError: rgb(105 0 5);
-        --errorContainer: rgb(147 0 10);
-        --onErrorContainer: rgb(255 218 214);
-        --background: rgb(23 19 11);
-        --onBackground: rgb(236 225 212);
-        --surface: rgb(23 19 11);
-        --onSurface: rgb(236 225 212);
-        --surfaceVarient: rgb(78 70 57);
-        --onSurfaceVarient: rgb(209 197 180);
-        --outline: rgb(154 143 128);
-    }
-}
-
+    /*London*/
 body.london {
     --primary: rgb(9 103 127);
     --onPrimary: rgb(255 255 255);
@@ -380,6 +434,116 @@ body.london {
         --surfaceVarient: rgb(64 72 76);
         --onSurfaceVarient: rgb(191 200 204);
         --outline: rgb(138 146 150);
+    }
+}
+
+    /*Yorkshire*/
+body.yorkshire {
+    --primary: #536525;
+    --onPrimary: #FFFFFF;
+    --primaryContainer: #D5EC9C;
+    --onPrimaryContainer: #3C4D0F;
+    --secondary: #5A6147;
+    --onSecondary: #FFFFFF;
+    --secondaryContainer: #DFE6C5;
+    --onSecondaryContainer: #434A31;
+    --tertiary: #39665F;
+    --onTertiary: #FFFFFF;
+    --tertiaryContainer: #BCECE3;
+    --onTertiaryContainer: #204E48;
+    --error: #BA1A1A;
+    --onError: #FFFFFF;
+    --errorContainer: #FFDAD6;
+    --onErrorContainer: #93000A;
+    --background: #FAFAEE;
+    --onBackground: #1B1C15;
+    --surface: #FAFAEE;
+    --onSurface: #1B1C15;
+    --surfaceVarient: #E2E4D4;
+    --onSurfaceVarient: #45483C;
+    --outline: #76786B;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.yorkshire {
+        --primary: #B9CF83;
+        --onPrimary: #273500;
+        --primaryContainer: #3C4D0F;
+        --onPrimaryContainer: #D5EC9C;
+        --secondary: #C3CAAA;
+        --onSecondary: #2C331C;
+        --secondaryContainer: #434A31;
+        --onSecondaryContainer: #DFE6C5;
+        --tertiary: #A1D0C7;
+        --onTertiary: #023731;
+        --tertiaryContainer: #204E48;
+        --onTertiaryContainer: #BCECE3;
+        --error: #FFB4AB;
+        --onError: #690005;
+        --errorContainer: #93000A;
+        --onErrorContainer: #FFDAD6;
+        --background: #12140D;
+        --onBackground: #E3E3D7;
+        --surface: #12140D;
+        --onSurface: #E3E3D7;
+        --surfaceVarient: #45483C;
+        --onSurfaceVarient: #C6C8B8;
+        --outline: #909284;
+    }
+}
+
+    /*Scotland*/
+body.scotland {
+    --primary: #435E91;
+    --onPrimary: #FFFFFF;
+    --primaryContainer: #D7E2FF;
+    --onPrimaryContainer: #2A4678;
+    --secondary: #565E71;
+    --onSecondary: #FFFFFF;
+    --secondaryContainer: #DAE2F9;
+    --onSecondaryContainer: #3F4759;
+    --tertiary: #715574;
+    --onTertiary: #FFFFFF;
+    --tertiaryContainer: #FBD7FC;
+    --onTertiaryContainer: #573E5B;
+    --error: #BA1A1A;
+    --onError: #FFFFFF;
+    --errorContainer: #FFDAD6;
+    --onErrorContainer: #93000A;
+    --background: #F9F9FF;
+    --onBackground: #1A1B20;
+    --surface: #F9F9FF;
+    --onSurface: #1A1B20;
+    --surfaceVarient: #E1E2EC;
+    --onSurfaceVarient: #44474F;
+    --outline: #74777F;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.scotland {
+        --primary: #ACC7FF;
+        --onPrimary: #0F2F60;
+        --primaryContainer: #2A4678;
+        --onPrimaryContainer: #D7E2FF;
+        --secondary: #BEC6DC;
+        --onSecondary: #283041;
+        --secondaryContainer: #3F4759;
+        --onSecondaryContainer: #DAE2F9;
+        --tertiary: #DEBCDF;
+        --onTertiary: #402844;
+        --tertiaryContainer: #573E5B;
+        --onTertiaryContainer: #FBD7FC;
+        --error: #FFB4AB;
+        --onError: #690005;
+        --errorContainer: #93000A;
+        --onErrorContainer: #FFDAD6;
+        --background: #111318;
+        --onBackground: #E2E2E9;
+        --surface: #111318;
+        --onSurface: #E2E2E9;
+        --surfaceVarient: #44474F;
+        --onSurfaceVarient: #C4C6D0;
+        --outline: #8E9099;
     }
 }
 
