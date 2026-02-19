@@ -727,8 +727,7 @@ body {
     font-variation-settings:
         "slnt" 0,
         "wdth" 100,
-        "GRAD" 0,
-        "ROND" 100;
+        "GRAD" 0;
     font-weight: 300;
     color: var(--onPrimaryContainer);
     user-select: none;
@@ -871,8 +870,7 @@ main.container {
     font-variation-settings:
         "slnt" 0,
         "wdth" 100,
-        "GRAD" 0,
-        "ROND" 100;
+        "GRAD" 0;
     font-weight: 600;
 }
 
