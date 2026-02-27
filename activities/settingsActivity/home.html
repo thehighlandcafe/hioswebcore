@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="color-scheme" content="dark light">
-		<link rel="icon" href="../../assets/pics/logos/hiosbadge.png" type="image/icon type">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
+        <link rel="icon" href="../../assets/pics/logos/hiosbadge.png" type="image/icon type">
         <link rel="stylesheet" href="../../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="../../assets/css/ripple.css" type="text/css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<title>HiOSMobile | Settings</title>
+        <link rel="stylesheet" href="../../assets/css/toggle.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script src="../../assets/scripts/links.js"></script>
+		<title>HiOS | Settings</title>
 	</head>
     <body>
-        <br><br>
-        <center>
-			<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">settings</span>Settings</h1>
-					<p id="para">Choose a settings category from below.</p>
+		<!--The universal background image-->
+		<div class="background-wrapper">
+			<div class="background-image"></div>
+		</div>
+		<main class="container mt-4 mb-5">
+			<div class="card full">
+				<div class="card-body">
+					<div class="top-container">
+						<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">settings</span>Settings</h1>
+						<p id="para" class="subtitle">Choose a settings category from below.</p>
+					</div>
+				</div>
 			</div>
-			<div class="translucentBox joinTop">
-                <button class="ripple-button joinTop roundedImage button" onclick="link('settings_activities/updates_activity.html')">
-					<span class="material-symbols-rounded">system_update</span>
-					<span class="button-text">Updates</span>
-				</button>
-				<button class="ripple-button joinTop roundedImage button" onclick="link('settings_activities/apps_activity.html')">
-					<span class="material-symbols-rounded">dashboard_customize</span>
-					<span class="button-text">Apps and Services</span>
-				</button>
-				<button class="ripple-button joinMiddle roundedImage button" onclick="link('settings_activities/websites_activity.html')">
-					<span class="material-symbols-rounded">language</span>
-					<span class="button-text">Websites</span>
-				</button>
-				<button class="ripple-button joinBottom roundedImage button" onclick="link('settings_activities/socials_activity.html')">
-					<span class="material-symbols-rounded">share</span>
-					<span class="button-text">Socials</span>
-				</button>
+			<div class="card mt-2 full">
+				<div class="card-body">
+					<h2>Customise HiOSMobile</h2>
+					<button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="link('settings_activities/appearance_activity.html')">
+						<span class="material-symbols-rounded">palette</span>
+						<span class="button-text">Appearance</span>
+					</button>
+				</div>
 			</div>
-			<div class="translucentBox joinBottom">
-				<button class="ripple-button full roundedImage button" onclick="link('settings_activities/privacypolicy_activity.html')">
-					<span class="material-symbols-rounded">security</span>
-					<span class="button-text">Privacy Policy</span>
-				</button>
+			<div class="card mt-2 full">
+				<div class="card-body">
+					<h2>General Settings</h2>
+					<button class="fluent-interactive ripple-button joinTop roundedImage button" onclick="link('settings_activities/updates_activity.html')">
+						<span class="material-symbols-rounded">system_update</span>
+						<span class="button-text">Updates</span>
+					</button>
+					<button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="link('settings_activities/apps_activity.html')">
+						<span class="material-symbols-rounded">dashboard_customize</span>
+						<span class="button-text">Apps and Services</span>
+					</button>
+				</div>
 			</div>
-		</center><br><br><br><br>
+			<div class="card mt-2 full">
+				<div class="card-body">
+					<h2>About</h2>
+					<button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="link('settings_activities/about_activity.html')">
+						<span class="material-symbols-rounded">info</span>
+						<span class="button-text">About HiOSMobile</span>
+					</button>
+				</div>
+			</div>
+			<div class="card mt-2 full">
+				<div class="card-body">
+					<h2>Your Privacy</h2>
+					<button class="fluent-interactive ripple-button joinBottom roundedImage button" onclick="link('settings_activities/privacypolicy_activity.html')">
+						<span class="material-symbols-rounded">security</span>
+						<span class="button-text">Privacy Policy</span>
+					</button>
+				</div>
+			</div>
+		</main>
 		<script src="../../assets/scripts/background.js"></script>
 		<script src="../../assets/scripts/ripple.js"></script>
+		<script src="../../assets/scripts/bootstrap-shim.js"></script>
+	</body>
 </html>
 
