@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme" content="dark light">
         <link rel="icon" href="../../../assets/pics/logos/hiosbadge.png" type="image/icon type">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="../../../assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/ripple.css" type="text/css">
         <link rel="stylesheet" href="../../../assets/css/toggle.css" type="text/css">
@@ -12,11 +13,11 @@
         <title>HiOS | Appearance</title>
         <style>
             .form-select {
-                padding-left: 15px;
-                border: 0.5px solid var(--outline);
-                border-radius: 25px 25px 6px 6px !important;
+                padding-left: 15px !important;
+                border: 0.5px solid var(--outline) !important;
+                border-radius: 40px 40px 6px 6px !important;
                 background-color: var(--secondaryContainer) !important;
-                color: var(--onSecondaryContainer);
+                color: var(--onSecondaryContainer) !important;
             }
 
             .form-select {
@@ -40,15 +41,20 @@
                 padding: 15px;
                 margin-top: 3px;
                 margin-bottom: 8px;
-                border-radius: 6px 6px 25px 25px;
+                border-radius: 6px 6px 40px 40px;
                 background-color: color-mix(in srgb, var(--surfaceVarient) 70%, transparent);
                 color: var(--onPrimaryContainer);
             }
 
             .switchContainer {
+                padding-right: 20px;
                 border: 0.5px solid var(--outline);
-                border-radius: 25px 25px 6px 6px;
+                border-radius: 40px 40px 6px 6px;
                 background-color: color-mix(in srgb, var(--tertiaryContainer) 70%, transparent);
+            }
+
+            .card-subtitle, h4 {
+                font-size: 18px;
             }
         </style>
     </head>
@@ -58,129 +64,138 @@
             <div class="background-image"></div>
         </div>
         <main class="container mt-4 mb-5">
-            <div class="card mt-3 full">
-                <div class="card-body">
-                    <div class="top-container">
-                        <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">palette</span>Appearance</h1>
-                        <p id="para">Customise the look and feel of HiOSMobile below.</p>
+            <div class="row mb-2">
+                <div class="col-12">
+                    <div class="card full">
+                        <div class="card-body">
+                            <div class="top-container">
+                                <h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">palette</span>Appearance</h1>
+                                <p id="para">Customise the look and feel of HiOSMobile below.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="widget-container" class="text-center widget-grid mt-2 mb-4">
-                <div class="card full">
-                    <div class="card-body">
-                        <div id="background-selector">
-                            <h1 class="card-title">Backgrounds</h1>
 
-                            <div class="switchContainer translucentAboutBox" style="margin-top: 12px;">
+            <div class="row g-2">
+                <div class="col-12 col-md-6">
+                    <div class="card full">
+                        <div class="card-body">
+                            <div id="background-selector">
+                                <h1 class="card-title">Backgrounds</h1>
+
+                                <div class="switchContainer translucentAboutBox" style="margin-top: 12px;">
+                                    <div style="display: flex; align-items: center; justify-content: flex-start;">
+                                        <label class="form-check-label ms-2" for="backgroundToggle" style="margin-right: auto;">Background Image</label>
+                                        <label class="switch" style="margin-left: auto;">
+                                            <input type="checkbox" id="backgroundToggle">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="infoBubble translucentAboutBox mb-4">
+                                    <h4><span class="material-symbols-rounded helpcenterIcons">wallpaper</span> Turn on or off the background image.</h4>
+                                    <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                        For the sake of accessibility, or just your personal preference.
+                                    </p>
+                                </div>
+
+                                <h3 class="card-subtitle mb-2 mt-4">Pick a Wallpaper</h3>
+                                <select class="form-select" id="backgroundSelect">
+                                    <option value="default">Montenegrin Lake (Default)</option>
+                                    <option value="dobrota" data-theme="dobrota">Dobrota, Montenegro</option>
+                                    <option value="spain" data-theme="spain">Montefrío, Spain</option>
+                                    <option value="france" data-theme="france">Terrasson, France</option>
+                                    <option value="turkey" data-theme="turkey">Tlos, Turkey</option>
+                                    <option value="morocco" data-theme="morocco">Dades Gorge, Morocco</option>
+                                    <option value="clouds" data-theme="clouds">Cloudy Sunrise, Liverpool</option>
+                                    <option value="london" data-theme="london">Tower Bridge, London</option>
+                                    <option value="yorkshire" data-theme="yorkshire">Keld, Yorkshire</option>
+                                    <option value="scotland" data-theme="scotland">Knockan Crag, Scotland</option>
+                                </select>
+
+                                <div class="infoBubble translucentAboutBox mb-4">
+                                    <h4><span class="material-symbols-rounded helpcenterIcons">photo_prints</span> Pick a background. Our backgrounds are stunning.</h4>
+                                    <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                        All our background photos were taken by us. We took the light mode photos, and Google Gemini generated dark mode versions of them, for HiOSMobile.
+                                    </p>
+                                </div>
+
+                                <!-- Theme Mode Selector (Light/Dark/Auto) -->
+                                <h3 class="card-subtitle mb-2 mt-4">Theme Mode</h3>
+                                <select class="form-select" id="darkModeSelect">
+                                    <option value="auto">Auto (Default)</option>
+                                    <option value="light">Light</option>
+                                    <option value="dark">Dark</option>
+                                </select>
+
+                                <div class="infoBubble translucentAboutBox mb-4">
+                                    <h4><span class="material-symbols-rounded helpcenterIcons">palette</span> Pick a colour of wallpaper.</h4>
+                                    <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                        We have a colour of wallpaper for day or night. And you get the choice. Have us change the mode automatically with your device's dark mode settings, or manually set it yourself. Fully up to you.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card full">
+                        <div class="card-body">
+                            <h1 class="card-title">Colours</h1>
+
+                            <h3 class="card-subtitle mb-2 mt-4">Auto Colour Palette</h3>
+                            <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
                                 <div style="display: flex; align-items: center; justify-content: flex-start;">
-                                    <label class="form-check-label ms-2" for="backgroundToggle" style="margin-right: auto;">Background Image</label>
+                                    <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
                                     <label class="switch" style="margin-left: auto;">
-                                        <input type="checkbox" id="backgroundToggle">
+                                        <input type="checkbox" id="autoColourToggle" checked>
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="infoBubble translucentAboutBox mb-4">
-                                <h4><span class="material-symbols-rounded helpcenterIcons">wallpaper</span> Turn on or off the background image.</h4>
-					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-                                    For the sake of accessibility, or just your personal preference.
-					            </p>
+                                <h4><span class="material-symbols-rounded helpcenterIcons">colors</span> Turn on or off the auto wallpaper colours.</h4>
+                                <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                    This allows you to use a basic default colour scheme, and disable the colours which match the wallpapers.
+                                </p>
                             </div>
 
-                            <h3 class="card-subtitle mb-2 mt-4">Pick a Wallpaper</h3>
-                            <select class="form-select" id="backgroundSelect">
-                                <option value="default">Montenegrin Lake (Default)</option>
-                                <option value="dobrota" data-theme="dobrota">Dobrota, Montenegro</option>
-                                <option value="spain" data-theme="spain">Montefrío, Spain</option>
-                                <option value="france" data-theme="france">Terrasson, France</option>
-                                <option value="turkey" data-theme="turkey">Tlos, Turkey</option>
-                                <option value="morocco" data-theme="morocco">Dades Gorge, Morocco</option>
-                                <option value="clouds" data-theme="clouds">Cloudy Sunrise, Liverpool</option>
-                                <option value="london" data-theme="london">Tower Bridge, London</option>
-                                <option value="yorkshire" data-theme="yorkshire">Keld, Yorkshire</option>
-                                <option value="scotland" data-theme="scotland">Knockan Crag, Scotland</option>
+                            <h3 class="card-subtitle mb-2 mt-4">Basic Colours</h3>
+                            <select class="form-select" id="genericColourSelect">
+                                <option value="default-light">Blue (Default)</option>
+                                <option value="generic-green">Green</option>
+                                <option value="generic-cyan">Cyan</option>
+                                <option value="generic-orange">Orange</option>
                             </select>
 
                             <div class="infoBubble translucentAboutBox mb-4">
-                                <h4><span class="material-symbols-rounded helpcenterIcons">photo_prints</span> Pick a background. Our backgrounds are stunning.</h4>
-					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-						            All our background photos were taken by us. We took the light mode photos, and Google Gemini generated dark mode versions of them, for HiOSMobile.
-					            </p>
+                                <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Pick a basic colour.</h4>
+                                <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                    To pick a basic colour, please disable Auto Wallpaper Colours above.
+                                </p>
                             </div>
 
-                            <!-- Theme Mode Selector (Light/Dark/Auto) -->
-                            <h3 class="card-subtitle mb-2 mt-4">Theme Mode</h3>
-                            <select class="form-select" id="darkModeSelect">
-                                <option value="auto">Auto (Default)</option>
-                                <option value="light">Light</option>
-                                <option value="dark">Dark</option>
-                            </select>
+                            <h3 class="card-subtitle mb-2 mt-4">Materials</h3>
+                            <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
+                                <div style="display: flex; align-items: center; justify-content: flex-start;">
+                                    <label class="form-check-label ms-2" for="acrylicToggle" style="margin-right: auto;">Acrylic Glass</label>
+                                    <label class="switch" style="margin-left: auto;">
+                                        <input type="checkbox" id="acrylicToggle">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
 
                             <div class="infoBubble translucentAboutBox mb-4">
-                                <h4><span class="material-symbols-rounded helpcenterIcons">palette</span> Pick a colour of wallpaper.</h4>
-					            <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-                                    We have a colour of wallpaper for day or night. And you get the choice. Have us change the mode automatically with your device's dark mode settings, or manually set it yourself. Fully up to you.
-					            </p>
+                                <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Turn on or off the acrylic glass effect.</h4>
+                                <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
+                                    The acrylic glass effect is the glassy blur effect used throughout HiOSMobile. You can disable this above for accessibility's sake, or just personal preference.
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card full">
-                    <div class="card-body">
-                        <h1 class="card-title">Colours</h1>
-
-                        <h3 class="card-subtitle mb-2 mt-4">Auto Colour Palette</h3>
-                        <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
-                            <div style="display: flex; align-items: center; justify-content: flex-start;">
-                                <label class="form-check-label ms-2" for="autoColourToggle" style="margin-right: auto;">Auto Wallpaper Colours</label>
-                                <label class="switch" style="margin-left: auto;">
-                                    <input type="checkbox" id="autoColourToggle" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="infoBubble translucentAboutBox mb-4">
-                            <h4><span class="material-symbols-rounded helpcenterIcons">colors</span> Turn on or off the auto wallpaper colours.</h4>
-					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-                                This allows you to use a basic default colour scheme, and disable the colours which match the wallpapers.
-					        </p>
-                        </div>
-
-                        <h3 class="card-subtitle mb-2 mt-4">Basic Colours</h3>
-                        <select class="form-select" id="genericColourSelect">
-                            <option value="default-light">Blue (Default)</option>
-                            <option value="generic-green">Green</option>
-                            <option value="generic-cyan">Cyan</option>
-                            <option value="generic-orange">Orange</option>
-                        </select>
-
-                        <div class="infoBubble translucentAboutBox mb-4">
-                            <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Pick a basic colour.</h4>
-					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-                                To pick a basic colour, please disable Auto Wallpaper Colours above.
-					        </p>
-                        </div>
-
-                        <h3 class="card-subtitle mb-2 mt-4">Basic Colours</h3>
-                        <div class="switchContainer translucentAboutBox" style="margin-top: 8px;">
-                            <div style="display: flex; align-items: center; justify-content: flex-start;">
-                                <label class="form-check-label ms-2" for="acrylicToggle" style="margin-right: auto;">Acrylic Glass</label>
-                                <label class="switch" style="margin-left: auto;">
-                                    <input type="checkbox" id="acrylicToggle">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="infoBubble translucentAboutBox mb-4">
-                            <h4><span class="material-symbols-rounded helpcenterIcons">colorize</span> Turn on or off the acrylic glass effect.</h4>
-					        <p style="font-size: 14px; margin: 8px 0 0 0; opacity: 0.8;">
-                                The acrylic glass effect is the glassy blur effect used throughout HiOSMobile. You can disable this above for accessibility's sake, or just personal preference.
-					        </p>
                         </div>
                     </div>
                 </div>
