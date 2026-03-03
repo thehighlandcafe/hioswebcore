@@ -11,46 +11,57 @@
 		<title>HiOSMobile | Help</title>
 	</head>
     <body>
-        <br>
-        <center>
-			<div class="container">
-			<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">help</span>Help</h1>
-					<p id="para" class="subtitle">Choose a help article from below</p>
+		<!--Universal background image-->
+		<div class="background-wrapper">
+			<div class="background-image"></div>
+		</div>
+		<main class="container mt-4 mb-4">
+			<div class="card full">
+				<div class="card-body">
+					<div class="top-container">
+						<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">help</span>Help</h1>
+						<p id="para">Choose a help article from below</p>
+					</div>
+				</div>
 			</div>
-			<div class="joinTop">
-				<h1>How to use HiOS for Windows</h1>
-				<button class="ripple-button roundedImage button" onclick="link('helpcenter/tutorial.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/8388/8388497.png">
-					<span>Navigation Tutorial</span>
-				</button>
+			<div class="card mt-2 joinTop">
+				<div class="card-body">
+					<h2 class="card-title">How to use HiOSDesktop</h2>
+					<button class="ripple-button joinTop roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">developer_guide</span>
+						<span class="button-text">Navigation Tutorial</span>
+					</button>
+				</div>
 			</div>
-			<div class="translucentBox joinBottom">
-				<h1>General Help</h1>
-				<button class="ripple-button joinTop roundedImage button" onclick="link('helpcenter/food.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/1205/1205031.png">
-					<span>Food</span>
-				</button>
-				<button class="ripple-button joinMiddle roundedImage button" onclick="link('helpcenter/hotel.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/1300/1300995.png">
-					<span>Hotel</span>
-				</button>
-				<button class="ripple-button roundedImage button" onclick="link('helpcenter/support.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/4961/4961759.png">
-					<span>Customer Support</span>
-				</button>
-                <button class="ripple-button joinBottom roundedImage button" onclick="link('helpcenter/hotel.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/5142/5142884.png">
-					<span>Wifi and Internet</span>
-				</button>
-				<button class="ripple-button roundedImage button" onclick="link('helpcenter/updates.html')">
-					<img src="https://cdn-icons-png.flaticon.com/512/1688/1688988.png">
-					<span>Updates</span>
-				</button>
+			<div class="card joinBottom">
+				<div class="card-body">
+					<h2 class="card-title">General Help</h2>
+					<button class="ripple-button joinTop roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">restaurant</span>
+						<span class="button-text">Eat</span>
+					</button>
+					<button class="ripple-button joinMiddle roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">hotel</span>
+						<span class="button-text">Hotel</span>
+					</button>
+					<button class="ripple-button joinMiddle roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">support_agent</span>
+						<span class="button-text">Support</span>
+					</button>
+					<button class="ripple-button joinMiddle roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">network_wifi</span>
+						<span class="button-text">WiFi and Internet</span>
+					</button>
+					<button class="ripple-button joinBottom roundedImage button" onclick="link('under_development.html')">
+						<span class="material-symbols-rounded">download</span>
+						<span class="button-text">Updates</span>
+					</button>
+				</div>
 			</div>
-		</center><br><br><br><br>
-        <script src="../assets/scripts/ripple.js"></script>
-    
+		</main>    
 		<script src="../assets/scripts/bootstrap-shim.js"></script>
-</body>
+		<script src="../assets/scripts/background.js"></script>
+		<script src="../assets/scripts/ripple.js"></script>
+	</body>
 </html>
 
