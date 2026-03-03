@@ -33,78 +33,87 @@
 			<div class="background-image"></div>
 		</div>
 		<main class="container mt-4 mb-5">
-			<div class="card full">
-				<div class="card-body">
-					<div class="top-container">
-						<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
-						<p id="para" class="subtitle">Staying at weB&B? Select an option from below to get started.</p>
-					</div>
-				</div>
-			</div>
-			<div class="card mt-2 joinTop">
-				<div class="card-body">
-					<!--new pills navigation-->
-					<div class="sub-nav-pills-header">
-						<button class="sub-header-tab active ripple-button" onclick="switchMenu('book-tab')" data-target="book-tab">
-							Book a Room
-						</button>
-						<button class="sub-header-tab ripple-button" onclick="switchMenu('arriving-tab')" data-target="arriving-tab">
-							Check-In
-						</button>
-						<button class="sub-header-tab ripple-button" onclick="switchMenu('leaving-tab')" data-target="leaving-tab">
-							Check-Out
-						</button>
-					</div>
-					
-					<!--Hidden nav buttons for bootstrap tab functionality-->
-					<div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
-						<ul class="nav nav-pills">
-							<li><button class="nav-link active" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab">Book a Room</button></li>
-							<li><button class="nav-link" id="arriving-tab" data-bs-toggle="pill" data-bs-target="#arriving-tab-pane" type="button" role="tab">Check-In</button></li>
-							<li><button class="nav-link" id="leaving-tab" data-bs-toggle="pill" data-bs-target="#leaving-tab-pane" type="button" role="tab">Check-Out</button></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="tab-content">
-				<div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
-					<div class="card joinBottom">
+			<div class="row mb-2">
+				<div class="col-12">
+					<div class="card full">
 						<div class="card-body">
-							<h2 class="card-title">Book a Room</h1>
-							<p class="card-text">Book a room at weB&B below.</p>
-							<button class="ripple-button form-button joinTop" onclick="link('hotel/booking.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-							<div class="iframe-wrapper">
-								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUNzlCNkROOVc3UzJCTFQ1UVpWQ0pHQk9YSS4u&embed=true">Loading...</iframe>
+							<div class="top-container">
+								<h1 class="blue-h2"><span class="titleIcon material-symbols-rounded">hotel</span>Hotel</h1>
+								<p id="para" class="subtitle">Staying at weB&B? Select an option from below to get started.</p>
 							</div>
-							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="tab-pane fade" id="arriving-tab-pane" role="tabpanel" aria-labelledby="arriving-tab" tabindex="0">
-					<div class="card joinBottom">
+			<div class="row g-2">
+				<div class="col-12">
+					<div class="card mt-2 joinTop">
 						<div class="card-body">
-							<h2 class="card-title">Check-In</h1>
-							<p class="card-text">Welcome! Check in below. :)</p>
-							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkin.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-							<div class="iframe-wrapper">
-								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUQkJBVkZFSDhCOVJDMjdBRFQ2Sjc3NEM5MS4u&embed=true">Loading…</iframe>
+							<!--new pills navigation-->
+							<div class="sub-nav-pills-header">
+								<button class="sub-header-tab active ripple-button" onclick="switchMenu('book-tab')" data-target="book-tab">
+									Book a Room
+								</button>
+								<button class="sub-header-tab ripple-button" onclick="switchMenu('arriving-tab')" data-target="arriving-tab">
+									Check-In
+								</button>
+								<button class="sub-header-tab ripple-button" onclick="switchMenu('leaving-tab')" data-target="leaving-tab">
+									Check-Out
+								</button>
 							</div>
-							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+							
+							<!--Hidden nav buttons for bootstrap tab functionality-->
+							<div style="position: absolute; left: -9999px; height: 0; overflow: hidden;">
+								<ul class="nav nav-pills">
+									<li><button class="nav-link active" id="book-tab" data-bs-toggle="pill" data-bs-target="#book-tab-pane" type="button" role="tab">Book a Room</button></li>
+									<li><button class="nav-link" id="arriving-tab" data-bs-toggle="pill" data-bs-target="#arriving-tab-pane" type="button" role="tab">Check-In</button></li>
+									<li><button class="nav-link" id="leaving-tab" data-bs-toggle="pill" data-bs-target="#leaving-tab-pane" type="button" role="tab">Check-Out</button></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="tab-pane fade" id="leaving-tab-pane" role="tabpanel" aria-labelledby="leaving-tab" tabindex="0">
-					<div class="card joinBottom">
-						<div class="card-body">
-							<h2 class="card-title">Check-Out</h1>
-							<p class="card-text">Thank you for staying with us! Check out below. :)</p>
-							<button class="ripple-button form-button joinTop" onclick="link('hotel/checkout.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
-							<div class="iframe-wrapper">
-								<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUMjdUUDRPMzg2OE9GOTRaQlNMUjJSUFdONS4u&embed=true">Loading…</iframe>
+					<div class="tab-content mt-2">
+						<div class="tab-pane fade show active" id="book-tab-pane" role="tabpanel" aria-labelledby="book-tab" tabindex="0">
+							<div class="card joinBottom">
+								<div class="card-body">
+									<h2 class="card-title">Book a Room</h1>
+									<p class="card-text">Book a room at weB&B below.</p>
+									<button class="ripple-button form-button joinTop" onclick="link('hotel/booking.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+									<div class="iframe-wrapper">
+										<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUNzlCNkROOVc3UzJCTFQ1UVpWQ0pHQk9YSS4u&embed=true">Loading...</iframe>
+									</div>
+									<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+								</div>
 							</div>
-							<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+						</div>
+
+						<div class="tab-pane fade" id="arriving-tab-pane" role="tabpanel" aria-labelledby="arriving-tab" tabindex="0">
+							<div class="card joinBottom">
+								<div class="card-body">
+									<h2 class="card-title">Check-In</h1>
+									<p class="card-text">Welcome! Check in below. :)</p>
+									<button class="ripple-button form-button joinTop" onclick="link('hotel/checkin.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+									<div class="iframe-wrapper">
+										<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUQkJBVkZFSDhCOVJDMjdBRFQ2Sjc3NEM5MS4u&embed=true">Loading…</iframe>
+									</div>
+									<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="leaving-tab-pane" role="tabpanel" aria-labelledby="leaving-tab" tabindex="0">
+							<div class="card joinBottom">
+								<div class="card-body">
+									<h2 class="card-title">Check-Out</h1>
+									<p class="card-text">Thank you for staying with us! Check out below. :)</p>
+									<button class="ripple-button form-button joinTop" onclick="link('hotel/checkout.html')"><span class="form-button-icon material-symbols-rounded">fullscreen</span>Open Form Fullscreen</button>
+									<div class="iframe-wrapper">
+										<iframe class="joinBottom menu-iframe roundedImage" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAABORJhBUMjdUUDRPMzg2OE9GOTRaQlNMUjJSUFdONS4u&embed=true">Loading…</iframe>
+									</div>
+									<a href="hotelactivities.html#"><img src="assets/buttons/scrolltop.bmp" class="mt-4 ripple-button roundedImage"></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
