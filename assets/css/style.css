@@ -791,7 +791,7 @@ main.container {
 
 /*Rounded corners for HiMaterial elements*/
 .roundedImage {
-    border-radius: 25px;
+    border-radius: 40px;
     border: 0.5px solid var(--outline);
 }
 
@@ -897,12 +897,11 @@ main.container {
     background-color: var(--tertiaryContainer);
     color: var(--onTertiaryContainer);
     padding: 10px;
-    min-width: 300px;
     backdrop-filter: blur(14px);
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 25px;
+    border-radius: 40px;
 }
 
 /*
@@ -911,7 +910,7 @@ main.container {
     are at the top, middle, or bottom.
 */
 .joinTop {
-    border-radius: 25px 25px 6px 6px !important;
+    border-radius: 40px 40px 6px 6px !important;
     margin-bottom: 3px !important;
 }
 
@@ -921,11 +920,11 @@ main.container {
 }
 
 .joinBottom {
-    border-radius: 6px 6px 25px 25px !important;
+    border-radius: 6px 6px 40px 40px !important;
 }
 
 .full {
-    border-radius: 25px;
+    border-radius: 40px;
 }
 
 /*Large link buttons*/
@@ -1401,46 +1400,10 @@ menu-iframe {
     right: 10px;
 }
 
-/*NEW WELCOME SCREEN WIDGET STYLES -- NOV 2025*/
-.widget-ghost {
-    opacity: 0.4;
-    background-color: #0d6efd;
-    border-radius: 25px;
-}
-
-.widget-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--bs-space-3);
-    align-items: stretch;
-}
-
-@media (min-width: 768px) {
-    .widget-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-.widget-grid .card {
-    height: 100%;
-}
-
-.widget-grid .roundedImage {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#ww_6b591a1444ddd {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-}
-
 .form-control {
-    border-radius: 25px;
+    border-radius: 40px !important;
     background-color: var(--secondaryContainer);
-    color: var(--onSecondaryContainer);
+    color: var(--onSecondaryContainer) !important;
     padding: 15px;
 }
 
@@ -1468,12 +1431,6 @@ menu-iframe {
         --surfaceVarient: #43474e;
         --onSurfaceVarient: #c3c6cf;
     }
-
-    /*
-     * DELETED the dark mode .card {} style block from here
-     * to prevent conflicts with the new liquid glass.
-     */
-
     .button:hover {
         background-color: #5A6B74;
     }
@@ -1489,22 +1446,18 @@ menu-iframe {
 
 /* Glass tokens */
 :root {
-    /* Acrylic-ish tint (light) */
     --glass-tint: rgba(255, 255, 255, 0.62);
     --glass-border: rgba(0, 0, 0, 0.08);
     --glass-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 
-    /* Optional noise (very subtle) */
-    --glass-noise-opacity: 0.06;
+    --glass-noise-opacity: 0.6;
     --glass-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 
-    /* Optional mica-like top sheen */
     --glass-sheen: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Acrylic-ish tint (dark) */
         --glass-tint: rgba(32, 32, 32, 0.62);
         --glass-border: rgba(255, 255, 255, 0.10);
         --glass-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
@@ -1521,7 +1474,7 @@ menu-iframe {
     background: var(--primaryContainer);
     color: var(--onPrimaryContainer);
     border: none;
-    border-radius: 25px !important;
+    border-radius: 40px !important;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
@@ -1586,7 +1539,7 @@ menu-iframe {
     background-color: rgba(0, 0, 0, 0.06) !important;
     border-color: rgba(255, 255, 255, 0.18) !important;
     color: var(--onSurface) !important;
-    border-radius: 12px !important;
+    border-radius: 40px !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1680,37 +1633,8 @@ p {
     }
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-}
-
-.row>* {
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-}
-
 .g-3 {
     gap: var(--bs-space-3);
-}
-
-.col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-@media (min-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
 }
 
 .h-100 {
@@ -1816,8 +1740,7 @@ p {
     font-variation-settings:
         "slnt" 0,
         "wdth" 100,
-        "GRAD" 0,
-        "ROND" 100;
+        "GRAD" 0;
     font-weight: 600;
 }
 
