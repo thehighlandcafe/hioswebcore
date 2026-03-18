@@ -1301,8 +1301,10 @@ menu-iframe {
     font-family: var(--fontPrimary);
     font-size: 14px;
     height: 40px;
-    border-radius: 12px;
     border: none;
+    corner-shape: squircle;
+    border-radius: var(--radius-card) !important; /* Fixed: smaller radius for uniform squircle look */
+    margin-bottom: 5px;
 }
 
 .form-button-icon {
@@ -1748,20 +1750,22 @@ p { margin-top: 0; margin-bottom: 1rem; }
 .nav-pills-header {
     display: flex;
     background-color: rgba(0,0,0,0.05); 
-    border-radius: 50px;
     padding: 4px;
     border: 1px solid var(--outline);
+    corner-shape: squircle;
+    border-radius: var(--radius-card) !important; /* Fixed: smaller radius for uniform squircle look */
 }
 
 .sub-nav-pills-header {
     display: flex;
     background-color: rgba(0,0,0,0.05);
-    border-radius: 50px;
     padding: 4px;
     border: 1px solid var(--outline);
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
+    corner-shape: squircle;
+    border-radius: var(--radius-card) !important; /* Fixed: smaller radius for uniform squircle look */
 }
 
 .sub-nav-pills-header::-webkit-scrollbar { display: none; }
@@ -1775,7 +1779,6 @@ p { margin-top: 0; margin-bottom: 1rem; }
     border: none;
     color: var(--onSurface);
     padding: 6px 12px;
-    border-radius: 40px;
     font-family: var(--fontPrimary);
     font-size: 14px;
     font-weight: 500;
@@ -1785,6 +1788,8 @@ p { margin-top: 0; margin-bottom: 1rem; }
     transition: all 0.3s ease;
     cursor: pointer;
     opacity: 0.7;
+    corner-shape: squircle;
+    border-radius: var(--radius-card) !important; /* Fixed: smaller radius for uniform squircle look */
 }
 
 .sub-header-tab {
@@ -1792,7 +1797,6 @@ p { margin-top: 0; margin-bottom: 1rem; }
     border: none;
     color: var(--onSurface);
     padding: 8px 16px;
-    border-radius: 40px;
     font-family: var(--fontPrimary);
     font-size: 14px;
     font-weight: 500;
@@ -1804,6 +1808,8 @@ p { margin-top: 0; margin-bottom: 1rem; }
     cursor: pointer;
     opacity: 0.7;
     flex-shrink: 0;
+    corner-shape: squircle;
+    border-radius: var(--radius-card) !important; /* Fixed: smaller radius for uniform squircle look */
 }
 
 .header-tab .material-symbols-rounded { font-size: 18px !important; }
